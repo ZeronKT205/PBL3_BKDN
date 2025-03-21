@@ -1,0 +1,23 @@
+.signup{
+    width: 350px;
+    height: 500px;
+    display:flex;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(104, 41, 41, 0.2);
+
+    opacity: 0;
+    transform: translateY(50px); /* Đặt form lệch xuống 50px */
+    animation: slideUp 0.8s ease-out forwards; /* Chạy animation */
+    
+}
+
+.signup h2{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
