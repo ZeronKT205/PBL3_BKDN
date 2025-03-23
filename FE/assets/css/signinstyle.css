@@ -5,9 +5,10 @@
     flex-direction: column;
     color: white;
     text-align: center;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(104, 41, 41, 0.2);
+
+    box-shadow: 2px 20px 20px rgba(98, 52, 215, 0.2);
 
     opacity: 0;
     transform: translateY(50px); /* Đặt form lệch xuống 50px */
@@ -20,4 +21,9 @@
     font-weight: 600;
     margin: 20px 0;
     font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.signup__form input::placeholder {
+    color: white; 
+    opacity: 0.8;
 }

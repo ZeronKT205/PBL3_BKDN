@@ -74,26 +74,32 @@ html {
       font-size: 16px;
     }
   }
-  html, body {
-    height: 100%;
-}
+
 .container{
-    background:linear-gradient(to top, rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url("../images/bg_index.jpg") no-repeat center/cover;
+    background:url("../images/bg_detail.jpg") no-repeat center/cover;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     display:grid;
     grid-template-rows: auto 100vh;
-    height: 100vh;
+    height: 110vh;
     overflow: hidden;
     color: white;
   }
   .navbar{
+    background:linear-gradient(to bottom, rgba(0,0,0,0.3),rgba(0,0,0,0.2));
+    position:sticky;
+    top:0;
+    z-index: 1000;
     display: flex;
     justify-content: space-between;
     border-bottom: 3px solid rgb(44, 43, 43);
 
   }
+  .navbar.scrolled {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.5));
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
   .navbar__logo{
     width: 300px;
     display: grid;
