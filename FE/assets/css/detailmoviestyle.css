@@ -5,6 +5,7 @@
     grid-template-rows: 75px auto;
 }
 .detailmovie{
+    position:relative;
     display: grid;
     grid-template-rows: 40% 10% auto ;
 }
@@ -179,13 +180,13 @@
     border: 4px outset rgb(46, 24, 48);
     transition:all 0.2s ease;
 }
-.schedule .time{
+.time{
     font-size: 18px;
 
     color: rgb(242, 242, 242);
 }
 
-.schedule .Screenx{
+.Screenx{
     font-size: 17px;
     font-weight:500;
     color:rgb(0, 0, 0);
@@ -194,4 +195,80 @@
     box-shadow: 0px 6px 20px rgba(76, 198, 228, 0.6);
     transform: translateY(-1.5px);
     background:rgb(214, 81, 134);
+}
+
+
+
+.schedule1{
+    display:grid;
+    justify-self:center;
+    width: 850px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    align-content: start;
+
+    opacity: 0.3;
+    animation: fadeIn 1.3s ease-in-out forwards;
+}
+
+.schedule1 button{
+    height: 60px;
+    width: 150px;
+    border-radius: 8px;
+    background:rgba(215, 80, 134, 0.8);
+    color:rgb(49, 48, 48);
+    border: 4px outset rgb(46, 24, 48);
+    transition:all 0.2s ease;
+}
+.schedule11 .time{
+    font-size: 18px;
+
+    color: rgb(242, 242, 242);
+}
+
+.schedule11 .Screenx{
+    font-size: 17px;
+    font-weight:500;
+    color:rgb(0, 0, 0);
+}
+.schedule1 button:hover{
+    box-shadow: 0px 6px 20px rgba(76, 198, 228, 0.6);
+    transform: translateY(-1.5px);
+    background:rgb(214, 81, 134);
+}
+
+
+
+
+
+.schedule__Booking{
+    position:absolute;
+    top:40%;
+    right: 50%;
+    height: 50%;
+    border-radius: 15px;
+    background:linear-gradient(to bottom , rgba(32, 21, 24, 0.8),rgba(71, 22, 29, 0.9));
+    align-content: center;
+    width: 1000px;
+    padding: 0 100px;
+    transform: translateX(50%);
+    animation: fadeIn 0.4s ease-in-out forwards;
+}
+.schedule__Booking span{
+    position:absolute;
+    background: rgb(231, 34, 34);
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 5px;
+    bottom: 89%;
+    left: 99%;
+    transform: translateX(-100%);
+    color: white;
+    opacity: 0.7;
+    transition:all 0.2s ease;
+}
+.schedule__Booking span:hover{
+    opacity:1;
 }

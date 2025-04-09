@@ -36,3 +36,13 @@ window.addEventListener("scroll",function(){
         navbar.classList.remove("scrolled");
     }
 });
+
+
+function closeTab() {
+    document.querySelector('.schedule__Booking').classList.add("hidden");
+}
+function showTab(){
+    document.querySelector('.schedule__Booking').classList.remove("hidden");
+}
+
+

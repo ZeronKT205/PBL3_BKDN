@@ -1,0 +1,161 @@
+.mainPage__Users{
+    display: grid;
+    grid-template-rows: 20% 80px 80% ;
+    background:linear-gradient(to top, rgba(0,0,0,0.3),rgb(69, 49, 62)), url("../images/bg__admin.jpg") no-repeat center/cover;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+.mainPage__Users-title{
+    border-bottom:3px inset rgb(146, 29, 150);
+    border-left:3px inset rgb(72, 40, 40);
+    box-shadow: 0px 4px 12px rgb(146, 29, 150);
+    border-radius:5px;
+    color: white;
+    font-weight: normal;
+    font-size: 15px;
+    padding: 3px 15px;
+    width: 300px;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    animation: fadeIn 1.3s ease-in-out forwards;
+
+}
+
+.mainPage__Users-search{
+    display:flex;
+    width:100%;
+    align-self: center;
+    justify-content:center;
+    gap: 8px;
+    animation: fadeIn 1.3s ease-in-out forwards;
+}
+
+.mainPage__Users-search-input{
+    width: 400px;
+    font-size: 16px;
+    padding: 6px 7px;
+    border-radius: 3px;
+    border: none;
+
+}
+
+.mainPage__Users-search button{
+    padding:4px 7px;
+    border-radius: 5px;
+    border:none;
+}
+
+.mainPage__Users-inf{
+    margin-top: 20px;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+
+.mainPage__Users-inf-table {
+    width: 100%; 
+    border-collapse: collapse;
+    justify-self: center;
+    max-width: 1200px; 
+}
+.mainPage__Users-inf-table table{
+    max-height: 100%;
+}
+.mainPage__Users-inf-table th {
+    background-color: rgb(135, 26, 139);
+    color: white;
+    font-size: 14px;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 4px inset #948e8e;
+    text-transform: uppercase;
+
+    z-index: 1;
+    position:sticky;
+    top:0;
+}
+tr:nth-child(even) {
+    background-color: rgba(125, 47, 132, 0.6); 
+}
+tr:nth-child(odd) {
+    background-color: rgba(184, 42, 70, 0.7); 
+}
+.mainPage__Users-inf-table td {
+    color: white;
+    font-size: 12px;
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid #fff;
+}
+.container{
+    height:80%;
+    width:80%;
+    max-width: 1200px;
+    justify-self: center;
+    overflow-y:auto;
+    border: 2px solid #651d6b;
+}
+
+
+.mainPage__Users-inf-table td button {
+    background-color: #4938b7;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.mainPage__Users-inf-table td button:hover {
+    background-color: #536fe1; 
+}
+
+.mainPage__Users-inf-table td button:active {
+    transform: scale(0.95); 
+}
+.mainPage__Users-inf-table td:nth-child(1) {
+    font-weight: bold; /* Chiều rộng cho cột Username */
+    font-style: 15px;
+}
+
+
+.mainPage__Users-inf-table th:nth-child(2),
+.mainPage__Users-inf-table td:nth-child(2) {
+    width: 200px;  /* Chiều rộng cho cột Username */
+}
+
+.mainPage__Users-inf-table th:nth-child(3),
+.mainPage__Users-inf-table td:nth-child(3) {
+    width: 300px;  /* Chiều rộng cho cột Email */
+}
+
+.mainPage__Users-inf-table th:nth-child(6),
+.mainPage__Users-inf-table td:nth-child(6),
+.mainPage__Users-inf-table th:nth-child(7),
+.mainPage__Users-inf-table td:nth-child(7) {
+    width: 150px;  /* Chiều rộng cho cột Action */
+}
+
+/* Kiểu thanh cuộn */
+.container::-webkit-scrollbar {
+    width: 9px;  /* Đặt độ rộng cho thanh cuộn */
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: #431e41;  /* Màu sắc cho phần thanh cuộn */
+    border-radius: 10px;  /* Tạo góc bo tròn cho thanh cuộn */
+    border: 2px solid #fff;  /* Thêm viền quanh thanh cuộn */
+}
+
+.container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;  /* Màu nền cho thanh cuộn */
+    border-radius: 10px;  /* Tạo góc bo tròn cho track */
+}
+
+/* Thêm hiệu ứng khi hover vào thanh cuộn */
+.container::-webkit-scrollbar:hover {
+    width: 12px;  /* Mở rộng thanh cuộn khi hover */
+}
