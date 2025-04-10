@@ -10,6 +10,7 @@
     <link rel = "stylesheet" href = "../assets/css/manageMovies.css">
     <link rel = "stylesheet" href = "../assets/css/animation.css">
     <link rel = "stylesheet" href = "../assets/css/manageScreens.css">
+    <link rel = "stylesheet" href = "../assets/css/manageShows.css">
 </head>
 <body>
     <div class="navbar">
@@ -41,7 +42,7 @@
     </div>
     <div class="mainPage">
         <!-- WELCOME -->
-        <div class="mainPage__Welcome">
+        <div class="mainPage__Welcome hidden">
             <h1><span>WELCOME</span> TO ADMIN PAGE !!</h1>
         </div>
         <!-- END WELCOME -->
@@ -231,7 +232,7 @@
         </div>
         <!-- END QUAN LY TAI KHOAN -->
 
-        <div class="mainPage__Screens">
+        <div class="mainPage__Screens hidden">
             <div class="mainPage__Screens-title">
                 <h1>Manage Screens</h1>
             </div>
@@ -320,94 +321,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="mainPage__Screens__ContainerListCard__item">
-                    <h2 class="mainPage__Screens__ContainerListCard__item-title">Screen A</h2>
-                    <div class="mainPage__Screens__ContainerListCard__item__Containerinf">
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-numSeats">
-                            <span>Total Seats</span>
-                            <p>50</p>
-                        </div>
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-AvailablenumSeats">
-                            <span>Available Seats</span>
-                            <p>10</p>
-                        </div>
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-type">
-                            <span>Room Type</span>
-                            <p>VIP</p>
-                        </div>
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-status">
-                            <span>Status</span>
-                            <p>active</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="mainPage__Screens__ContainerListCard__item">
-                    <h2 class="mainPage__Screens__ContainerListCard__item-title">Screen A</h2>
-                    <div class="mainPage__Screens__ContainerListCard__item__Containerinf">
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-numSeats">
-                            <span>Total Seats</span>
-                            <p>50</p>
-                        </div>
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-AvailablenumSeats">
-                            <span>Available Seats</span>
-                            <p>10</p>
-                        </div>
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-type">
-                            <span>Room Type</span>
-                            <p>VIP</p>
-                        </div>
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-status">
-                            <span>Status</span>
-                            <p>active</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="mainPage__Screens__ContainerListCard__item">
-                    <h2 class="mainPage__Screens__ContainerListCard__item-title">Screen A</h2>
-                    <div class="mainPage__Screens__ContainerListCard__item__Containerinf">
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-numSeats">
-                            <span>Total Seats</span>
-                            <p>50</p>
-                        </div>
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-AvailablenumSeats">
-                            <span>Available Seats</span>
-                            <p>10</p>
-                        </div>
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-type">
-                            <span>Room Type</span>
-                            <p>VIP</p>
-                        </div>
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-status">
-                            <span>Status</span>
-                            <p>active</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="mainPage__Screens__ContainerListCard__item">
-                    <h2 class="mainPage__Screens__ContainerListCard__item-title">Screen A</h2>
-                    <div class="mainPage__Screens__ContainerListCard__item__Containerinf">
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-numSeats">
-                            <span>Total Seats</span>
-                            <p>50</p>
-                        </div>
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-AvailablenumSeats">
-                            <span>Available Seats</span>
-                            <p>10</p>
-                        </div>
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-type">
-                            <span>Room Type</span>
-                            <p>VIP</p>
-                        </div>
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-status">
-                            <span>Status</span>
-                            <p>active</p>
-                        </div>
-                    </div>
-                </div>
-             
-
             </div>
-            <div class="mainPage__Screens__DetailContainer">
+            <div class="mainPage__Screens__DetailContainer hidden">
                 <div class="containerScreenx">
                     <div class="input-container">
                         <h1>Chọn Số Hàng và Cột</h1>
@@ -519,8 +434,33 @@
 
             </div>
         </div>
-        <div class="mainPage__Shows hidden">
-            <p>HELLO</p>
+        <div class="mainPage__Shows">
+            <div class="mainPage__Shows-title">
+                <h1>Manage Shows</h1>
+            </div>
+            <div class = "mainPage__Shows__Containersearch">
+                
+            </div>
+            <!-- Danh Sach suat chieu -->
+            <div class="mainPage__Shows__containerinfo">
+                <div class="mainPage__Shows__containerinfo__block1">
+                    <table class = "mainPage__Shows__containerinfo__block1-table">
+                        <thead>
+                            <tr>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+ 
+                            
+                            
+                        
+                            <!-- Dữ liệu từ cơ sở dữ liệu sẽ được chèn vào đây -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
         </div>
         <div class="mainPage__Booking hidden">
             

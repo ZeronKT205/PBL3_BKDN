@@ -5298,19 +5298,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ACER\\.nuget\\packages\\": {}
+    "C:\\Users\\Kim Tai\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\Datvexemfilm.csproj",
+      "projectUniqueName": "D:\\Cinema_Booking\\Datvexemfilm\\Datvexemfilm.csproj",
       "projectName": "Datvexemfilm",
-      "projectPath": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\Datvexemfilm.csproj",
-      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\obj\\",
+      "projectPath": "D:\\Cinema_Booking\\Datvexemfilm\\Datvexemfilm.csproj",
+      "packagesPath": "C:\\Users\\Kim Tai\\.nuget\\packages\\",
+      "outputPath": "D:\\Cinema_Booking\\Datvexemfilm\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Kim Tai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5335,7 +5340,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0": {
@@ -5383,7 +5389,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

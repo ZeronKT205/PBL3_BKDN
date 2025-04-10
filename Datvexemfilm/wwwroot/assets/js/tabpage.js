@@ -68,7 +68,7 @@ document.getElementById("loginform").addEventListener("submit", async function(e
     }
 
 })
-async function loadfilm(){
+async function loadfilm() {
     const response = await fetch("http://localhost:5120/api/FilmControllers/getfilm", {
         method: "GET",
         headers: {
@@ -76,18 +76,17 @@ async function loadfilm(){
         }
     });
     const result = await response.json();
+
+    const movieList = document.querySelector("#movie");
+
     result.forEach(movie => {
-        const movieList = document.querySelector("#movie");
-        movieList.innerHTML = "";
-        result.forEach(movie => { 
-            const movieContainer = document.createElement("div");
-            movieContainer.classList.add("movie1");
-            movieContainer.innerHTML = `
-                <img src="${movie.src}" alt="photo" class="poster_booking">
-                <p class="movie__name">${movie.name}</p>
-                <p class="movie__releaseDay">KC | ${movie.releaseDay}</p>
-            `;
-            movieList.appendChild(movieContainer);
-        });
+        const movieContainer = document.createElement("div");
+        movieContainer.classList.add("movie1");
+        movieContainer.innerHTML = `
+            <img src="${movie.src}" alt="photo" class="poster_booking">
+            <p class="movie__name">${movie.name}</p>
+            <p class="movie__releaseDay">KC | ${movie.releaseDay}</p>
+        `;
+        movieList.appendChild(movieContainer); // Thêm phần tử vào danh sách
     });
-};
+}

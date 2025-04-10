@@ -1,192 +1,200 @@
 {
   "Files": [
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\FE\\adminhome.html",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\adminhome.html",
       "PackagePath": "staticwebassets\\FE\\adminhome.html"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\FE\\detailmovie.html",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\detailmovie.html",
       "PackagePath": "staticwebassets\\FE\\detailmovie.html"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\FE\\home.html",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\home.html",
       "PackagePath": "staticwebassets\\FE\\home.html"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\FE\\index.html",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\index.html",
       "PackagePath": "staticwebassets\\FE\\index.html"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\FE\\userlogin.html",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\userlogin.html",
       "PackagePath": "staticwebassets\\FE\\userlogin.html"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\FE\\usersignup.html",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\usersignup.html",
       "PackagePath": "staticwebassets\\FE\\usersignup.html"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\css\\adminhomestyle.css",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\adminhomestyle.css",
       "PackagePath": "staticwebassets\\assets\\css\\adminhomestyle.css"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\css\\animation.css",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\animation.css",
       "PackagePath": "staticwebassets\\assets\\css\\animation.css"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\css\\detailmoviestyle.css",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\detailmoviestyle.css",
       "PackagePath": "staticwebassets\\assets\\css\\detailmoviestyle.css"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\css\\homestyle.css",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\homestyle.css",
       "PackagePath": "staticwebassets\\assets\\css\\homestyle.css"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\css\\loginstyle.css",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\loginstyle.css",
       "PackagePath": "staticwebassets\\assets\\css\\loginstyle.css"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\css\\manageMovies.css",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\manageMovies.css",
       "PackagePath": "staticwebassets\\assets\\css\\manageMovies.css"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\css\\manageScreens.css",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\manageScreens.css",
       "PackagePath": "staticwebassets\\assets\\css\\manageScreens.css"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\css\\manageUsers.css",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\manageShows.css",
+      "PackagePath": "staticwebassets\\assets\\css\\manageShows.css"
+    },
+    {
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\manageUsers.css",
       "PackagePath": "staticwebassets\\assets\\css\\manageUsers.css"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\css\\signinstyle.css",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\signinstyle.css",
       "PackagePath": "staticwebassets\\assets\\css\\signinstyle.css"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\css\\style.css",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\style.css",
       "PackagePath": "staticwebassets\\assets\\css\\style.css"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\background_index.jpg",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\background_index.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\background_index.jpg"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\bg__admin.jpg",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\bg__admin.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\bg__admin.jpg"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\bg__home.jpg",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\bg__home.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\bg__home.jpg"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\bg_detail.jpg",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\bg_detail.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\bg_detail.jpg"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\bg_index.jpg",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\bg_index.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\bg_index.jpg"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\logo.png",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\logo.png",
       "PackagePath": "staticwebassets\\assets\\images\\logo.png"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\LabMMT XemThongTinMangTrenHDHWindows.docx",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\LabMMT XemThongTinMangTrenHDHWindows.docx",
       "PackagePath": "staticwebassets\\assets\\images\\mainPoster\\LabMMT XemThongTinMangTrenHDHWindows.docx"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\SafeExamBrowser(SED).zip",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\SafeExamBrowser(SED).zip",
       "PackagePath": "staticwebassets\\assets\\images\\mainPoster\\SafeExamBrowser(SED).zip"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\lac_troi.jpg",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\lac_troi.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\mainPoster\\lac_troi.jpg"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\movie5.webp",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\movie5.webp",
       "PackagePath": "staticwebassets\\assets\\images\\mainPoster\\movie5.webp"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\movie6.webp",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\movie6.webp",
       "PackagePath": "staticwebassets\\assets\\images\\mainPoster\\movie6.webp"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\movie7.webp",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\movie7.webp",
       "PackagePath": "staticwebassets\\assets\\images\\mainPoster\\movie7.webp"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\nha_gia_tien.jpg",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\nha_gia_tien.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\mainPoster\\nha_gia_tien.jpg"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\quy_nhap_trang.jpg",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\quy_nhap_trang.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\mainPoster\\quy_nhap_trang.jpg"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\sat_thu.jpg",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\sat_thu.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\mainPoster\\sat_thu.jpg"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\poster\\movie1.jpg",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\poster\\movie1.jpg"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\poster\\movie10.jpg",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie10.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\poster\\movie10.jpg"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\poster\\movie2.jpg",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie2.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\poster\\movie2.jpg"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\poster\\movie3.jpg",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie3.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\poster\\movie3.jpg"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\poster\\movie4.jpg",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie4.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\poster\\movie4.jpg"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\poster\\movie5.jpg",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie5.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\poster\\movie5.jpg"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\poster\\movie7.jpg",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie7.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\poster\\movie7.jpg"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\poster\\movie8.jpg",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie8.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\poster\\movie8.jpg"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\poster\\movie9.jpg",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie9.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\poster\\movie9.jpg"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\shield.png",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\shield.png",
       "PackagePath": "staticwebassets\\assets\\images\\shield.png"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\js\\admin.js",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\js\\admin.js",
       "PackagePath": "staticwebassets\\assets\\js\\admin.js"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\js\\seatLayout.js",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\js\\seatLayout.js",
       "PackagePath": "staticwebassets\\assets\\js\\seatLayout.js"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\js\\tabpage.js",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\js\\tabpage.js",
       "PackagePath": "staticwebassets\\assets\\js\\tabpage.js"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\image\\amduonglo.jpg",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\image\\amduonglo.jpg",
       "PackagePath": "staticwebassets\\image\\amduonglo.jpg"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\image\\matvuphuho.jpg",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\image\\matvuphuho.jpg",
       "PackagePath": "staticwebassets\\image\\matvuphuho.jpg"
     },
     {
-      "Id": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\image\\quynhaptrang.jpg",
+      "Id": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\image\\quynhaptrang.jpg",
       "PackagePath": "staticwebassets\\image\\quynhaptrang.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Datvexemfilm.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Datvexemfilm.Microsoft.AspNetCore.StaticWebAssets.props",

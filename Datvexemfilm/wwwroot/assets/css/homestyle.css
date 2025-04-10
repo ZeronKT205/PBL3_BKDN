@@ -183,7 +183,7 @@ html, body{
 
 .listfilm__container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive */
     grid-auto-rows: auto;
     gap: 30px;
     row-gap: 50px;
@@ -195,7 +195,7 @@ html, body{
     border-radius: 15px;
     margin-bottom:100px;
 }
-.listfilm__container .title_container{
+.title_container{
     grid-area: 1/1/1/5;
     width: 100%;
     padding: 15px 25px;
