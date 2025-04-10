@@ -17,10 +17,10 @@ public class RegisterControllers : ControllerBase
     }
 
     [HttpPost("register")]
-    public IActionResult Dangki([FromBody] LoginRequest req)
+    public IActionResult Dangki([FromBody] RegisterRequest req)
     { 
-        string s = req.Username;
-        var q = _dbContext.Accounts.FirstOrDefault(x => x.Username == s);
+        var q = _dbContext.Accounts.FirstOrDefault(x => x.Username == req.Username);
+        var p = _dbContext.Accounts.FirstOrDefault(x => x.Email == req.Email);
         if (q != null)
         {
             return BadRequest(new {
@@ -28,10 +28,17 @@ public class RegisterControllers : ControllerBase
                 message = "Tài khoản đã tồn tại"
             });
         }
+        else 
+        if (p!=null)
+        {
+            return BadRequest(new {
+                success = false,
+                message = "Email đã tồn tại"
+            });
+        }
         else
         {
-            string p = req.Password;
-            var newAccount = new Account { Username = s, Password = p };
+            var newAccount = new Account { Username = req.Username, Password = req.Password ,Email = req.Email, Role = "user", Status = "Normal" };
             _dbContext.Accounts.Add(newAccount);
             _dbContext.SaveChanges();
             return Ok(new {

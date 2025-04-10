@@ -70,160 +70,8 @@
                                 <th>Action</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Zeron123</td>
-                                <td>a.nguyen@example.com</td>
-                                <td><span class="active1">Hoạt Động</span></td>
-                                <td>Admin</td>
-                                <td>
-                                    <button>Info</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Zeron123</td>
-                                <td>b.tran@example.com</td>
-                                <td><span class="inactive1">Tạm Khóa</span></td>
-                                <td>User</td>
-                                <td>
-                                    <button>Info</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Zeron123</td>
-                                <td>b.tran@example.com</td>
-                                <td><span class="inactive1">Tạm Khóa</span></td>
-                                <td>User</td>
-                                <td>
-                                    <button>Info</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Zeron123</td>
-                                <td>b.tran@example.com</td>
-                                <td><span class="inactive1">Tạm Khóa</span></td>
-                                <td>User</td>
-                                <td>
-                                    <button>Info</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Zeron123</td>
-                                <td>b.tran@example.com</td>
-                                <td><span class="inactive1">Tạm Khóa</span></td>
-                                <td>User</td>
-                                <td>
-                                    <button>Info</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>Zeron123</td>
-                                <td>b.tran@example.com</td>
-                                <td><span class="inactive1">Tạm Khóa</span></td>
-                                <td>User</td>
-                                <td>
-                                    <button>Info</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>Zeron123</td>
-                                <td>b.tran@example.com</td>
-                                <td><span class="inactive1">Tạm Khóa</span></td>
-                                <td>User</td>
-                                <td>
-                                    <button>Info</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>8</td>
-                                <td>Zeron123</td>
-                                <td>b.tran@example.com</td>
-                                <td><span class="inactive1">Tạm Khóa</span></td>
-                                <td>User</td>
-                                <td>
-                                    <button>Info</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>9</td>
-                                <td>Zeron123</td>
-                                <td>b.tran@example.com</td>
-                                <td><span class="inactive1">Tạm Khóa</span></td>
-                                <td>User</td>
-                                <td>
-                                    <button>Info</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>10</td>
-                                <td>Zeron123</td>
-                                <td>b.tran@example.com</td>
-                                <td><span class="inactive1">Tạm Khóa</span></td>
-                                <td>User</td>
-                                <td>
-                                    <button>Info</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>11</td>
-                                <td>Zeron123</td>
-                                <td>b.tran@example.com</td>
-                                <td><span class="inactive1">Tạm Khóa</span></td>
-                                <td>User</td>
-                                <td>
-                                    <button>Info</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>12</td>
-                                <td>Zeron123</td>
-                                <td>b.tran@example.com</td>
-                                <td><span class="inactive1">Tạm Khóa</span></td>
-                                <td>User</td>
-                                <td>
-                                    <button>Info</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>13</td>
-                                <td>Zeron123</td>
-                                <td>b.tran@example.com</td>
-                                <td><span class="inactive1">Tạm Khóa</span></td>
-                                <td>User</td>
-                                <td>
-                                    <button>Info</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>14</td>
-                                <td>Zeron123</td>
-                                <td>b.tran@example.com</td>
-                                <td><span class="inactive1">Tạm Khóa</span></td>
-                                <td>User</td>
-                                <td>
-                                    <button>Info</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>15</td>
-                                <td>Zeron123</td>
-                                <td>b.tran@example.com</td>
-                                <td><span class="inactive1">Tạm Khóa</span></td>
-                                <td>User</td>
-                                <td>
-                                    <button>Info</button>
-                                </td>
-                            </tr>
+                        <tbody id="userlist">
                             
-                            
-                        
                             <!-- Dữ liệu từ cơ sở dữ liệu sẽ được chèn vào đây -->
                         </tbody>
                     </table>
@@ -469,7 +317,12 @@
             <p>HELLO</p>
         </div>
     </div>
-    <script src = "../assets/js/admin.js"></script>
+    <script src = "../assets/js/admin.js" defer></script>
     <script src = "../assets/js/seatLayout.js"></script>
+    <script>
+        window.onload = function() {
+            getUser();
+        };
+    </script>
 </body>
 </html>
