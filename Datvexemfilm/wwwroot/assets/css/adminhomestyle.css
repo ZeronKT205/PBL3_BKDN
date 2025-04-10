@@ -1,0 +1,173 @@
+html {
+    line-height: 1.5;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  input,
+  textarea,
+  select,
+  button {
+    outline: none;
+    font: inherit;
+  }
+  input {
+    line-height: normal;
+  }
+  label,
+  button {
+    cursor: pointer;
+    user-select: none !important;
+  }
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+    user-select: none !important;
+  }
+  
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* Mobie: width < 740px */
+  @media only screen and (max-width: 46.1875em) {
+    input[type="color"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="email"],
+    input[type="month"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="text"],
+    input[type="time"],
+    input[type="url"],
+    input[type="week"],
+    select:focus,
+    textarea {
+      font-size: 16px;
+    }
+  }
+
+
+  body{
+    display:grid;
+    grid-template-columns: 200px auto;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    font-size: 16px;
+  }
+
+  .navbar{
+    background: #332a51;
+    color: white;
+    display:flex;
+    flex-direction: column;
+    border-right: 3px solid rgb(128, 111, 111);
+  }
+.navbar__logo{
+    display:flex;
+    align-items: flex-end;
+    font-size: 33px;
+    gap: 10px;
+    padding:5px 20px;
+    color: rgb(255, 45, 22);
+    font-weight: bold;
+    font-family: cursive;
+    background: #332a51;
+}
+.navbar__logo:hover{
+    cursor: pointer;
+}
+.title{
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+    width:100%;
+    color:rgb(168, 161, 161);
+    background: #211b36;
+    
+}
+.navbar__logo img{
+    width:40px;
+}
+
+.navbar__management div{
+    padding: 10px 10px;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.navbar__management div p{
+    font-size:14px;
+    vertical-align: middle;
+}
+.navbar__management div:hover{
+    cursor:pointer;
+    background-color: #4b3b75;
+    transform: translateX(3px) translateY(-1px);
+    box-shadow: 0 4px 12px rgba(158, 49, 163, 0.2);
+}
+
+.mainPage{
+  overflow-y:auto;
+}
+.mainPage__Welcome{
+    display: flex;
+    width:100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background:linear-gradient(to top, rgba(0,0,0,0.3),rgb(69, 49, 62)), url("../images/bg__admin.jpg") no-repeat center/cover;
+    color: white;
+    font-weight: normal;
+    font-size: 24px;
+    font-family:sans-serif;
+}
+.mainPage__Welcome h1{
+    width:70%;
+    text-align: center;
+    background:linear-gradient(to top, rgba(108, 38, 118, 0.1),rgb(0,0,0,0.1)) ;
+    padding: 10px 0;
+    box-shadow: 0 8px 6px rgba(207, 44, 180, 0.2);
+    border-radius: 10px;
+    animation: slideRight 1.5s ease-in-out forwards;
+}
+.mainPage__Welcome span{
+    color:rgb(244, 47, 182);
+}
+
+.hidden{
+    display: none !important;
+}
+.active{
+    background-color: #4b3b75;
+    transform: translateX(4px) translateY(-1px);
+    box-shadow: 0 4px 12px rgba(158, 49, 163, 0.2);
+    color:rgb(93, 153, 205);
+}

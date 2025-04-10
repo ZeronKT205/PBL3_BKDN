@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeron | Detail Movie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel = "stylesheet" href = "../assets/css/loginstyle.css">
+    <link rel = "stylesheet" href = "../assets/css/style.css">
+    <link rel = "stylesheet" href ="../assets/css/signinstyle.css">
+    <link rel = "stylesheet" href = "../assets/css/detailmoviestyle.css">
+    <link rel = "stylesheet" href = "../assets/css/animation.css">
+</head>
+<body>
+    <div class="container">
+        <!--NAVBAR -->
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <img src="../assets/images/logo.png" alt="logo" class="navbar__logo-item">
+                <span class = "navbar__logo-name">Zeron</span>
+            </div>
+            <ul class="navbar__content">
+                <li><a href = "#" class="navbar__content-item1">TRANG CHỦ</a></li>
+                <li><a href = "#" class="navbar__content-item1">ĐẶT VÉ</a></li>
+                <button class="navbar__content-btn" onclick ="goToPageLogin2()" >ĐĂNG NHẬP</button>
+            </ul>
+        </nav>
+        <!--END NAVBAR -->
+
+        <div class="detailmovie">
+            <div class="maincontainer">
+                <div>
+                    <img src="../assets/images/poster/movie1.jpg" alt="poster" class="maincontainer__poster">
+                </div>
+                <ul class="maincontainer__movieInf">
+                    <li><h2 class="maincontainer__movieInf-title">VÒNG TRÒN OAN NGHIỆT (T16)</h2></li>
+                    <li>
+                        <div class = "maincontainer__movieInf__block1">
+                            <ul class="maincontainer__movieInf__block1-title">
+                                <p>Đạo diễn:</p>
+                                <p>Thể loại:</p>
+                                <p>Khởi chiếu:</p>
+                                <p>Thời Lượng:</p>
+                                <p>Ngôn ngữ:</p>
+                            </ul>
+                            <ul class = "maincontainer__movieInf__block1__Inf">
+                                <p class="maincontainer__movieInf__block1__Inf-director">Hideo Nakata</p>
+                                <p class="maincontainer__movieInf__block1__Inf-genre">Kinh dị</p>
+                                <p class="maincontainer__movieInf__block1__Inf-releaseDay">21-03-2025</p>
+                                <p class="maincontainer__movieInf__block1__Inf-durationMins">95 phút</p>
+                                <p class="maincontainer__movieInf__block1__Inf-language">Phụ đề Tiếng Việt</p>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div class="maincontainer__bookingbtn">
+                    <button class = "booking-btn" onclick = "showTab()" >Đặt Vé</button>
+                </div>
+            </div>
+            
+            <div class="buttoncontainer">
+                <button class="buttoncontainer__description active" onclick = "toggleContent('description')" >CHI TIẾT</button>
+                <button class="buttoncontainer__trailer" onclick = "toggleContent('trailer')" >TRAILER</button>
+                <button class= "buttoncontainer__schedule" onclick = "toggleContent('schedule')" >LỊCH CHIẾU</button>
+            </div>
+
+            <!-- nội dung khi bấm vào các button-->
+            <div class="description"><p>Trong qua trình điều tra nguyên nhân cái chết của cháu gái cùng với ba người bạn sau khi xem một đoạn băng video bị nguyền rủa. Vô tình Reiko tìm thấy đoạn băng, xem nó và nhận được một cuộc gọi điện thoại thông báo rằng cô sẽ chết trong một tuần.</p></div>
+            
+            <div class="trailer hidden">
+                <iframe class = "trailer__video" width="530" height="315" src="https://www.youtube.com/embed/epgybI1Jc7U?si=kHOWxIgbqvehR9Yz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            
+            <div class="schedule hidden">
+                <button><p class = "time">20:00 - 22:00</p><p class = "Screenx">Screenx 01</p></button>
+                <button><p class = "time">20:00 - 22:00</p><p class = "Screenx">Screenx 02</p></button>
+                <button><p class = "time">20:00 - 22:00</p><p class = "Screenx">Screenx 03</p></button>
+                <button><p class = "time">20:00 - 22:00</p><p class = "Screenx">Screenx 04</p></button>
+                <button><p class = "time">20:00 - 22:00</p><p class = "Screenx">Screenx 01</p></button>
+                <button><p class = "time">20:00 - 22:00</p><p class = "Screenx">Screenx 03</p></button>
+                <button><p class = "time">20:00 - 22:00</p><p class = "Screenx">Screenx 04</p></button>
+                <button><p class = "time">20:00 - 22:00</p><p class = "Screenx">Screenx 02</p></button>
+                <button><p class = "time">20:00 - 22:00</p><p class = "Screenx">Screenx 03</p></button>
+            </div>
+            <!-- nội dung khi bấm vào các button-->
+        </div>
+    </div>
+    <div class="schedule__Booking hidden">
+        <div class="schedule1">
+            <button><p class = "time">20:00 - 22:00</p><p class = "Screenx">Screenx 01</p></button>
+            <button><p class = "time">20:00 - 22:00</p><p class = "Screenx">Screenx 02</p></button>
+            <button><p class = "time">20:00 - 22:00</p><p class = "Screenx">Screenx 03</p></button>
+            <button><p class = "time">20:00 - 22:00</p><p class = "Screenx">Screenx 04</p></button>
+            <button><p class = "time">20:00 - 22:00</p><p class = "Screenx">Screenx 01</p></button>
+            <button><p class = "time">20:00 - 22:00</p><p class = "Screenx">Screenx 03</p></button>
+            <button><p class = "time">20:00 - 22:00</p><p class = "Screenx">Screenx 04</p></button>
+            <button><p class = "time">20:00 - 22:00</p><p class = "Screenx">Screenx 02</p></button>
+            <button><p class = "time">20:00 - 22:00</p><p class = "Screenx">Screenx 03</p></button>
+        </div>
+        <button><span class="close-btn" onclick="closeTab()">&#10006;</span></button>
+    </div>
+    <footer>
+        <div class = "container__footer">
+            <h3>Ký ức đẹp bắt đầu từ một bộ phim hay!</h3>
+        </div>
+        <div class="footercontent">
+            <div class="navbar__logo navbar__logo2">
+                <img src="../assets/images/logo.png" alt="logo" class="navbar__logo-item">
+                <span class = "navbar__logo-name">Zeron</span>
+            </div>
+            <ul class="footercontent__ContactInf">
+                <li><p class = "footercontent__header">Hỗ Trợ</p></li>
+                <li>
+                    <div class="footercontent__ContactInf-list">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>0948 203 816</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="footercontent__ContactInf-list">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>zeron_cinema@gmail.com</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="footercontent__ContactInf-list">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Số 16 Nguyễn Lương Bằng, Hòa Khánh Bắc, Đà Nẵng</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="footercontent__QuickLink">
+                <li><p class = "footercontent__header">Liên Kết Nhanh</p></li>
+                <li><a class = "footercontent__QuickLink-list" href ="##">Trang Chủ</a></li>
+                <li><a class = "footercontent__QuickLink-list" href ="##">Đặt Vé</a></li>
+                <li><a class = "footercontent__QuickLink-list" href ="##">Thể Loại</a></li>
+            </ul>
+            <ul class="footercontent__SocialMedia">
+                <p class = "footercontent__header">Mạng Xã Hội</p></li>
+                <div class = "footercontent__SocialMedia-list">
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                    <a href="https://zalo.me" target="_blank"><i class="fa-solid fa-comment-dots fa-2x"></i></a>
+                </div>
+            </ul>
+            <div><p class = "line"></p></div>
+        </div>
+     </footer>
+     <script src="../assets/js/tabpage.js"></script>
+</body>
+</html>
