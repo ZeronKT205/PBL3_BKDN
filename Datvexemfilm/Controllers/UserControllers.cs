@@ -17,22 +17,9 @@ public class UserControllers : ControllerBase
     }
 
     [HttpGet("getuser")]
-    public IActionResult getalluser()
+    public IEnumerable<Account> getalluser()
     { 
-        var q = _dbContext.Accounts.ToList();
-        if (q != null)
-        {
-            return Ok(new {
-                success = true,
-                data = q
-            });
-        }
-        else
-        {
-            return BadRequest(new {
-                success = false,
-            });
-        }
+        return _dbContext.Accounts.ToList();
     }
 }
 

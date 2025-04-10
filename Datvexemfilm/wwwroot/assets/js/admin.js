@@ -16,7 +16,33 @@ function TabPage(type){
     document.querySelector(".mainPage__"+type).classList.remove("hidden");
     document.querySelector(".navbar__management-"+type).classList.add("active");
 }
-
+async function getUser(){
+    const response = await fetch("http://localhost:5120/api/UserControllers/getuser", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        }
+    });
+    const data = await response.json();
+    const userList = document.querySelector("#userlist");
+    userList.innerHTML = ""; 
+    index=1;
+    data.forEach(user => {
+        const userItem = document.createElement("tr");
+        userItem.classList.add("user-item");
+        userItem.innerHTML = `
+            <td>${index++}</td>
+            <td>${user.username}</td>
+            <td>${user.email}</td>
+            <td>${user.status}</td>
+            <td>${user.role}</td>
+            <td>
+                <button>Info</button>
+            </td>
+        `;
+        userList.appendChild(userItem);
+    });
+}
 
 //add click cho cac tab
 document.querySelector(".navbar__management-Screens").addEventListener("click",function(){

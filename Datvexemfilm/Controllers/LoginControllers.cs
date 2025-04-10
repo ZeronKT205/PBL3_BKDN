@@ -35,6 +35,14 @@ namespace MySimpleApi.Controllers
                 });
             }
             else 
+            if( q.Status == "Ban")
+            {
+                return BadRequest(new {
+                    success = false,
+                    message = "Tài khoản đã bị khóa"
+                });
+            }
+            else 
             if (q.Password == req.Password){
             return Ok(new {
                 success = true,
