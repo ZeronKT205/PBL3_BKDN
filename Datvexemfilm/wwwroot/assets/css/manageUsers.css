@@ -1,6 +1,6 @@
 .mainPage__Users{
     display: grid;
-    grid-template-rows: 20% 80px 80% ;
+    grid-template-rows: 20% 90px 70% ;
     background:linear-gradient(to top, rgba(0,0,0,0.3),rgb(69, 49, 62)), url("../images/bg__admin.jpg") no-repeat center/cover;
     height: 100vh;
     width: 100%;
@@ -13,7 +13,7 @@
     border-radius:5px;
     color: white;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 18px;
     padding: 3px 15px;
     width: 300px;
     align-self: center;
@@ -25,11 +25,16 @@
 
 .mainPage__Users-search{
     display:flex;
-    width:100%;
-    align-self: center;
-    justify-content:center;
-    gap: 8px;
+    width:60%;
+    height: auto;
+    align-items: center;
+    justify-self: center;
     animation: fadeIn 1.3s ease-in-out forwards;
+    justify-content: center;
+    color: rgb(227, 46, 146);
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 3px inset rgb(130, 130, 130);
 }
 
 .mainPage__Users-search-input{
@@ -48,70 +53,92 @@
 }
 
 .mainPage__Users-inf{
-    margin-top: 20px;
+    width: 80%;
+    max-width: 1200px;
+    height: 80%;
+    margin: 50px auto;
+    border-radius: 12px;
+    overflow-y: auto;
+    background: rgba(9, 8, 10, 0.6);
+    border:2px inset rgb(180, 178, 180);
     animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 
 .mainPage__Users-inf-table {
-    width: 100%; 
+    width: 100%;
     border-collapse: collapse;
-    justify-self: center;
-    max-width: 1200px; 
+    border-radius: 12px;
+    animation: fadeIn 1.3s ease-in-out forwards;
 }
 .mainPage__Users-inf-table table{
     max-height: 100%;
 }
-.mainPage__Users-inf-table th {
-    background-color: rgb(135, 26, 139);
-    color: white;
-    font-size: 14px;
-    padding: 12px;
+.mainPage__Users-inf-table th,td{
+    padding: 12px 15px;
     text-align: left;
-    border-bottom: 4px inset #948e8e;
-    text-transform: uppercase;
+    border-bottom: 1px solid #ddd; /* Viền dưới các ô */
+    font-size: 16px;
+}
+.mainPage__Users-inf-table th {
+    background: #2b235f;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 12px;
+    text-align: center;
+    border-bottom:4px solid rgba(255, 255, 255, 0.1);
+}
 
-    z-index: 1;
+.mainPage__Users-inf-table thead{
     position:sticky;
     top:0;
+    z-index: 1;
 }
-tr:nth-child(even) {
-    background-color: rgba(125, 47, 132, 0.6); 
+.mainPage__Users-inf-table tbody tr{
+    background: rgba(52, 121, 170, 0.3);
+    color: rgb(217, 211, 211);
+    font-size: 15px;
+    text-align: center;
+    transition: background 0.3s ease;
 }
-tr:nth-child(odd) {
-    background-color: rgba(184, 42, 70, 0.7); 
+.mainPage__Users-inf-table tbody tr:nth-child(odd) {
+    background: rgba(79, 156, 211, 0.3);
 }
+
+.mainPage__Users-inf-table tbody tr:hover {
+    background: rgba(18, 41, 109, 0.5);
+}
+
 .mainPage__Users-inf-table td {
-    color: white;
-    font-size: 12px;
-    padding: 10px 12px;
-    text-align: left;
-    border-bottom: 1px solid #fff;
-}
-.container{
-    height:80%;
-    width:80%;
-    max-width: 1200px;
-    justify-self: center;
-    overflow-y:auto;
-    border: 2px solid #651d6b;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-
+/* Optional button style */
 .mainPage__Users-inf-table td button {
-    background-color: #4938b7;
     color: white;
-    padding: 8px 16px;
+    background: transparent;
+    border: 1px solid #aaa;
+    padding: 4px 10px;
     border-radius: 4px;
-    border: none;
     cursor: pointer;
-    font-size: 12px;
-    transition: background-color 0.3s;
+}
+
+.mainPage__Users-inf-table span {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
 }
 
 .mainPage__Users-inf-table td button:hover {
-    background-color: #536fe1; 
+    background: rgba(255, 255, 255, 0.1);
 }
+
+
 
 .mainPage__Users-inf-table td button:active {
     transform: scale(0.95); 
@@ -159,3 +186,8 @@ tr:nth-child(odd) {
 .container::-webkit-scrollbar:hover {
     width: 12px;  /* Mở rộng thanh cuộn khi hover */
 }
+
+
+
+
+/* STYLE CHO CHỨC NĂNG THÊM TÀI KHOẢN  */

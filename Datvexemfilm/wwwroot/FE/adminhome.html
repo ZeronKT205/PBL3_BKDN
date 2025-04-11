@@ -58,33 +58,86 @@
             </div>
             <!-- Danh Sach Nguoi Dung -->
             <div class="mainPage__Users-inf">
-                <div class="container">
-                    <table class = "mainPage__Users-inf-table">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Username</th>
-                                <th>Email</th>
-                                <th>Status</th>
-                                <th>Roles</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody id="userlist">
-                            
+                <table class = "mainPage__Users-inf-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                            <th>Roles</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userlist">
+                        <tr>
+                            <td>1</td>
+                            <td>admin</td>
+                            <td>admin@gmail.com</td>
+                            <td><span>active</span></td>
+                            <td>Admin</td>
+                            <td><button class = "RemoveUser">Remove</button></td>     
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>admin</td>
+                            <td>admin@gmail.com</td>
+                            <td><span>active</span></td>
+                            <td>Admin</td>
+                            <td><button class = "EditUser">Remove</button></td>     
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>admin</td>
+                            <td>admin@gmail.com</td>
+                            <td><span>active</span></td>
+                            <td>Admin</td>
+                            <td><button class = "EditUser">Remove</button></td>     
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>admin</td>
+                            <td>admin@gmail.com</td>
+                            <td><span>active</span></td>
+                            <td>Admin</td>
+                            <td><button class = "EditUser">Remove</button></td>     
+                        </tr>
                             <!-- Dữ liệu từ cơ sở dữ liệu sẽ được chèn vào đây -->
-                        </tbody>
-                    </table>
-                </div>
+                    </tbody>
+                </table>
             </div>
         </div>
         <!-- END QUAN LY TAI KHOAN -->
 
-        <div class="mainPage__Screens hidden">
+        <div class="mainPage__Screens">
             <div class="mainPage__Screens-title">
                 <h1>Manage Screens</h1>
             </div>
+            <div class = "mainPage__Screens-search">
+                <div>
+                    <h1>SCREENX</h1>
+                </div>
+                <!-- BUTTON SEARCH VÀ ADD THUỘC TÍNH POSITION -->
+                <div class="mainPage__Screens__BlockSearch">
+                    <div class="mainPage__Screens__BlockSearch-screen">
+                        <select class = "mainPage__Screens__BlockSearch-screen-select">
+                            <option value="0">Phòng Chiếu</option>
+                            <option>ScreenA</option>
+                            <option>ScreenB</option>
+                            <option>ScreenC</option>
+                            <option>ScreenD</option>
+                            <option>ScreenE</option>
+                        </select>
+                    </div>
+                    <div class="mainPage__Screens__BlockSearch-button">
+                        <button class = "mainPage__Screens__BlockSearch-button-search"><i class="fas fa-magnifying-glass"></i></button>
+                        <button class = "mainPage__Screens__BlockSearch-button-add"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+                             <!--END BUTTON SEARCH VÀ ADD THUỘC TÍNH POSITION -->
+            </div>    
             <div class="mainPage__Screens__ContainerListCard">
+                <!-- DANH SÁCH PHÒNG CHIẾU NẰM Ở ĐÂY -->
                 <div class="mainPage__Screens__ContainerListCard__item">
                     <h2 class="mainPage__Screens__ContainerListCard__item-title">Screen A</h2>
                     <div class="mainPage__Screens__ContainerListCard__item__Containerinf">
@@ -93,8 +146,8 @@
                             <p>50</p>
                         </div>
                         <div class="mainPage__Screens__ContainerListCard__item__Containerinf-AvailablenumSeats">
-                            <span>Available Seats</span>
-                            <p>10</p>
+                            <span>Row | Col</span>
+                            <p>5 | 10</p>
                         </div>
                         <div class="mainPage__Screens__ContainerListCard__item__Containerinf-type">
                             <span>Room Type</span>
@@ -114,8 +167,8 @@
                             <p>50</p>
                         </div>
                         <div class="mainPage__Screens__ContainerListCard__item__Containerinf-AvailablenumSeats">
-                            <span>Available Seats</span>
-                            <p>10</p>
+                            <span>Row | Col</span>
+                            <p>5 | 10</p>
                         </div>
                         <div class="mainPage__Screens__ContainerListCard__item__Containerinf-type">
                             <span>Room Type</span>
@@ -135,8 +188,8 @@
                             <p>50</p>
                         </div>
                         <div class="mainPage__Screens__ContainerListCard__item__Containerinf-AvailablenumSeats">
-                            <span>Available Seats</span>
-                            <p>10</p>
+                            <span>Row | Col</span>
+                            <p>5 | 10</p>
                         </div>
                         <div class="mainPage__Screens__ContainerListCard__item__Containerinf-type">
                             <span>Room Type</span>
@@ -156,8 +209,8 @@
                             <p>50</p>
                         </div>
                         <div class="mainPage__Screens__ContainerListCard__item__Containerinf-AvailablenumSeats">
-                            <span>Available Seats</span>
-                            <p>10</p>
+                            <span>Row | Col</span>
+                            <p>5 | 10</p>
                         </div>
                         <div class="mainPage__Screens__ContainerListCard__item__Containerinf-type">
                             <span>Room Type</span>
@@ -173,15 +226,29 @@
             <div class="mainPage__Screens__DetailContainer hidden">
                 <div class="containerScreenx">
                     <div class="input-container">
-                        <h1>Chọn Số Hàng và Cột</h1>
-                        <label for="rows">Số Hàng: </label>
-                        <input type="number" id="rows" min="1" placeholder="Số hàng" />
-                        <label for="cols">Số Cột: </label>
-                        <input type="number" id="cols" min="1" placeholder="Số cột" />
-                        <button onclick="generateSeats()">Tạo Sơ Đồ</button>
+                        <h1>Chỉnh Sửa Phòng Chiếu</h1>
+                        <div class = "input-container__block1">
+                            <label for="rows">Số Hàng: </label>
+                            <input type="number" id="rows" min="1" placeholder="Số hàng" />
+                            <label for="cols">Số Cột: </label>
+                            <input type="number" id="cols" min="1" placeholder="Số cột" />
+                            <label >Kiểu Phòng </label>
+                            <select id="type" placeholder="VIP ">
+                                <option value="VIP">VIP</option>
+                                <option value="Normal">Normal</option>
+                            </select>
+                            <label>Trạng Thái </label>
+                            <select id="status_Room" placeholder="active">
+                                <option value="active">active</option>
+                                <option value="inactive">inactive</option>
+                            </select>
+                        </div>
+                        <div class = "input-container__block2">
+                            <button onclick="generateSeats()">Tạo Sơ Đồ</button>
 
-                        <!-- CẦN ADD SỰ KIỆN LƯU DỮ LIỆU VÀO DATABASE -->
-                        <button class ="SubmitChangeSeatLayout" >Submit</button>
+                            <!-- CẦN ADD SỰ KIỆN LƯU DỮ LIỆU VÀO DATABASE -->
+                            <button class ="SubmitChangeSeatLayout" >Submit</button>
+                        </div>
                         <h1>\____________SCREEN____________/</h1>
                     </div>
             
@@ -251,6 +318,78 @@
                             <td><span>Đang Chiếu</span></td>
                             <td><Button>Edit</Button></td>
                         </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>The Dark Knight</td>
+                            <td>Action, Crime, Drama</td>
+                            <td>18-6-2008</td>
+                            <td><span>Đang Chiếu</span></td>
+                            <td><Button>Edit</Button></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>The Dark Knight</td>
+                            <td>Action, Crime, Drama</td>
+                            <td>18-6-2008</td>
+                            <td><span>Đang Chiếu</span></td>
+                            <td><Button>Edit</Button></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>The Dark Knight</td>
+                            <td>Action, Crime, Drama</td>
+                            <td>18-6-2008</td>
+                            <td><span>Đang Chiếu</span></td>
+                            <td><Button>Edit</Button></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>The Dark Knight</td>
+                            <td>Action, Crime, Drama</td>
+                            <td>18-6-2008</td>
+                            <td><span>Đang Chiếu</span></td>
+                            <td><Button>Edit</Button></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>The Dark Knight</td>
+                            <td>Action, Crime, Drama</td>
+                            <td>18-6-2008</td>
+                            <td><span>Đang Chiếu</span></td>
+                            <td><Button>Edit</Button></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>The Dark Knight</td>
+                            <td>Action, Crime, Drama</td>
+                            <td>18-6-2008</td>
+                            <td><span>Đang Chiếu</span></td>
+                            <td><Button>Edit</Button></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>The Dark Knight</td>
+                            <td>Action, Crime, Drama</td>
+                            <td>18-6-2008</td>
+                            <td><span>Đang Chiếu</span></td>
+                            <td><Button>Edit</Button></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>The Dark Knight</td>
+                            <td>Action, Crime, Drama</td>
+                            <td>18-6-2008</td>
+                            <td><span>Đang Chiếu</span></td>
+                            <td><Button>Edit</Button></td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>The Dark Knight</td>
+                            <td>Action, Crime, Drama</td>
+                            <td>18-6-2008</td>
+                            <td><span>Đang Chiếu</span></td>
+                            <td><Button>Edit</Button></td>
+                        </tr>
                         <!-- Thêm nhiều phim nếu cần -->
                     </tbody>
                 </table>
@@ -282,31 +421,150 @@
 
             </div>
         </div>
-        <div class="mainPage__Shows">
+        <div class="mainPage__Shows hidden">
             <div class="mainPage__Shows-title">
                 <h1>Manage Shows</h1>
             </div>
             <div class = "mainPage__Shows__Containersearch">
-                
+                <div class = "mainPage__Shows__Containersearch-date">
+                    <label>Chọn Ngày</label>
+                    <input type="date" class = "mainPage__Shows__Containersearch-date-input">
+                </div>
+                <div class = "mainPage__Shows__Containersearch-screen">
+                    <label>Chọn Phòng</label>
+                    <select class = "mainPage__Shows__Containersearch-screen-select">
+                        <option value="0">Phòng Chiếu</option>
+                        <option>ScreenA</option>
+                        <option>ScreenB</option>
+                        <option>ScreenC</option>
+                        <option>ScreenD</option>
+                        <option>ScreenE</option>
+                    </select>
+                </div>
+                <div class = "mainPage__Shows__Containersearch-movie">
+                    <label>Chọn Phim</label>
+                    <select class = "mainPage__Shows__Containersearch-movie-select">
+                        <option value="0">Tất Cả Phim</option>
+                        <option>Em Của Anh ĐỪng Của Ai</option>
+                        <option>Vòng Tròn Oan Nghiệt</option>
+                        <option>Cuộc Tấn Công Mãnh Liệt</option>
+                    </select>
+                </div>
+                <div class="mainPage__Shows__Containersearch-button">
+                    <button class = "mainPage__Shows__Containersearch-button-search"><i class="fas fa-magnifying-glass"></i></button>
+                    <button class = "mainPage__Shows__Containersearch-button-add"><i class="fas fa-plus"></i></button>
+                </div>
             </div>
             <!-- Danh Sach suat chieu -->
             <div class="mainPage__Shows__containerinfo">
-                <div class="mainPage__Shows__containerinfo__block1">
-                    <table class = "mainPage__Shows__containerinfo__block1-table">
-                        <thead>
-                            <tr>
+                <table class = "mainPage__Shows__containerinfo-table">
+                    <thead>
+                        <tr>
+                            <th>Movie</th>
+                            <th>Screen</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>The Dark Knight</td>
+                            <td>Screen A</td>
+                            <td>2023-10-01</td>
+                            <td>18:00</td>
+                            <td>100000</td>
+                            <td><button class = "EditShow">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>The Dark Knight</td>
+                            <td>Screen A</td>
+                            <td>2023-10-01</td>
+                            <td>18:00</td>
+                            <td>100000</td>
+                            <td><button class = "EditShow">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>The Dark Knight</td>
+                            <td>Screen A</td>
+                            <td>2023-10-01</td>
+                            <td>18:00</td>
+                            <td>100000</td>
+                            <td><button class = "EditShow">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>The Dark Knight</td>
+                            <td>Screen A</td>
+                            <td>2023-10-01</td>
+                            <td>18:00</td>
+                            <td>100000</td>
+                            <td><button class = "EditShow">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>The Dark Knight</td>
+                            <td>Screen A</td>
+                            <td>2023-10-01</td>
+                            <td>18:00</td>
+                            <td>100000</td>
+                            <td><button class = "EditShow">Edit</button></td>
+                        </tr>
 
-                            </tr>
-                        </thead>
-                        <tbody>
- 
+                        <tr>
+                            <td>The Dark Knight</td>
+                            <td>Screen A</td>
+                            <td>2023-10-01</td>
+                            <td>18:00</td>
+                            <td>100000</td>
+                            <td><button class = "EditShow">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>The Dark Knight</td>
+                            <td>Screen A</td>
+                            <td>2023-10-01</td>
+                            <td>18:00</td>
+                            <td>100000</td>
+                            <td><button class = "EditShow">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>The Dark Knight</td>
+                            <td>Screen A</td>
+                            <td>2023-10-01</td>
+                            <td>18:00</td>
+                            <td>100000</td>
+                            <td><button class = "EditShow">Edit</button></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>The Dark Knight</td>
+                            <td>Screen A</td>
+                            <td>2023-10-01</td>
+                            <td>18:00</td>
+                            <td>100000</td>
+                            <td><button class = "EditShow">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>The Dark Knight</td>
+                            <td>Screen A</td>
+                            <td>2023-10-01</td>
+                            <td>18:00</td>
+                            <td>100000</td>
+                            <td><button class = "EditShow">Edit</button></td>
+                        </tr>
+                        <tr>
+                            <td>The Dark Knight</td>
+                            <td>Screen A</td>
+                            <td>2023-10-01</td>
+                            <td>18:00</td>
+                            <td>100000</td>
+                            <td><button class = "EditShow">Edit</button></td>
+                        </tr>
                             
                             
                         
                             <!-- Dữ liệu từ cơ sở dữ liệu sẽ được chèn vào đây -->
-                        </tbody>
-                    </table>
-                </div>
+                    </tbody>
+                </table>
             </div>
         </div>
         </div>

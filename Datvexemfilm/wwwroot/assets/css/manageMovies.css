@@ -1,6 +1,6 @@
 .mainPage__Movies{
     display: grid;
-    grid-template-rows: 20% 80px 80%;
+    grid-template-rows: 20% 90px 70%;
     background:linear-gradient(to top, rgba(0,0,0,0.3),rgb(69, 49, 62)), url("../images/bg__admin.jpg") no-repeat center/cover;
     height: 100vh;
     width: 100%;
@@ -15,9 +15,9 @@
     border-radius:5px;
     color: white;
     font-weight: bold;
-    font-size: 30px;
-    padding: 3px 15px;
-    width: 300px;
+    font-size: 35px;
+    padding: 3px 20px;
+    width: 350px;
     align-self: center;
     justify-self: center;
     text-align: center;
@@ -26,11 +26,16 @@
 
 .mainPage__Movies-search{
     display:flex;
-    width:100%;
-    align-self: center;
-    justify-content:center;
-    gap: 8px;
+    width:60%;
+    height: auto;
+    align-items: center;
+    justify-self: center;
     animation: fadeIn 1.3s ease-in-out forwards;
+    justify-content: center;
+    color: rgb(227, 46, 146);
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 3px inset rgb(130, 130, 130);
 }
 .mainPage__Movies-search-input{
     width: 400px;
@@ -50,20 +55,20 @@
 .mainPage__Movies__Container {
     width: 80%;
     max-width: 1200px;
-    max-height: 70%;
-    margin: 20px;
-    justify-self: center;
+    height: 80%;
+    margin: 50px auto;
+    border-radius: 12px;
     overflow-y: auto;
-    border-radius: 5px;
-    border:1px solid rgb(139, 139, 139);
+    background: rgba(9, 8, 10, 0.6);
+    border:2px inset rgb(180, 178, 180);
     animation: fadeIn 1.5s ease-in-out forwards;
 }
 
 .mainPage__Movies__Container table {
     width: 100%;
-    max-height: 100%;
-    border-collapse: collapse; /* Gộp các viền của bảng lại */
-    color: white;
+    border-collapse: collapse;
+    border-radius: 12px;
+    animation: fadeIn 1.3s ease-in-out forwards;
 }
 
 .mainPage__Movies__Container th, td {
@@ -74,27 +79,54 @@
 }
 
 .mainPage__Movies__Container th {
-    background-color: #22313d; /* Màu nền của tiêu đề cột */
-    color: white; /* Màu chữ */
+    background: #2b235f;
+    color: white;
     font-weight: bold;
+    font-size: 17px;
+    padding: 12px;
+    text-align: center;
+    border-bottom:4px solid rgba(255, 255, 255, 0.1);
+}
+.mainPage__Movies__Container thead{
+    position:sticky;
     top:0;
     z-index: 1;
-    position: sticky;
+}
+.mainPage__Movies__Container tbody tr{
+    background: rgba(52, 121, 170, 0.3);
+    color: rgb(217, 211, 211);
+    font-size: 15px;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+.mainPage__Movies__Container tbody tr:nth-child(odd) {
+    background: rgba(79, 156, 211, 0.3);
 }
 
-.mainPage__Movies__Container tr:nth-child(even) {
-    background-color: rgba(165, 46, 70, 0.7); 
-    transition: all 0.4s ease;
-}
-.mainPage__Movies__Container tr:nth-child(odd) {
-    background-color: rgba(7, 100, 120, 0.7); 
-    transition: all 0.4s ease;
+.mainPage__Movies__Container tbody tr:hover {
+    background: rgba(18, 41, 109, 0.5);
 }
 
-.mainPage__Movies__Container tr:hover {
-    opacity: 0.7;
+.mainPage__Movies__Container td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Optional button style */
+.mainPage__Movies__Container td button {
+    color: white;
+    background: transparent;
+    border: 1px solid #aaa;
+    padding: 4px 10px;
+    border-radius: 4px;
     cursor: pointer;
 }
+
+.mainPage__Movies__Container td button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
 
 .mainPage__Movies__Container span {
     display: inline-block;
@@ -104,16 +136,7 @@
     border-radius: 5px;
 }
 
-button {
-    padding: 6px 18px;
-    background-color: #008CBA;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
+
 
 button:hover {
     background-color: #006F8E; /* Màu nền khi di chuột vào nút */
@@ -180,10 +203,10 @@ button:hover {
     top: 10px;
     right: 10px;
     background: rgb(116, 42, 42);
-    width:45px;
+    width:54px;
     border: none;
     border-radius: 10px;;
-    font-size: 24px;
+    font-size: 22px;
     color: white;
     cursor: pointer;
     outline: none;

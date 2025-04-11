@@ -1,6 +1,6 @@
 .mainPage__Screens{
     display: grid;
-    grid-template-rows: 25% auto !important;
+    grid-template-rows: 20% 130px auto !important;
     background:linear-gradient(to top, rgba(27, 25, 25, 0.3),rgb(68, 48, 61)), url("../images/bg__admin.jpg") no-repeat center/cover;
     height: 100vh;
     width: 100%;
@@ -37,9 +37,13 @@
     overflow-x: hidden;
     justify-self: center;
     align-self: start;
-    border-radius: 10px;
+    border-radius: 20px;
     padding:5px;
     padding-right:20px;
+    background:rgba(21, 20, 20, 0.5);
+    padding: 20px;
+    border:5px inset rgb(89, 52, 129);
+    box-shadow: 0px 4px 12px rgb(153, 25, 83);
 }
 
 .mainPage__Screens__ContainerListCard__item{
@@ -114,7 +118,7 @@
 }
 /* Kiểu thanh cuộn */
 .mainPage__Screens__ContainerListCard::-webkit-scrollbar {
-    width: 9px;  /* Đặt độ rộng cho thanh cuộn */
+    width: 0px;  /* Đặt độ rộng cho thanh cuộn */
 }
 .mainPage__Screens__ContainerListCard__item__Containerinf-status p{
     background-color:rgb(20, 129, 65);
@@ -153,12 +157,12 @@
     align-items: center;
 }
 .containerScreenx{
-    width: 60%;
+    width: 70%;
     height: auto;
-    min-height: 70%;
+    min-height: 75%;
     max-height:100%;
     display: grid;
-    grid-template-rows: 30% 80%;
+    grid-template-rows: 40% 60%;
     justify-content: center;
     text-align: center;
     border:1px solid rgb(255, 255, 255);
@@ -170,19 +174,39 @@
     box-shadow: 0px 4px 12px rgb(153, 25, 83);
 
 }
-.containerScreenx h1{
-    margin: 10px;
-}
 .containerScreenx input{
     margin-right:20px;
     width:100px;
     padding: 5px 10px;
     border-radius: 7px;
+    color:black;
+}
+.containerScreenx select{
+    margin-right:20px;
+    width:100px;
+    padding: 5px 10px;
+    border-radius: 7px;
+    background:white;
+    color:black;
 }
 .input-container{
     margin-bottom:10px;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-
+.input-container__block1{
+    margin:30px 0;
+}
+.input-container__block2{
+    display: flex;
+    align-items: center;
+    width:100%;
+    justify-content:space-around;
+    padding:0 40px;
+}
 button {
     padding: 10px 20px;
     background-color: #287db6;
@@ -256,3 +280,35 @@ button:hover {
     transform: scale(0.95);
     background: rgb(255, 0, 0);
 } 
+
+
+
+
+/* Chuc Nang Tim Kiem va Them Phong Chieu */
+.mainPage__Screens-search{
+    display:flex;
+    width:90%;
+    max-width: 1400px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-left:5px inset rgb(248, 244, 248);
+    color:rgb(239, 224, 224);
+    align-self:flex-start;
+    justify-self: center;
+    padding: 15px 30px;
+    margin-bottom:20px;
+}
+.mainPage__Screens__BlockSearch{
+    display:flex;
+    align-items: center;
+    gap:20px;
+}
+.mainPage__Screens__BlockSearch-screen select{
+    padding:10px;
+    border-radius: 10px;
+    background:white;
+    color:black;
+    font-size: 18px;
+    font-weight: 500;
+}
