@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "44hNdMJ4KdPFuBcjWIxgD7TeJUPHVCzfyatzPyuOGYM=",
+  "Hash": "pcl7HxZhzRtKgbPmeiux9wxQBvdeHf6q7VLk0hi8xXw=",
   "Source": "Datvexemfilm",
   "BasePath": "_content/Datvexemfilm",
   "Mode": "Default",
@@ -10,4957 +10,923 @@
     {
       "Name": "Datvexemfilm\\wwwroot",
       "Source": "Datvexemfilm",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\adminhomestyle.css",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\css\\adminhomestyle.css",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/css/adminhomestyle#[.{fingerprint}]?.css",
+      "RelativePath": "assets/css/adminhomestyle.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "3eb71ltfgc",
-      "Integrity": "a9oYycT1jvFj8uaadf+UoJ/6l8QNvrpGcoJ6taqrr2c=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\adminhomestyle.css"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\animation.css",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\css\\animation.css",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/css/animation#[.{fingerprint}]?.css",
+      "RelativePath": "assets/css/animation.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "xy9yxm6d3c",
-      "Integrity": "ByCpzlm6y3f6PhA/CcMC88GvKZrcAh+B3WcTT+i4rmE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\animation.css"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\detailmoviestyle.css",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\css\\detailmoviestyle.css",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/css/detailmoviestyle#[.{fingerprint}]?.css",
+      "RelativePath": "assets/css/detailmoviestyle.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "qvvhqs55pr",
-      "Integrity": "WmpXhI+is3eXgCUDe6tly9+CU6CWRnQmKKB+BV1JPDk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\detailmoviestyle.css"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\homestyle.css",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\css\\homestyle.css",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/css/homestyle#[.{fingerprint}]?.css",
+      "RelativePath": "assets/css/homestyle.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "jqpvs20yyu",
-      "Integrity": "C/inwY1uPSkfuy9kMa8K3nwa+pVhljGWJDAF2kb0s6w=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\homestyle.css"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\loginstyle.css",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\css\\loginstyle.css",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/css/loginstyle#[.{fingerprint}]?.css",
+      "RelativePath": "assets/css/loginstyle.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "d3ekzpxpdf",
-      "Integrity": "pyQYkHCLXsPNdXDpii+nq15l8Q7dtPqjWIyaJV01Y6g=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\loginstyle.css"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\manageMovies.css",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\css\\manageMovies.css",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/css/manageMovies#[.{fingerprint}]?.css",
+      "RelativePath": "assets/css/manageMovies.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "mhmjmhbm93",
-      "Integrity": "muLKUxnJuCZAxojPZrDXbB0vvQpaoJaqpdaeVA+hJEI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\manageMovies.css"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\manageScreens.css",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\css\\manageScreens.css",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/css/manageScreens#[.{fingerprint}]?.css",
+      "RelativePath": "assets/css/manageScreens.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "np60fs1it6",
-      "Integrity": "+xD/Nxv6qvpF8yx/d9vQ0oUD0eEDOnC9thJDqjdERXY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\manageScreens.css"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\manageShows.css",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\css\\manageShows.css",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/css/manageShows#[.{fingerprint}]?.css",
+      "RelativePath": "assets/css/manageShows.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "i16vfztiwo",
-      "Integrity": "VlvgG4CoukcSUn8UO7uzIMdvvjxdzKQTfzc5Mdp3gY0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\manageShows.css"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\manageUsers.css",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\css\\manageUsers.css",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/css/manageUsers#[.{fingerprint}]?.css",
+      "RelativePath": "assets/css/manageUsers.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "cqvr96ur5d",
-      "Integrity": "nAV4wNn0LZLo1GXTv32L11LOApMLaekP/8FiNz8ovZc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\manageUsers.css"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\signinstyle.css",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\css\\signinstyle.css",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/css/signinstyle#[.{fingerprint}]?.css",
+      "RelativePath": "assets/css/signinstyle.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "nkf4g3izl0",
-      "Integrity": "1wP0tKEKrGRp9PPdWSx3QdMfJ6db8ksSooewhvCIpk8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\signinstyle.css"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\style.css",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\css\\style.css",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/css/style#[.{fingerprint}]?.css",
+      "RelativePath": "assets/css/style.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "cxaxc61ixh",
-      "Integrity": "kKlfpSc9onpR5H+llthn2dDbJOsvy7c/pCTtdHrEhuc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\css\\style.css"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\background_index.jpg",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\background_index.jpg",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/background_index#[.{fingerprint}]?.jpg",
+      "RelativePath": "assets/images/background_index.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "x59sufra3y",
-      "Integrity": "mzgbwC7aWfPK0uzmse62Vs6t4qO8Yha4MovYAKloB84=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\background_index.jpg"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\bg__admin.jpg",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\bg__admin.jpg",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/bg__admin#[.{fingerprint}]?.jpg",
+      "RelativePath": "assets/images/bg__admin.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "f959mkyrwm",
-      "Integrity": "4wgIzd+Pc6JSO4H0KhCcS/+H4b+lpgsXII1wzXtn2uw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\bg__admin.jpg"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\bg__home.jpg",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\bg__home.jpg",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/bg__home#[.{fingerprint}]?.jpg",
+      "RelativePath": "assets/images/bg__home.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ngrsq9qf3g",
-      "Integrity": "+QexA2FlhTvlMYfW2GqQoQp1AHV1+xO/Bf0K3BFUG2E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\bg__home.jpg"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\bg_detail.jpg",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\bg_detail.jpg",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/bg_detail#[.{fingerprint}]?.jpg",
+      "RelativePath": "assets/images/bg_detail.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "nfc43xrpmp",
-      "Integrity": "8w6kNUOXOPku4WD6J8DpWq+0zTuQN36KRUpVtdG0ubA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\bg_detail.jpg"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\bg_index.jpg",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\bg_index.jpg",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/bg_index#[.{fingerprint}]?.jpg",
+      "RelativePath": "assets/images/bg_index.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "rz8f7vqu6x",
-      "Integrity": "Rz5lqv3ePkgNUJ5dnhgjK+g24mpnq8rSk2IRvDEdfg0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\bg_index.jpg"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\logo.png",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\logo.png",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/logo#[.{fingerprint}]?.png",
+      "RelativePath": "assets/images/logo.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ye3dg9plq5",
-      "Integrity": "ivakc7Y0JRwOwAyJBpOcpgYG6eoy8y6ZPQhJRHswbXI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\logo.png"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\LabMMT XemThongTinMangTrenHDHWindows.docx",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\LabMMT XemThongTinMangTrenHDHWindows.docx",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/mainPoster/LabMMT XemThongTinMangTrenHDHWindows#[.{fingerprint}]?.docx",
+      "RelativePath": "assets/images/mainPoster/LabMMT XemThongTinMangTrenHDHWindows.docx",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ncmpczb7vs",
-      "Integrity": "mVoddWdSufzvgsXZV+HzHm5H0RpnvLy9Gr5Om7knHd8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\mainPoster\\LabMMT XemThongTinMangTrenHDHWindows.docx"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\lac_troi.jpg",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\lac_troi.jpg",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/mainPoster/lac_troi#[.{fingerprint}]?.jpg",
+      "RelativePath": "assets/images/mainPoster/lac_troi.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "r4dptvdi61",
-      "Integrity": "RYhuNeL9lovUYapRmj2xzJXLAkT9IaZuO9hVZI4MFUY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\mainPoster\\lac_troi.jpg"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\movie5.webp",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\movie5.webp",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/mainPoster/movie5#[.{fingerprint}]?.webp",
+      "RelativePath": "assets/images/mainPoster/movie5.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "7jo0fwi255",
-      "Integrity": "Mwt6HTKBCERqjsUQhHaumUDWYV8Kz4oWBj5hfJpF31Y=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\mainPoster\\movie5.webp"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\movie6.webp",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\movie6.webp",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/mainPoster/movie6#[.{fingerprint}]?.webp",
+      "RelativePath": "assets/images/mainPoster/movie6.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "a99tu4ikom",
-      "Integrity": "HmJc8U9Q9tkcbZMGx72J6I4KmJK4GyP7N4Jt12X9s+k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\mainPoster\\movie6.webp"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\movie7.webp",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\movie7.webp",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/mainPoster/movie7#[.{fingerprint}]?.webp",
+      "RelativePath": "assets/images/mainPoster/movie7.webp",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "jqcwhj0dnj",
-      "Integrity": "eyVRu0e6Jj8uwPnb52e2u2436CLlZFljFD92VK713mU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\mainPoster\\movie7.webp"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\nha_gia_tien.jpg",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\nha_gia_tien.jpg",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/mainPoster/nha_gia_tien#[.{fingerprint}]?.jpg",
+      "RelativePath": "assets/images/mainPoster/nha_gia_tien.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "5mksqyezm2",
-      "Integrity": "o+bjJhCnq0TgCns3mLP3K6rMh9YYjjKJuwZL3cPT+fY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\mainPoster\\nha_gia_tien.jpg"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\quy_nhap_trang.jpg",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\quy_nhap_trang.jpg",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/mainPoster/quy_nhap_trang#[.{fingerprint}]?.jpg",
+      "RelativePath": "assets/images/mainPoster/quy_nhap_trang.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ep7f39jyxy",
-      "Integrity": "witjaUkmNfEItdMJls2gEmTAaqk8KOVuRaKTTvhAcYc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\mainPoster\\quy_nhap_trang.jpg"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\SafeExamBrowser(SED).zip",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\SafeExamBrowser(SED).zip",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/mainPoster/SafeExamBrowser(SED)#[.{fingerprint}]?.zip",
+      "RelativePath": "assets/images/mainPoster/SafeExamBrowser(SED).zip",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "cs1rbfsgey",
-      "Integrity": "NHeTk5vjVaTDBYNe2Q2Shl7u5Oko0k+NM29Ej2zWQCk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\mainPoster\\SafeExamBrowser(SED).zip"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\sat_thu.jpg",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\sat_thu.jpg",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/mainPoster/sat_thu#[.{fingerprint}]?.jpg",
+      "RelativePath": "assets/images/mainPoster/sat_thu.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "9pqr6bt7p7",
-      "Integrity": "E97fFGdvcKaBg+WdB1ZJuho668MmQZqa94gyoFhliAk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\mainPoster\\sat_thu.jpg"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie1.jpg",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\poster\\movie1.jpg",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/poster/movie1#[.{fingerprint}]?.jpg",
+      "RelativePath": "assets/images/poster/movie1.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "1y1lwa7y5x",
-      "Integrity": "54prsEMTt0/FF86irf5hT8ouARvwMVT7o8lr4ZNr02U=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\poster\\movie1.jpg"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie10.jpg",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\poster\\movie10.jpg",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/poster/movie10#[.{fingerprint}]?.jpg",
+      "RelativePath": "assets/images/poster/movie10.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "natvv7im9z",
-      "Integrity": "D0HJm0HX7PdUjA4TYdz60XHwqB+KkNzTCtDrssiiqcw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\poster\\movie10.jpg"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie2.jpg",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\poster\\movie2.jpg",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/poster/movie2#[.{fingerprint}]?.jpg",
+      "RelativePath": "assets/images/poster/movie2.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "r17t4d3v39",
-      "Integrity": "EW9MwZBS6B6ydzgI7QFKAQNRLsVqdDUekN6uVNJSJGY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\poster\\movie2.jpg"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie3.jpg",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\poster\\movie3.jpg",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/poster/movie3#[.{fingerprint}]?.jpg",
+      "RelativePath": "assets/images/poster/movie3.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "38oogvu1kq",
-      "Integrity": "o5zTjm3rAWJ5KO0FIoV/gkQlNtt9kiexJtzMiDxh9l8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\poster\\movie3.jpg"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie4.jpg",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\poster\\movie4.jpg",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/poster/movie4#[.{fingerprint}]?.jpg",
+      "RelativePath": "assets/images/poster/movie4.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "m7gry5508v",
-      "Integrity": "Lo8ghYFNVL6K9bAczckRiXkMkf57oLVzyPX2sXKsZHc=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\poster\\movie4.jpg"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie5.jpg",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\poster\\movie5.jpg",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/poster/movie5#[.{fingerprint}]?.jpg",
+      "RelativePath": "assets/images/poster/movie5.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "er6i1a6nqq",
-      "Integrity": "uhuV96tl5qhksnRmXurQxWVUfAHHWxCqKd6Ci+tO0tk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\poster\\movie5.jpg"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie7.jpg",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\poster\\movie7.jpg",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/poster/movie7#[.{fingerprint}]?.jpg",
+      "RelativePath": "assets/images/poster/movie7.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "hjg73gw2e6",
-      "Integrity": "gw2/ybZTFx3lGxQ7Zx94WXe3AxAe14cWGDbqVNeTWC8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\poster\\movie7.jpg"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie8.jpg",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\poster\\movie8.jpg",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/poster/movie8#[.{fingerprint}]?.jpg",
+      "RelativePath": "assets/images/poster/movie8.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "uz65013127",
-      "Integrity": "qsanSonEPDAJO3gP+T8RraqLavBj5GnTI5ddMev5/pE=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\poster\\movie8.jpg"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie9.jpg",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\poster\\movie9.jpg",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/poster/movie9#[.{fingerprint}]?.jpg",
+      "RelativePath": "assets/images/poster/movie9.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "zcss1kgvn7",
-      "Integrity": "k68wEsXKsVJyG1fl1F2MHPgqoiyumhGgxPQyqkLufpw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\poster\\movie9.jpg"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\shield.png",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\images\\shield.png",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/images/shield#[.{fingerprint}]?.png",
+      "RelativePath": "assets/images/shield.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "m0eka8kqv9",
-      "Integrity": "9q32xzHw+fdfGmhz1co4kdYFuSH5Ck6gufmnIpHjcXo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\shield.png"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\js\\admin.js",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\js\\admin.js",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/js/admin#[.{fingerprint}]?.js",
+      "RelativePath": "assets/js/admin.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "svokrnw5cr",
-      "Integrity": "CE6Xs5GCFv3VhoRaZStxF5O4YA6rWl50MGTuuSgYgEo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\admin.js"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\js\\seatLayout.js",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\js\\seatLayout.js",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/js/seatLayout#[.{fingerprint}]?.js",
+      "RelativePath": "assets/js/seatLayout.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "r03yexw9bn",
-      "Integrity": "y3UnIijoWSFTutjbonVfittjLYO34zx7sDsqNDUswTQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\seatLayout.js"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\js\\tabpage.js",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\assets\\js\\tabpage.js",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "assets/js/tabpage#[.{fingerprint}]?.js",
+      "RelativePath": "assets/js/tabpage.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "elur3qrafw",
-      "Integrity": "oo6pbJ3GjoYXvajp5stFIGAkq4um51PwgsbpsYUIlQ0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\js\\tabpage.js"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\adminhome.html",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\FE\\adminhome.html",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "FE/adminhome#[.{fingerprint}]?.html",
+      "RelativePath": "FE/adminhome.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "795hajs1zx",
-      "Integrity": "JVXezjFJfDLAuPUOxArBXMyYGQVCjsq5HtmMFFB6Cf8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\FE\\adminhome.html"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\detailmovie.html",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\FE\\detailmovie.html",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "FE/detailmovie#[.{fingerprint}]?.html",
+      "RelativePath": "FE/detailmovie.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "5ud26z4nbf",
-      "Integrity": "cxvFcYP9a8S0s1oP56IGAVMpnmnBv0l6hOjSHU0EEbI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\FE\\detailmovie.html"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\home.html",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\FE\\home.html",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "FE/home#[.{fingerprint}]?.html",
+      "RelativePath": "FE/home.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "vuqx2vxlll",
-      "Integrity": "N3Sq6FNkW9kmj+phfHhMZoUq4DjGcvTZqBVPgrvZbRk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\FE\\home.html"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\index.html",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\FE\\index.html",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "FE/index#[.{fingerprint}]?.html",
+      "RelativePath": "FE/index.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "wqbaxt87it",
-      "Integrity": "+O77rB+EGG47V2XxJNi80GTkIpe4CXAHvTdSWrD04VQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\FE\\index.html"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\userlogin.html",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\FE\\userlogin.html",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "FE/userlogin#[.{fingerprint}]?.html",
+      "RelativePath": "FE/userlogin.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "sno14fn4kl",
-      "Integrity": "GMMi9H+DKmV4/GpDZPmjO9p9BwWf5nADjVFOfEuMcmw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\FE\\userlogin.html"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\usersignup.html",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\FE\\usersignup.html",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "FE/usersignup#[.{fingerprint}]?.html",
+      "RelativePath": "FE/usersignup.html",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "phpkcjif3i",
-      "Integrity": "DVY8MpHQ8JtnWWaznkB9iDRe7viWuZBzrhRhNsg1xwk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\FE\\usersignup.html"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\image\\amduonglo.jpg",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\image\\amduonglo.jpg",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "image/amduonglo#[.{fingerprint}]?.jpg",
+      "RelativePath": "image/amduonglo.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "8pwnq6qpgu",
-      "Integrity": "TBcP/m3r2ktcEv7QzX6R35SrEBJpbPmnZfdqwE87lpg=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\image\\amduonglo.jpg"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\image\\matvuphuho.jpg",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\image\\matvuphuho.jpg",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "image/matvuphuho#[.{fingerprint}]?.jpg",
+      "RelativePath": "image/matvuphuho.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "h4ipiw9z56",
-      "Integrity": "/7UUbdS4VC2dSZrILGJzEEKqUVD5JgaQUadDBOEGHhI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\image\\matvuphuho.jpg"
     },
     {
-      "Identity": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\image\\quynhaptrang.jpg",
+      "Identity": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\image\\quynhaptrang.jpg",
       "SourceId": "Datvexemfilm",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\",
+      "ContentRoot": "D:\\visual studio code\\PBL\\PBL3_BKDN\\datvexemfilm\\wwwroot\\",
       "BasePath": "_content/Datvexemfilm",
-      "RelativePath": "image/quynhaptrang#[.{fingerprint}]?.jpg",
+      "RelativePath": "image/quynhaptrang.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
-      "AssetMergeBehavior": "",
+      "AssetMergeBehavior": "PreferTarget",
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "3m75308srz",
-      "Integrity": "NecAVArCygXUvrwJoxP/U4/2fGkLvXu6n+ddODcZDJY=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\image\\quynhaptrang.jpg"
-    }
-  ],
-  "Endpoints": [
-    {
-      "Route": "assets/css/adminhomestyle.3eb71ltfgc.css",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\adminhomestyle.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3468"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"a9oYycT1jvFj8uaadf+UoJ/6l8QNvrpGcoJ6taqrr2c=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3eb71ltfgc"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/css/adminhomestyle.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-a9oYycT1jvFj8uaadf+UoJ/6l8QNvrpGcoJ6taqrr2c="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/adminhomestyle.css",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\adminhomestyle.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3468"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"a9oYycT1jvFj8uaadf+UoJ/6l8QNvrpGcoJ6taqrr2c=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-a9oYycT1jvFj8uaadf+UoJ/6l8QNvrpGcoJ6taqrr2c="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/animation.css",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\animation.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "489"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ByCpzlm6y3f6PhA/CcMC88GvKZrcAh+B3WcTT+i4rmE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ByCpzlm6y3f6PhA/CcMC88GvKZrcAh+B3WcTT+i4rmE="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/animation.xy9yxm6d3c.css",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\animation.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "489"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ByCpzlm6y3f6PhA/CcMC88GvKZrcAh+B3WcTT+i4rmE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "xy9yxm6d3c"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/css/animation.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ByCpzlm6y3f6PhA/CcMC88GvKZrcAh+B3WcTT+i4rmE="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/detailmoviestyle.css",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\detailmoviestyle.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5716"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WmpXhI+is3eXgCUDe6tly9+CU6CWRnQmKKB+BV1JPDk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-WmpXhI+is3eXgCUDe6tly9+CU6CWRnQmKKB+BV1JPDk="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/detailmoviestyle.qvvhqs55pr.css",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\detailmoviestyle.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5716"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"WmpXhI+is3eXgCUDe6tly9+CU6CWRnQmKKB+BV1JPDk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "qvvhqs55pr"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/css/detailmoviestyle.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-WmpXhI+is3eXgCUDe6tly9+CU6CWRnQmKKB+BV1JPDk="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/homestyle.css",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\homestyle.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4898"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"C/inwY1uPSkfuy9kMa8K3nwa+pVhljGWJDAF2kb0s6w=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-C/inwY1uPSkfuy9kMa8K3nwa+pVhljGWJDAF2kb0s6w="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/homestyle.jqpvs20yyu.css",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\homestyle.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4898"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"C/inwY1uPSkfuy9kMa8K3nwa+pVhljGWJDAF2kb0s6w=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "jqpvs20yyu"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/css/homestyle.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-C/inwY1uPSkfuy9kMa8K3nwa+pVhljGWJDAF2kb0s6w="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/loginstyle.css",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\loginstyle.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1910"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"pyQYkHCLXsPNdXDpii+nq15l8Q7dtPqjWIyaJV01Y6g=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-pyQYkHCLXsPNdXDpii+nq15l8Q7dtPqjWIyaJV01Y6g="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/loginstyle.d3ekzpxpdf.css",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\loginstyle.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1910"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"pyQYkHCLXsPNdXDpii+nq15l8Q7dtPqjWIyaJV01Y6g=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "d3ekzpxpdf"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/css/loginstyle.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-pyQYkHCLXsPNdXDpii+nq15l8Q7dtPqjWIyaJV01Y6g="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/manageMovies.css",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\manageMovies.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6055"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"muLKUxnJuCZAxojPZrDXbB0vvQpaoJaqpdaeVA+hJEI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-muLKUxnJuCZAxojPZrDXbB0vvQpaoJaqpdaeVA+hJEI="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/manageMovies.mhmjmhbm93.css",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\manageMovies.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6055"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"muLKUxnJuCZAxojPZrDXbB0vvQpaoJaqpdaeVA+hJEI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "mhmjmhbm93"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/css/manageMovies.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-muLKUxnJuCZAxojPZrDXbB0vvQpaoJaqpdaeVA+hJEI="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/manageScreens.css",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\manageScreens.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6598"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+xD/Nxv6qvpF8yx/d9vQ0oUD0eEDOnC9thJDqjdERXY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-+xD/Nxv6qvpF8yx/d9vQ0oUD0eEDOnC9thJDqjdERXY="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/manageScreens.np60fs1it6.css",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\manageScreens.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "6598"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+xD/Nxv6qvpF8yx/d9vQ0oUD0eEDOnC9thJDqjdERXY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "np60fs1it6"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/css/manageScreens.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-+xD/Nxv6qvpF8yx/d9vQ0oUD0eEDOnC9thJDqjdERXY="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/manageShows.css",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\manageShows.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1217"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"VlvgG4CoukcSUn8UO7uzIMdvvjxdzKQTfzc5Mdp3gY0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 14:43:36 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-VlvgG4CoukcSUn8UO7uzIMdvvjxdzKQTfzc5Mdp3gY0="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/manageShows.i16vfztiwo.css",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\manageShows.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1217"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"VlvgG4CoukcSUn8UO7uzIMdvvjxdzKQTfzc5Mdp3gY0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 14:43:36 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "i16vfztiwo"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/css/manageShows.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-VlvgG4CoukcSUn8UO7uzIMdvvjxdzKQTfzc5Mdp3gY0="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/manageUsers.cqvr96ur5d.css",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\manageUsers.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4010"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"nAV4wNn0LZLo1GXTv32L11LOApMLaekP/8FiNz8ovZc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "cqvr96ur5d"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/css/manageUsers.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-nAV4wNn0LZLo1GXTv32L11LOApMLaekP/8FiNz8ovZc="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/manageUsers.css",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\manageUsers.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4010"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"nAV4wNn0LZLo1GXTv32L11LOApMLaekP/8FiNz8ovZc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-nAV4wNn0LZLo1GXTv32L11LOApMLaekP/8FiNz8ovZc="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/signinstyle.css",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\signinstyle.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "647"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"1wP0tKEKrGRp9PPdWSx3QdMfJ6db8ksSooewhvCIpk8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-1wP0tKEKrGRp9PPdWSx3QdMfJ6db8ksSooewhvCIpk8="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/signinstyle.nkf4g3izl0.css",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\signinstyle.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "647"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"1wP0tKEKrGRp9PPdWSx3QdMfJ6db8ksSooewhvCIpk8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "nkf4g3izl0"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/css/signinstyle.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-1wP0tKEKrGRp9PPdWSx3QdMfJ6db8ksSooewhvCIpk8="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/style.css",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\style.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5876"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"kKlfpSc9onpR5H+llthn2dDbJOsvy7c/pCTtdHrEhuc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-kKlfpSc9onpR5H+llthn2dDbJOsvy7c/pCTtdHrEhuc="
-        }
-      ]
-    },
-    {
-      "Route": "assets/css/style.cxaxc61ixh.css",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\css\\style.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5876"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"kKlfpSc9onpR5H+llthn2dDbJOsvy7c/pCTtdHrEhuc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "cxaxc61ixh"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/css/style.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-kKlfpSc9onpR5H+llthn2dDbJOsvy7c/pCTtdHrEhuc="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/background_index.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\background_index.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "155781"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"mzgbwC7aWfPK0uzmse62Vs6t4qO8Yha4MovYAKloB84=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-mzgbwC7aWfPK0uzmse62Vs6t4qO8Yha4MovYAKloB84="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/background_index.x59sufra3y.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\background_index.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "155781"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"mzgbwC7aWfPK0uzmse62Vs6t4qO8Yha4MovYAKloB84=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "x59sufra3y"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/background_index.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-mzgbwC7aWfPK0uzmse62Vs6t4qO8Yha4MovYAKloB84="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/bg__admin.f959mkyrwm.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\bg__admin.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "203069"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4wgIzd+Pc6JSO4H0KhCcS/+H4b+lpgsXII1wzXtn2uw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "f959mkyrwm"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/bg__admin.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4wgIzd+Pc6JSO4H0KhCcS/+H4b+lpgsXII1wzXtn2uw="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/bg__admin.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\bg__admin.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "203069"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4wgIzd+Pc6JSO4H0KhCcS/+H4b+lpgsXII1wzXtn2uw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-4wgIzd+Pc6JSO4H0KhCcS/+H4b+lpgsXII1wzXtn2uw="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/bg__home.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\bg__home.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4999"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+QexA2FlhTvlMYfW2GqQoQp1AHV1+xO/Bf0K3BFUG2E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-+QexA2FlhTvlMYfW2GqQoQp1AHV1+xO/Bf0K3BFUG2E="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/bg__home.ngrsq9qf3g.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\bg__home.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4999"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+QexA2FlhTvlMYfW2GqQoQp1AHV1+xO/Bf0K3BFUG2E=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ngrsq9qf3g"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/bg__home.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-+QexA2FlhTvlMYfW2GqQoQp1AHV1+xO/Bf0K3BFUG2E="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/bg_detail.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\bg_detail.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "542358"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"8w6kNUOXOPku4WD6J8DpWq+0zTuQN36KRUpVtdG0ubA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-8w6kNUOXOPku4WD6J8DpWq+0zTuQN36KRUpVtdG0ubA="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/bg_detail.nfc43xrpmp.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\bg_detail.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "542358"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"8w6kNUOXOPku4WD6J8DpWq+0zTuQN36KRUpVtdG0ubA=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "nfc43xrpmp"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/bg_detail.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-8w6kNUOXOPku4WD6J8DpWq+0zTuQN36KRUpVtdG0ubA="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/bg_index.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\bg_index.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "107745"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Rz5lqv3ePkgNUJ5dnhgjK+g24mpnq8rSk2IRvDEdfg0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Rz5lqv3ePkgNUJ5dnhgjK+g24mpnq8rSk2IRvDEdfg0="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/bg_index.rz8f7vqu6x.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\bg_index.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "107745"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Rz5lqv3ePkgNUJ5dnhgjK+g24mpnq8rSk2IRvDEdfg0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "rz8f7vqu6x"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/bg_index.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Rz5lqv3ePkgNUJ5dnhgjK+g24mpnq8rSk2IRvDEdfg0="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/logo.png",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\logo.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1087"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ivakc7Y0JRwOwAyJBpOcpgYG6eoy8y6ZPQhJRHswbXI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-ivakc7Y0JRwOwAyJBpOcpgYG6eoy8y6ZPQhJRHswbXI="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/logo.ye3dg9plq5.png",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\logo.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1087"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"ivakc7Y0JRwOwAyJBpOcpgYG6eoy8y6ZPQhJRHswbXI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ye3dg9plq5"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/logo.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-ivakc7Y0JRwOwAyJBpOcpgYG6eoy8y6ZPQhJRHswbXI="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/mainPoster/LabMMT XemThongTinMangTrenHDHWindows.docx",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\LabMMT XemThongTinMangTrenHDHWindows.docx",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "496232"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"mVoddWdSufzvgsXZV+HzHm5H0RpnvLy9Gr5Om7knHd8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-mVoddWdSufzvgsXZV+HzHm5H0RpnvLy9Gr5Om7knHd8="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/mainPoster/LabMMT XemThongTinMangTrenHDHWindows.ncmpczb7vs.docx",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\LabMMT XemThongTinMangTrenHDHWindows.docx",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "496232"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"mVoddWdSufzvgsXZV+HzHm5H0RpnvLy9Gr5Om7knHd8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ncmpczb7vs"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/mainPoster/LabMMT XemThongTinMangTrenHDHWindows.docx"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-mVoddWdSufzvgsXZV+HzHm5H0RpnvLy9Gr5Om7knHd8="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/mainPoster/lac_troi.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\lac_troi.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "95829"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"RYhuNeL9lovUYapRmj2xzJXLAkT9IaZuO9hVZI4MFUY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-RYhuNeL9lovUYapRmj2xzJXLAkT9IaZuO9hVZI4MFUY="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/mainPoster/lac_troi.r4dptvdi61.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\lac_troi.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "95829"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"RYhuNeL9lovUYapRmj2xzJXLAkT9IaZuO9hVZI4MFUY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "r4dptvdi61"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/mainPoster/lac_troi.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-RYhuNeL9lovUYapRmj2xzJXLAkT9IaZuO9hVZI4MFUY="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/mainPoster/movie5.7jo0fwi255.webp",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\movie5.webp",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "163544"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/webp"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Mwt6HTKBCERqjsUQhHaumUDWYV8Kz4oWBj5hfJpF31Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "7jo0fwi255"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/mainPoster/movie5.webp"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Mwt6HTKBCERqjsUQhHaumUDWYV8Kz4oWBj5hfJpF31Y="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/mainPoster/movie5.webp",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\movie5.webp",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "163544"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/webp"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Mwt6HTKBCERqjsUQhHaumUDWYV8Kz4oWBj5hfJpF31Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Mwt6HTKBCERqjsUQhHaumUDWYV8Kz4oWBj5hfJpF31Y="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/mainPoster/movie6.a99tu4ikom.webp",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\movie6.webp",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "87424"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/webp"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"HmJc8U9Q9tkcbZMGx72J6I4KmJK4GyP7N4Jt12X9s+k=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "a99tu4ikom"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/mainPoster/movie6.webp"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-HmJc8U9Q9tkcbZMGx72J6I4KmJK4GyP7N4Jt12X9s+k="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/mainPoster/movie6.webp",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\movie6.webp",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "87424"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/webp"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"HmJc8U9Q9tkcbZMGx72J6I4KmJK4GyP7N4Jt12X9s+k=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-HmJc8U9Q9tkcbZMGx72J6I4KmJK4GyP7N4Jt12X9s+k="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/mainPoster/movie7.jqcwhj0dnj.webp",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\movie7.webp",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "139724"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/webp"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"eyVRu0e6Jj8uwPnb52e2u2436CLlZFljFD92VK713mU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "jqcwhj0dnj"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/mainPoster/movie7.webp"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-eyVRu0e6Jj8uwPnb52e2u2436CLlZFljFD92VK713mU="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/mainPoster/movie7.webp",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\movie7.webp",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "139724"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/webp"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"eyVRu0e6Jj8uwPnb52e2u2436CLlZFljFD92VK713mU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-eyVRu0e6Jj8uwPnb52e2u2436CLlZFljFD92VK713mU="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/mainPoster/nha_gia_tien.5mksqyezm2.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\nha_gia_tien.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "664138"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"o+bjJhCnq0TgCns3mLP3K6rMh9YYjjKJuwZL3cPT+fY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "5mksqyezm2"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/mainPoster/nha_gia_tien.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-o+bjJhCnq0TgCns3mLP3K6rMh9YYjjKJuwZL3cPT+fY="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/mainPoster/nha_gia_tien.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\nha_gia_tien.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "664138"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"o+bjJhCnq0TgCns3mLP3K6rMh9YYjjKJuwZL3cPT+fY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-o+bjJhCnq0TgCns3mLP3K6rMh9YYjjKJuwZL3cPT+fY="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/mainPoster/quy_nhap_trang.ep7f39jyxy.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\quy_nhap_trang.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "66256"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"witjaUkmNfEItdMJls2gEmTAaqk8KOVuRaKTTvhAcYc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "ep7f39jyxy"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/mainPoster/quy_nhap_trang.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-witjaUkmNfEItdMJls2gEmTAaqk8KOVuRaKTTvhAcYc="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/mainPoster/quy_nhap_trang.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\quy_nhap_trang.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "66256"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"witjaUkmNfEItdMJls2gEmTAaqk8KOVuRaKTTvhAcYc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-witjaUkmNfEItdMJls2gEmTAaqk8KOVuRaKTTvhAcYc="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/mainPoster/SafeExamBrowser(SED).cs1rbfsgey.zip",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\SafeExamBrowser(SED).zip",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "103581391"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/x-zip-compressed"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NHeTk5vjVaTDBYNe2Q2Shl7u5Oko0k+NM29Ej2zWQCk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "cs1rbfsgey"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/mainPoster/SafeExamBrowser(SED).zip"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-NHeTk5vjVaTDBYNe2Q2Shl7u5Oko0k+NM29Ej2zWQCk="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/mainPoster/SafeExamBrowser(SED).zip",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\SafeExamBrowser(SED).zip",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "103581391"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "application/x-zip-compressed"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NHeTk5vjVaTDBYNe2Q2Shl7u5Oko0k+NM29Ej2zWQCk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-NHeTk5vjVaTDBYNe2Q2Shl7u5Oko0k+NM29Ej2zWQCk="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/mainPoster/sat_thu.9pqr6bt7p7.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\sat_thu.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "149348"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"E97fFGdvcKaBg+WdB1ZJuho668MmQZqa94gyoFhliAk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "9pqr6bt7p7"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/mainPoster/sat_thu.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-E97fFGdvcKaBg+WdB1ZJuho668MmQZqa94gyoFhliAk="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/mainPoster/sat_thu.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\mainPoster\\sat_thu.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "149348"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"E97fFGdvcKaBg+WdB1ZJuho668MmQZqa94gyoFhliAk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-E97fFGdvcKaBg+WdB1ZJuho668MmQZqa94gyoFhliAk="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/poster/movie1.1y1lwa7y5x.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie1.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "113484"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"54prsEMTt0/FF86irf5hT8ouARvwMVT7o8lr4ZNr02U=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "1y1lwa7y5x"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/poster/movie1.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-54prsEMTt0/FF86irf5hT8ouARvwMVT7o8lr4ZNr02U="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/poster/movie1.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie1.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "113484"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"54prsEMTt0/FF86irf5hT8ouARvwMVT7o8lr4ZNr02U=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-54prsEMTt0/FF86irf5hT8ouARvwMVT7o8lr4ZNr02U="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/poster/movie10.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie10.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "99514"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"D0HJm0HX7PdUjA4TYdz60XHwqB+KkNzTCtDrssiiqcw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-D0HJm0HX7PdUjA4TYdz60XHwqB+KkNzTCtDrssiiqcw="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/poster/movie10.natvv7im9z.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie10.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "99514"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"D0HJm0HX7PdUjA4TYdz60XHwqB+KkNzTCtDrssiiqcw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "natvv7im9z"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/poster/movie10.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-D0HJm0HX7PdUjA4TYdz60XHwqB+KkNzTCtDrssiiqcw="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/poster/movie2.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie2.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "159225"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"EW9MwZBS6B6ydzgI7QFKAQNRLsVqdDUekN6uVNJSJGY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-EW9MwZBS6B6ydzgI7QFKAQNRLsVqdDUekN6uVNJSJGY="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/poster/movie2.r17t4d3v39.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie2.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "159225"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"EW9MwZBS6B6ydzgI7QFKAQNRLsVqdDUekN6uVNJSJGY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "r17t4d3v39"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/poster/movie2.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-EW9MwZBS6B6ydzgI7QFKAQNRLsVqdDUekN6uVNJSJGY="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/poster/movie3.38oogvu1kq.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie3.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "130010"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"o5zTjm3rAWJ5KO0FIoV/gkQlNtt9kiexJtzMiDxh9l8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "38oogvu1kq"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/poster/movie3.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-o5zTjm3rAWJ5KO0FIoV/gkQlNtt9kiexJtzMiDxh9l8="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/poster/movie3.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie3.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "130010"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"o5zTjm3rAWJ5KO0FIoV/gkQlNtt9kiexJtzMiDxh9l8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-o5zTjm3rAWJ5KO0FIoV/gkQlNtt9kiexJtzMiDxh9l8="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/poster/movie4.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie4.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "127377"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Lo8ghYFNVL6K9bAczckRiXkMkf57oLVzyPX2sXKsZHc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Lo8ghYFNVL6K9bAczckRiXkMkf57oLVzyPX2sXKsZHc="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/poster/movie4.m7gry5508v.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie4.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "127377"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Lo8ghYFNVL6K9bAczckRiXkMkf57oLVzyPX2sXKsZHc=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "m7gry5508v"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/poster/movie4.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Lo8ghYFNVL6K9bAczckRiXkMkf57oLVzyPX2sXKsZHc="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/poster/movie5.er6i1a6nqq.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie5.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "98386"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"uhuV96tl5qhksnRmXurQxWVUfAHHWxCqKd6Ci+tO0tk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "er6i1a6nqq"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/poster/movie5.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-uhuV96tl5qhksnRmXurQxWVUfAHHWxCqKd6Ci+tO0tk="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/poster/movie5.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie5.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "98386"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"uhuV96tl5qhksnRmXurQxWVUfAHHWxCqKd6Ci+tO0tk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-uhuV96tl5qhksnRmXurQxWVUfAHHWxCqKd6Ci+tO0tk="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/poster/movie7.hjg73gw2e6.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie7.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "100418"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"gw2/ybZTFx3lGxQ7Zx94WXe3AxAe14cWGDbqVNeTWC8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "hjg73gw2e6"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/poster/movie7.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-gw2/ybZTFx3lGxQ7Zx94WXe3AxAe14cWGDbqVNeTWC8="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/poster/movie7.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie7.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "100418"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"gw2/ybZTFx3lGxQ7Zx94WXe3AxAe14cWGDbqVNeTWC8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-gw2/ybZTFx3lGxQ7Zx94WXe3AxAe14cWGDbqVNeTWC8="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/poster/movie8.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie8.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "148436"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"qsanSonEPDAJO3gP+T8RraqLavBj5GnTI5ddMev5/pE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-qsanSonEPDAJO3gP+T8RraqLavBj5GnTI5ddMev5/pE="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/poster/movie8.uz65013127.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie8.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "148436"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"qsanSonEPDAJO3gP+T8RraqLavBj5GnTI5ddMev5/pE=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "uz65013127"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/poster/movie8.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-qsanSonEPDAJO3gP+T8RraqLavBj5GnTI5ddMev5/pE="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/poster/movie9.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie9.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "155712"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"k68wEsXKsVJyG1fl1F2MHPgqoiyumhGgxPQyqkLufpw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-k68wEsXKsVJyG1fl1F2MHPgqoiyumhGgxPQyqkLufpw="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/poster/movie9.zcss1kgvn7.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\poster\\movie9.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "155712"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"k68wEsXKsVJyG1fl1F2MHPgqoiyumhGgxPQyqkLufpw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "zcss1kgvn7"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/poster/movie9.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-k68wEsXKsVJyG1fl1F2MHPgqoiyumhGgxPQyqkLufpw="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/shield.m0eka8kqv9.png",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\shield.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "124422"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"9q32xzHw+fdfGmhz1co4kdYFuSH5Ck6gufmnIpHjcXo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "m0eka8kqv9"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/images/shield.png"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-9q32xzHw+fdfGmhz1co4kdYFuSH5Ck6gufmnIpHjcXo="
-        }
-      ]
-    },
-    {
-      "Route": "assets/images/shield.png",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\images\\shield.png",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "124422"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/png"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"9q32xzHw+fdfGmhz1co4kdYFuSH5Ck6gufmnIpHjcXo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-9q32xzHw+fdfGmhz1co4kdYFuSH5Ck6gufmnIpHjcXo="
-        }
-      ]
-    },
-    {
-      "Route": "assets/js/admin.js",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\js\\admin.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2259"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"CE6Xs5GCFv3VhoRaZStxF5O4YA6rWl50MGTuuSgYgEo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-CE6Xs5GCFv3VhoRaZStxF5O4YA6rWl50MGTuuSgYgEo="
-        }
-      ]
-    },
-    {
-      "Route": "assets/js/admin.svokrnw5cr.js",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\js\\admin.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2259"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"CE6Xs5GCFv3VhoRaZStxF5O4YA6rWl50MGTuuSgYgEo=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "svokrnw5cr"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/js/admin.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-CE6Xs5GCFv3VhoRaZStxF5O4YA6rWl50MGTuuSgYgEo="
-        }
-      ]
-    },
-    {
-      "Route": "assets/js/seatLayout.js",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\js\\seatLayout.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2103"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"y3UnIijoWSFTutjbonVfittjLYO34zx7sDsqNDUswTQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-y3UnIijoWSFTutjbonVfittjLYO34zx7sDsqNDUswTQ="
-        }
-      ]
-    },
-    {
-      "Route": "assets/js/seatLayout.r03yexw9bn.js",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\js\\seatLayout.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2103"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"y3UnIijoWSFTutjbonVfittjLYO34zx7sDsqNDUswTQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "r03yexw9bn"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/js/seatLayout.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-y3UnIijoWSFTutjbonVfittjLYO34zx7sDsqNDUswTQ="
-        }
-      ]
-    },
-    {
-      "Route": "assets/js/tabpage.elur3qrafw.js",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\js\\tabpage.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3144"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"oo6pbJ3GjoYXvajp5stFIGAkq4um51PwgsbpsYUIlQ0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 17:29:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "elur3qrafw"
-        },
-        {
-          "Name": "label",
-          "Value": "assets/js/tabpage.js"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-oo6pbJ3GjoYXvajp5stFIGAkq4um51PwgsbpsYUIlQ0="
-        }
-      ]
-    },
-    {
-      "Route": "assets/js/tabpage.js",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\assets\\js\\tabpage.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "3144"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"oo6pbJ3GjoYXvajp5stFIGAkq4um51PwgsbpsYUIlQ0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 17:29:02 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-oo6pbJ3GjoYXvajp5stFIGAkq4um51PwgsbpsYUIlQ0="
-        }
-      ]
-    },
-    {
-      "Route": "FE/adminhome.795hajs1zx.html",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\adminhome.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "23577"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JVXezjFJfDLAuPUOxArBXMyYGQVCjsq5HtmMFFB6Cf8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 14:43:45 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "795hajs1zx"
-        },
-        {
-          "Name": "label",
-          "Value": "FE/adminhome.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-JVXezjFJfDLAuPUOxArBXMyYGQVCjsq5HtmMFFB6Cf8="
-        }
-      ]
-    },
-    {
-      "Route": "FE/adminhome.html",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\adminhome.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "23577"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"JVXezjFJfDLAuPUOxArBXMyYGQVCjsq5HtmMFFB6Cf8=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 14:43:45 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-JVXezjFJfDLAuPUOxArBXMyYGQVCjsq5HtmMFFB6Cf8="
-        }
-      ]
-    },
-    {
-      "Route": "FE/detailmovie.5ud26z4nbf.html",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\detailmovie.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "9239"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"cxvFcYP9a8S0s1oP56IGAVMpnmnBv0l6hOjSHU0EEbI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "5ud26z4nbf"
-        },
-        {
-          "Name": "label",
-          "Value": "FE/detailmovie.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-cxvFcYP9a8S0s1oP56IGAVMpnmnBv0l6hOjSHU0EEbI="
-        }
-      ]
-    },
-    {
-      "Route": "FE/detailmovie.html",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\detailmovie.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "9239"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"cxvFcYP9a8S0s1oP56IGAVMpnmnBv0l6hOjSHU0EEbI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-cxvFcYP9a8S0s1oP56IGAVMpnmnBv0l6hOjSHU0EEbI="
-        }
-      ]
-    },
-    {
-      "Route": "FE/home.html",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\home.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5542"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"N3Sq6FNkW9kmj+phfHhMZoUq4DjGcvTZqBVPgrvZbRk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-N3Sq6FNkW9kmj+phfHhMZoUq4DjGcvTZqBVPgrvZbRk="
-        }
-      ]
-    },
-    {
-      "Route": "FE/home.vuqx2vxlll.html",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\home.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5542"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"N3Sq6FNkW9kmj+phfHhMZoUq4DjGcvTZqBVPgrvZbRk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "vuqx2vxlll"
-        },
-        {
-          "Name": "label",
-          "Value": "FE/home.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-N3Sq6FNkW9kmj+phfHhMZoUq4DjGcvTZqBVPgrvZbRk="
-        }
-      ]
-    },
-    {
-      "Route": "FE/index.html",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4444"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+O77rB+EGG47V2XxJNi80GTkIpe4CXAHvTdSWrD04VQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-+O77rB+EGG47V2XxJNi80GTkIpe4CXAHvTdSWrD04VQ="
-        }
-      ]
-    },
-    {
-      "Route": "FE/index.wqbaxt87it.html",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\index.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4444"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"+O77rB+EGG47V2XxJNi80GTkIpe4CXAHvTdSWrD04VQ=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "wqbaxt87it"
-        },
-        {
-          "Name": "label",
-          "Value": "FE/index.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-+O77rB+EGG47V2XxJNi80GTkIpe4CXAHvTdSWrD04VQ="
-        }
-      ]
-    },
-    {
-      "Route": "FE/userlogin.html",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\userlogin.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4421"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"GMMi9H+DKmV4/GpDZPmjO9p9BwWf5nADjVFOfEuMcmw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-GMMi9H+DKmV4/GpDZPmjO9p9BwWf5nADjVFOfEuMcmw="
-        }
-      ]
-    },
-    {
-      "Route": "FE/userlogin.sno14fn4kl.html",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\userlogin.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4421"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"GMMi9H+DKmV4/GpDZPmjO9p9BwWf5nADjVFOfEuMcmw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "sno14fn4kl"
-        },
-        {
-          "Name": "label",
-          "Value": "FE/userlogin.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-GMMi9H+DKmV4/GpDZPmjO9p9BwWf5nADjVFOfEuMcmw="
-        }
-      ]
-    },
-    {
-      "Route": "FE/usersignup.html",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\usersignup.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4713"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"DVY8MpHQ8JtnWWaznkB9iDRe7viWuZBzrhRhNsg1xwk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-DVY8MpHQ8JtnWWaznkB9iDRe7viWuZBzrhRhNsg1xwk="
-        }
-      ]
-    },
-    {
-      "Route": "FE/usersignup.phpkcjif3i.html",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\FE\\usersignup.html",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4713"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/html"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"DVY8MpHQ8JtnWWaznkB9iDRe7viWuZBzrhRhNsg1xwk=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:27 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "phpkcjif3i"
-        },
-        {
-          "Name": "label",
-          "Value": "FE/usersignup.html"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-DVY8MpHQ8JtnWWaznkB9iDRe7viWuZBzrhRhNsg1xwk="
-        }
-      ]
-    },
-    {
-      "Route": "image/amduonglo.8pwnq6qpgu.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\image\\amduonglo.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "146822"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"TBcP/m3r2ktcEv7QzX6R35SrEBJpbPmnZfdqwE87lpg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "8pwnq6qpgu"
-        },
-        {
-          "Name": "label",
-          "Value": "image/amduonglo.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-TBcP/m3r2ktcEv7QzX6R35SrEBJpbPmnZfdqwE87lpg="
-        }
-      ]
-    },
-    {
-      "Route": "image/amduonglo.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\image\\amduonglo.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "146822"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"TBcP/m3r2ktcEv7QzX6R35SrEBJpbPmnZfdqwE87lpg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-TBcP/m3r2ktcEv7QzX6R35SrEBJpbPmnZfdqwE87lpg="
-        }
-      ]
-    },
-    {
-      "Route": "image/matvuphuho.h4ipiw9z56.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\image\\matvuphuho.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "147347"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/7UUbdS4VC2dSZrILGJzEEKqUVD5JgaQUadDBOEGHhI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "h4ipiw9z56"
-        },
-        {
-          "Name": "label",
-          "Value": "image/matvuphuho.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-/7UUbdS4VC2dSZrILGJzEEKqUVD5JgaQUadDBOEGHhI="
-        }
-      ]
-    },
-    {
-      "Route": "image/matvuphuho.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\image\\matvuphuho.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "147347"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"/7UUbdS4VC2dSZrILGJzEEKqUVD5JgaQUadDBOEGHhI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-/7UUbdS4VC2dSZrILGJzEEKqUVD5JgaQUadDBOEGHhI="
-        }
-      ]
-    },
-    {
-      "Route": "image/quynhaptrang.3m75308srz.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\image\\quynhaptrang.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "170896"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NecAVArCygXUvrwJoxP/U4/2fGkLvXu6n+ddODcZDJY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "3m75308srz"
-        },
-        {
-          "Name": "label",
-          "Value": "image/quynhaptrang.jpg"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-NecAVArCygXUvrwJoxP/U4/2fGkLvXu6n+ddODcZDJY="
-        }
-      ]
-    },
-    {
-      "Route": "image/quynhaptrang.jpg",
-      "AssetFile": "D:\\Cinema_Booking\\Datvexemfilm\\wwwroot\\image\\quynhaptrang.jpg",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "170896"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/jpeg"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NecAVArCygXUvrwJoxP/U4/2fGkLvXu6n+ddODcZDJY=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Thu, 10 Apr 2025 13:28:28 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=3600, must-revalidate"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-NecAVArCygXUvrwJoxP/U4/2fGkLvXu6n+ddODcZDJY="
-        }
-      ]
     }
   ]
 }

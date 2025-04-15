@@ -1,12 +1,11 @@
 const pageLogin = "userlogin.html"; 
 const pageSignUp = "usersignup.html";
-const pageLogin2 = "userlogin.html";
 
 function goToPageLogin() {
     window.location.href = pageLogin;
 }
 function goToPageLogin2() {
-    window.location.href = pageLogin2;
+    window.location.href = pageLogin;
 }
 function goToPageSignUp() {
     window.location.href = pageSignUp;
@@ -25,7 +24,7 @@ function toggleContent(type) {
 // CUỘN TRANG
 window.addEventListener("scroll", function () {
     let navbar = document.querySelector(".navbar");
-    if (this.window.scrollY > 50) {
+    if (window.scrollY > 50) {
         navbar.classList.add("scrolled");
     } else {
         navbar.classList.remove("scrolled");
@@ -47,9 +46,6 @@ if (loginForm) {
         const user = document.getElementById("Username").value;
         const pass = document.getElementById("Password").value;
 
-<<<<<<< HEAD
-})
-=======
         const response = await fetch("http://localhost:5120/api/LoginControllers/login", {
             method: "POST",
             headers: {
@@ -60,7 +56,7 @@ if (loginForm) {
 
         const result = await response.json();
         if (result.success) {
-            if (result.role == "admin") {
+            if (result.role === "admin") {
                 window.location.href = "adminhome.html";
             } else {
                 window.location.href = "home.html";
@@ -81,7 +77,7 @@ if (registerForm) {
         const pass = document.getElementById("Password").value;
         const confirm_pass = document.getElementById("Confirm_Password").value;
 
-        if (pass != confirm_pass) {
+        if (pass !== confirm_pass) {
             alert("Mật khẩu không khớp!");
             return;
         }
@@ -105,7 +101,6 @@ if (registerForm) {
 }
 
 // Load danh sách phim
->>>>>>> cceda27632c1bca5cd5bee75b1ceb22a72347445
 async function loadfilm() {
     const response = await fetch("http://localhost:5120/api/FilmControllers/getfilm", {
         method: "GET",
@@ -115,14 +110,9 @@ async function loadfilm() {
     });
 
     const result = await response.json();
-<<<<<<< HEAD
-
-    const movieList = document.querySelector("#movie");
-
-=======
     const movieList = document.querySelector("#movie");
     movieList.innerHTML = ""; 
->>>>>>> cceda27632c1bca5cd5bee75b1ceb22a72347445
+
     result.forEach(movie => {
         const movieContainer = document.createElement("div");
         movieContainer.classList.add("movie1");
@@ -131,10 +121,6 @@ async function loadfilm() {
             <p class="movie__name">${movie.name}</p>
             <p class="movie__releaseDay">KC | ${movie.releaseDay}</p>
         `;
-<<<<<<< HEAD
-        movieList.appendChild(movieContainer); // Thêm phần tử vào danh sách
-=======
         movieList.appendChild(movieContainer);
->>>>>>> cceda27632c1bca5cd5bee75b1ceb22a72347445
     });
 }

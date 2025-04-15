@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Cinema_Booking\\Datvexemfilm\\Datvexemfilm.csproj": {}
+    "D:\\visual studio code\\PBL\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm.csproj": {}
   },
   "projects": {
-    "D:\\Cinema_Booking\\Datvexemfilm\\Datvexemfilm.csproj": {
+    "D:\\visual studio code\\PBL\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Cinema_Booking\\Datvexemfilm\\Datvexemfilm.csproj",
+        "projectUniqueName": "D:\\visual studio code\\PBL\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm.csproj",
         "projectName": "Datvexemfilm",
-        "projectPath": "D:\\Cinema_Booking\\Datvexemfilm\\Datvexemfilm.csproj",
-        "packagesPath": "C:\\Users\\Kim Tai\\.nuget\\packages\\",
-        "outputPath": "D:\\Cinema_Booking\\Datvexemfilm\\obj\\",
+        "projectPath": "D:\\visual studio code\\PBL\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm.csproj",
+        "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
+        "outputPath": "D:\\visual studio code\\PBL\\PBL3_BKDN\\Datvexemfilm\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Kim Tai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -92,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
