@@ -1,0 +1,118 @@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeron | Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/loginstyle.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/style.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/homestyle.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/animation.css")">
+</head>
+<body>
+    <div class="container1">
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <img src="@Url.Content("~/Content/assets/images/logo.png")" alt="logo" class="navbar__logo-item">
+                <span class="navbar__logo-name">Zeron</span>
+            </div>
+            <ul class="navbar__content">
+                <li><a href="#" class="navbar__content-item1">TRANG CHỦ</a></li>
+                <li><a href="#" class="navbar__content-item1">ĐẶT VÉ</a></li>
+                <button class="navbar__content-btn" onclick="goToPageSignUp()">ĐĂNG KÍ</button>
+            </ul>
+        </nav>
+        <!-- END NAVBAR -->
+        <!-- POSTER MAIN -->
+        <div class="mainposter">
+            <div class="mainposter__button">
+                <button class="mainposter__button-left"><i class="fas fa-chevron-left"></i></button>
+                <button class="mainposter__button-right"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <!-- END POSTER MAIN -->
+
+        <div class="listfilm">
+            <div class="listfilm__navbar">
+                <div class="listfilm__navbar-search">
+                    <button class="search__btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" placeholder="Search Film" class="search__input">
+                </div>
+                <div class="listfilm__navbar-genre">
+                    <p class="listgenre">Thể Loại <i class="fas fa-chevron-down"></i></p>
+                    <div class="listfilm__navbar-genre-content"></div>
+                </div>
+                <div class="listfilm__navbar-btnnow">
+                    <button class="listfilmnow">Phim Đang Chiếu</button>
+                </div>
+                <div class="listfilm__navbar-btnfuture">
+                    <button class="listfilmfulture">Phim Sắp Chiếu</button>
+                </div>
+            </div>
+
+            <div id="movie" class="listfilm__container">
+                <p class="title_container">Movies</p>
+                <!-- Phim sẽ xuất hiện ở đây -->
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container__footer">
+            <h3>Ký ức đẹp bắt đầu từ một bộ phim hay!</h3>
+        </div>
+        <div class="footercontent">
+            <div class="navbar__logo navbar__logo2">
+                <img src="@Url.Content("~/Content/assets/images/logo.png")" alt="logo" class="navbar__logo-item">
+                <span class="navbar__logo-name">Zeron</span>
+            </div>
+            <ul class="footercontent__ContactInf">
+                <li><p class="footercontent__header">Hỗ Trợ</p></li>
+                <li>
+                    <div class="footercontent__ContactInf-list">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>0948 203 816</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="footercontent__ContactInf-list">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>zeron_cinema@gmail.com</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="footercontent__ContactInf-list">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Số 16 Nguyễn Lương Bằng, Hòa Khánh Bắc, Đà Nẵng</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="footercontent__QuickLink">
+                <li><p class="footercontent__header">Liên Kết Nhanh</p></li>
+                <li><a class="footercontent__QuickLink-list" href="/Home">Trang Chủ</a></li>
+                <li><a class="footercontent__QuickLink-list" href="#">Đặt Vé</a></li>
+                <li><a class="footercontent__QuickLink-list" href="#">Thể Loại</a></li>
+            </ul>
+            <ul class="footercontent__SocialMedia">
+                <p class="footercontent__header">Mạng Xã Hội</p>
+                <div class="footercontent__SocialMedia-list">
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                    <a href="https://zalo.me" target="_blank"><i class="fa-solid fa-comment-dots fa-2x"></i></a>
+                </div>
+            </ul>
+            <div><p class="line"></p></div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="@Url.Content("~/Scripts/js/tabpage.js")"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</body>
+</html>
