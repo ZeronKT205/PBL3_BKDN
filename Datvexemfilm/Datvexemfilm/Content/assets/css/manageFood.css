@@ -1,0 +1,330 @@
+.mainPage__FoodDrinks{
+    display: grid;
+    grid-template-rows: 20% 90px 70% ;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mainPage__FoodDrinks-title h1 {
+    border-bottom: 3px inset #2b4f81;         /* Xanh đậm trung tính */
+    border-left: 3px inset #365a8d;           /* Xanh than gần nền */
+    box-shadow: 0px 4px 12px rgba(51, 112, 197, 0.6); /* Nhẹ, tông xanh dịu */
+    border-radius: 5px;
+    color: #e0f0ff;                           /* Trắng xanh nhẹ, không gắt */
+    font-weight: bold;
+    font-size: 35px;
+    padding: 3px 15px;
+    width: 420px;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    animation: fadeIn 1.3s ease-in-out forwards;
+}
+
+.mainPage__FoodDrinks-search{
+    display:flex;
+    width:60%;
+    height: auto;
+    align-items: center;
+    justify-self: center;
+    animation: fadeIn 1.3s ease-in-out forwards;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 3px inset rgb(130, 130, 130);
+    padding-bottom: 20px;
+}
+
+.mainPage__FoodDrinks-search-search{
+    display:flex;
+    width: 400px;
+    height: 40px;
+    border-radius: 3px;
+    border: none;
+    margin-right: 10px;
+    padding: 0 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #e0f0ff;
+}
+.mainPage__FoodDrinks-search-search input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: white;
+    border-radius: 8px;
+    padding-left: 10px;
+}
+.mainPage__FoodDrinks-search-search button{
+    width: 60px;
+    height: 45px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #2b4f81;
+    color: #e0f0ff;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.mainPage__FoodDrinks-add{
+    display:flex;
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.mainPage__FoodDrinks-add-button{
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: #2b4f81;
+    color: #e0f0ff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Container tổng cho các card combo */
+.mainPage__FoodDrinks-containerinfo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 24px;
+    background: #0f172a;
+    border-radius: 12px;
+    height: 90%;
+    max-height: 1000px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: 0 4px 24px rgba(30,41,59,0.15);
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #38bdf8 #1e293b;
+    animation: fadeInScale 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+}
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.mainPage__FoodDrinks-containerinfo::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 8px;
+    background: #1e293b;
+}
+.mainPage__FoodDrinks-containerinfo::-webkit-scrollbar-thumb {
+    background: #38bdf8;
+    border-radius: 8px;
+}
+.mainPage__FoodDrinks-containerinfo::-webkit-scrollbar-thumb:hover {
+    background: #0ea5e9;
+}
+
+/* Card combo */
+.mainPage__FoodDrinks-containerinfo-card {
+    width: 260px;
+    background: #1e293b;
+    border: 1.5px solid #334155;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(255,255,255,0.04);
+    color: #f1f5f9;
+    padding: 18px 14px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.25s, box-shadow 0.25s;
+    position: relative;
+}
+.mainPage__FoodDrinks-containerinfo-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(59,130,246,0.18);
+    border-color: #38bdf8;
+}
+
+.mainPage__FoodDrinks-containerinfo-card-img {
+    width: 100%;
+    max-width: 135px;
+    height: 120px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px auto;
+    border-radius: 8px;
+    background: #334155;
+}
+
+.mainPage__FoodDrinks-containerinfo-card-content {
+    width: 100%;
+    margin-bottom: 14px;
+    font-size: 1rem;
+    color: #e0e7ef;
+}
+.mainPage__FoodDrinks-containerinfo-card-content p {
+    margin: 4px 0;
+    font-size: 0.98rem;
+}
+.mainPage__FoodDrinks-containerinfo-card-content span {
+    color: #38bdf8;
+    font-weight: 500;
+}
+
+.mainPage__FoodDrinks-containerinfo-card-action {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    justify-content: flex-end;
+}
+.mainPage__FoodDrinks-containerinfo-card-action-button {
+    background: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 13px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(59,130,246,0.10);
+    display: flex;
+    align-items: center;
+}
+.mainPage__FoodDrinks-containerinfo-card-action-button:hover {
+    background: #2563eb;
+}
+.mainPage__FoodDrinks-containerinfo-card-action-button:last-child {
+    background: #ef4444;
+}
+.mainPage__FoodDrinks-containerinfo-card-action-button:last-child:hover {
+    background: #b91c1c;
+}
+
+@media (max-width: 900px) {
+    .mainPage__FoodDrinks-containerinfo {
+        gap: 16px;
+        padding: 12px;
+    }
+    .mainPage__FoodDrinks-containerinfo-card {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+.add-combo-modal {
+  position: fixed; z-index: 2000; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.add-combo-modal.hidden { display: none; }
+.add-combo-modal__overlay {
+  position: absolute; inset: 0;
+  background: rgba(15,23,42,0.7);
+  z-index: 1;
+}
+.add-combo-modal__content {
+  position: relative; z-index: 2;
+  background: #1e293b;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(30,41,59,0.25);
+  padding: 32px 32px 24px 32px;
+  min-width: 600px; max-width: 800px;
+  animation: fadeIn 0.3s;
+}
+.add-combo-modal__content h2 {
+  color: #38bdf8; margin-bottom: 18px; text-align: center;
+}
+.add-combo-form {
+  display: grid; grid-template-columns: 1fr 240px; gap: 32px;
+}
+.add-combo-form__left label { color: #e0e7ef; font-weight: 500; margin-top: 10px; display: block; }
+.add-combo-form__left input, .add-combo-form__left textarea {
+  width: 100%; background: #0f172a; color: #f1f5f9;
+  border: 1.5px solid #38bdf8; border-radius: 6px;
+  padding: 8px 10px; margin-bottom: 10px; font-size: 1rem;
+  transition: border 0.2s;
+}
+.add-combo-form__left input:focus, .add-combo-form__left textarea:focus {
+  border: 1.5px solid #0ea5e9; outline: none;
+}
+.required { color: #ef4444; }
+.add-combo-form__right label { color: #e0e7ef; font-weight: 500; margin-bottom: 8px; display: block; }
+.img-upload-area {
+  width: 200px; height: 200px; background: #0f172a;
+  border: 2px dashed #38bdf8; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; position: relative; margin-bottom: 10px;
+  cursor: pointer; text-align: center;
+}
+.img-upload-placeholder { color: #64748b; font-size: 0.98rem; }
+.img-upload-area.dragover { border-color: #0ea5e9; background: #1e293b; }
+.img-preview {
+  width: 100%; height: 100%; object-fit: contain;
+  border-radius: 8px; background: #334155;
+  position: absolute; top: 0; left: 0;
+}
+.img-remove-btn, .img-choose-btn {
+  background: #ef4444; color: #fff; border: none; border-radius: 5px;
+  padding: 5px 12px; font-size: 0.95rem; margin-top: 8px; cursor: pointer;
+  transition: background 0.2s;
+}
+.img-choose-btn { background: #3b82f6; margin-left: 0; }
+.img-remove-btn:hover { background: #b91c1c; }
+.img-choose-btn:hover { background: #2563eb; }
+.add-combo-form__actions {
+  grid-column: 1 / span 2; display: flex; justify-content: flex-end; gap: 16px; margin-top: 18px;
+}
+.btn-save {
+  background: linear-gradient(90deg, #2563eb, #38bdf8);
+  color: #fff; border: none; border-radius: 6px; padding: 8px 22px;
+  font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: background 0.2s;
+}
+.btn-save:hover { background: linear-gradient(90deg, #0ea5e9, #38bdf8); }
+.btn-cancel {
+  background: transparent; color: #e0e7ef; border: 1.5px solid #64748b;
+  border-radius: 6px; padding: 8px 22px; font-size: 1.1rem; font-weight: 500; cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-cancel:hover { background: #334155; color: #fff; }
+@media (max-width: 800px) {
+  .add-combo-modal__content { min-width: 90vw; padding: 18px 6vw; }
+  .add-combo-form { grid-template-columns: 1fr; gap: 18px; }
+  .add-combo-form__actions { grid-column: 1; }
+}
+.hidden { display: none !important; }
+
+.img-choose-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Hiệu ứng cho card mới thêm vào */
+.mainPage__FoodDrinks-containerinfo-card.new-product {
+  animation: popIn 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  box-shadow: 0 0 0 4px #38bdf8, 0 4px 24px rgba(56,189,248,0.15);
+  border-color: #38bdf8;
+}
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) translateY(40px);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1.05) translateY(-6px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}

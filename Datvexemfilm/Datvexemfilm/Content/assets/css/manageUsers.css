@@ -1,17 +1,16 @@
 .mainPage__Users{
     display: grid;
     grid-template-rows: 20% 90px 70% ;
-    background:linear-gradient(to top, rgba(0,0,0,0.3),rgb(69, 49, 62)), url("../images/bg__admin.jpg") no-repeat center/cover;
     height: 100vh;
     width: 100%;
     overflow: hidden;
 }
-.mainPage__Users-title{
-    border-bottom:3px inset rgb(146, 29, 150);
-    border-left:3px inset rgb(72, 40, 40);
-    box-shadow: 0px 4px 12px rgb(146, 29, 150);
-    border-radius:5px;
-    color: white;
+.mainPage__Users-title {
+    border-bottom: 3px inset #2b4f81;         /* Xanh đậm trung tính */
+    border-left: 3px inset #365a8d;           /* Xanh than gần nền */
+    box-shadow: 0px 4px 12px rgba(51, 112, 197, 0.6); /* Nhẹ, tông xanh dịu */
+    border-radius: 5px;
+    color: #e0f0ff;                           /* Trắng xanh nhẹ, không gắt */
     font-weight: normal;
     font-size: 18px;
     padding: 3px 15px;
@@ -20,7 +19,6 @@
     justify-self: center;
     text-align: center;
     animation: fadeIn 1.3s ease-in-out forwards;
-
 }
 
 .mainPage__Users-search{
@@ -31,7 +29,6 @@
     justify-self: center;
     animation: fadeIn 1.3s ease-in-out forwards;
     justify-content: center;
-    color: rgb(227, 46, 146);
     font-size: 18px;
     font-weight: 500;
     border-bottom: 3px inset rgb(130, 130, 130);
@@ -41,15 +38,20 @@
     width: 400px;
     font-size: 16px;
     padding: 6px 7px;
-    border-radius: 3px;
+    border-radius: 5px;
     border: none;
+    margin-right: 10px;
+    margin-left: 10px;
+
 
 }
 
 .mainPage__Users-search button{
-    padding:4px 7px;
-    border-radius: 5px;
+    padding:10px 15px !important;
+    border-radius: 8px;
     border:none;
+    background-color: rgb(59, 65, 182);
+    color: white;
 }
 
 .mainPage__Users-inf{
@@ -191,3 +193,253 @@
 
 
 /* STYLE CHO CHỨC NĂNG THÊM TÀI KHOẢN  */
+
+/* Modal Thêm User */
+.addUserModal {
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background: rgba(4, 1, 5, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+}
+.addUserModal.hidden {
+    display: none;
+}
+.addUserModal__content {
+    background: #15052e;
+    border-radius: 17px;
+    box-shadow: 0 8px 32px 0 rgba(168, 84, 84, 0.13);
+    padding: 32px 32px 24px 32px;
+    min-width: 320px;
+    max-width: 95vw;
+    color: #e7e1e1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    animation: fadeIn 0.6s;
+}
+.addUserModal__content h2 {
+    text-align: center;
+    color: #f3efef;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+}
+#addUserForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+#addUserForm label {
+    font-weight: 600;
+    color: #fffefe;
+    margin-bottom: 2px;
+    font-size: 1rem;
+}
+#addUserForm input,
+#addUserForm select {
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+    background: #f3f3f3;
+    color: #f7efef;
+    margin-bottom: 6px;
+    outline: none;
+    transition: box-shadow 0.2s;
+}
+#addUserForm input:focus,
+#addUserForm select:focus {
+    box-shadow: 0 0 0 2px #ffe066;
+}
+.addUserModal__actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+.confirmAddUser, .cancelAddUser {
+    padding: 8px 22px;
+    border-radius: 8px;
+    border: none;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.confirmAddUser {
+    background: linear-gradient(90deg, #5f1ea8 0%, #090b80 100%);
+    color: #fff4f4;
+    box-shadow: 0 2px 8px 0 rgba(255,106,0,0.10);
+}
+.confirmAddUser:hover {
+    background: linear-gradient(90deg, #ffb347 0%, #a166f4 100%);
+    color: #fff;
+}
+.cancelAddUser {
+    background: #bbb;
+    color: #222;
+}
+.cancelAddUser:hover {
+    background: #e57373;
+    color: #fff;
+}
+@media (max-width: 600px) {
+    .addUserModal__content {
+        padding: 16px 6vw 12px 6vw;
+        min-width: 0;
+    }
+    #addUserForm input, #addUserForm select {
+        font-size: 0.95rem;
+    }
+    .addUserModal__content h2 {
+        font-size: 1.1rem;
+    }
+}
+
+/* STYLE CHO CHỨC NĂNG XEM THÔNG TIN USER */
+
+/* Modal Thông tin User */
+.userInfoModal {
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background: rgba(4, 1, 5, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+}
+
+.userInfoModal.hidden {
+    display: none;
+}
+
+.userInfoModal__content {
+    background: #15052e;
+    border-radius: 17px;
+    box-shadow: 0 8px 32px 0 rgba(168, 84, 84, 0.13);
+    padding: 40px 30px;
+    min-width: 500px;
+    max-width: 95vw;
+    color: #e7e1e1;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    animation: fadeIn 0.6s;
+}
+
+.userInfoModal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.userInfoModal__header h2 {
+    color: #f3efef;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.closeUserInfo {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px 13px;
+    transition: transform 0.2s;
+}
+
+.closeUserInfo:hover {
+    transform: scale(1.1);
+}
+
+.userInfoModal__body {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+#userInfoForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#userInfoForm .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#userInfoForm label {
+    font-weight: 600;
+    color: #fffefe;
+    font-size: 1rem;
+}
+
+#userInfoForm input,
+#userInfoForm textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    color: #f7efef;
+    outline: none;
+    transition: all 0.2s;
+}
+
+#userInfoForm input:read-only,
+#userInfoForm textarea:read-only {
+    background: rgba(255, 255, 255, 0.1);
+    cursor: not-allowed;
+}
+
+#userInfoForm textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* Style cho thanh cuộn trong modal */
+.userInfoModal__body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.userInfoModal__body::-webkit-scrollbar-thumb {
+    background-color: #431e41;
+    border-radius: 10px;
+    border: 2px solid #15052e;
+}
+
+.userInfoModal__body::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .userInfoModal__content {
+        padding: 20px;
+        min-width: 0;
+        width: 90%;
+    }
+
+    .userInfoModal__header h2 {
+        font-size: 1.2rem;
+    }
+
+    #userInfoForm input,
+    #userInfoForm textarea {
+        font-size: 0.95rem;
+    }
+}

@@ -35,8 +35,11 @@ namespace Datvexemfilm.Controllers
                 {
                     return Json(new { success = false, message = "Tài khoản đã bị khóa" });
                 }
+                else
 
-                return Json(new { success = true, message = "Đăng nhập thành công", role = user.Role });
+                { 
+                   return Json(new {id=user.ID,username=user.Username,email=user.Email, success = true, message = "Đăng nhập thành công", role = user.Role }); 
+                }
             }
             catch (Exception ex)
             {

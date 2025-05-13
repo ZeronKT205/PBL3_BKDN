@@ -28,5 +28,13 @@ namespace Datvexemfilm.Controllers
         {
             return View();
         }
+        public ActionResult bookingTicket()
+        {
+            return View();
+        }
+        public ActionResult CustomerInfor()
+        {
+            return View();
+        }
     }
 }

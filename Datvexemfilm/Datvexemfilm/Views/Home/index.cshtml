@@ -1,6 +1,7 @@
-@{
+@{ 
     Layout = null;
 }
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,23 +12,24 @@
     <title>ZeronTicket</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/style.css")" />
+    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/style.css")">
 </head>
 <body>
     <div class="container">
-        <!--NAVBAR -->
+            <!--NAVBAR -->
         <nav class="navbar">
             <div class="navbar__logo">
                 <img src="@Url.Content("~/Content/assets/images/logo.png")" alt="logo" class="navbar__logo-item">
-                <span class="navbar__logo-name">Zeron</span>
+                <span class = "navbar__logo-name">Zeron</span>
             </div>
             <ul class="navbar__content">
-                <li><a href="#" class="navbar__content-item1">TRANG CHỦ</a></li>
-                <li><a href="#" class="navbar__content-item1">ĐẶT VÉ</a></li>
+                <li><a href="@Url.Action("Home","Home")" class="navbar__content-item1">TRANG CHỦ</a></li>
+                <li><a href="@Url.Action("userlogin","Home")" class="navbar__content-item1">ĐẶT VÉ</a></li>
                 <li><button class="navbar__content-btn" onclick="goToPageLogin()">ĐĂNG NHẬP</button></li>
             </ul>
         </nav>
         <!--END NAVBAR -->
+
         <!-- DESCRIPTION -->
         <div class="containerDESC">
             <div class="desc">
@@ -36,19 +38,19 @@
             </div>
         </div>
         <!--END DESCRIPTION-->
+        
     </div>
-
-    <footer>
-        <div class="container__footer">
+     <footer>
+        <div class = "container__footer">
             <h3>Ký ức đẹp bắt đầu từ một bộ phim hay!</h3>
         </div>
         <div class="footercontent">
             <div class="navbar__logo navbar__logo2">
                 <img src="@Url.Content("~/Content/assets/images/logo.png")" alt="logo" class="navbar__logo-item">
-                <span class="navbar__logo-name">Zeron</span>
+                <span class = "navbar__logo-name">Zeron</span>
             </div>
             <ul class="footercontent__ContactInf">
-                <li><p class="footercontent__header">Hỗ Trợ</p></li>
+                <li><p class = "footercontent__header">Hỗ Trợ</p></li>
                 <li>
                     <div class="footercontent__ContactInf-list">
                         <i class="fa-solid fa-phone"></i>
@@ -69,23 +71,22 @@
                 </li>
             </ul>
             <ul class="footercontent__QuickLink">
-                <li><p class="footercontent__header">Liên Kết Nhanh</p></li>
-                <li><a class="footercontent__QuickLink-list" href="#">Trang Chủ</a></li>
-                <li><a class="footercontent__QuickLink-list" href="#">Đặt Vé</a></li>
-                <li><a class="footercontent__QuickLink-list" href="#">Thể Loại</a></li>
+                <li><p class = "footercontent__header">Liên Kết Nhanh</p></li>
+                <li><a class = "footercontent__QuickLink-list" href ="##">Trang Chủ</a></li>
+                <li><a class = "footercontent__QuickLink-list" href ="##">Đặt Vé</a></li>
+                <li><a class = "footercontent__QuickLink-list" href ="##">Thể Loại</a></li>
             </ul>
             <ul class="footercontent__SocialMedia">
-                <p class="footercontent__header">Mạng Xã Hội</p>
-                <div class="footercontent__SocialMedia-list">
+                <p class = "footercontent__header">Mạng Xã Hội</p></li>
+                <div class = "footercontent__SocialMedia-list">
                     <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
                     <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
                     <a href="https://zalo.me" target="_blank"><i class="fa-solid fa-comment-dots fa-2x"></i></a>
                 </div>
             </ul>
-            <div><p class="line"></p></div>
+            <div><p class = "line"></p></div>
         </div>
-    </footer>
-
-    <script src="@Url.Content("~/Scripts/js/tabpage.js")"></script>
+     </footer>
+     <script src = "@Url.Content("~/Scripts/js/tabpage.js")"></script>
 </body>
 </html>

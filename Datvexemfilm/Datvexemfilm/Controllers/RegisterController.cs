@@ -10,7 +10,7 @@ namespace MySimpleMvcApp.Controllers
 
         public RegisterController()
         {
-            _dbContext = new AppDbContext(); // Với MVC thường new trực tiếp hoặc dùng DI nâng cao
+            _dbContext = new AppDbContext(); 
         }
         [HttpPost]
         public JsonResult Register(RegisterRequest req)
@@ -36,10 +36,8 @@ namespace MySimpleMvcApp.Controllers
                     Role = "user",
                     Status = "Normal"
                 };
-
                 _dbContext.Accounts.Add(newAccount);
                 _dbContext.SaveChanges();
-
                 return Json(new { success = true, message = "Đăng ký thành công!" });
             }
         }

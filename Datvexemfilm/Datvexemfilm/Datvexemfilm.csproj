@@ -142,7 +142,6 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="Controllers\FilmController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -152,7 +151,11 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\AccountLR.cs" />
     <Compile Include="Models\AppDbContext.cs" />
+    <Compile Include="Models\CustomerInfo.cs" />
+    <Compile Include="Models\Film.cs" />
+    <Compile Include="Models\Film_Type.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -163,13 +166,23 @@
     <Content Include="bin\EntityFramework.SqlServer.dll" />
     <Content Include="Content\assets\css\adminhomestyle.css" />
     <Content Include="Content\assets\css\animation.css" />
+    <Content Include="Content\assets\css\bookingTicket.css" />
+    <Content Include="Content\assets\css\bookingticketstyle.css" />
+    <Content Include="Content\assets\css\CustomerInfor.css" />
     <Content Include="Content\assets\css\detailmoviestyle.css" />
+    <Content Include="Content\assets\css\historyBooking.css" />
     <Content Include="Content\assets\css\homestyle.css" />
     <Content Include="Content\assets\css\loginstyle.css" />
+    <Content Include="Content\assets\css\managebooking.css" />
+    <Content Include="Content\assets\css\manageFood.css" />
     <Content Include="Content\assets\css\manageMovies.css" />
+    <Content Include="Content\assets\css\manageReport.css" />
     <Content Include="Content\assets\css\manageScreens.css" />
+    <Content Include="Content\assets\css\manageShow.css" />
     <Content Include="Content\assets\css\manageShows.css" />
     <Content Include="Content\assets\css\manageUsers.css" />
+    <Content Include="Content\assets\css\Payment.css" />
+    <Content Include="Content\assets\css\SearchPage.css" />
     <Content Include="Content\assets\css\signinstyle.css" />
     <Content Include="Content\assets\css\style.css" />
     <Content Include="Content\assets\images\background_index.jpg" />
@@ -249,9 +262,30 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\js\admin.js" />
+    <Content Include="Scripts\js\auth.js" />
+    <Content Include="Scripts\js\bookingTicket.js" />
+    <Content Include="Scripts\js\customerInfo.js" />
+    <Content Include="Scripts\js\dataManager.js" />
+    <Content Include="Scripts\js\home.js" />
+    <Content Include="Scripts\js\login.js" />
+    <Content Include="Scripts\js\manageBooking.js" />
+    <Content Include="Scripts\js\manageMovie.js" />
+    <Content Include="Scripts\js\manageProduct.js" />
+    <Content Include="Scripts\js\manageShow.js" />
+    <Content Include="Scripts\js\manageUser.js" />
+    <Content Include="Scripts\js\mangageScreen.js" />
+    <Content Include="Scripts\js\Payment.js" />
+    <Content Include="Scripts\js\register.js" />
+    <Content Include="Scripts\js\seatBooking.js" />
     <Content Include="Scripts\js\seatLayout.js" />
     <Content Include="Scripts\js\tabpage.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Home\adminhome.cshtml" />
+    <Content Include="Views\Home\detailmovie.cshtml" />
+    <Content Include="Views\Home\home.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\userlogin.cshtml" />
+    <Content Include="Views\Home\usersignup.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -263,12 +297,11 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\usersignup.cshtml" />
-    <Content Include="Views\Home\userlogin.cshtml" />
-    <Content Include="Views\Home\home.cshtml" />
-    <Content Include="Views\Home\detailmovie.cshtml" />
-    <Content Include="Views\Home\adminhome.cshtml" />
+    <Content Include="Views\Home\bookingTicket.cshtml" />
+    <Content Include="Views\Home\CustomerInfor.cshtml" />
+    <Content Include="Views\Home\historyBooking.cshtml" />
+    <Content Include="Views\Home\Payment.cshtml" />
+    <Content Include="Views\Home\SearchFilmPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

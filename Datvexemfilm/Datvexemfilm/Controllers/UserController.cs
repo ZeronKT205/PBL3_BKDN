@@ -23,8 +23,13 @@ namespace MySimpleMvcApp.Controllers
                 user.Status,
                 user.Role
             }).ToList();
-
-            return Json(users, JsonRequestBehavior.AllowGet); // Cho phép trả về JSON qua GET
+            return Json(users, JsonRequestBehavior.AllowGet); 
+        }
+        [HttpPost]
+        public JsonResult GetUserbyID(int id)
+        {
+            var user = _dbContext.customerInfos.Where(p => p.ID == id).FirstOrDefault();
+            return Json(user, JsonRequestBehavior.AllowGet);
         }
     }
 }

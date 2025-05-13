@@ -11,24 +11,6 @@ public class AppDbContext : DbContext
 
     public DbSet<Account> Accounts { get; set; }
     public DbSet<Film> Films { get; set; }
-}
-
-[Table("Account")]
-public class Account
-{
-    [Key]
-    public string Username { get; set; }
-    public string Password { get; set; }
-    public string Role { get; set; }
-    public string Email { get; set; }
-    public string Status { get; set; }
-}
-
-[Table("Film")]
-public class Film
-{
-    [Key]
-    public string src { get; set; }
-    public string name { get; set; }
-    public string releaseDay { get; set; }
+    public DbSet<Film_Type> Film_Types { get; set; }
+    public DbSet<CustomerInfo> customerInfos { get; set; }
 }

@@ -1,90 +1,117 @@
-document.querySelector(".navbar__logo").addEventListener("click",function(){
+//--------------------------Xử Lý các action chuyển tab, hiddenn của trang Admin Home-------------------------------------------//
+// Show Welcome page by default when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    // Hide all pages first
+    const allPages = document.querySelectorAll(".mainPage > div");
+    allPages.forEach(page => {
+        page.classList.add("hidden");
+    });
+    
+    // Show welcome page
+    const welcomePage = document.querySelector(".mainPage__Welcome");
+    if (welcomePage) {
+        welcomePage.classList.remove("hidden");
+    }
+});
+
+document.querySelector(".navbar__logo").addEventListener("click", function() {
     location.reload();
 });
 
-function TabPage(type){
-    const allPages = document.querySelectorAll(".mainPage > div");
-    const allbtn = document.querySelectorAll(".navbar__management > div")
+function TabPage(type) {
+    try {
+        // Hide all pages
+        const allPages = document.querySelectorAll(".mainPage > div");
+        allPages.forEach(page => {
+            page.classList.add("hidden");
+        });
 
-    allPages.forEach(page => {
-        page.classList.add("hidden");
-    })
+        // Remove active class from all menu items
+        const allMenuItems = document.querySelectorAll(".navbar__management > div");
+        allMenuItems.forEach(item => {
+            item.classList.remove("active");
+        });
 
-    allbtn.forEach(page => {
-        page.classList.remove("active");
-    })
-    document.querySelector(".mainPage__"+type).classList.remove("hidden");
-    document.querySelector(".navbar__management-"+type).classList.add("active");
-}
-async function getUser(){
-    const response = await fetch("https://localhost:44343/User/getuser",{
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json",
+        // Show selected page and activate menu item
+        const selectedPage = document.querySelector(".mainPage__" + type);
+        const selectedMenuItem = document.querySelector(".navbar__management-" + type);
+
+        if (selectedPage) {
+            selectedPage.classList.remove("hidden");
         }
-    });
-    const data = await response.json();
-    const userList = document.querySelector("#userlist");
-    userList.innerHTML = ""; 
-    index=1;
-    data.forEach(user => {
-        const userItem = document.createElement("tr");
-        userItem.classList.add("user-item");
-        userItem.innerHTML = `
-            <td>${index++}</td>
-            <td>${user.username}</td>
-            <td>${user.email}</td>
-            <td>${user.status}</td>
-            <td>${user.role}</td>
-            <td>
-                <button>Info</button>
-            </td>
-        `;
-        userList.appendChild(userItem);
-    });
+        if (selectedMenuItem) {
+            selectedMenuItem.classList.add("active");
+        }
+
+        // If it's the Users page, load user data
+        // if (type === "Users") {
+        //     getUser();
+        // }
+    } catch (error) {
+        console.error("Error switching tabs:", error);
+    }
 }
 
-//add click cho cac tab
-document.querySelector(".navbar__management-Screens").addEventListener("click",function(){
-    TabPage("Screens");
-});
-document.querySelector(".navbar__management-Movies").addEventListener("click",function(){
-    TabPage("Movies");
-});
-document.querySelector(".navbar__management-Shows").addEventListener("click",function(){
-    TabPage("Shows");
-});
-document.querySelector(".navbar__management-Booking").addEventListener("click",function(){
-    TabPage("Booking");
-});
-document.querySelector(".navbar__management-SalesReport").addEventListener("click",function(){
-    TabPage("SalesReport");
-});
-document.querySelector(".navbar__management-Users").addEventListener("click",function(){
+// Add click events for all menu items
+document.querySelector(".navbar__management-Users").addEventListener("click", function() {
     TabPage("Users");
 });
 
+document.querySelector(".navbar__management-Screens").addEventListener("click", function() {
+    TabPage("Screens");
+});
 
+document.querySelector(".navbar__management-Movies").addEventListener("click", function() {
+    TabPage("Movies");
+});
 
-//button close tab phan detailfilm
-document.querySelector(".mainPage__Movies__Detailfilm-close").addEventListener("click",function(){
-    document.querySelector(".mainPage__Movies__Detailfilm").classList.add("hidden");
+document.querySelector(".navbar__management-Shows").addEventListener("click", function() {
+    TabPage("Shows");
+});
+
+document.querySelector(".navbar__management-Booking").addEventListener("click", function() {
+    TabPage("Booking");
+});
+
+document.querySelector(".navbar__management-FoodDrinks").addEventListener("click", function() {
+    TabPage("FoodDrinks");
+});
+
+document.querySelector(".navbar__management-SalesReport").addEventListener("click", function() {
+    TabPage("SalesReport");
 });
 
 
-//button edit de xem detailfilm
-document.querySelector(".Editmovie1").addEventListener("click",function(){
-    document.querySelector(".mainPage__Movies__Detailfilm").classList.remove("hidden");
+
+
+
+
+
+
+//--------------------------End Xử Lý các action chuyển tab, hiddenn của trang Admin Home-------------------------------------------//
+
+
+
+// Add event listeners for Remove buttons
+document.addEventListener('DOMContentLoaded', function() {
+    // Add click event listeners to all Remove buttons
+    document.querySelectorAll('.RemoveUser').forEach(button => {
+        button.addEventListener('click', function() {
+            const userId = this.getAttribute('data-userid');
+            const row = this.closest('tr');
+            
+            if (confirm('Bạn có chắc chắn muốn xóa người dùng này?')) {
+                // Remove the row from the table
+                row.remove();
+                // TODO: Add API call to delete user from database
+                console.log('Deleting user with ID:', userId);
+            }
+        });
+    });
 });
 
 
 
-//button close tab phan SeatLayout
-document.querySelector(".closeScreen").addEventListener("click",function(){
-    document.querySelector(".mainPage__Screens__DetailContainer").classList.add("hidden");
-});
 
-//button edit de xem detailScreen
-document.querySelector(".mainPage__Screens__ContainerListCard__item").addEventListener("click",function(){
-    document.querySelector(".mainPage__Screens__DetailContainer").classList.remove("hidden");
-});
+
+

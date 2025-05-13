@@ -9,21 +9,27 @@
 }
 
 .mainPage__Movies-title{
-    border-bottom:3px inset rgb(146, 29, 150);
-    border-left:3px inset rgb(72, 40, 40);
-    box-shadow: 0px 4px 12px rgb(146, 29, 150);
-    border-radius:5px;
-    color: white;
-    font-weight: bold;
-    font-size: 35px;
+    border-bottom: 3px inset #2b4f81;         /* Xanh đậm trung tính */
+    border-left: 3px inset #365a8d;           /* Xanh than gần nền */
+    box-shadow: 0px 4px 12px rgba(51, 112, 197, 0.6); /* Nhẹ, tông xanh dịu */
+    border-radius: 5px;
+    color: #e0f0ff;                           /* Trắng xanh nhẹ, không gắt */
+    font-weight: normal;
+    font-size: 18px;
     padding: 3px 20px;
-    width: 350px;
+    width: 350px !important;
     align-self: center;
     justify-self: center;
     text-align: center;
     animation: fadeIn 1.3s ease-in-out forwards;
 }
-
+.searchMovieBtn{
+  padding:10px 15px !important;
+  border-radius: 8px;
+  border:none;
+  background-color: rgb(59, 65, 182);
+  color: white;
+}
 .mainPage__Movies-search{
     display:flex;
     width:60%;
@@ -43,6 +49,7 @@
     padding: 6px 7px;
     border-radius: 3px;
     border: none;
+    margin-left: 10px;
 
 }
 
@@ -50,6 +57,13 @@
     padding:4px 7px;
     border-radius: 5px;
     border:none;
+}
+button{
+  padding:10px 15px !important;
+  border-radius: 8px;
+  border:none;
+  background-color: rgb(59, 65, 182);
+  color: white;
 }
 
 .mainPage__Movies__Container {
@@ -142,118 +156,6 @@ button:hover {
     background-color: #006F8E; /* Màu nền khi di chuột vào nút */
 }
 
-.mainPage__Movies__Detailfilm{
-    position:absolute;
-    top:40%;
-    right: 50%;
-    height: 500px;
-    border-radius: 15px;
-    background:linear-gradient(to bottom , rgba(27, 22, 24, 0.95),rgba(88, 18, 29, 0.9));
-    align-content: center;
-    width: 1300px;
-    padding: 0 100px;
-    transform: translate(50%,-20%);
-    animation: fadeIn 0.2s ease-in-out forwards;
-    display:grid;
-    grid-template-columns: 30% 70%;;
-    gap:10px;
-    justify-items: center;
-}
-
-.mainPage__Movies__Detailfilm-img{
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 12px rgb(86, 58, 189);
-    margin: 10px;
-}
-
-
-.mainPage__Movies__Detailfilm-content{
-    width: 100%;
-    padding: 10px;
-    display: grid;
-    grid-template-columns: 16% 80%;
-    gap: 5px;
-    justify-content: center;
-    color: white;
-    font-size: 20px;
-    align-self: center;
-}
-
-.mainPage__Movies__Detailfilm-content p{
-    padding-bottom: 25px;
-}
-.mainPage__Movies__Detailfilm-content input{
-    width: 90%;
-    padding: 8px 15px;
-    border-radius: 5px;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.2);
-    color: white;
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 18px;
-}
-.mainPage__Movies__Detailfilm-content__block1__Inf{
-    display: inline-block;
-}
-
-.mainPage__Movies__Detailfilm-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgb(116, 42, 42);
-    width:54px;
-    border: none;
-    border-radius: 10px;;
-    font-size: 22px;
-    color: white;
-    cursor: pointer;
-    outline: none;
-    transition: transform 0.1s ease;
-}
-.mainPage__Movies__Detailfilm-close:hover {
-    background: rgb(255, 0, 0);
-    transform: scale(1.05);
-}
-.mainPage__Movies__Detailfilm-close:active{
-    transform: scale(0.95);
-    background: rgb(255, 0, 0);
-} 
-
-
-.mainPage__Movies__Detailfilm-submit{
-    position:absolute;
-    right: 29%;
-    bottom: 30px;
-    padding: 10px;
-    width: 150px;
-    background-color: #9b1860;
-    color: white;
-    font-weight: bold;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    opacity:0.8;
-    transition: background-color 0.3s;
-}
-
-.mainPage__Movies__Detailfilm-submit:hover {
-    opacity:1;
-    background-color: #a82871; /* Màu nền khi di chuột vào nút */
-}   
-
-
-
-
-
-
-
-
-
-
-
 /* Kiểu thanh cuộn */
 .mainPage__Movies__Container::-webkit-scrollbar {
     width: 8px;  /* Đặt độ rộng cho thanh cuộn */
@@ -275,3 +177,196 @@ button:hover {
 .mainPage__Movies__Container::-webkit-scrollbar:hover {
     width: 12px;  /* Mở rộng thanh cuộn khi hover */
 }
+
+.AddMovieBtn {
+  background: linear-gradient(90deg, #2563eb, #38bdf8);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 12px !important;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(56, 189, 248, 0.15);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+.AddMovieBtn i {
+  font-size: 16px;
+}
+.AddMovieBtn:hover {
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+  box-shadow: 0 4px 16px rgba(56, 189, 248, 0.25);
+  transform: translateY(-2px) scale(1.04);
+}
+
+
+
+.movie-modal {
+    position: fixed; inset: 0; z-index: 3000;
+    background: rgba(15,23,42,0.7);
+    display: flex; align-items: center; justify-content: center;
+    transition: opacity 0.3s;
+  }
+  .movie-modal.hidden { display: none; }
+  .movie-modal__content {
+    background: #1e2332;
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(30,41,59,0.25);
+    padding: 32px 32px 24px 32px;
+    min-width: 700px; max-width: 900px;
+    width: 95vw;
+    color: #e0f0ff;
+    display: flex; flex-direction: column;
+    animation: fadeIn 0.3s;
+  }
+  .movie-modal__content h2 {
+    color: #38bdf8;
+    margin-bottom: 18px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    padding-right: 50px;
+  }
+  .movie-form {
+    display: flex;
+    gap: 36px;
+  }
+  .movie-form__left {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .movie-form__right {
+    flex: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    min-width: 300px;
+  }
+  .movie-form__right label{
+    color: #e0e7ef;
+    font-weight: 500;
+    margin-bottom: 4px;
+    font-size: 25px;
+  }
+  .movie-form__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 80px;
+  }
+  .movie-form__row {
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+  .movie-form__row label {
+    color: #e0e7ef;
+    font-weight: 500;
+    margin-bottom: 4px;
+    font-size: 1rem;
+  }
+  .movie-form__row input,
+  .movie-form__row textarea {
+    width: 100%;
+    padding: 10px 12px;
+    background: #0f172a;
+    border: 1.5px solid #334155;
+    border-radius: 6px;
+    color: #f1f5f9;
+    font-size: 1rem;
+    transition: border 0.2s;
+  }
+  .movie-form__row input:focus,
+  .movie-form__row textarea:focus {
+    border: 1.5px solid #38bdf8;
+    outline: none;
+  }
+  .movie-poster-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .movie-poster-img {
+    width: 300px; height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #334155;
+    box-shadow: 0 2px 12px rgba(56,189,248,0.12);
+    margin-bottom: 15px;
+  }
+  .movie-poster-btn {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .movie-poster-btn:hover {
+    background: #38bdf8;
+    color: #222;
+  }
+  .btn-save {
+    background: linear-gradient(90deg, #2563eb, #38bdf8);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 22px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-save:hover {
+    background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+  }
+  .btn-delete {
+    background: #ef4444;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 22px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-delete:hover {
+    background: #b91c1c;
+  }
+  .btn-cancel {
+    background: transparent;
+    color: #e0e7ef;
+    border: 1.5px solid #64748b;
+    border-radius: 6px;
+    padding: 10px 22px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  .btn-cancel:hover {
+    background: #334155;
+    color: #fff;
+  }
+  .required { color: #ef4444; }
+  @media (max-width: 900px) {
+    .movie-modal__content { min-width: 90vw; padding: 18px 6vw; }
+    .movie-form { flex-direction: column; gap: 18px; }
+    .movie-form__right { min-width: 0; }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }

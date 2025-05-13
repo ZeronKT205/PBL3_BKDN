@@ -8,14 +8,14 @@
     position:relative;
 }
 .mainPage__Shows-title{
-    border-bottom:3px inset rgb(146, 29, 150);
-    border-left:3px inset rgb(72, 40, 40);
-    box-shadow: 0px 4px 12px rgb(146, 29, 150);
-    border-radius:5px;
-    color: white;
-    font-weight: bold;
+    border-bottom: 3px inset #2b4f81;         /* Xanh đậm trung tính */
+    border-left: 3px inset #365a8d;           /* Xanh than gần nền */
+    box-shadow: 0px 4px 12px rgba(51, 112, 197, 0.6); /* Nhẹ, tông xanh dịu */
+    border-radius: 5px;
+    color: #e0f0ff;                           /* Trắng xanh nhẹ, không gắt */
+    font-weight: normal;
     font-size: 18px;
-    padding: 3px 15px;
+    padding: 3px 20px;
     width: 330px;
     align-self: center;
     justify-self: center;
@@ -32,7 +32,7 @@
     animation: fadeIn 1.3s ease-in-out forwards;
     margin-bottom: 20px;
     justify-content: space-around;
-    color: rgb(227, 46, 146);
+    color: rgb(207, 207, 207);
     font-size: 18px;
     font-weight: 500;
     margin-top:30px;
@@ -45,8 +45,8 @@
 }
 .mainPage__Shows__Containersearch div input,select{
     color: white;
-    background: rgba(0, 0, 0, 0.5);
-    border:1px solid rgb(127, 26, 75);
+    background: rgba(3, 4, 26, 0.5)!important;
+    border:1px solid rgb(17, 3, 146) !important;
     font-size: 16px;
     font-weight:normal;
     width: 180px;
@@ -138,18 +138,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* Kiểu thanh cuộn */
 .mainPage__Shows__containerinfo::-webkit-scrollbar {
     width: 5px;  /* Đặt độ rộng cho thanh cuộn */
@@ -175,4 +163,125 @@
 input[type="date"]::-webkit-calendar-picker-indicator {
     filter: brightness(0) invert(1); /* Biến icon thành màu trắng */
     cursor: pointer;
+}
+
+/* Modal Add Show */
+.add-show-modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(15,23,42,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.add-show-modal.hidden {
+  display: none;
+}
+.add-show-modal__content {
+  background: #1e2332;
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(30,41,59,0.25);
+  padding: 32px 32px 24px 32px;
+  min-width: 350px; max-width: 420px;
+  width: 95vw;
+  animation: fadeIn 0.3s;
+  color: #e0f0ff;
+}
+.add-show-modal__content h2 {
+  color: #38bdf8;
+  margin-bottom: 18px;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.add-show-form__row {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.add-show-form__row label {
+  color: #e0e7ef;
+  font-weight: 500;
+  margin-bottom: 6px;
+  font-size: 1rem;
+}
+.add-show-form__row input,
+.add-show-form__row select {
+  width: 100%;
+  padding: 10px 12px;
+  background: #0f172a;
+  border: 1.5px solid #334155;
+  border-radius: 6px;
+  color: #f1f5f9;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+.add-show-form__row input:focus,
+.add-show-form__row select:focus {
+  border: 1.5px solid #38bdf8;
+  outline: none;
+}
+.add-show-form__row input[type="number"]::-webkit-inner-spin-button,
+.add-show-form__row input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.add-show-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 18px;
+}
+.btn-save {
+  background: linear-gradient(90deg, #2563eb, #38bdf8);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-save:hover {
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+}
+.btn-cancel {
+  background: transparent;
+  color: #e0e7ef;
+  border: 1.5px solid #64748b;
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-cancel:hover {
+  background: #334155;
+  color: #fff;
+}
+.required {
+  color: #ef4444;
+}
+@media (max-width: 600px) {
+  .add-show-modal__content {
+    min-width: 90vw;
+    padding: 18px 6vw;
+  }
+  .add-show-form__actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btn-save, .btn-cancel {
+    width: 100%;
+  }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
 }

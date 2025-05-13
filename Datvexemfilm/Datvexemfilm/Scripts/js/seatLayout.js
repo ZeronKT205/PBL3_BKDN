@@ -1,59 +1,115 @@
-function generateSeats() {
-    let rows = document.getElementById("rows").value;
-    let cols = document.getElementById("cols").value;
-    const seatsContainer = document.getElementById("seats-container");
+// Giá vé mỗi ghế (có thể thay đổi)
+const TICKET_PRICE = 50000;
 
-    // Tạo mặc định 4x4 nếu không nhập giá trị
-    if (rows === "" && cols === "") {
-        rows = 4;
-        cols = 4;
-    }
+// Mảng lưu các ghế đã chọn
+let selectedSeats = [];
 
-    // Kiểm tra nếu giá trị nhập hợp lệ
-    if (rows <= 0 || cols <= 0) {
-        alert("Vui lòng nhập số hàng và số cột hợp lệ.");
-        return;
-    }
+// Hàm tạo layout ghế
+function loadSeats(rows, cols) {
+    const seatsContainer = document.getElementById('seats-container');
+    seatsContainer.innerHTML = ''; // Xóa nội dung cũ
 
-    // Xóa các ghế cũ (nếu có)
-    seatsContainer.innerHTML = "";
-
-    // Tạo sơ đồ ghế
-    seatsContainer.style.gridTemplateColumns = `repeat(${cols}, 50px)`; // Đặt số cột
-    seatsContainer.style.gridTemplateRows = `repeat(${rows}, 50px)`;   // Đặt số hàng
-
-    const letters = Array.from({ length: 26 }, (_, i) => String.fromCharCode(65 + i)); // Tạo mảng A-Z
-
-    // Tạo các ghế cho từng hàng và cột
+    // Tạo ma trận ghế
     for (let i = 0; i < rows; i++) {
+        const row = document.createElement('div');
+        row.className = 'seat-row';
+        row.style.display = 'flex';
+
         for (let j = 0; j < cols; j++) {
-            const seat = document.createElement("div");
-            seat.classList.add("seat", "available");
+            const seat = document.createElement('button');
+            const seatNumber = `${String.fromCharCode(65 + i)}${j + 1}`; // A1, A2, B1, B2,...
+            
+            seat.className = 'available';
+            seat.textContent = seatNumber;
+            seat.dataset.seat = seatNumber;
 
-            // Tạo ID cho từng ghế (A1, A2, B1, B2, ...)
-            const seatId = `${letters[i]}${j + 1}`;
-            seat.textContent = seatId;
-
-            // Thêm sự kiện click cho ghế
-            seat.onclick = function () {
-                toggleSeat(seat);
-            };
-
-            // Thêm ghế vào container
-            seatsContainer.appendChild(seat);
+            // Thêm sự kiện click
+            seat.addEventListener('click', () => handleSeatClick(seat));
+            
+            row.appendChild(seat);
         }
+        seatsContainer.appendChild(row);
     }
 }
 
-// Xử lý sự kiện khi chọn hoặc bỏ chọn ghế
-function toggleSeat(seat) {
-    if (seat.classList.contains("available")) {
-        // Nếu ghế có sẵn, chuyển sang đã chọn
-        seat.classList.remove("available");
-        seat.classList.add("selected");
-    } else if (seat.classList.contains("selected")) {
-        // Nếu ghế đã chọn, bỏ chọn
-        seat.classList.remove("selected");
-        seat.classList.add("available");
+// Hàm xử lý khi click vào ghế
+function handleSeatClick(seat) {
+    const seatNumber = seat.dataset.seat;
+    const seatList = document.querySelector('.seat-list');
+    const ticketNumber = document.querySelector('.MainContainer__DetailBooking-ticketNumber .movie-detail-value');
+    const totalPrice = document.querySelector('.MainContainer__DetailBooking-totalPrice .price');
+
+    if (seat.classList.contains('selected')) {
+        // Bỏ chọn ghế
+        seat.classList.remove('selected');
+        seat.classList.add('available');
+        
+        // Xóa ghế khỏi danh sách
+        selectedSeats = selectedSeats.filter(s => s !== seatNumber);
+        
+        // Cập nhật hiển thị
+        updateSeatDisplay(seatList);
+        updateTicketCount(ticketNumber);
+        updateTotalPrice(totalPrice);
+    } else {
+        // Chọn ghế
+        seat.classList.remove('available');
+        seat.classList.add('selected');
+        
+        // Thêm ghế vào danh sách
+        selectedSeats.push(seatNumber);
+        
+        // Cập nhật hiển thị
+        updateSeatDisplay(seatList);
+        updateTicketCount(ticketNumber);
+        updateTotalPrice(totalPrice);
     }
 }
+
+// Hàm cập nhật hiển thị danh sách ghế
+function updateSeatDisplay(seatList) {
+    seatList.innerHTML = '';
+    selectedSeats.forEach(seat => {
+        const seatSpan = document.createElement('span');
+        seatSpan.textContent = seat;
+        seatList.appendChild(seatSpan);
+    });
+}
+
+// Hàm cập nhật số vé
+function updateTicketCount(ticketNumber) {
+    ticketNumber.textContent = selectedSeats.length;
+}
+
+// Hàm cập nhật tổng tiền
+function updateTotalPrice(totalPrice) {
+    const total = selectedSeats.length * TICKET_PRICE;
+    totalPrice.textContent = `${total.toLocaleString('vi-VN')} VNĐ`;
+}
+
+// Hàm reset tất cả ghế
+function resetSeats() {
+    selectedSeats = [];
+    const seats = document.querySelectorAll('.seats-container button');
+    seats.forEach(seat => {
+        seat.classList.remove('selected');
+        seat.classList.add('available');
+    });
+    
+    // Reset hiển thị
+    const seatList = document.querySelector('.seat-list');
+    const ticketNumber = document.querySelector('.MainContainer__DetailBooking-ticketNumber .movie-detail-value');
+    const totalPrice = document.querySelector('.MainContainer__DetailBooking-totalPrice .price');
+    
+    updateSeatDisplay(seatList);
+    updateTicketCount(ticketNumber);
+    updateTotalPrice(totalPrice);
+}
+
+// Thêm sự kiện cho nút Reset
+document.querySelector('.MainContainer__DetailBooking-btn-reset').addEventListener('click', resetSeats);
+
+// Khởi tạo layout ghế khi trang được load
+document.addEventListener('DOMContentLoaded', () => {
+    loadSeats(4, 5);
+});

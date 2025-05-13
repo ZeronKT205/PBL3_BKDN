@@ -4,285 +4,383 @@
     background:linear-gradient(to top, rgba(27, 25, 25, 0.3),rgb(68, 48, 61)), url("../images/bg__admin.jpg") no-repeat center/cover;
     height: 100vh;
     width: 100%;
-    overflow:hidden;
+    overflow: hidden !important;
     color:rgb(255, 255, 255);
     position:relative;
 }
 
 .mainPage__Screens-title{
-    border-bottom:3px inset rgb(146, 29, 150);
-    border-left:3px inset rgb(72, 40, 40);
-    box-shadow: 0px 4px 12px rgb(146, 29, 150);
-    border-radius:5px;
-    color: white;
+    border-bottom: 3px inset #2b4f81;         /* Xanh đậm trung tính */
+    border-left: 3px inset #365a8d;           /* Xanh than gần nền */
+    box-shadow: 0px 4px 12px rgba(51, 112, 197, 0.6); /* Nhẹ, tông xanh dịu */
+    border-radius: 5px;
+    color: #e0f0ff;                           /* Trắng xanh nhẹ, không gắt */
     font-weight: normal;
-    font-size: 15px;
-    padding: 3px 15px;
-    width: 300px;
+    font-size: 18px;
+    padding: 3px 20px;
+    width: 330px;
     align-self: center;
     justify-self: center;
     text-align: center;
     animation: fadeIn 1.3s ease-in-out forwards;
 }
-
+.mainPage__Screens__BlockSearch-button button{
+    padding:10px 15px !important;
+    border-radius: 8px;
+    border:none;
+    background-color: rgb(59, 65, 182);
+    color: white;
+}
+.mainPage__Screens__BlockSearch-screen-select{
+    color:white!important;
+}
 .mainPage__Screens__ContainerListCard{
     width: 90%;
     max-width: 1400px;
-    height: 100%;
-    display:grid;
-    gap: 60px;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Tạo lưới với các cột tự động */
-    grid-template-rows: repeat(auto-fill, 400px); /* Tạo lưới với các hàng tự động */
-    overflow-y: auto;
+    height: calc(100vh - 350px);
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    overflow-y: auto !important;
     overflow-x: hidden;
     justify-self: center;
     align-self: start;
     border-radius: 20px;
-    padding:5px;
-    padding-right:20px;
-    background:rgba(21, 20, 20, 0.5);
     padding: 20px;
-    border:5px inset rgb(89, 52, 129);
-    box-shadow: 0px 4px 12px rgb(153, 25, 83);
+    background: rgba(9, 8, 10, 0.6);
+    border: 2px inset rgb(180, 178, 180);
+    box-shadow: 0px 4px 12px rgba(51, 112, 197, 0.6);
+    margin-bottom: 20px;
 }
 
 .mainPage__Screens__ContainerListCard__item{
-    display:flex;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background:rgba(35, 91, 211, 0.6);
-    border-radius: 10px;
-    padding: 20px;  
-    box-shadow: 0px 4px 12px rgb(153, 25, 83);
-    border: 3px inset rgb(0, 0, 0);
+    background: rgba(52, 121, 170, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(51, 112, 197, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
     cursor: pointer;
-    font-weight: 500;
-    text-align: center;
     animation: fadeIn 1.3s ease-in-out forwards;
+    height: 350px;
 }
 
 .mainPage__Screens__ContainerListCard__item:hover{
-    box-shadow: 0px 6px 20px rgba(76, 198, 228);
+    background: rgba(18, 41, 109, 0.5);
     transform: translateY(-5px);
 }
 
 .mainPage__Screens__ContainerListCard__item-title{
     font-size: 20px;
     font-weight: 600;
-    color: rgb(255, 255, 255);
-    margin-bottom: 10px;
-    justify-content: start;
-    align-items: center;;
-    width:100%;
-    text-align: start;
-    padding:5px 10px;
-    font-size: 25px;
-    margin-top: 10px;
+    color: #fff;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .mainPage__Screens__ContainerListCard__item__Containerinf{
-    display:grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 cột */
-    grid-template-rows: repeat(2, auto); /* 2 hàng */
-    gap: 25px; /* Khoảng cách giữa các ô */
-    align-self: start;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
     width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    justify-content: center;
+    padding: 10px;
 }
 
 .mainPage__Screens__ContainerListCard__item__Containerinf div{
-    border-radius: 10px;
-    padding: 10px;
-    background:rgb(64, 62, 83);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .mainPage__Screens__ContainerListCard__item__Containerinf span{
-    color: rgb(209, 199, 199);
-    font-size: 18px;
+    color: #e0f0ff;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
 }
+
 .mainPage__Screens__ContainerListCard__item__Containerinf p{
-    font-size: 27px;
-    margin:10px;
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
 }
 
-
-.mainPage__Screens__ContainerListCard__item__Containerinf-numSeats p{
-    font-size: 35px;
-}
-.mainPage__Screens__ContainerListCard__item__Containerinf-AvailablenumSeats p{
-    font-size: 35px;
-}
-/* Kiểu thanh cuộn */
-.mainPage__Screens__ContainerListCard::-webkit-scrollbar {
-    width: 0px;  /* Đặt độ rộng cho thanh cuộn */
-}
 .mainPage__Screens__ContainerListCard__item__Containerinf-status p{
-    background-color:rgb(20, 129, 65);
-    border-radius: 10px;
+    background-color: rgba(32, 201, 101, 0.2);
+    color: #20c965;
+    border-radius: 6px;
     padding: 5px 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Style cho thanh cuộn */
+.mainPage__Screens__ContainerListCard::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(4, 7, 24);
 }
 
 .mainPage__Screens__ContainerListCard::-webkit-scrollbar-thumb {
-    background-color: #431e41;  /* Màu sắc cho phần thanh cuộn */
-    border-radius: 10px;  /* Tạo góc bo tròn cho thanh cuộn */
-    border: 2px solid #fff;  /* Thêm viền quanh thanh cuộn */
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
 }
 
 .mainPage__Screens__ContainerListCard::-webkit-scrollbar-track {
-    background-color: #f1f1f1;  /* Màu nền cho thanh cuộn */
-    border-radius: 10px;  /* Tạo góc bo tròn cho track */
+    background-color: rgb(9, 10, 82);
 }
 
-/* Thêm hiệu ứng khi hover vào thanh cuộn */
-.mainPage__Screens__ContainerListCard::-webkit-scrollbar:hover {
-    width: 12px;  /* Mở rộng thanh cuộn khi hover */
+.mainPage__Screens__ContainerListCard::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.3);
 }
-
-
-
-
 
 /* Chi tiet tao so do cho ngoi */
-.mainPage__Screens__DetailContainer{
-    position:absolute;
-    width: 100%;
-    height: 100%;
-    background:linear-gradient(to top, rgba(74, 51, 94, 0.8),rgb(29, 32, 71,0.8));
+.mainPage__Screens__DetailContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top, rgba(27, 25, 25, 0.95), rgba(68, 48, 61, 0.95));
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+    animation: fadeIn 0.3s ease-in-out;
 }
-.containerScreenx{
-    width: 70%;
-    height: auto;
-    min-height: 75%;
-    max-height:100%;
-    display: grid;
-    grid-template-rows: 40% 60%;
-    justify-content: center;
-    text-align: center;
-    border:1px solid rgb(255, 255, 255);
-    background:linear-gradient(to top, rgba(61, 24, 68, 0.8),rgba(49, 56, 165, 0.8));
-    padding: 30px;
-    position:relative;
-    border-radius: 10px; 
-    animation:fadein 1.3s ease-in-out forwards;
-    box-shadow: 0px 4px 12px rgb(153, 25, 83);
 
+.containerScreenx {
+    width: 80%;
+    max-width: 1200px;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to bottom, rgba(27, 25, 25, 0.95), rgba(68, 48, 61, 0.95));
+    padding: 30px;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow-y: auto;
 }
-.containerScreenx input{
-    margin-right:20px;
-    width:100px;
-    padding: 5px 10px;
-    border-radius: 7px;
-    color:black;
+
+.closeScreen {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.274);
+    width: 40px!important;
+    height: 40px!important;
+
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 2;
 }
-.containerScreenx select{
-    margin-right:20px;
-    width:100px;
-    padding: 5px 10px;
-    border-radius: 7px;
-    background:white;
-    color:black;
+
+.closeScreen:hover {
+    background: rgba(255, 0, 0, 0.2);
+    transform: rotate(90deg);
 }
-.input-container{
-    margin-bottom:10px;
+
+.input-container {
+    margin-bottom: 20px;
     width: 100%;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.input-container__block1{
-    margin:30px 0;
+
+.input-container__block1 {
+    margin: 30px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+
 }
-.input-container__block2{
+
+.input-container__block1 label{
+    font-size: 18px;
+    font-weight: 500;
+    color: #e0f0ff;
+    margin-top: 8px;
+}
+.input-container__block1 input {
+    width: 120px;
+    height: 35px;
+    border-radius: 5px;
+    padding: 2px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.input-container__block1 input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+.input-container__block1 select {
+    width: 120px;
+    height: 35px;
+    border-radius: 9px;
+    padding: 2px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #e4e0e0;
+    background: rgb(12, 4, 56) !important;
+    border: 1px solid rgba(34, 32, 32, 0.1) !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.input-container__block1 select:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+.input-container__block1 label {
+    font-size: 14px;
+    color: #e0f0ff;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: 500;
+}
+
+.input-container__block2 {
     display: flex;
     align-items: center;
-    width:100%;
-    justify-content:space-around;
-    padding:0 40px;
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 40px;
+    margin-top: 20px;
 }
-button {
-    padding: 10px 20px;
-    background-color: #287db6;
-    color: white;
-    border: none;
+
+.seats-layout {
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    margin-right: 10px;
-    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.SubmitChangeSeatLayout{
-    padding: 10px 20px;
-    background-color: #e92f5d;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-.SubmitChangeSeatLayout:hover {
-    background-color: #d0244c;
-}
-button:hover {
-    opacity:0.8;
+
+.seats-layout h3 {
+    color: #e0f0ff;
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .seats-container {
     display: grid;
-    gap: 7px;
+    gap: 8px;
     justify-content: center;
-    margin-top:50px;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    position: relative;
+    min-height: 58%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.containerScreenx button {
+    padding: 12px 25px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 15px;
+    min-width: 120px;
+}
+
+.containerScreenx button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.SubmitChangeSeatLayout {
+    background: #e92f5d !important;
+    border: none !important;
+}
+
+.SubmitChangeSeatLayout:hover {
+    background: #d0244c !important;
 }
 
 .seat {
     width: 35px;
     height: 35px;
-    font-size: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #7f8c8d;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 13px;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.seat.available {
-    background-color: #2291eb;
+.seat:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
 }
 
 .seat.selected {
-    background-color: #2980b9;
+    background: #4a90e2;
+    border-color: #357abd;
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
 }
 
-.closeScreen {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgb(116, 42, 42);
-    border: none;
-    border-radius: 10px;;
-    font-size: 24px;
-    color: white;
-    cursor: pointer;
-    outline: none;
-    transition: transform 0.1s ease;
+.seat.selected:hover {
+    background: #357abd;
 }
-.closeScreen:hover {
-    background: rgb(255, 0, 0);
-    transform: scale(1.05);
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
-.closeScreen:active{
-    transform: scale(0.95);
-    background: rgb(255, 0, 0);
-} 
-
-
-
 
 /* Chuc Nang Tim Kiem va Them Phong Chieu */
 .mainPage__Screens-search{

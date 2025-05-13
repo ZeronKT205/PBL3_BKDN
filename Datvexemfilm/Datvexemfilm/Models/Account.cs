@@ -1,16 +1,14 @@
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
-// LoginRequest.cs - hoặc có thể để trong cùng file nhưng ngoài class controller
-namespace Datvexemfilm.Controllers
+[Table("Account")]
+public class Account
 {
-    public class LoginRequest
-    {
-        public string Username { get; set; }
-        public string Password { get; set; }
-    }
-    public class RegisterRequest
-    {
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public string Email { get; set; }
-    }
+    [Key]
+    public int ID { get; set; }
+    public string Username { get; set; }
+    public string Password { get; set; }
+    public string Role { get; set; }
+    public string Email { get; set; }
+    public string Status { get; set; }
 }

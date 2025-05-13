@@ -14,7 +14,6 @@ namespace Datvexemfilm
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-            SwaggerConfig.Register();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);

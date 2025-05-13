@@ -1,0 +1,45 @@
+.container{
+    background: linear-gradient(145deg, #111161 0%, #341a4b 60%, #2c105a 100%)!important;
+    height: auto !important;
+    min-height: 110vh !important;
+    grid-template-rows: 80px auto !important;
+}
+
+.history-container{
+    display: grid;
+    grid-template-rows: 150px auto;
+    justify-content: center;
+
+}
+
+
+.history-container__content-ticket img{
+    height: 150px;
+}
+
+
+
+
+
+.ticket-grid img{
+    height: 150px;
+}
+.ticket-grid{
+    display: grid;
+    gap: 20px;
+    width: 800px;
+}
+.ticket-card{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 20px;
+    background-color: #331a5c;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.10);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+
