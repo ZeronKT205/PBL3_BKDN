@@ -1,0 +1,578 @@
+body, html {
+    min-height: 100vh;
+    
+    color: #F1F5F9;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    height:auto !important;
+}
+.container{
+    background: linear-gradient(135deg, #0b0b46 0%, #1c1635 60%, #442b6d 100%)!important;
+    height: auto !important;
+    min-height: 110vh !important;
+    grid-template-rows: 70px auto !important;
+
+}
+/* Nếu muốn làm mờ hoặc hiệu ứng glassmorphism cho phần chính, có thể thêm ví dụ:
+.payment-container {
+    background: rgba(30, 34, 60, 0.85);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(93, 80, 254, 0.18), 0 2px 8px rgba(255, 94, 98, 0.10);
+    backdrop-filter: blur(8px);
+    padding: 32px 24px;
+    margin: 40px auto;
+    max-width: 500px;
+}
+*/
+
+.container.payment-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 36px auto 0 auto;
+    background: rgba(30, 34, 60, 0.82);
+    box-shadow: 0 8px 32px rgba(93, 80, 254, 0.13), 0 2px 8px rgba(255, 94, 98, 0.08);
+    border-radius: 22px;
+    padding: 0 0 36px 0;
+    display: block !important;
+    backdrop-filter: blur(8px);
+    grid-template-rows: unset !important;
+}
+
+.payment-container {
+    background: rgba(30, 34, 60, 0.92);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(93, 80, 254, 0.18), 0 2px 8px rgba(255, 94, 98, 0.10);
+    backdrop-filter: blur(8px);
+    padding: 40px 32px 32px 32px;
+    margin: 48px auto 32px auto;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+
+.payment-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.vnpay-logo {
+    width: 120px;
+    margin-bottom: 8px;
+}
+
+.payment-title h2 {
+    color: #FFD600;
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.payment-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.payment-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.08rem;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.payment-label {
+    color: #a0a0a0;
+    font-weight: 500;
+}
+
+.payment-value {
+    color: #fff;
+    font-weight: 600;
+}
+
+.payment-amount {
+    color: #FFD600;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.btn-vnpay {
+    margin-top: 18px;
+    width: 100%;
+    background: linear-gradient(90deg, #0d99ff 0%, #0d47a1 100%);
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: bold;
+    padding: 16px 0;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(13, 153, 255, 0.13);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: background 0.18s, box-shadow 0.18s, transform 0.12s;
+    letter-spacing: 1px;
+}
+
+.btn-vnpay:hover {
+    background: linear-gradient(90deg, #0d47a1 0%, #0d99ff 100%);
+    box-shadow: 0 8px 24px rgba(13, 153, 255, 0.18);
+    transform: translateY(-2px) scale(1.03);
+}
+
+.vnpay-btn-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+@media (max-width: 600px) {
+    .payment-container {
+        padding: 18px 6vw 18px 6vw;
+        max-width: 98vw;
+    }
+    .vnpay-logo {
+        width: 80px;
+    }
+    .btn-vnpay {
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+}
+
+.payment-header {
+    width: 100%;
+    background: #2d2e4a;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 18px 32px 14px 32px;
+    border-radius: 18px 18px 0 0;
+    box-shadow: 0 2px 12px rgba(93,80,254,0.07);
+    border-bottom: 1.5px solid #393a5a;
+    margin-bottom: 0;
+    gap: 18px;
+}
+.payment-header-title {
+    color: #FFD600;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-left: 12px;
+}
+.vnpay-header-logo {
+    width: 90px;
+    height: auto;
+    object-fit: contain;
+}
+
+.payment-main {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 48px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 36px 0 0 0;
+}
+.payment-ticket-box, .payment-detail-box {
+    flex: 1 1 40%;
+    min-width: 340px;
+    max-width: 480px;
+    width: 40%;
+    background: #23234a;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(93,80,254,0.07);
+    padding: 36px 32px 28px 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+.payment-ticket-box {
+    background: #1c1b42;
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(93,80,254,0.10);
+    padding: 38px 36px 32px 36px;
+    margin: 0 auto 24px auto;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    min-width: 340px;
+    max-width: 480px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+.ticket-poster {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.ticket-poster-img {
+    width: 80px;
+    height: 110px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(93,80,254,0.13);
+    object-fit: cover;
+}
+.ticket-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.ticket-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.04rem;
+    color: #F1F5F9;
+}
+.ticket-label {
+    color: #a0a0b8;
+    font-weight: 500;
+}
+.ticket-value {
+    color: #FFD600;
+    font-weight: 600;
+}
+.payment-detail-box {
+    align-items: flex-start;
+    background: #292a4a;
+}
+.payment-detail-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.08rem;
+    color: #F1F5F9;
+    margin-bottom: 10px;
+}
+.payment-detail-label {
+    color: #a0a0b8;
+    font-weight: 500;
+}
+.payment-detail-value {
+    color: #FFD600;
+    font-weight: 600;
+}
+.payment-amount {
+    color: #0d99ff;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+.payment-btn-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 36px 0 0 0;
+}
+.btn-vnpay-full {
+    width: 340px;
+    background: linear-gradient(90deg, #0d99ff 0%, #0d47a1 100%);
+    color: #fff;
+    font-size: 1.18rem;
+    font-weight: bold;
+    padding: 18px 0;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(13, 153, 255, 0.13);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    transition: background 0.18s, box-shadow 0.18s, transform 0.12s;
+    letter-spacing: 1px;
+}
+.btn-vnpay-full:hover {
+    background: linear-gradient(90deg, #0d47a1 0%, #0d99ff 100%);
+    box-shadow: 0 8px 24px rgba(13, 153, 255, 0.18);
+    transform: translateY(-2px) scale(1.03);
+}
+.vnpay-btn-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+@media (max-width: 1100px) {
+    .payment-ticket-box, .payment-detail-box {
+        min-width: 280px;
+        width: 48%;
+        padding: 24px 10px 18px 10px;
+    }
+    .payment-main {
+        gap: 18px;
+    }
+}
+@media (max-width: 900px) {
+    .payment-main {
+        flex-direction: column !important;
+        gap: 18px;
+        align-items: center;
+        padding: 24px 0 0 0;
+    }
+    .payment-ticket-box, .payment-detail-box {
+        width: 98vw;
+        max-width: 98vw;
+        min-width: 0;
+        padding: 18px 4vw 12px 4vw;
+    }
+}
+@media (max-width: 600px) {
+    .payment-header {
+        padding: 10px 4vw 8px 4vw;
+        gap: 8px;
+    }
+    .payment-header-title {
+        font-size: 1.05rem;
+    }
+    .vnpay-header-logo {
+        width: 60px;
+    }
+    .btn-vnpay-full {
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+}
+
+.addon-section {
+    margin-top: 18px;
+    width: 100%;
+}
+.addon-title {
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: #FFD600;
+    margin-bottom: 8px;
+}
+.addon-list {
+    max-height: 180px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-right: 4px;
+}
+.addon-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #23234a;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(93,80,254,0.06);
+    padding: 8px 12px;
+    transition: box-shadow 0.18s;
+}
+.addon-item:hover {
+    box-shadow: 0 4px 16px rgba(13, 153, 255, 0.10);
+}
+.addon-img {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    border-radius: 6px;
+    background: #292a4a;
+    box-shadow: 0 1px 4px rgba(93,80,254,0.08);
+}
+.addon-info {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.addon-name {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #FFD600;
+}
+.addon-price {
+    font-size: 0.98rem;
+    color: #0d99ff;
+    font-weight: 600;
+}
+.addon-btn {
+    background: linear-gradient(90deg, #ff9800 0%, #ff3d00 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 7px 18px;
+    font-size: 0.98rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.18s, box-shadow 0.18s, transform 0.12s;
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.10);
+}
+.addon-btn:hover {
+    background: linear-gradient(90deg, #ff3d00 0%, #ff9800 100%);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(255, 61, 0, 0.13);
+    transform: translateY(-2px) scale(1.04);
+}
+.addon-list::-webkit-scrollbar {
+    width: 6px;
+}
+.addon-list::-webkit-scrollbar-thumb {
+    background: #393a5a;
+    border-radius: 4px;
+}
+.addon-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.addon-qty-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 8px;
+    background: #292a4a;
+    border-radius: 8px;
+    padding: 2px 8px;
+}
+.addon-qty-btn {
+    background: linear-gradient(90deg, #0d99ff 0%, #0d47a1 100%);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    width: 28px;
+    height: 28px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.18s, box-shadow 0.18s, transform 0.12s;
+    box-shadow: 0 1px 4px rgba(13, 153, 255, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.addon-qty-btn:hover {
+    background: linear-gradient(90deg, #0d47a1 0%, #0d99ff 100%);
+    color: #FFD600;
+    transform: scale(1.08);
+}
+.addon-qty-value {
+    min-width: 18px;
+    text-align: center;
+    color: #FFD600;
+    font-weight: 700;
+    font-size: 1.08rem;
+    padding: 0 4px;
+}
+
+.styled-remove {
+    background: linear-gradient(90deg, #ff3d00 0%, #ff9800 100%);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-left: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(255, 61, 0, 0.10);
+    transition: background 0.18s, box-shadow 0.18s, transform 0.12s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.styled-remove:hover {
+    background: linear-gradient(90deg, #ff9800 0%, #ff3d00 100%);
+    color: #fff;
+    box-shadow: 0 4px 16px rgba(255, 61, 0, 0.13);
+    transform: scale(1.12);
+}
+
+.ticket-bill-title {
+    text-align: center;
+    font-size: 1.28rem;
+    font-weight: bold;
+    color: #f9f9fd;
+    letter-spacing: 1px;
+    margin-bottom: 22px;
+    border-bottom: none;
+}
+.ticket-bill-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    font-size: 1.13rem;
+}
+.ticket-bill-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.13rem;
+    color: #23234a;
+    padding: 10px 0 10px 0;
+    gap: 8px;
+    border-bottom: 1px solid #393a5a;
+}
+.ticket-bill-row.bill-addon-title,
+.ticket-bill-row.bill-total,
+.ticket-bill-row.bill-addon-row,
+.ticket-bill-row:nth-child(n+8) {
+    border-bottom: none !important;
+}
+.ticket-bill-row:last-child {
+    border-bottom: none;
+}
+.bill-label {
+    font-weight: 600;
+    opacity: 0.85;
+    font-size: 1.08rem;
+    letter-spacing: 0.2px;
+    color: #e4e9e8;
+}
+.ticket-bill-row .bill-label {
+    min-width: 140px;
+    text-align: left;
+}
+.bill-value {
+    font-weight: 700;
+    font-size: 1.13rem;
+    text-align: right;
+    color: #fff;
+}
+
+/* Đường kẻ phân cách trước tổng cộng */
+.ticket-bill-list .bill-total {
+    border-top: 2.5px solid #b3b0ad;
+    margin-top: 18px;
+    font-size: 1.22rem;
+    font-weight: bold;
+    color: #FFD600;
+    padding-top: 13px;
+    letter-spacing: 0.5px;
+    background: transparent;
+    border-radius: 0 0 14px 14px;
+}
+.ticket-bill-list .bill-total .bill-label {
+    color: #fff;
+    font-size: 1.18rem;
+    font-weight: bold;
+}
+.ticket-bill-list .bill-total .bill-value {
+    color: #0d99ff;
+    font-size: 1.22rem;
+    font-weight: bold;
+}
+
+.product-title{
+    color: #cacac9;
+    font-size: 1.13rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeron | MovieMovie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/style.css")">
+    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/animation.css")">
+    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/SearchPage.css")">
+</head>
+<body>
+
+    <div class="container1">
+        <!--NAVBAR -->
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <img src="@Url.Content("~/Content/assets/images/logo.png")" alt="logo" class="navbar__logo-item">
+                <span class = "navbar__logo-name">Zeron</span>
+            </div>
+            <ul class="navbar__content">
+                <li><a href = "#" class="navbar__content-item1">TRANG CHỦ</a></li>
+                <li><a href = "#" class="navbar__content-item1">ĐẶT VÉ</a></li>
+                <button class="navbar__content-btn" onclick ="goToPageSignUp()" >ĐĂNG KÍ</button>
+            </ul>
+        </nav>
+        <!--END NAVBAR -->
+        <div class="search-bar-container">
+          <input type="text" class="search-bar-input" placeholder="Nhập tên phim...">
+          <button class="search-bar-btn"><i class="fa fa-search"></i></button>
+        </div>
+        <div class="search-movie-list">
+          <div class="search-movie-card">
+            <div class="search-movie-poster">
+              <img src="@Url.Content("~/Content/assets/images/poster/movie1.jpg")" alt="Tên phim">
+              <a class="search-movie-play" href="https://www.youtube.com/watch?v=trailer1" target="_blank">
+                <i class="fas fa-play"></i>
+              </a>
+            </div>
+            <div class="search-movie-info">
+              <h2 class="search-movie-title">Avengers: Endgame</h2>
+              <div class="search-movie-genres">Adventure, Science Fiction, Action</div>
+              <div class="search-movie-meta">
+                <span><i class="fa fa-calendar-alt"></i> 12/07/2024</span>
+                <span><i class="fa fa-clock"></i> 181 phút</span>
+              </div>
+            </div>
+            <button class="search-movie-book-btn">Đặt vé</button>
+          </div>
+          <div class="search-movie-card">
+            <div class="search-movie-poster">
+              <img src="@Url.Content("~/Content/assets/images/poster/movie2.jpg")" alt="Tên phim">
+              <a class="search-movie-play" href="https://www.youtube.com/watch?v=trailer2" target="_blank">
+                <i class="fas fa-play"></i>
+              </a>
+            </div>
+            <div class="search-movie-info">
+              <h2 class="search-movie-title">Spider-Man: No Way Home</h2>
+              <div class="search-movie-genres">Action, Adventure, Fantasy</div>
+              <div class="search-movie-meta">
+                <span><i class="fa fa-calendar-alt"></i> 17/12/2021</span>
+                <span><i class="fa fa-clock"></i> 148 phút</span>
+              </div>
+            </div>
+            <button class="search-movie-book-btn">Đặt vé</button>
+          </div>
+          <div class="search-movie-card">
+            <div class="search-movie-poster">
+              <img src="@Url.Content("~/Content/assets/images/poster/movie1.jpg")" alt="Tên phim">
+              <a class="search-movie-play" href="https://www.youtube.com/watch?v=trailer1" target="_blank">
+                <i class="fas fa-play"></i>
+              </a>
+            </div>
+            <div class="search-movie-info">
+              <h2 class="search-movie-title">Avengers: Endgame</h2>
+              <div class="search-movie-genres">Adventure, Science Fiction, Action</div>
+              <div class="search-movie-meta">
+                <span><i class="fa fa-calendar-alt"></i> 12/07/2024</span>
+                <span><i class="fa fa-clock"></i> 181 phút</span>
+              </div>
+            </div>
+            <button class="search-movie-book-btn">Đặt vé</button>
+          </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+    <footer>
+        <div class = "container__footer">
+            <h3>Ký ức đẹp bắt đầu từ một bộ phim hay!</h3>
+        </div>
+        <div class="footercontent">
+            <div class="navbar__logo navbar__logo2">
+                <img src="@Url.Content("~/Content/assets/images/logo.png")" alt="logo" class="navbar__logo-item">
+                <span class = "navbar__logo-name">Zeron</span>
+            </div>
+            <ul class="footercontent__ContactInf">
+                <li><p class = "footercontent__header">Hỗ Trợ</p></li>
+                <li>
+                    <div class="footercontent__ContactInf-list">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>0948 203 816</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="footercontent__ContactInf-list">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>zeron_cinema@gmail.com</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="footercontent__ContactInf-list">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Số 16 Nguyễn Lương Bằng, Hòa Khánh Bắc, Đà Nẵng</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="footercontent__QuickLink">
+                <li><p class = "footercontent__header">Liên Kết Nhanh</p></li>
+                <li><a class = "footercontent__QuickLink-list" href ="##">Trang Chủ</a></li>
+                <li><a class = "footercontent__QuickLink-list" href ="##">Đặt Vé</a></li>
+                <li><a class = "footercontent__QuickLink-list" href ="##">Thể Loại</a></li>
+            </ul>
+            <ul class="footercontent__SocialMedia">
+                <p class = "footercontent__header">Mạng Xã Hội</p></li>
+                <div class = "footercontent__SocialMedia-list">
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                    <a href="https://zalo.me" target="_blank"><i class="fa-solid fa-comment-dots fa-2x"></i></a>
+                </div>
+            </ul>
+            <div><p class = "line"></p></div>
+        </div>
+     </footer>
+     <script src = "@Url.Content("~/Scripts/js/auth.js")" defer></script>
+</body>
+</html>
