@@ -1,0 +1,447 @@
+.mainPage__Booking{
+    display: grid;
+    grid-template-rows: 20% 90px 70%;
+    background:linear-gradient(to top, rgba(0,0,0,0.3),rgb(69, 49, 62)), url("../images/bg__admin.jpg") no-repeat center/cover;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position:relative;
+}
+.mainPage__Booking-title{
+    border-bottom: 3px inset #2b4f81;         /* Xanh đậm trung tính */
+    border-left: 3px inset #365a8d;           /* Xanh than gần nền */
+    box-shadow: 0px 4px 12px rgba(51, 112, 197, 0.6); /* Nhẹ, tông xanh dịu */
+    border-radius: 5px;
+    color: #e0f0ff;                           /* Trắng xanh nhẹ, không gắt */
+    font-weight: normal;
+    font-size: 18px;
+    padding: 3px 20px;
+    width: 350px;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+.mainPage__Booking__Containersearch{
+    display:flex;
+    width:60%;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
+    animation: fadeIn 1.3s ease-in-out forwards;
+    margin-bottom: 20px;
+    justify-content: space-around;
+    color:  rgb(208, 208, 212);
+    font-size: 18px;
+    font-weight: 500;
+    margin-top:30px;
+    border-bottom: 3px inset rgb(130, 130, 130);
+}
+.mainPage__Booking__Containersearch div{
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.mainPage__Booking__Containersearch div input,select{
+    color: white;
+    background: rgba(3, 4, 26, 0.5)!important;
+    border:1px solid rgb(17, 3, 146) !important;
+    font-size: 16px;
+    font-weight:normal;
+    width: 180px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.mainPage__Booking__Containersearch-button{
+    display:grid !important;
+    grid-template-columns: 1fr 1fr;
+    height: 50px;
+    gap: 20px;
+}
+.mainPage__Booking__Containersearch-button button{
+   margin-top:25px;
+}
+
+
+
+.mainPage__Booking__containerinfo {
+    width: 80%;
+    max-width: 1200px;
+    height: 80%;
+    margin: 50px auto;
+    border-radius: 12px;
+    overflow-y: auto;
+    background: rgba(9, 8, 10, 0.6);
+    border:2px inset rgb(180, 178, 180);
+}
+
+.mainPage__Booking__containerinfo-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    animation: fadeIn 1.3s ease-in-out forwards;
+}
+.mainPage__Booking__containerinfo-table thead{
+    position:sticky;
+    top:0;
+    z-index: 1;
+}
+.mainPage__Booking__containerinfo-table th {
+    background: #2b235f;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 12px;
+    border-bottom:4px solid rgba(255, 255, 255, 0.1);
+}
+
+.mainPage__Booking__containerinfo-table tbody tr {
+    background: rgba(52, 121, 170, 0.3);
+    color: rgb(217, 211, 211);
+    font-size: 15px;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.mainPage__Booking__containerinfo-table tbody tr:nth-child(odd) {
+    background: rgba(79, 156, 211, 0.3);
+}
+
+.mainPage__Booking__containerinfo-table tbody tr:hover {
+    background: rgba(18, 41, 109, 0.5);
+}
+
+.mainPage__Booking__containerinfo-table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Optional button style */
+.mainPage__Booking__containerinfo-table td button {
+    color: white;
+    background: transparent;
+    border: 1px solid #aaa;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.mainPage__Booking__containerinfo-table td button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Kiểu thanh cuộn */
+.mainPage__Booking__containerinfo::-webkit-scrollbar {
+    width: 5px;  /* Đặt độ rộng cho thanh cuộn */
+}
+
+.mainPage__Booking__containerinfo::-webkit-scrollbar-thumb {
+    background-color: #811441;  /* Màu sắc cho phần thanh cuộn */
+    border-radius: 10px;  /* Tạo góc bo tròn cho thanh cuộn */
+    border: 2px solid #fff;  /* Thêm viền quanh thanh cuộn */
+}
+
+.mainPage__Booking__containerinfo::-webkit-scrollbar-track {
+    background-color: #f1f1f1;  /* Màu nền cho thanh cuộn */
+    border-radius: 10px;  /* Tạo góc bo tròn cho track */
+}
+
+/* Thêm hiệu ứng khi hover vào thanh cuộn */
+.mainPage__Booking__containerinfo::-webkit-scrollbar:hover {
+    width: 12px;  /* Mở rộng thanh cuộn khi hover */
+}
+
+/* Phần tùy chỉnh icon lịch - chỉ hoạt động trên Webkit (Chrome, Edge, Safari) */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: brightness(0) invert(1); /* Biến icon thành màu trắng */
+    cursor: pointer;
+}
+
+/* Modal Hóa Đơn */
+.invoiceModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(17, 16, 16, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.invoiceModal.hidden {
+    display: none;
+}
+
+.invoiceModal__content {
+    background: rgb(73, 72, 72);
+    width: 90%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.invoiceModal__header {
+    background: linear-gradient(135deg, #36312a, #130e1a);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.invoiceModal__header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.closeInvoice {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.invoiceModal__body {
+    padding: 20px;
+}
+
+.invoiceInfo, .movieInfo, .foodInfo {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #cbccce;
+    border-radius: 10px;
+}
+
+.invoiceInfo__item, .movieInfo__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 5px 0;
+    border-bottom: 1px solid #302b2b;
+}
+
+.invoiceInfo__item:last-child, .movieInfo__item:last-child {
+    border-bottom: none;
+}
+
+.label {
+    color: #252525;
+    font-weight: 500;
+}
+
+.value {
+    color: #333;
+    font-weight: 600;
+}
+
+.foodInfo h3, .movieInfo h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.foodItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #2c0e0e;
+}
+
+.foodItem:last-child {
+    border-bottom: none;
+}
+
+.foodItem .name {
+    flex: 1;
+}
+
+.foodItem .quantity {
+    margin: 0 20px;
+    color: #666;
+}
+
+.foodItem .price {
+    font-weight: 600;
+    color: #333;
+}
+
+.invoiceTotal {
+    background: #cbccce;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.totalItem {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 5px 0;
+}
+
+.grandTotal {
+    border-top: 2px solid #2e0909;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6e8efb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .invoiceModal__content {
+        width: 95%;
+        margin: 10px;
+    }
+
+    .invoiceModal__header h2 {
+        font-size: 1.2rem;
+    }
+
+    .invoiceInfo__item, .movieInfo__item, .foodItem {
+        font-size: 0.9rem;
+    }
+}
+
+.combo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+    color: #f1f5f9;
+}
+
+.button-add-combo {
+    background: linear-gradient(90deg, #3b82f6, #06b6d4);
+    color: #fff;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(59,130,246,0.15);
+    transition: background 0.2s, box-shadow 0.2s;
+}
+.button-add-combo:hover {
+    background: linear-gradient(90deg, #2563eb, #0ea5e9);
+    box-shadow: 0 4px 16px rgba(59,130,246,0.25);
+}
+
+.combo-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #0f172a;
+    border-radius: 8px;
+    min-height: 300px;
+}
+
+.combo-card {
+    width: 240px;
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+    color: #f1f5f9;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s;
+}
+.combo-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.1);
+}
+.combo-img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background: #334155;
+}
+.combo-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #38bdf8;
+}
+.combo-list {
+    list-style: disc inside;
+    margin-bottom: 12px;
+    color: #e0e7ef;
+    font-size: 0.97rem;
+    padding-left: 0;
+}
+.combo-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.combo-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #facc15;
+}
+.button-edit {
+    background-color: #3b82f6;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    margin-right: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+.button-edit:hover {
+    background-color: #2563eb;
+}
+.button-delete {
+    background-color: #ef4444;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+.button-delete:hover {
+    background-color: #b91c1c;
+}
+@media (max-width: 600px) {
+    .combo-card { width: 100%; }
+    .combo-wrapper { flex-direction: column; gap: 16px; }
+}

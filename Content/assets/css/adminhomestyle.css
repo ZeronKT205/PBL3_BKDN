@@ -1,0 +1,321 @@
+html {
+    line-height: 1.5;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+  input,
+  textarea,
+  select,
+  button {
+    outline: none;
+    font: inhert;
+
+  }
+  input {
+    line-height: normal;
+  }
+  label,
+  button {
+    cursor: pointer;
+    user-select: none !important;
+  }
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+    user-select: none !important;
+  }
+  
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* Mobie: width < 740px */
+  @media only screen and (max-width: 46.1875em) {
+    input[type="color"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="email"],
+    input[type="month"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="text"],
+    input[type="time"],
+    input[type="url"],
+    input[type="week"],
+    select:focus,
+    textarea {
+      font-size: 16px;
+    }
+  }
+
+
+  body {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .navbar {
+    width: 280px;
+    height: 100vh;
+    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  .navbar__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .navbar__logo:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar__logo-item {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar__logo-name {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  .title {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    width: 80%;
+    text-align: center;
+  }
+
+  .navbar__management {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0 15px;
+  }
+
+  .navbar__management > div {
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .navbar__management > div:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+  }
+
+  .navbar__management > div.active {
+    background: linear-gradient(90deg, #4a90e2 0%, #357abd 100%);
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+  }
+
+  .navbar__management > div p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .navbar__management > div i {
+    font-size: 18px;
+    width: 24px;
+    text-align: center;
+  }
+
+  /* Add specific colors for each menu item */
+  .navbar__management-Users i { color: #4CAF50; }
+  .navbar__management-Screens i { color: #2196F3; }
+  .navbar__management-Movies i { color: #9C27B0; }
+  .navbar__management-Shows i { color: #FF9800; }
+  .navbar__management-Booking i { color: #E91E63; }
+  .navbar__management-FoodDrinks i { color: #FF5722; }
+  .navbar__management-SalesReport i { color: #00BCD4; }
+
+  /* Hover effect for icons */
+  .navbar__management > div:hover i {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+  }
+
+  /* Active state for menu items */
+  .navbar__management > div.active i {
+    color: #fff;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .navbar {
+      width: 80px;
+      padding: 20px 0;
+    }
+
+    .navbar__logo-name,
+    .title,
+    .navbar__management > div p {
+      display: none;
+    }
+
+    .navbar__logo {
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .navbar__management > div {
+      justify-content: center;
+      padding: 12px;
+    }
+
+    .navbar__management > div i {
+      font-size: 20px;
+    }
+  }
+
+  .mainPage {
+    grid-column: 2;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    background: #0c0625;
+    overflow-y: auto;
+  }
+
+  .mainPage > div {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(to bottom right, #06061f, #031430);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .mainPage__Welcome{
+      display: flex;
+      width:100%;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background:linear-gradient(to top, rgba(0,0,0,0.3),rgb(69, 49, 62)), url("../images/bg__admin.jpg") no-repeat center/cover;
+      color: white;
+      font-weight: normal;
+      font-size: 24px;
+      font-family:sans-serif;
+  }
+  .mainPage__Welcome h1{
+      width:70%;
+      text-align: center;
+      background:linear-gradient(to top, rgba(108, 38, 118, 0.1),rgb(0,0,0,0.1)) ;
+      padding: 10px 0;
+      box-shadow: 0 8px 6px rgba(207, 44, 180, 0.2);
+      border-radius: 10px;
+      animation: slideRight 0.9s ease-in-out forwards;
+  }
+  .mainPage__Welcome span{
+      color:rgb(244, 47, 182);
+  }
+
+  .hidden{
+      display: none !important;
+  }
+  .active{
+      background: linear-gradient(90deg, #4a90e2 0%, #357abd 100%);
+      box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+      color: #fff !important;
+  }
+
+  .navbar__logout {
+    margin-top: auto;
+    width: 100%;
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .logout-btn {
+    width: 100%;
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #ff4b4b 0%, #ff7676 100%);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .logout-btn:hover {
+    background: linear-gradient(90deg, #ff3333 0%, #ff6666 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 75, 75, 0.3);
+  }
+
+  .logout-btn:active {
+    transform: translateY(0);
+  }
+
+  .logout-btn i {
+    font-size: 18px;
+  }
+
