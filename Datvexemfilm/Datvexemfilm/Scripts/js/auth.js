@@ -5,10 +5,19 @@
  *
  * @param {string} userInfo.role - Vai trò (user/admin)
  */
+
+window.addEventListener('pageshow', function (event) {
+    // Nếu không phải reload thực sự (tức là load từ cache)
+    if (event.persisted || (performance && performance.getEntriesByType('navigation')[0].type === 'back_forward')) {
+        window.location.reload();
+    }
+});
+
+
+
 function saveUserInfo(userInfo) {
     try {
         localStorage.setItem('userInfo', JSON.stringify(userInfo));
-        console.log('Đã lưu thông tin người dùng thành công');
     } catch (error) {
         console.error('Lỗi khi lưu thông tin người dùng:', error);
     }
@@ -52,7 +61,7 @@ function isLoggedIn() {
  * Hàm kiểm tra và chuyển hướng nếu chưa đăng nhập
  * @param {string} redirectUrl - URL để chuyển hướng nếu chưa đăng nhập
  */
-function checkAuth(redirectUrl = '../FE/userlogin.html') {
+function checkAuth(redirectUrl = '/Home/userlogin') {
     if (!isLoggedIn()) {
         alert('Vui lòng đăng nhập để tiếp tục!');
         window.location.href = redirectUrl;
@@ -74,7 +83,7 @@ function isAdmin() {
  * Hàm kiểm tra và chuyển hướng nếu không phải admin
  * @param {string} redirectUrl - URL để chuyển hướng nếu không phải admin
  */
-function checkAdmin(redirectUrl = '../FE/index.html') {
+function checkAdmin(redirectUrl = '/Home/Index') {
     if (!isAdmin()) {
         alert('Bạn cần đăng nhập với tài khoản Admin để truy cập trang này!');
         window.location.href = redirectUrl;
@@ -95,7 +104,7 @@ function handleUIForLoginStatus() {
     const profileLink = document.querySelector('.profile-link');
     const btnsignup = document.querySelector('.navbar__content-btn');
 
-    if (userInfo) {
+    if (isLoggedIn()) {
         // Người dùng đã đăng nhập
         if(btnsignup) btnsignup.style.display = 'none';
         if (loginBtn) loginBtn.style.display = 'none';
@@ -114,45 +123,38 @@ function handleUIForLoginStatus() {
 }
 
 // Thêm sự kiện kiểm tra đăng nhập khi trang được tải
-document.addEventListener('DOMContentLoaded', function() {
-    // Danh sách các trang cần kiểm tra đăng nhập
+document.addEventListener('DOMContentLoaded', function () {
     const protectedPages = [
-        '/Home/bookingTicket',
-        '/Home/Payment.html',
-        '/Home/CustomerInfor.html',
-        '/Home/searchFilmPage.html',
-        '/Home/detailmovie.html',
-        '/Home/historyBooking.html'
+        '/home/bookingticket',
+        '/home/payment',
+        '/home/customerinfor',
+        '/home/searchfilmPage',
+        '/home/detailmovie',
+        '/home/historybooking'
     ];
-    
-    // Danh sách các trang chỉ dành cho admin
     const adminPages = [
-        '/Home/adminhome'
+        '/home/adminhome'
     ];
+    const currentPage = window.location.pathname.toLowerCase();
 
-    // Lấy tên file hiện tại
-    const currentPage = window.location.pathname.split('/').pop();
-
-    // Xử lý UI cho trang home.html
-    if (currentPage === '/Home/Home') {
+    if (currentPage === '/home/home') {
         handleUIForLoginStatus();
-    }
-    // Kiểm tra nếu là trang admin
-    else if (adminPages.includes(currentPage)) {
+    } else if (adminPages.includes(currentPage)) {
         checkAdmin();
-    }
-    // Kiểm tra nếu là trang cần đăng nhập
-    else if (protectedPages.includes(currentPage)) {
+    } else if (protectedPages.includes(currentPage)) {
         checkAuth();
     }
 
-    // Thêm sự kiện cho nút đăng xuất
     const logoutBtn = document.querySelector('.btn-logout');
     if (logoutBtn) {
-        logoutBtn.addEventListener('click', function(e) {
+        logoutBtn.addEventListener('click', function (e) {
             e.preventDefault();
             clearUserInfo();
             window.location.href = '/Home/Index';
         });
     }
+
 });
+
+
+

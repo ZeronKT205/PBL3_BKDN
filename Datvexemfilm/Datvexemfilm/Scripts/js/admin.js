@@ -1,3 +1,7 @@
+
+
+
+
 //--------------------------Xử Lý các action chuyển tab, hiddenn của trang Admin Home-------------------------------------------//
 // Show Welcome page by default when page loads
 document.addEventListener('DOMContentLoaded', function() {

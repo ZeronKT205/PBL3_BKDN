@@ -107,7 +107,10 @@ function resetSeats() {
 }
 
 // Thêm sự kiện cho nút Reset
-document.querySelector('.MainContainer__DetailBooking-btn-reset').addEventListener('click', resetSeats);
+const btn_reset_DetilBooking = document.querySelector('.MainContainer__DetailBooking-btn-reset');
+if (btn_reset_DetilBooking) {
+    btn_reset_DetilBooking.addEventListener('click', resetSeats);
+}
 
 // Khởi tạo layout ghế khi trang được load
 document.addEventListener('DOMContentLoaded', () => {

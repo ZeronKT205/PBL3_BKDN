@@ -15,6 +15,10 @@ namespace MySimpleMvcApp.Controllers
         [HttpPost]
         public JsonResult Register(RegisterRequest req)
         {
+            if(req.Username==null || req.Password == null || req.Email == null)
+            {
+                return Json(new { success = false, message = "Input is not valid!" });
+            }
             var q = _dbContext.Accounts.FirstOrDefault(x => x.Username == req.Username);
             var p = _dbContext.Accounts.FirstOrDefault(x => x.Email == req.Email);
 

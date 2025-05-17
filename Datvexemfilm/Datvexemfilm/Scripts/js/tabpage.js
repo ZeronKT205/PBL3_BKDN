@@ -45,6 +45,13 @@ function closeBookingModal() {
 // Load danh sách phim
 
 
+
+
+
+
+
+
+
 // Xử lý chọn rạp
 document.querySelectorAll('.cinema-item').forEach(item => {
     item.addEventListener('click', function() {
@@ -104,6 +111,8 @@ document.querySelectorAll('.showtime-item').forEach(item => {
     });
 });
 
+
+
 // Hiển thị form xác nhận
 function showConfirmModal() {
     const confirmModal = document.querySelector('.confirm-modal');
@@ -128,6 +137,9 @@ function closeConfirmModal() {
         confirmModal.classList.add('hidden');
     }, 300);
 }
+
+
+
 
 // Xử lý checkbox điều khoản
 //document.getElementById('terms-checkbox').addEventListener('change', function() {

@@ -1,32 +1,48 @@
+
+
+
 function goToPageSignUp() {
     window.location.href = "/Home/usersignup";
 }
-// Xử lý form đăng nhập
-const loginForm = document.getElementById("loginform");
-if (loginForm) {
-    loginForm.addEventListener("submit", async function (e) {
-        e.preventDefault();
-        const user = document.getElementById("Username").value;
-        const pass = document.getElementById("Password").value;
 
-        const response = await fetch("https://localhost:44343/Login/Login", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ username: user, password: pass })
-        });
 
-        const result = await response.json();
-        if (result.success) {
-            if (result.role === "admin") {
-                window.location.href = "/Home/adminhome";
-            } else {
-                saveUserInfo(result);
-                window.location.href = "/Home/home";
-            }
-        } else {
-            alert(result.message);
-        }
+document.getElementById('loginform').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const Username = document.getElementById('Username').value;
+    const Password = document.getElementById('Password').value;
+
+    const response = await fetch('/Login/Login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ Username, Password })
     });
-} 
+    const result = await response.json();
+    if (result.success) {
+        saveUserInfoLogin({
+            username: result.username,
+            role: result.role,
+            email: result.email,
+            id: result.id
+        });
+        // Chuyển hướng sang trang home hoặc trang phù hợp
+        if (result.role == "admin") {
+            window.location.href = '/Home/adminhome';
+        }
+        else {
+            window.location.href = '/Home/home';
+        }
+
+    } else {
+        alert(result.message);
+    }
+});
+
+
+
+function saveUserInfoLogin(userInfo) {
+    try {
+        localStorage.setItem('userInfo', JSON.stringify(userInfo));
+    } catch (error) {
+        console.error('Lỗi khi lưu thông tin người dùng:', error);
+    }
+}

@@ -16,6 +16,11 @@ document.addEventListener('click', function(e) {
     }
 });
 
+
+
+
+
+
 // MainPoster slideshow functionality
 let slides = [];
 let dots = [];
@@ -26,11 +31,18 @@ let slideInterval;
 
 // Hàm hiển thị slide và dot tương ứng với index được chọn
 function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    dots.forEach(dot => dot.classList.remove('active'));
-    slides[index].classList.add('active');
-    dots[index].classList.add('active');
-    currentSlide = index;
+    try {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        if (!slides[index] || !dots[index]) {
+            throw new Error(`Slide or dot at index ${index} does not exist.`);
+        }
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        currentSlide = index;
+    } catch (error) {
+        console.error('Error in showSlide:', error);
+    }
 }
 
 // Hàm chuyển đến slide tiếp theo
@@ -45,9 +57,9 @@ function prevSlide() {
     showSlide(currentSlide);
 }
 
-// Hàm bắt đầu tự động chuyển slide sau mỗi 2 giây
+// Hàm bắt đầu tự động chuyển slide sau mỗi 6 giây
 function startSlideInterval() {
-    slideInterval = setInterval(nextSlide, 2000);
+    slideInterval = setInterval(nextSlide, 10000);
 }
 
 // Hàm dừng tự động chuyển slide
@@ -55,26 +67,68 @@ function stopSlideInterval() {
     clearInterval(slideInterval);
 }
 
-prevBtn.addEventListener('click', () => {
-    prevSlide();
-    stopSlideInterval();
-    startSlideInterval();
-});
-nextBtn.addEventListener('click', () => {
-    nextSlide();
-    stopSlideInterval();
-    startSlideInterval();
-});
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        showSlide(index);
+// Gán sự kiện cho nút prev
+if (typeof prevBtn !== 'undefined' && prevBtn) {
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
         stopSlideInterval();
         startSlideInterval();
     });
-});
+}
+
+// Gán sự kiện cho nút next
+if (typeof nextBtn !== 'undefined' && nextBtn) {
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        stopSlideInterval();
+        startSlideInterval();
+    });
+}
+
+// Gán sự kiện cho các dot
+if (typeof dots !== 'undefined' && dots && dots.forEach) {
+    dots.forEach((dot, index) => {
+        if (dot) {
+            dot.addEventListener('click', () => {
+                showSlide(index);
+                stopSlideInterval();
+                startSlideInterval();
+            });
+        }
+    });
+}
+
+// Gán sự kiện cho mainposter
+const mainPoster = document.querySelector('.mainposter');
+if (mainPoster) {
+    mainPoster.addEventListener('mouseenter', stopSlideInterval);
+    mainPoster.addEventListener('mouseleave', startSlideInterval);
+}
+
+// Bắt đầu tự động chuyển slide
 startSlideInterval();
-document.querySelector('.mainposter').addEventListener('mouseenter', stopSlideInterval);
-document.querySelector('.mainposter').addEventListener('mouseleave', startSlideInterval);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Carousel scroll for movie-horizontal-list
 /**
@@ -221,7 +275,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+function AddEventBookingbtnHome() {
     // Sự kiện cho nút Đặt vé
     const btnBooks = document.querySelectorAll('.btn-book');
     btnBooks.forEach(btn => {
@@ -229,11 +283,14 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             document.body.style.opacity = 0;
             setTimeout(() => {
-                window.location.href = 'detailmovie.html';
+                window.location.href = "/Home/detailmovie";
             }, 500);
         });
     });
-});
+}
+
+
+
 async function loadfilm() {
     const response = await fetch("https://localhost:44343/Film/GetFilm", {
         method: "GET",
@@ -340,9 +397,13 @@ async function loadfilm_on() {
         `;
         movieList.appendChild(movieContainer);
     });
+
+
+
     const nowShowingLeftBtn = document.querySelector('.movie-carousel-nav-btn.left[data-target="now-showing"]');
     const nowShowingRightBtn = document.querySelector('.movie-carousel-nav-btn.right[data-target="now-showing"]');
     setupCarousel('now-showing', nowShowingLeftBtn, nowShowingRightBtn);
+
 }
 async function loadfilm_next() {
     const response = await fetch("https://localhost:44343/Film/GetFilm_Next", {
@@ -377,6 +438,8 @@ async function loadfilm_next() {
         `;
         movieList.appendChild(movieContainer);
     });
+
+
     const nowShowingLeftBtn = document.querySelector('.movie-carousel-nav-btn.left[data-target="coming-soon"]');
     const nowShowingRightBtn = document.querySelector('.movie-carousel-nav-btn.right[data-target="coming-soon"]');
     setupCarousel('coming-soon', nowShowingLeftBtn, nowShowingRightBtn);

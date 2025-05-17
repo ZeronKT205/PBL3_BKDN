@@ -52,15 +52,46 @@ if (addUserForm) {
 // Biến tạm để lưu trữ danh sách người dùng ban đầu
 let originalUsers = [];
 
+// Gắn sự kiện cho các nút Info
+function attachInfoButtonListeners() {
+    const infoButtons = document.querySelectorAll('.InfoUser');
+    infoButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            const userId = this.getAttribute('data-userid');
+            if (userId) {
+                showUserInfo(userId);
+            }
+        });
+    });
+}
+
 // Hàm load dữ liệu người dùng
-function loadUsers() {
-  const userElements = document.querySelectorAll('#userlist tr');
-  originalUsers = Array.from(userElements).map(user => ({
-    id: user.querySelector('td:first-child').textContent,
-    username: user.querySelector('td:nth-child(2)').textContent,
-    email: user.querySelector('td:nth-child(3)').textContent,
-    role: user.querySelector('td:nth-child(4)').textContent
-  }));
+async function loadUsers() {
+    const response = await fetch("https://localhost:44343/User/GetUsers", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    });
+    const data = await response.json();
+    originalUsers = data;
+    const user_list = document.querySelector("#userlist");
+    user_list.innerHTML = "";
+    data.forEach(user => {
+        const user_container = document.createElement("tr");
+        user_container.innerHTML = `
+        <td>${user.ID}</td>
+        <td>${user.Username}</td>
+        <td>${user.Email}</td>
+        <td>${user.Role}</td>
+        <td><button class="InfoUser" data-userid="${user.ID}">Info</button> <button class="RemoveUser" data-userid="${user.ID}">Remove</button></td>
+        `;
+        user_list.appendChild(user_container);
+    });
+    
+    // Gắn lại event listeners
+    attachInfoButtonListeners();
+    attachRemoveButtonListeners();
 }
 
 // Load dữ liệu khi trang được tải
@@ -76,42 +107,55 @@ function confirmUser(message) {
 }
 
 // Hàm xóa người dùng
-function deleteUser(userId) {
-  if (confirmUser('Bạn có chắc chắn muốn xóa người dùng này?')) {
-    // TODO: Gọi API để xóa User
-    // Ví dụ:
-    // fetch(`/api/users/${userId}`, {
-    //   method: 'DELETE',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    // })
-    // .then(response => response.json())
-    // .then(data => {
-    //   console.log('Success:', data);
-    //   // Cập nhật UI sau khi xóa User
-    // })
-    // .catch((error) => {
-    //   console.error('Error:', error);
-    // });
+async function deleteUser(userId) {
+    if (confirmUser('Bạn có chắc chắn muốn xóa người dùng này?')) {
+        try {
+            const response = await fetch(`https://localhost:44343/User/DeleteUser`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ id: userId })
+            });
 
-    // Xóa người dùng khỏi danh sách
-    const userRow = document.querySelector(`.RemoveUser[data-userid="${userId}"]`).closest('tr');
-    if (userRow) {
-      userRow.remove();
-      // Cập nhật lại originalUsers sau khi xóa
-      originalUsers = originalUsers.filter(user => user.id !== userId);
-    } else {
-      console.error('Không tìm thấy người dùng để xóa');
+            const result = await response.json();
+            
+            if (result.success) {
+                // Xóa người dùng khỏi danh sách
+                const userRow = document.querySelector(`.RemoveUser[data-userid="${userId}"]`).closest('tr');
+                if (userRow) {
+                    userRow.remove();
+                    // Cập nhật lại originalUsers sau khi xóa
+                    originalUsers = originalUsers.filter(user => user.ID !== parseInt(userId));
+                }
+                alert(result.message);
+            } else {
+                alert(result.message);
+            }
+        } catch (error) {
+            alert('Có lỗi xảy ra khi xóa người dùng!');
+        }
     }
-  }
+}
+
+// Gắn sự kiện cho các nút Remove
+function attachRemoveButtonListeners() {
+    const removeButtons = document.querySelectorAll('.RemoveUser');
+    removeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const userId = this.getAttribute('data-userid');
+            if (userId) {
+                deleteUser(userId);
+            }
+        });
+    });
 }
 
 // Hàm tìm kiếm người dùng theo tên người dùng
 function searchUsers(query) {
   // Lọc kết quả dựa trên query
   const filteredResults = originalUsers.filter(user => 
-    user.username.toLowerCase().includes(query.toLowerCase())
+    user.Username.toLowerCase().includes(query.toLowerCase())
   );
 
   // Cập nhật UI với kết quả tìm kiếm
@@ -121,25 +165,20 @@ function searchUsers(query) {
   filteredResults.forEach(user => {
     const row = document.createElement('tr');
     row.innerHTML = `
-      <td>${user.id}</td>
-      <td>${user.username}</td>
-      <td>${user.email}</td>
-      <td>${user.role}</td>
+      <td>${user.ID}</td>
+      <td>${user.Username}</td>
+      <td>${user.Email}</td>
+      <td>${user.Role}</td>
       <td>
-        <button class="InfoUser" data-userid="${user.id}">Info</button>
-        <button class="RemoveUser" data-userid="${user.id}">Remove</button>
+        <button class="InfoUser" data-userid="${user.ID}">Info</button>
+        <button class="RemoveUser" data-userid="${user.ID}">Remove</button>
       </td>
     `;
     tbody.appendChild(row);
   });
 
   // Gắn lại sự kiện cho các nút Info mới
-  document.querySelectorAll('.InfoUser').forEach(button => {
-    button.addEventListener('click', function() {
-      const userId = this.getAttribute('data-userid');
-      showUserInfo(userId);
-    });
-  });
+  attachInfoButtonListeners();
 
   // Gắn lại sự kiện cho các nút Remove mới
   document.querySelectorAll('.RemoveUser').forEach(button => {
@@ -171,78 +210,92 @@ function handleSearch() {
 
 //-------------------------------Hàm xem thông tin người dùng-------------------------------//
 
-// Hàm hiển thị thông tin chi tiết của user
-function showUserInfo(userId) {
-  const user = originalUsers.find(u => u.id === userId);
-  if (!user) {
-    alert('Không tìm thấy thông tin người dùng!');
-    return;
-  }
-
-  // Kiểm tra nếu role không phải User thì không hiển thị
-  if (user.role !== 'User') {
-    alert('Chỉ có thể xem thông tin chi tiết của User!');
-    return;
-  }
-
-  // TODO: Gọi API để lấy thông tin chi tiết của user
-  // Ví dụ:
-  // fetch(`/api/users/${userId}/info`)
-  //   .then(response => response.json())
-  //   .then(data => {
-  //     fillUserInfoForm(data);
-  //     showUserInfoModal();
-  //   })
-  //   .catch(error => {
-  //     console.error('Error:', error);
-  //   });
-
-  // Tạm thời sử dụng dữ liệu mẫu
-  const userDetail = {
-    name: "Nguyễn Văn A",
-    gender: "Nam",
-    birthday: "1990-01-01",
-    phone: "0123456789",
-    address: "123 Đường ABC, Quận XYZ, TP.HCM",
-    email: user.email
-  };
-
-  try {
-    fillUserInfoForm(userDetail);
-    showUserInfoModal();
-  } catch (error) {
-    console.error('Lỗi khi hiển thị thông tin:', error);
-    alert('Có lỗi xảy ra khi hiển thị thông tin!');
-  }
-}
-
 // Hàm điền thông tin vào form
 function fillUserInfoForm(userDetail) {
-  if (!userDetail) {
-    throw new Error('Không có dữ liệu người dùng');
-  }
-
-  const form = document.getElementById('userInfoForm');
-  if (!form) {
-    throw new Error('Không tìm thấy form thông tin');
-  }
-
-  // Điền thông tin vào các trường
-  const fields = {
-    'userName': userDetail.name,
-    'userGender': userDetail.gender,
-    'userBirthday': userDetail.birthday,
-    'userPhone': userDetail.phone,
-    'userAddress': userDetail.address,
-    'userEmail': userDetail.email
-  };
-
-  for (const [id, value] of Object.entries(fields)) {
-    const element = document.getElementById(id);
-    if (element) {
-      element.value = value;
+    if (!userDetail) {
+        throw new Error('Không có dữ liệu người dùng');
     }
-  }
+
+    const form = document.getElementById('userInfoForm');
+    if (!form) {
+        throw new Error('Không tìm thấy form thông tin');
+    }
+
+    // Điền thông tin vào các trường
+    const fields = {
+        'userName': userDetail.name || '',
+        'userGender': userDetail.gender || '',
+        'userBirthday': userDetail.birthday || '',
+        'userPhone': userDetail.phone || '',
+        'userAddress': userDetail.address || '',
+        'userEmail': userDetail.email || ''
+    };
+
+    for (const [id, value] of Object.entries(fields)) {
+        const element = document.getElementById(id);
+        if (element) {
+            if (element.type === 'date') {
+                element.value = value; // Đã được format thành yyyy-MM-dd
+            } else if (element.tagName === 'INPUT') {
+                element.value = value;
+            } else {
+                element.textContent = value;
+            }
+        }
+    }
+}
+
+// Hàm hiển thị thông tin chi tiết của user
+async function showUserInfo(userId) {
+    const user = originalUsers.find(u => u.ID === parseInt(userId));
+    if (!user) {
+        alert('Không tìm thấy thông tin người dùng!');
+        return;
+    }
+
+    // Kiểm tra nếu role không phải "user" thì không hiển thị
+    if (user.Role.toLowerCase() !== 'user') {
+        alert('Chỉ có thể xem thông tin chi tiết của User!');
+        return;
+    }
+
+    try {
+        const response = await fetch(`https://localhost:44343/User/GetUserbyID?id=${userId}`, {
+            method: "POST", 
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+        const data = await response.json();
+
+        const userDetail = {
+            name: data.fullname || '',
+            gender: data.Gender || '',
+            birthday: formatDate(data.Birthday) || '',
+            phone: data.Phone || '',
+            address: data.Address || '',
+            email: data.Email || ''
+        };
+
+        fillUserInfoForm(userDetail);
+        showUserInfoModal();
+
+    } catch (error) {
+        alert('Không thể hiển thị thông tin người dùng!');
+    }
+}
+
+function formatDate(dotNetDate) {
+    // Xử lý chuỗi "/Date(1014570000000)/" để lấy timestamp
+    const timestamp = parseInt(dotNetDate.replace(/[^0-9]/g, ''));
+    const date = new Date(timestamp);
+    
+    // Format thành yyyy-MM-dd cho input type="date"
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    
+    return `${year}-${month}-${day}`;
 }
 
 // Hàm hiển thị modal
@@ -268,15 +321,5 @@ const closeButton = document.querySelector('.closeUserInfo');
 if (closeButton) {
   closeButton.addEventListener('click', hideUserInfoModal);
 }
-
-// Gắn sự kiện cho các nút Info
-document.querySelectorAll('.InfoUser').forEach(button => {
-  button.addEventListener('click', function() {
-    const userId = this.getAttribute('data-userid');
-    if (userId) {
-      showUserInfo(userId);
-    }
-  });
-});
 
 //------------------------------- End Hàm xem thông tin người dùng-------------------------------//
