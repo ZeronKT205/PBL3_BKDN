@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿namespace Datvexemfilm.Models
+{
+    using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -10,4 +12,5 @@ public class Film_Type
     public string Name { get; set; }
 
     public ICollection<Film> Films { get; set; }
+}
 }

@@ -146,6 +146,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\TicketController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -266,6 +267,7 @@
     <Content Include="Scripts\js\bookingTicket.js" />
     <Content Include="Scripts\js\customerInfo.js" />
     <Content Include="Scripts\js\dataManager.js" />
+    <Content Include="Scripts\js\detailmovie.js" />
     <Content Include="Scripts\js\home.js" />
     <Content Include="Scripts\js\login.js" />
     <Content Include="Scripts\js\manageBooking.js" />
@@ -305,6 +307,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Ticket\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

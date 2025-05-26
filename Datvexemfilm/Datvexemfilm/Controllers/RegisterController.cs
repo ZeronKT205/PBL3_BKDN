@@ -1,7 +1,7 @@
 using System.Linq;
 using System.Web.Mvc;
 using Datvexemfilm.Controllers;
-
+using Datvexemfilm.Models;
 namespace MySimpleMvcApp.Controllers
 {
     public class RegisterController : Controller

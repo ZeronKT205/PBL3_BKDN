@@ -4,6 +4,9 @@ window.onload = function() {
     loadfilm_on();
     loadfilm_next();
 };
+function viewDetail(id) {
+    window.location.href = `/Film/detailmovie?id=${id}`;
+}
 
 const navBtn = document.querySelector('.toggle-nav-btn');
 const navBar = document.querySelector('.NavbarLeftContainer');
@@ -59,7 +62,7 @@ function prevSlide() {
 
 // Hàm bắt đầu tự động chuyển slide sau mỗi 6 giây
 function startSlideInterval() {
-    slideInterval = setInterval(nextSlide, 10000);
+    slideInterval = setInterval(nextSlide, 3000);
 }
 
 // Hàm dừng tự động chuyển slide
@@ -314,7 +317,7 @@ async function loadfilm() {
         const movieContainer = document.createElement("div");
         movieContainer.classList.add("movie1");
         movieContainer.innerHTML = `
-            <img src="${movie.src}" alt="photo" class="poster_booking">
+            <img src="${movie.src}" onclick="viewDetail(${movie.ID})" alt="photo" class="poster_booking">
             <p class="movie__name">${movie.name}</p>
             <p class="movie__releaseDay">KC | ${movie.releaseDay}</p>
         `;
@@ -328,7 +331,7 @@ async function loadfilm() {
         movieSlide.innerHTML = `
             <div class="mainposter__content">
                 <h2>${movie.name}</h2>
-                <p>${movie.Description}</p>
+                <p>${movie.ShortDescription}</p>
             </div>
         `;
         movieListPoster.appendChild(movieSlide);
@@ -389,7 +392,7 @@ async function loadfilm_on() {
                             </div>
                             <div class="movie-card-btns">
                                 <button class="btn-book">Đặt vé</button>
-                                <button class="btn-trailer">Trailer</button>
+                                <button class="btn-trailer" onclick="viewDetail(${movie.ID})">Chi tiết</button>
                             </div>
                         </div>
                         <div class="movie-card-title">${movie.name}</div>
@@ -430,7 +433,7 @@ async function loadfilm_next() {
                             </div>
                             <div class="movie-card-btns">
                                 <button class="btn-book">Đặt vé</button>
-                                <button class="btn-trailer">Trailer</button>
+                                <button class="btn-trailer" onclick="viewDetail(${movie.ID})">Chi tiết</button>
                             </div>
                         </div>
                         <div class="movie-card-title">${movie.name}</div>

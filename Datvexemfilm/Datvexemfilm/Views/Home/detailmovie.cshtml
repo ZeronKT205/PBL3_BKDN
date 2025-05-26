@@ -1,3 +1,7 @@
+@{
+    Layout = null;
+}
+@model Datvexemfilm.Models.Film
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,11 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zeron | Detail Movie</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/loginstyle.css")">
-    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/style.css")">
-    <link rel = "stylesheet" href ="@Url.Content("~/Content/assets/css/signinstyle.css")">
-    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/detailmoviestyle.css")">
-    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/animation.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/loginstyle.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/style.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/signinstyle.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/detailmoviestyle.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/animation.css")">
 </head>
 <body>
     <div class="container">
@@ -17,12 +21,12 @@
         <nav class="navbar">
             <div class="navbar__logo">
                 <img src="@Url.Content("~/Content/assets/images/logo.png")" alt="logo" class="navbar__logo-item">
-                <span class = "navbar__logo-name">Zeron</span>
+                <span class="navbar__logo-name">Zeron</span>
             </div>
             <ul class="navbar__content">
-                <li><a href = "#" class="navbar__content-item1">TRANG CHỦ</a></li>
-                <li><a href = "#" class="navbar__content-item1">ĐẶT VÉ</a></li>
-                <button class="navbar__content-btn" onclick ="goToPageLogin2()" >ĐĂNG NHẬP</button>
+                <li><a href="@Url.Action("Home","Home")" class="navbar__content-item1">TRANG CHỦ</a></li>
+                <li><a href="#" class="navbar__content-item1">ĐẶT VÉ</a></li>
+                <button class="navbar__content-btn" onclick="goToPageLogin()">ĐĂNG NHẬP</button>
             </ul>
         </nav>
         <!--END NAVBAR -->
@@ -30,12 +34,12 @@
         <div class="detailmovie">
             <div class="maincontainer">
                 <div>
-                    <img src="@Url.Content("~/Content/assets/images/poster/movie1.jpg")" alt="poster" class="maincontainer__poster">
+                    <img src="@Url.Content(Model.src)" alt="poster" class="maincontainer__poster">
                 </div>
                 <ul class="maincontainer__movieInf">
-                    <li><h2 class="maincontainer__movieInf-title">VÒNG TRÒN OAN NGHIỆT</h2></li>
+                    <li><h2 class="maincontainer__movieInf-title">@Model.name</h2></li>
                     <li>
-                        <div class = "maincontainer__movieInf__block1">
+                        <div class="maincontainer__movieInf__block1">
                             <ul class="maincontainer__movieInf__block1-title">
                                 <p class="movie-info-row row-director"><i class="fas fa-user-tie"></i> Đạo diễn:</p>
                                 <p class="movie-info-row row-genre"><i class="fas fa-film"></i> Thể loại:</p>
@@ -43,45 +47,45 @@
                                 <p class="movie-info-row row-duration"><i class="fas fa-clock"></i> Thời Lượng:</p>
                                 <p class="movie-info-row row-language"><i class="fas fa-language"></i> Ngôn ngữ:</p>
                             </ul>
-                            <ul class = "maincontainer__movieInf__block1__Inf">
-                                <p class="movie-info-row row-director"><span class="maincontainer__movieInf__block1__Inf-director">Hideo Nakata</span></p>
-                                <p class="movie-info-row row-genre"><span class="maincontainer__movieInf__block1__Inf-genre">Kinh dị</span></p>
-                                <p class="movie-info-row row-release"><span class="maincontainer__movieInf__block1__Inf-releaseDay">21-03-2025</span></p>
-                                <p class="movie-info-row row-duration"><span class="maincontainer__movieInf__block1__Inf-durationMins">95 phút</span></p>
-                                <p class="movie-info-row row-language"><span class="maincontainer__movieInf__block1__Inf-language">Phụ đề Tiếng Việt</span></p>
+                            <ul class="maincontainer__movieInf__block1__Inf">
+                                <p class="movie-info-row row-director"><span class="maincontainer__movieInf__block1__Inf-director">@Model.Director</span></p>
+                                <p class="movie-info-row row-genre"><span class="maincontainer__movieInf__block1__Inf-genre">@Model.Film_Type.Name</span></p>
+                                <p class="movie-info-row row-release"><span class="maincontainer__movieInf__block1__Inf-releaseDay">@Model.releaseDay</span></p>
+                                <p class="movie-info-row row-duration"><span class="maincontainer__movieInf__block1__Inf-durationMins">@Model.Duration phút</span></p>
+                                <p class="movie-info-row row-language"><span class="maincontainer__movieInf__block1__Inf-language">Phụ đề @Model.Language</span></p>
                             </ul>
                         </div>
                     </li>
                 </ul>
                 <div class="maincontainer__bookingbtn">
-                    <button class = "booking-btn" onclick = "showTab()" >Đặt Vé</button>
+                    <button class="booking-btn" onclick="showTab()">Đặt Vé</button>
                 </div>
             </div>
-            
+
             <div class="buttoncontainer">
-                <button class="buttoncontainer__description active" onclick = "toggleContent('description')" >CHI TIẾT</button>
-                <button class="buttoncontainer__trailer" onclick = "toggleContent('trailer')" >TRAILER</button>
+                <button class="buttoncontainer__description active" onclick="toggleContent('description')">CHI TIẾT</button>
+                <button class="buttoncontainer__trailer" onclick="toggleContent('trailer')">TRAILER</button>
             </div>
 
             <!-- nội dung khi bấm vào các button-->
-            <div class="description"><p>Trong qua trình điều tra nguyên nhân cái chết của cháu gái cùng với ba người bạn sau khi xem một đoạn băng video bị nguyền rủa. Vô tình Reiko tìm thấy đoạn băng, xem nó và nhận được một cuộc gọi điện thoại thông báo rằng cô sẽ chết trong một tuần.</p></div>
-            
+            <div class="description"><p>@Model.FullDescription.</p></div>
+
             <div class="trailer hidden">
-                <iframe class = "trailer__video" width="530" height="315" src="https://www.youtube.com/embed/epgybI1Jc7U?si=kHOWxIgbqvehR9Yz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe class="trailer__video" width="530" height="315" src="@Model.Trailer" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     </div>
     <footer>
-        <div class = "container__footer">
+        <div class="container__footer">
             <h3>Ký ức đẹp bắt đầu từ một bộ phim hay!</h3>
         </div>
         <div class="footercontent">
             <div class="navbar__logo navbar__logo2">
                 <img src="@Url.Content("~/Content/assets/images/logo.png")" alt="logo" class="navbar__logo-item">
-                <span class = "navbar__logo-name">Zeron</span>
+                <span class="navbar__logo-name">Zeron</span>
             </div>
             <ul class="footercontent__ContactInf">
-                <li><p class = "footercontent__header">Hỗ Trợ</p></li>
+                <li><p class="footercontent__header">Hỗ Trợ</p></li>
                 <li>
                     <div class="footercontent__ContactInf-list">
                         <i class="fa-solid fa-phone"></i>
@@ -102,22 +106,22 @@
                 </li>
             </ul>
             <ul class="footercontent__QuickLink">
-                <li><p class = "footercontent__header">Liên Kết Nhanh</p></li>
-                <li><a class = "footercontent__QuickLink-list" href ="##">Trang Chủ</a></li>
-                <li><a class = "footercontent__QuickLink-list" href ="##">Đặt Vé</a></li>
-                <li><a class = "footercontent__QuickLink-list" href ="##">Thể Loại</a></li>
+                <li><p class="footercontent__header">Liên Kết Nhanh</p></li>
+                <li><a class="footercontent__QuickLink-list" href="##">Trang Chủ</a></li>
+                <li><a class="footercontent__QuickLink-list" href="##">Đặt Vé</a></li>
+                <li><a class="footercontent__QuickLink-list" href="##">Thể Loại</a></li>
             </ul>
             <ul class="footercontent__SocialMedia">
-                <p class = "footercontent__header">Mạng Xã Hội</p></li>
-                <div class = "footercontent__SocialMedia-list">
+                <p class="footercontent__header">Mạng Xã Hội</p></li>
+                <div class="footercontent__SocialMedia-list">
                     <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
                     <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
                     <a href="https://zalo.me" target="_blank"><i class="fa-solid fa-comment-dots fa-2x"></i></a>
                 </div>
             </ul>
-            <div><p class = "line"></p></div>
+            <div><p class="line"></p></div>
         </div>
-     </footer>
+    </footer>
     <!-- Modal đặt vé -->
     <div class="booking-modal hidden">
         <div class="booking-modal__content">
@@ -243,6 +247,6 @@
         </div>
     </div>
     <script src="@Url.Content("~/Scripts/js/tabpage.js")"></script>
-    <script src = "@Url.Content("~/Scripts/js/auth.js")" defer></script>
+    <script src="@Url.Content("~/Scripts/js/auth.js")" defer></script>
 </body>
 </html>

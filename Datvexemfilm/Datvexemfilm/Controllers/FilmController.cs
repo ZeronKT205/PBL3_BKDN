@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
+using Datvexemfilm.Models;
 namespace Datvexemfilm.Controllers
 {
     public class FilmController : Controller
@@ -28,40 +29,58 @@ namespace Datvexemfilm.Controllers
             var films = _dbContext.Films
                 .Where(p => p.Status == "ON")
                 .Include(f => f.Film_Type)
-                .Select(f => new _Film
+                .Select(f => new
                 {
-                    ID = f.ID,
-                    src = f.src,
-                    name = f.name,
+                    f.ID,
+                    f.src,
+                    f.name,
                     Type = f.Film_Type.Name,
-                    releaseDay = f.releaseDay,
-                    Director = f.Director,
-                    Language = f.Language,
-                    Duration = f.Duration
+                    f.releaseDay,
+                    f.Director,
+                    f.Language,
+                    f.Duration,
+                    f.ShortDescription,
+                    f.FullDescription,
+                    f._Cast
                 })
                 .ToList();
 
             return Json(films, JsonRequestBehavior.AllowGet);
         }
+
         [HttpGet]
         public JsonResult GetFilm_Next()
         {
             var films = _dbContext.Films
             .Where(p => p.Status == "NEXT")
             .Include(f => f.Film_Type)
-            .Select(f => new _Film
+            .Select(f => new
             {
-                ID = f.ID,
-                src = f.src,
-                name = f.name,
+                f.ID,
+                f.src,
+                f.name,
                 Type = f.Film_Type.Name,
-                releaseDay = f.releaseDay,
-                Director = f.Director,
-                Language = f.Language,
-                Duration = f.Duration
+                f.releaseDay,
+                f.Director,
+                f.Language,
+                f.Duration,
+                f.ShortDescription,
+                f.FullDescription,
+                f._Cast
             })
             .ToList();
             return Json(films, JsonRequestBehavior.AllowGet);
+        }
+        public ActionResult detailmovie(int id)
+        {
+            var film = _dbContext.Films
+                .Include(f => f.Film_Type)
+                .FirstOrDefault(f => f.ID == id);
+            if (film == null)
+            {
+                return HttpNotFound();
+            }
+            return View("~/Views/Home/detailmovie.cshtml", film);
         }
     }
 }
