@@ -3,12 +3,24 @@
   "WorkspaceRootPath": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|d:\\c#\\project\\pbl3_bkdn\\datvexemfilm\\datvexemfilm\\views\\home\\bookingticket.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|solutionrelative:datvexemfilm\\views\\home\\bookingticket.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|d:\\c#\\project\\pbl3_bkdn\\datvexemfilm\\datvexemfilm\\controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|solutionrelative:datvexemfilm\\controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|d:\\c#\\project\\pbl3_bkdn\\datvexemfilm\\datvexemfilm\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|solutionrelative:datvexemfilm\\models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|d:\\c#\\project\\pbl3_bkdn\\datvexemfilm\\datvexemfilm\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|solutionrelative:datvexemfilm\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|d:\\c#\\project\\pbl3_bkdn\\datvexemfilm\\datvexemfilm\\scripts\\js\\bookingticket.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|solutionrelative:datvexemfilm\\scripts\\js\\bookingticket.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|d:\\c#\\project\\pbl3_bkdn\\datvexemfilm\\datvexemfilm\\views\\home\\bookingticket.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|solutionrelative:datvexemfilm\\views\\home\\bookingticket.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,23 +29,9 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 139,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 134,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "bookingTicket.cshtml",
-              "DocumentMoniker": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Views\\Home\\bookingTicket.cshtml",
-              "RelativeDocumentMoniker": "Datvexemfilm\\Views\\Home\\bookingTicket.cshtml",
-              "ToolTip": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Views\\Home\\bookingTicket.cshtml",
-              "RelativeToolTip": "Datvexemfilm\\Views\\Home\\bookingTicket.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAADMAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-26T07:22:28.491Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
@@ -45,14 +43,66 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Models\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Datvexemfilm\\Models\\AppDbContext.cs",
+              "ToolTip": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Models\\AppDbContext.cs",
+              "RelativeToolTip": "Datvexemfilm\\Models\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T12:46:59.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RegisterController.cs",
+              "DocumentMoniker": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Controllers\\RegisterController.cs",
+              "RelativeDocumentMoniker": "Datvexemfilm\\Controllers\\RegisterController.cs",
+              "ToolTip": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Controllers\\RegisterController.cs",
+              "RelativeToolTip": "Datvexemfilm\\Controllers\\RegisterController.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T12:10:08.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TicketController.cs",
+              "DocumentMoniker": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Controllers\\TicketController.cs",
+              "RelativeDocumentMoniker": "Datvexemfilm\\Controllers\\TicketController.cs",
+              "ToolTip": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Controllers\\TicketController.cs",
+              "RelativeToolTip": "Datvexemfilm\\Controllers\\TicketController.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAqwEMAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T12:09:12.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "bookingTicket.js",
               "DocumentMoniker": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Scripts\\js\\bookingTicket.js",
               "RelativeDocumentMoniker": "Datvexemfilm\\Scripts\\js\\bookingTicket.js",
               "ToolTip": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Scripts\\js\\bookingTicket.js",
               "RelativeToolTip": "Datvexemfilm\\Scripts\\js\\bookingTicket.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-05-26T07:29:56.666Z",
+              "WhenOpened": "2025-05-27T10:28:53.959Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "bookingTicket.cshtml",
+              "DocumentMoniker": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Views\\Home\\bookingTicket.cshtml",
+              "RelativeDocumentMoniker": "Datvexemfilm\\Views\\Home\\bookingTicket.cshtml",
+              "ToolTip": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Views\\Home\\bookingTicket.cshtml",
+              "RelativeToolTip": "Datvexemfilm\\Views\\Home\\bookingTicket.cshtml",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAEUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-27T10:28:37.691Z",
               "EditorCaption": ""
             }
           ]

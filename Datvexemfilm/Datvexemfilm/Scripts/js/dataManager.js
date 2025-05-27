@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Chuyển hướng đến trang thanh toán
             document.body.style.opacity = 0;
             setTimeout(() => {
-                window.location.href = '../FE/Payment.html';
+                window.location.href = '../Home/Payment';
             }, 500);
         });
     }

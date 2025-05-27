@@ -145,7 +145,9 @@
     <Compile Include="Controllers\FilmController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\ShowController.cs" />
     <Compile Include="Controllers\TicketController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
@@ -154,9 +156,15 @@
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\AccountLR.cs" />
     <Compile Include="Models\AppDbContext.cs" />
+    <Compile Include="Models\Booking.cs" />
     <Compile Include="Models\CustomerInfo.cs" />
     <Compile Include="Models\Film.cs" />
     <Compile Include="Models\Film_Type.cs" />
+    <Compile Include="Models\Room.cs" />
+    <Compile Include="Models\Seat.cs" />
+    <Compile Include="Models\SeatOrder.cs" />
+    <Compile Include="Models\Show.cs" />
+    <Compile Include="Models\tmp.cs" />
     <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -307,6 +315,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Payment\" />
+    <Folder Include="Views\Show\" />
     <Folder Include="Views\Ticket\" />
   </ItemGroup>
   <ItemGroup>

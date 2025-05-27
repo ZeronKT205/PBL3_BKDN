@@ -134,14 +134,14 @@
                     <!-- Thông tin phim -->
                     <div class="movie-info">
                         <div class="movie-info__poster">
-                            <img src="@Url.Content("~/Content/assets/images/poster/movie1.jpg")" alt="poster">
+                            <img src="@Url.Content(Model.src)" alt="poster">
                         </div>
                         <div class="movie-info__details">
                             <h3 class="movie-info__title">VÒNG TRÒN OAN NGHIỆT</h3>
                             <div class="movie-info__meta">
-                                <span><i class="fas fa-film"></i> Kinh dị</span>
-                                <span><i class="fas fa-clock"></i> 95 phút</span>
-                                <span><i class="fas fa-language"></i> Phụ đề</span>
+                                <span><i class="fas fa-film"></i> @Model.Film_Type.Name</span>
+                                <span><i class="fas fa-clock"></i> @Model.Duration phút</span>
+                                <span><i class="fas fa-language"></i> Phụ đề:@Model.Language</span>
                             </div>
                         </div>
                     </div>
@@ -151,27 +151,8 @@
                         <!-- Chọn ngày -->
                         <div class="booking-modal__date">
                             <h3>Chọn ngày chiếu</h3>
-                            <div class="date-list">
-                                <button class="date-item active">
-                                    <span class="day">Hôm nay</span>
-                                    <span class="date">21/03</span>
-                                </button>
-                                <button class="date-item">
-                                    <span class="day">Ngày mai</span>
-                                    <span class="date">22/03</span>
-                                </button>
-                                <button class="date-item">
-                                    <span class="day">Thứ 4</span>
-                                    <span class="date">23/03</span>
-                                </button>
-                                <button class="date-item">
-                                    <span class="day">Thứ 5</span>
-                                    <span class="date">24/03</span>
-                                </button>
-                                <button class="date-item">
-                                    <span class="day">Thứ 6</span>
-                                    <span class="date">25/03</span>
-                                </button>
+                            <div id="date-list" class="date-list">
+                                
                             </div>
                         </div>
 
@@ -179,36 +160,7 @@
                         <div class="booking-modal__showtime">
                             <h3>Chọn suất chiếu</h3>
                             <div class="showtime-list">
-                                <button class="showtime-item" data-seats="20">
-                                    <span class="time">09:00 - 10:35</span>
-                                    <span class="screen">Rạp 1</span>
-                                    <span class="seats available">Còn 20 chỗ</span>
-                                </button>
-                                <button class="showtime-item" data-seats="5">
-                                    <span class="time">11:30 - 13:05</span>
-                                    <span class="screen">Rạp 2</span>
-                                    <span class="seats almost-full">Còn 5 chỗ</span>
-                                </button>
-                                <button class="showtime-item" data-seats="0">
-                                    <span class="time">14:00 - 15:35</span>
-                                    <span class="screen">Rạp 1</span>
-                                    <span class="seats full">Hết chỗ</span>
-                                </button>
-                                <button class="showtime-item" data-seats="15">
-                                    <span class="time">16:30 - 18:05</span>
-                                    <span class="screen">Rạp 3</span>
-                                    <span class="seats available">Còn 15 chỗ</span>
-                                </button>
-                                <button class="showtime-item" data-seats="25">
-                                    <span class="time">19:00 - 20:35</span>
-                                    <span class="screen">Rạp 2</span>
-                                    <span class="seats available">Còn 25 chỗ</span>
-                                </button>
-                                <button class="showtime-item" data-seats="10">
-                                    <span class="time">21:30 - 23:05</span>
-                                    <span class="screen">Rạp 1</span>
-                                    <span class="seats available">Còn 10 chỗ</span>
-                                </button>
+                                
                             </div>
                         </div>
                     </div>
@@ -246,6 +198,8 @@
             </div>
         </div>
     </div>
+    <div id="movie-detail" data-id="@Model.ID_Movie"></div>
+    <script src="@Url.Content("~/Scripts/js/detailmovie.js")" defer></script>
     <script src="@Url.Content("~/Scripts/js/tabpage.js")"></script>
     <script src="@Url.Content("~/Scripts/js/auth.js")" defer></script>
 </body>

@@ -317,7 +317,7 @@ async function loadfilm() {
         const movieContainer = document.createElement("div");
         movieContainer.classList.add("movie1");
         movieContainer.innerHTML = `
-            <img src="${movie.src}" onclick="viewDetail(${movie.ID})" alt="photo" class="poster_booking">
+            <img src="${movie.src}" onclick="viewDetail(${movie.ID_Movie})" alt="photo" class="poster_booking">
             <p class="movie__name">${movie.name}</p>
             <p class="movie__releaseDay">KC | ${movie.releaseDay}</p>
         `;
@@ -392,7 +392,7 @@ async function loadfilm_on() {
                             </div>
                             <div class="movie-card-btns">
                                 <button class="btn-book">Đặt vé</button>
-                                <button class="btn-trailer" onclick="viewDetail(${movie.ID})">Chi tiết</button>
+                                <button class="btn-trailer" onclick="viewDetail(${movie.ID_Movie})">Chi tiết</button>
                             </div>
                         </div>
                         <div class="movie-card-title">${movie.name}</div>
@@ -433,7 +433,7 @@ async function loadfilm_next() {
                             </div>
                             <div class="movie-card-btns">
                                 <button class="btn-book">Đặt vé</button>
-                                <button class="btn-trailer" onclick="viewDetail(${movie.ID})">Chi tiết</button>
+                                <button class="btn-trailer" onclick="viewDetail(${movie.ID_Movie})">Chi tiết</button>
                             </div>
                         </div>
                         <div class="movie-card-title">${movie.name}</div>

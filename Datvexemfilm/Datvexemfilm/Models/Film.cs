@@ -8,7 +8,7 @@
     public class Film
     {
         [Key]
-        public int ID { get; set; }
+        public int ID_Movie { get; set; }
 
         public string src { get; set; }
         public string name { get; set; }
@@ -28,5 +28,6 @@
         public string ShortDescription { get; set; }
         public string _Cast { get; set; }
         public string Trailer { get; set; }
+        public ICollection<Show> Shows { get; set; }
     }
 }

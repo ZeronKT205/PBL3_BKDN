@@ -26,7 +26,8 @@ document.querySelectorAll('.Editmovie1, .AddMovieBtn').forEach(btn => {
       };
       reader.readAsDataURL(file);
     }
-  };
+};
+
   
   // Xử lý submit form
   document.getElementById('movieForm').addEventListener('submit', function(e) {
@@ -215,7 +216,6 @@ nên khi xóa hay thêm một phim mới chỉ cần thêm vào biến tạm nà
 
    */
   
-
 
 
 

@@ -11,7 +11,7 @@ document.getElementById('loginform').addEventListener('submit', async function (
     const Username = document.getElementById('Username').value;
     const Password = document.getElementById('Password').value;
 
-    const response = await fetch('/Login/Login', {
+    const response = await fetch('https://localhost:44343/Login/Login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ Username, Password })
@@ -24,6 +24,7 @@ document.getElementById('loginform').addEventListener('submit', async function (
             email: result.email,
             id: result.id
         });
+        window.id_user = result.id;
         // Chuyển hướng sang trang home hoặc trang phù hợp
         if (result.role == "admin") {
             window.location.href = '/Home/adminhome';

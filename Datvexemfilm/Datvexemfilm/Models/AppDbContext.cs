@@ -14,5 +14,11 @@ namespace Datvexemfilm.Models
         public DbSet<Film> Films { get; set; }
         public DbSet<Film_Type> Film_Types { get; set; }
         public DbSet<CustomerInfo> customerInfos { get; set; }
+        public DbSet<Show> Shows { get; set; }
+        public DbSet<Seat> Seats { get; set; }
+        public DbSet<Room> Rooms { get; set; }
+        public DbSet<Booking> Bookings { get; set; }
+        public DbSet<SeatOrder> seatOrders { get; set; }
+
     }
 }

@@ -38,7 +38,7 @@ namespace Datvexemfilm.Controllers
                 else
 
                 { 
-                   return Json(new {id=user.ID,username=user.Username,email=user.Email, success = true, message = "Đăng nhập thành công", role = user.Role }); 
+                   return Json(new {id=user.User_ID,username=user.Username,email=user.Email, success = true, message = "Đăng nhập thành công", role = user.Role }); 
                 }
             }
             catch (Exception ex)

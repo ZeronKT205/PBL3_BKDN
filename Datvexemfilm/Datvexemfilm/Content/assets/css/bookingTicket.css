@@ -339,6 +339,24 @@ body, html {
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
 }
+.booked {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d3d3d3; /* xám nhạt */
+    color: #555; /* màu chữ tối hơn để nhìn rõ */
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(211, 211, 211, 0.5); /* bóng xám nhẹ */
+}
+
 
 .movie-detail-title {
   text-align: center;

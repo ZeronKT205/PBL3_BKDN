@@ -19,7 +19,7 @@ namespace MySimpleMvcApp.Controllers
         {
             var users = _dbContext.Accounts.Select(user => new
             {
-                user.ID,
+                user.User_ID,
                 user.Username,
                 user.Email,
                 user.Status,

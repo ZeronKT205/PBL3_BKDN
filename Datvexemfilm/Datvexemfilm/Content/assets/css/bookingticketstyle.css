@@ -122,6 +122,13 @@
     color: #fff;
     box-shadow: 0 4px 15px rgba(23, 67, 102, 0.3);
 }
+.seat.booked {
+    background: rgba(255, 215, 0, 0.15); /* vàng nhạt */
+    color: #ffd700; /* vàng */
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
 
 .seat.occupied {
     background: rgba(255, 71, 87, 0.2);

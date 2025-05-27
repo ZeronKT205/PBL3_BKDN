@@ -15,7 +15,26 @@ namespace Datvexemfilm.Controllers
         {
             try
             {
-                var films = _dbContext.Films.Where(p => p.Status != "OFF").ToList();
+                var films = _dbContext.Films
+               .Where(p => p.Status != "OFF")
+               .Include(f => f.Film_Type)
+               .Select(f => new
+               {
+                   f.ID_Movie,
+                   f.src,
+                   f.name,
+                   Type = f.Film_Type.Name,
+                   f.releaseDay,
+                   f.Director,
+                   f.Language,
+                   f.Duration,
+                   f.ShortDescription,
+                   f.FullDescription,
+                   f._Cast,
+                   f.Status,
+                   f.Poster
+               })
+               .ToList();
                 return Json(films, JsonRequestBehavior.AllowGet);
             }
             catch (Exception ex)
@@ -31,7 +50,7 @@ namespace Datvexemfilm.Controllers
                 .Include(f => f.Film_Type)
                 .Select(f => new
                 {
-                    f.ID,
+                    f.ID_Movie,
                     f.src,
                     f.name,
                     Type = f.Film_Type.Name,
@@ -56,7 +75,7 @@ namespace Datvexemfilm.Controllers
             .Include(f => f.Film_Type)
             .Select(f => new
             {
-                f.ID,
+                f.ID_Movie,
                 f.src,
                 f.name,
                 Type = f.Film_Type.Name,
@@ -75,7 +94,7 @@ namespace Datvexemfilm.Controllers
         {
             var film = _dbContext.Films
                 .Include(f => f.Film_Type)
-                .FirstOrDefault(f => f.ID == id);
+                .FirstOrDefault(f => f.ID_Movie == id);
             if (film == null)
             {
                 return HttpNotFound();
