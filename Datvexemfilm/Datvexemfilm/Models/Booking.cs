@@ -1,6 +1,7 @@
 ﻿namespace Datvexemfilm.Models
 {
     using System;
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
@@ -19,5 +20,6 @@
         public int Total { get; set; }
         public DateTime Booking_Date { get; set; }
         public string Status { get; set; }
+        public ICollection<Order_Product> Order_Products { get; set; }
     }
 }

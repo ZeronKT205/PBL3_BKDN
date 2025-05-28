@@ -146,6 +146,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PaymentController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\ShowController.cs" />
     <Compile Include="Controllers\TicketController.cs" />
@@ -160,6 +161,9 @@
     <Compile Include="Models\CustomerInfo.cs" />
     <Compile Include="Models\Film.cs" />
     <Compile Include="Models\Film_Type.cs" />
+    <Compile Include="Models\Order_Product.cs" />
+    <Compile Include="Models\Payment.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Room.cs" />
     <Compile Include="Models\Seat.cs" />
     <Compile Include="Models\SeatOrder.cs" />
@@ -316,6 +320,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Payment\" />
+    <Folder Include="Views\Product\" />
     <Folder Include="Views\Show\" />
     <Folder Include="Views\Ticket\" />
   </ItemGroup>

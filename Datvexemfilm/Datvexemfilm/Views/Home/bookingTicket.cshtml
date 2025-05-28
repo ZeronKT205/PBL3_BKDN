@@ -37,7 +37,7 @@
             <div class="MainContainer__DetailBooking-cinema">
                 <i class="fas fa-building icon-cinema"></i>
                 <span class="movie-detail-label">Rạp chiếu:</span>
-                <span class="movie-detail-value cinema-name">@Model.Name</span>
+                <span class="movie-detail-value cinema-name">@Model.Name_Room</span>
             </div>
             <div class="MainContainer__DetailBooking-date">
                 <i class="fas fa-calendar-alt icon-date"></i>
@@ -97,6 +97,8 @@
     <script>
         const Price =@Model.Price_Show;
         const show_id =@Model.Show_ID;
+        const room_id =@Model.Room_ID;
+
     document.addEventListener('DOMContentLoaded', function () {
         loadSeats(@Model.Row, @Model.Col, "@Model.Booked");
     });

@@ -1,180 +1,136 @@
-@{ 
+@model Datvexemfilm.Models._Payment
+@{
     Layout = null;
+    var seats = Model.Seat.Split(',');
+    var seatCount = seats.Length;
 }
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment | Zeron</title>
-    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/Payment.css")">
-    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/style.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/Payment.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/style.css")">
 </head>
 <body>
     <div class="container">
         <!--NAVBAR -->
-    <nav class="navbar">
-        <div class="navbar__logo">
-            <img src="@Url.Content("~/Content/assets/images/logo.png")" alt="logo" class="navbar__logo-item">
-            <span class = "navbar__logo-name">Zeron</span>
-        </div>
-        <ul class="navbar__content">
-            <li><a href = "@Url.Action("Home","Home")" class="navbar__content-item1">TRANG CHỦ</a></li>
-            <li><a href = "@Url.Action("bookingTicket","Home")" class="navbar__content-item1">ĐẶT VÉ</a></li>
-        </ul>
-    </nav>
-    <!--END NAVBAR -->
-    <!-- Nội dung của page ở đây -->
-    <div class="container payment-container">
-        <!-- Header thanh toán -->
-        <div class="payment-header">
-            <img src="@Url.Content("~/Content/assets/images/vnpay-logo.jpg")" alt="VNPay Logo" class="vnpay-header-logo">
-            <span class="payment-header-title">Thanh toán VNPay</span>
-        </div>
-
-        <!-- Main content -->
-        <div class="payment-main">
-            <!-- Box chi tiết vé -->
-            <div class="payment-ticket-box">
-                <div class="ticket-bill-title">HÓA ĐƠN THANH TOÁN</div>
-                <div class="ticket-bill-list">
-                    <div class="ticket-bill-row"><span class="bill-label">Phim:</span> <span class="bill-value payment-movie-name">Vòng Tròn Oan Nghiệt</span></div>
-                    <div class="ticket-bill-row"><span class="bill-label">Suất chiếu:</span> <span class="bill-value payment-date">22/10/2025</span><spann class = "bill-value payment-date">|</spann><span class = "bill-value payment-date payment-time">19:30</span></div>
-                    <div class="ticket-bill-row"><span class="bill-label">Phòng chiếu:</span> <span class="bill-value payment-cinema">Rạp 3</span></div>
-                    <div class="ticket-bill-row"><span class="bill-label">Ghế:</span> <span class="bill-value payment-seats">D5, D6</span></div>
-                    <div class="ticket-bill-row"><span class="bill-label">Số lượng vé:</span> <span class="bill-value payment-number-ticket">2</span></div>
-                    <div class="ticket-bill-row"><span class="bill-label">Giá mỗi vé:</span> <span class="bill-value payment-price-ticket">100.000 VNĐ</span></div>
-                    <div class="ticket-bill-row"><span class="bill-label">Tạm tính vé:</span> <span class="bill-value payment-total" id="bill-ticket-total">200.000 VNĐ</span></div>
-                    <div class="ticket-bill-row bill-addon-title"><span class = "product-title"><i class="fa fa-utensils bill-icon"></i>Đồ ăn & Đồ uống đi kèm:</span></div>
-                    <div class="ticket-bill-addon-list"></div>
-                    <div class="ticket-bill-row bill-total"><span class="bill-label"><i class="fa fa-receipt bill-icon"></i>Tổng cộng:</span> <span class="bill-value" id="bill-grand-total">200.000 VNĐ</span></div>
-                </div>
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <img src="@Url.Content("~/Content/assets/images/logo.png")" alt="logo" class="navbar__logo-item">
+                <span class="navbar__logo-name">Zeron</span>
             </div>
-            <!-- Box chi tiết thanh toán -->
-            <div class="payment-detail-box">
-                <div class="payment-detail-row"><span class="payment-detail-label">Tổng tiền:</span> <span class="payment-detail-value payment-amount">200.000 VNĐ</span></div>
-                <div class="payment-detail-row"><span class="payment-detail-label">Phí giao dịch:</span> <span class="payment-detail-value">Miễn phí</span></div>
-                <div class="payment-detail-row"><span class="payment-detail-label">Mã đơn hàng:</span> <span class="payment-detail-value">#123456789</span></div>
-                <div class="payment-detail-row"><span class="payment-detail-label">Email:</span> <span class="payment-detail-value">user@email.com</span></div>
-                <!-- Sản phẩm bắp nước đi kèm -->
-                <div class="addon-section">
-                    <div class="addon-title">Chọn bắp nước đi kèm</div>
-                    <div class="addon-list">
-                        <div class="addon-item" data-name="Bắp ngọt lớn" data-price="40000">
-                            <img src="@Url.Content("~/Content/assets/images/Product/combo1.png")" alt="Bắp" class="addon-img">
-                            <div class="addon-info">
-                                <div class="addon-name">Bắp ngọt lớn</div>
-                                <div class="addon-price">40.000 VNĐ</div>
-                            </div>
-                            <div class="addon-qty-group">
-                                <button class="addon-qty-btn addon-qty-minus">-</button>
-                                <span class="addon-qty-value">0</span>
-                                <button class="addon-qty-btn addon-qty-plus">+</button>
-                            </div>
-                        </div>
-                        <div class="addon-item" data-name="Coca-Cola 500ml" data-price="25000">
-                            <img src="@Url.Content("~/Content/assets/images/Product/combo2.jpg")" alt="Coca" class="addon-img">
-                            <div class="addon-info">
-                                <div class="addon-name">Coca-Cola 500ml</div>
-                                <div class="addon-price">25.000 VNĐ</div>
-                            </div>
-                            <div class="addon-qty-group">
-                                <button class="addon-qty-btn addon-qty-minus">-</button>
-                                <span class="addon-qty-value">0</span>
-                                <button class="addon-qty-btn addon-qty-plus">+</button>
-                            </div>
-                        </div>
-                        <div class="addon-item" data-name="Combo 1 bắp + 2 nước" data-price="75000">
-                            <img src="@Url.Content("~/Content/assets/images/Product/combo4.jpg")" alt="Combo" class="addon-img">
-                            <div class="addon-info">
-                                <div class="addon-name">Combo 1 bắp + 2 nước</div>
-                                <div class="addon-price">75.000 VNĐ</div>
-                            </div>
-                            <div class="addon-qty-group">
-                                <button class="addon-qty-btn addon-qty-minus">-</button>
-                                <span class="addon-qty-value">0</span>
-                                <button class="addon-qty-btn addon-qty-plus">+</button>
-                            </div>
-                        </div>
-                        <div class="addon-item" data-name="Combo 1 bắp + 2 nước (VIP)" data-price="95000">
-                            <img src="@Url.Content("~/Content/assets/images/Product/combo3.jpg")" alt="Combo" class="addon-img">
-                            <div class="addon-info">
-                                <div class="addon-name">Combo 1 bắp + 2 nước (VIP)</div>
-                                <div class="addon-price">95.000 VNĐ</div>
-                            </div>
-                            <div class="addon-qty-group">
-                                <button class="addon-qty-btn addon-qty-minus">-</button>
-                                <span class="addon-qty-value">0</span>
-                                <button class="addon-qty-btn addon-qty-plus">+</button>
-                            </div>
-                        </div>
-                        <!-- Thêm nhiều sản phẩm nếu muốn -->
+            <ul class="navbar__content">
+                <li><a href="@Url.Action("Home","Home")" class="navbar__content-item1">TRANG CHỦ</a></li>
+                <li><a href="@Url.Action("bookingTicket","Home")" class="navbar__content-item1">ĐẶT VÉ</a></li>
+            </ul>
+        </nav>
+        <!--END NAVBAR -->
+        <!-- Nội dung của page ở đây -->
+        <div class="container payment-container">
+            <!-- Header thanh toán -->
+            <div class="payment-header">
+                <img src="@Url.Content("~/Content/assets/images/vnpay-logo.jpg")" alt="VNPay Logo" class="vnpay-header-logo">
+                <span class="payment-header-title">Thanh toán VNPay</span>
+            </div>
+
+            <!-- Main content -->
+            <div class="payment-main">
+                <!-- Box chi tiết vé -->
+                <div class="payment-ticket-box">
+                    <div class="ticket-bill-title">HÓA ĐƠN THANH TOÁN</div>
+                    <div class="ticket-bill-list">
+                        <div class="ticket-bill-row"><span class="bill-label">Phim:</span> <span class="bill-value payment-movie-name">@Model.Name</span></div>
+                        <div class="ticket-bill-row"><span class="bill-label">Suất chiếu:</span> <span class="bill-value payment-date">@Model.Day.ToString("dd/MM/yyyy")</span><spann class="bill-value payment-date">|</spann><span class="bill-value payment-date payment-time">@Model.Start.ToString(@"hh\:mm")</span></div>
+                        <div class="ticket-bill-row"><span class="bill-label">Phòng chiếu:</span> <span class="bill-value payment-cinema">@Model.Room_Name</span></div>
+                        <div class="ticket-bill-row"><span class="bill-label">Ghế:</span> <span class="bill-value payment-seats">@Model.Seat</span></div>
+                        <div class="ticket-bill-row"><span class="bill-label">Số lượng vé:</span> <span class="bill-value payment-number-ticket">@seatCount</span></div>
+                        <div class="ticket-bill-row"><span class="bill-label">Giá mỗi vé:</span> <span class="bill-value payment-price-ticket">@Model.Price_Show VNĐ</span></div>
+                        <div class="ticket-bill-row"><span class="bill-label">Tạm tính vé:</span> <span class="bill-value payment-total" id="bill-ticket-total">@Model.Total VNĐ</span></div>
+                        <div class="ticket-bill-row bill-addon-title"><span class="product-title"><i class="fa fa-utensils bill-icon"></i>Đồ ăn & Đồ uống đi kèm:</span></div>
+                        <div class="ticket-bill-addon-list"></div>
+                        <div class="ticket-bill-row bill-total"><span class="bill-label"><i class="fa fa-receipt bill-icon"></i>Tổng cộng:</span> <span class="bill-value" id="bill-grand-total"> VNĐ</span></div>
                     </div>
                 </div>
-                <div class="addon-selected-list"></div>
+                <!-- Box chi tiết thanh toán -->
+                <div class="payment-detail-box">
+                    <div class="payment-detail-row"><span class="payment-detail-label">Tổng tiền:</span> <span class="payment-detail-value payment-amount">200.000 VNĐ</span></div>
+                    <div class="payment-detail-row"><span class="payment-detail-label">Phí giao dịch:</span> <span class="payment-detail-value">Miễn phí</span></div>
+                    <div class="payment-detail-row"><span class="payment-detail-label">Mã đơn hàng:</span> <span class="payment-detail-value">@Model.Booking_ID</span></div>
+                    <div class="payment-detail-row"><span class="payment-detail-label">Email:</span> <span class="payment-detail-value">@Model.Email</span></div>
+                    <!-- Sản phẩm bắp nước đi kèm -->
+                    <div class="addon-section">
+                        <div class="addon-title">Chọn bắp nước đi kèm</div>
+                        <div class="addon-list">
+                            
+                           
+                            <!-- Thêm nhiều sản phẩm nếu muốn -->
+                        </div>
+                    </div>
+                    <div class="addon-selected-list"></div>
+                </div>
+            </div>
+            <!-- Nút thanh toán -->
+            <div class="payment-btn-wrap">
+                <button class="btn-vnpay-full">
+                    Thanh toán với VNPay
+                </button>
             </div>
         </div>
-        <!-- Nút thanh toán -->
-        <div class="payment-btn-wrap">
-            <button class="btn-vnpay-full">
-                Thanh toán với VNPay
-            </button>
-        </div>
-    </div>
 
-    
-</div>
- <footer>
-    <div class = "container__footer">
-        <h3>Ký ức đẹp bắt đầu từ một bộ phim hay!</h3>
+
     </div>
-    <div class="footercontent">
-        <div class="navbar__logo navbar__logo2">
-            <img src="@Url.Content("~/Content/assets/images/logo.png")" alt="logo" class="navbar__logo-item">
-            <span class = "navbar__logo-name">Zeron</span>
+    <footer>
+        <div class="container__footer">
+            <h3>Ký ức đẹp bắt đầu từ một bộ phim hay!</h3>
         </div>
-        <ul class="footercontent__ContactInf">
-            <li><p class = "footercontent__header">Hỗ Trợ</p></li>
-            <li>
-                <div class="footercontent__ContactInf-list">
-                    <i class="fa-solid fa-phone"></i>
-                    <p>0948 203 816</p>
-                </div>
-            </li>
-            <li>
-                <div class="footercontent__ContactInf-list">
-                    <i class="fa-solid fa-envelope"></i>
-                    <p>zeron_cinema@gmail.com</p>
-                </div>
-            </li>
-            <li>
-                <div class="footercontent__ContactInf-list">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p>Số 16 Nguyễn Lương Bằng, Hòa Khánh Bắc, Đà Nẵng</p>
-                </div>
-            </li>
-        </ul>
-        <ul class="footercontent__QuickLink">
-            <li><p class = "footercontent__header">Liên Kết Nhanh</p></li>
-            <li><a class = "footercontent__QuickLink-list" href ="##">Trang Chủ</a></li>
-            <li><a class = "footercontent__QuickLink-list" href ="##">Đặt Vé</a></li>
-            <li><a class = "footercontent__QuickLink-list" href ="##">Thể Loại</a></li>
-        </ul>
-        <ul class="footercontent__SocialMedia">
-            <p class = "footercontent__header">Mạng Xã Hội</p></li>
-            <div class = "footercontent__SocialMedia-list">
-                <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
-                <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
-                <a href="https://zalo.me" target="_blank"><i class="fa-solid fa-comment-dots fa-2x"></i></a>
+        <div class="footercontent">
+            <div class="navbar__logo navbar__logo2">
+                <img src="@Url.Content("~/Content/assets/images/logo.png")" alt="logo" class="navbar__logo-item">
+                <span class="navbar__logo-name">Zeron</span>
             </div>
-        </ul>
-        <div><p class = "line"></p></div>
-    </div>
- </footer>
+            <ul class="footercontent__ContactInf">
+                <li><p class="footercontent__header">Hỗ Trợ</p></li>
+                <li>
+                    <div class="footercontent__ContactInf-list">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>0948 203 816</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="footercontent__ContactInf-list">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>zeron_cinema@gmail.com</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="footercontent__ContactInf-list">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Số 16 Nguyễn Lương Bằng, Hòa Khánh Bắc, Đà Nẵng</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="footercontent__QuickLink">
+                <li><p class="footercontent__header">Liên Kết Nhanh</p></li>
+                <li><a class="footercontent__QuickLink-list" href="##">Trang Chủ</a></li>
+                <li><a class="footercontent__QuickLink-list" href="##">Đặt Vé</a></li>
+                <li><a class="footercontent__QuickLink-list" href="##">Thể Loại</a></li>
+            </ul>
+            <ul class="footercontent__SocialMedia">
+                <p class="footercontent__header">Mạng Xã Hội</p></li>
+                <div class="footercontent__SocialMedia-list">
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                    <a href="https://zalo.me" target="_blank"><i class="fa-solid fa-comment-dots fa-2x"></i></a>
+                </div>
+            </ul>
+            <div><p class="line"></p></div>
+        </div>
+    </footer>
 
- <script src = "@Url.Content("~/Content/assets/js/Payment.js")" defer ></script>
- <script src = "@Url.Content("~/Content/assets/js/dataManager.js")" defer ></script>
- <script src = "@Url.Content("~/Content/assets/js/auth.js")" defer></script>
+    <script src="@Url.Content("~/Scripts/js/Payment.js")" defer></script>
+    <script src="@Url.Content("~/Scripts/js/dataManager.js")" defer></script>
+    <script src="@Url.Content("~/Scripts/js/auth.js")" defer></script>
 </body>
 </html>

@@ -33,7 +33,8 @@ namespace Datvexemfilm.Controllers
                 var tmp = new TMP
                 {
                     Show_ID = show_id,
-                    Name = _room.Room_Name,
+                    Room_ID = room_id,
+                    Name_Room = _room.Room_Name,
                     Day = _show.Day,
                     Booked = _seat.Booked,
                     Start = _show.Start_Movie,
