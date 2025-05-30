@@ -262,22 +262,6 @@ if(genreBtn && genreDropdown) {
         }
     });
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-    const navItems = document.querySelectorAll('.NavbarLeftContainer__content .nav-item');
-    navItems.forEach(item => {
-        if (item.textContent.includes('Thông tin cá nhân')) {
-            item.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.body.style.opacity = 0;
-                setTimeout(() => {
-                    window.location.href = '/Home/CustomerInfor';
-                }, 500);
-            });
-        }
-    });
-});
-
 function AddEventBookingbtnHome() {
     // Sự kiện cho nút Đặt vé
     const btnBooks = document.querySelectorAll('.btn-book');

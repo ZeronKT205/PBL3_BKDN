@@ -40,5 +40,9 @@ namespace Datvexemfilm.Controllers
         {
             return View();
         }
+        public ActionResult historyBooking()
+        {
+            return View();
+        }
     }
 }

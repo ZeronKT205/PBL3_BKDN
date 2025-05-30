@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.Mvc;
 using Datvexemfilm.Models;
+
 namespace MySimpleMvcApp.Controllers
 {
     public class UserController : Controller
@@ -64,5 +66,38 @@ namespace MySimpleMvcApp.Controllers
                 return Json(new { success = false, message = "Có lỗi xảy ra khi xóa người dùng: " + ex.Message }, JsonRequestBehavior.AllowGet);
             }
         }
+        [HttpGet]
+        public JsonResult history(int id_user)
+        {
+            var bookings = _dbContext.Bookings
+                .Where(b => b.User_ID == id_user)
+                .Include("Show.Film")
+                .Include("Show.Room")
+                .Include("Order_Products.Product")
+                .Include("SeatOrder.Seat")
+                .ToList();
+
+            var tickets = bookings.Select(b => new TicketViewModel
+            {
+                Id = b.Booking_ID.ToString("D6"),
+                Title = b.Show.Film.name,
+                Status = b.Status,
+                BookingDate = b.Booking_Date.ToString("dd/MM/yyyy"),
+                Showtime = $"{b.Show.Day:dd/MM/yyyy} - {b.Show.Start_Movie:hh\\:mm}",
+                Combo = b.Order_Products.Select(op => new TicketViewModel.ComboItem
+                {
+                    Name = op.Product.Name,
+                    Quantity = op.quantity,
+                    Price = string.Format("{0:N0}", op.Product.Price)
+                }).ToList(),
+                Price = string.Format("{0:N0} VNĐ", b.total),
+                Poster = b.Show.Film.Poster,
+                CinemaRoom = b.Show.Room.Room_Name,
+                Seat = b.SeatOrder.Choice
+            }).ToList();
+
+            return Json(tickets,JsonRequestBehavior.AllowGet);
+        }
+
     }
 }

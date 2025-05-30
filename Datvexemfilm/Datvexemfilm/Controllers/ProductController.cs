@@ -46,7 +46,7 @@ namespace Datvexemfilm.Controllers
             {
                 var orderproduct = new Order_Product
                 {
-                    Booking_ID = 1,
+                    Booking_ID = item.Booking_ID,
                     Product_ID = item.Product_ID,
                     quantity = item.quantity,
                     total = item.total

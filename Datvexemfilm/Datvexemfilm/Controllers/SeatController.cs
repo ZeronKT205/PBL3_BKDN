@@ -14,7 +14,7 @@ namespace Datvexemfilm.Controllers
 
         public JsonResult Seat_Booking(int Room_ID, int Show_ID, string Choice)
         {
-            var _seatid = _dbContext.Seats.Where(s => s.Room_ID == Room_ID && s.Show_ID == Room_ID).Select(s => s.Seat_ID);
+            var _seatid = _dbContext.Seats.Where(s => s.Room_ID == Room_ID && s.Show_ID == Show_ID).Select(s => s.Seat_ID);
             var _seatorder = new SeatOrder
             {
                 Seat_ID = _seatid.FirstOrDefault(),

@@ -1,5 +1,6 @@
 ﻿// Models/BookingViewModel.cs
 using System;
+using System.Collections.Generic;
 
 namespace Datvexemfilm.Models
 {
@@ -32,4 +33,25 @@ namespace Datvexemfilm.Models
         public string Email { get; set; }
         public string Room_Name { get; set; }
     }
+    public class TicketViewModel
+    {
+        public string Id { get; set; }
+        public string Title { get; set; }
+        public string Status { get; set; }
+        public string BookingDate { get; set; }
+        public string Showtime { get; set; }
+        public List<ComboItem> Combo { get; set; }
+        public string Price { get; set; }
+        public string Poster { get; set; }
+        public string CinemaRoom { get; set; }
+        public string Seat { get; set; }
+
+        public class ComboItem
+        {
+            public string Name { get; set; }
+            public int Quantity { get; set; }
+            public string Price { get; set; }
+        }
+    }
+
 }
