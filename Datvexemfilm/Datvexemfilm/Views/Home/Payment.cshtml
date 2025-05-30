@@ -55,7 +55,7 @@
                 </div>
                 <!-- Box chi tiết thanh toán -->
                 <div class="payment-detail-box">
-                    <div class="payment-detail-row"><span class="payment-detail-label">Tổng tiền:</span> <span class="payment-detail-value payment-amount">200.000 VNĐ</span></div>
+                    <div class="payment-detail-row"><span class="payment-detail-label">Tổng tiền:</span> <span class="payment-detail-value payment-amount">@Model.Total VNĐ</span></div>
                     <div class="payment-detail-row"><span class="payment-detail-label">Phí giao dịch:</span> <span class="payment-detail-value">Miễn phí</span></div>
                     <div class="payment-detail-row"><span class="payment-detail-label">Mã đơn hàng:</span> <span class="payment-detail-value">@Model.Booking_ID</span></div>
                     <div class="payment-detail-row"><span class="payment-detail-label">Email:</span> <span class="payment-detail-value">@Model.Email</span></div>
@@ -73,7 +73,7 @@
             </div>
             <!-- Nút thanh toán -->
             <div class="payment-btn-wrap">
-                <button class="btn-vnpay-full">
+                <button onclick="submitPay()" class="btn-vnpay-full">
                     Thanh toán với VNPay
                 </button>
             </div>
@@ -130,6 +130,12 @@
     </footer>
 
     <script src="@Url.Content("~/Scripts/js/Payment.js")" defer></script>
+    <script>
+        var _price = "@Model.Total";
+        const seats = "@Model.Seat";
+        const tmp = @Html.Raw(Json.Encode(Model));
+        const bookingid=@Model.Booking_ID;
+    </script>
     <script src="@Url.Content("~/Scripts/js/dataManager.js")" defer></script>
     <script src="@Url.Content("~/Scripts/js/auth.js")" defer></script>
 </body>

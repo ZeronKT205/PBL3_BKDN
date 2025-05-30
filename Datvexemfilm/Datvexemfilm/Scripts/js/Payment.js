@@ -3,7 +3,8 @@ window.onload = function () {
 }
 
 let selectedProducts = [];
-let baseTotal = 200000;
+let baseTotal = parseInt(_price.replace(/[^\d]/g, ''));
+;
 
 function formatVND(val) {
     return val.toLocaleString('vi-VN') + ' VNĐ';
@@ -53,9 +54,10 @@ function attachAddonEventHandlers() {
         const qtyValue = item.querySelector('.addon-qty-value');
 
         plusBtn.addEventListener('click', function () {
-            let prod = selectedProducts.find(p => p.name === name);
+            const id = item.getAttribute('data-id');
+            let prod = selectedProducts.find(p => p.id === id);
             if (!prod) {
-                prod = { name, price, qty: 1 };
+                prod = { id,name, price, qty: 1 };
                 selectedProducts.push(prod);
             } else {
                 prod.qty++;
@@ -66,7 +68,8 @@ function attachAddonEventHandlers() {
         });
 
         minusBtn.addEventListener('click', function () {
-            let prod = selectedProducts.find(p => p.name === name);
+            const id = item.getAttribute('data-id');
+            let prod = selectedProducts.find(p => p.id === id);
             if (prod && prod.qty > 0) {
                 prod.qty--;
                 if (prod.qty === 0) {
@@ -111,6 +114,7 @@ async function getProduct() {
         item.className = 'addon-item';
         item.setAttribute('data-name', product.Name);
         item.setAttribute('data-price', product.Price);
+        item.setAttribute('data-id', product.Product_ID);
 
         item.innerHTML = `
             <img src="${product.img}" alt="${product.Name}" class="addon-img">
@@ -134,4 +138,37 @@ async function getProduct() {
     // Cập nhật lại danh sách và tổng
     updateSelectedList();
     updateTotal();
+}
+async function submitPay() {
+    const _orderproduct = selectedProducts.map(p => ({
+        Booking_ID: tmp.Booking_ID,
+        Product_ID: p.id,
+        quantity: p.qty,
+        total: p.price * p.qty
+    }));
+    
+    const response = await fetch("https://localhost:44343/Product/OrderProduct", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(_orderproduct)
+    });
+    const totalText = document.querySelector('.payment-amount').textContent;
+    const totalNumber = parseInt(totalText.replace(/[^\d]/g, ''), 10);
+    const _repose = await fetch("https://localhost:44343/Payment/addPayment", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            Booking_ID: bookingid,
+            Amount: totalNumber
+        })
+    });
+    const data = await _repose.json();
+    if (data.success) {
+        alert("Thanh toán thành công");
+        window.location.href = "/Home/Home";
+    }
 }

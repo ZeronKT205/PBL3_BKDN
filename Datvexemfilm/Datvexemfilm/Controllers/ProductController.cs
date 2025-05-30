@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices.ComTypes;
 using System.Web;
 using System.Web.Mvc;
 
@@ -33,6 +34,27 @@ namespace Datvexemfilm.Controllers
             {
                 return Json(new { error = ex.Message }, JsonRequestBehavior.AllowGet);
             }
+        }
+        [HttpPost]
+        public JsonResult OrderProduct(List<Order_Product> _order)
+        {
+            if (_order == null || !_order.Any())
+            {
+                return Json(new { success = false, message = "Không có sản phẩm nào để đặt hàng." });
+            }
+            foreach (var item in _order)
+            {
+                var orderproduct = new Order_Product
+                {
+                    Booking_ID = 1,
+                    Product_ID = item.Product_ID,
+                    quantity = item.quantity,
+                    total = item.total
+                };
+                _dbContext.order_Products.Add(orderproduct);
+            }
+            _dbContext.SaveChanges();
+            return Json(new {success = true });
         }
     }
 }

@@ -28,6 +28,7 @@ namespace Datvexemfilm.Models
         public int Booking_ID { get; set; }
       
         public int Room_ID { get; set; }
+        public int Show_ID { get; set; }
         public string Email { get; set; }
         public string Room_Name { get; set; }
     }

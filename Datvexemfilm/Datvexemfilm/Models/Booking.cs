@@ -17,7 +17,7 @@
         public int SeatOrder_ID { get; set; }
         [ForeignKey("SeatOrder_ID")]
         public SeatOrder SeatOrder { get; set; }
-        public int Total { get; set; }
+        public int total { get; set; }
         public DateTime Booking_Date { get; set; }
         public string Status { get; set; }
         public ICollection<Order_Product> Order_Products { get; set; }

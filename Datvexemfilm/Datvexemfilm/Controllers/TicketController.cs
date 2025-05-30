@@ -62,7 +62,7 @@ namespace Datvexemfilm.Controllers
                 Show_ID = id_show,
                 Booking_Date = DateTime.Now,
                 Status = "ON",
-                Total = total
+                total = total
             };
             _dbContext.Bookings.Add(booking);
             _dbContext.SaveChanges();

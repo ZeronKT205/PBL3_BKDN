@@ -27,7 +27,7 @@ if (registerForm) {
         const result = await response.json();
         if (result.success) {
             alert("Đăng ký thành công!");
-            window.location.href = "userlogin.html";
+            window.location.href = "/Home/userlogin";
         } else {
             alert(result.message);
         }
