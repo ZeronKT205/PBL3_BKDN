@@ -213,6 +213,10 @@ function setupCarousel(carouselId, leftBtn, rightBtn) {
     // Khởi tạo trạng thái ban đầu
     updateBtns();
 }
+document.getElementById("btnbooking").addEventListener("click", function (event) {
+    event.preventDefault();
+    document.getElementById("movie").scrollIntoView({ behavior: "smooth" });
+});
 
 // Scroll to section when click button
 const btnNow = document.querySelector('.listfilmnow');
@@ -279,7 +283,7 @@ function AddEventBookingbtnHome() {
 
 
 async function loadfilm() {
-    const response = await fetch("https://localhost:44343/Film/GetFilm", {
+    const response = await fetch(`${window.location.origin}/Film/GetFilm`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -351,7 +355,7 @@ function updateSlideControls() {
 
 
 async function loadfilm_on() {
-    const response = await fetch("https://localhost:44343/Film/GetFilm_ON", {
+    const response = await fetch(`${window.location.origin}/Film/GetFilm_ON`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -393,7 +397,7 @@ async function loadfilm_on() {
 
 }
 async function loadfilm_next() {
-    const response = await fetch("https://localhost:44343/Film/GetFilm_Next", {
+    const response = await fetch(`${window.location.origin}/Film/GetFilm_Next`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"

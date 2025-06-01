@@ -9,13 +9,14 @@
     [Table("CustomerInfo")]
     public class CustomerInfo
     {
-        [Key]
-        public int ID { get; set; }
+        [Key, ForeignKey("Account")] 
+        public int User_ID { get; set; }
         public string fullname { get; set; }
-        public DateTime Birthday { get; set; }
+        public DateTime? Birthday { get; set; }
         public string Gender { get; set; }
         public string Phone { get; set; }
         public string Address { get; set; }
         public string Email { get; set; }
+        public virtual Account Account { get; set; }
     }
 }

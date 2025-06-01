@@ -30,10 +30,10 @@ namespace MySimpleMvcApp.Controllers
             return Json(users, JsonRequestBehavior.AllowGet); 
         }
 
-        [HttpPost]
+        [HttpGet]
         public JsonResult GetUserbyID(int id)
         {
-            var user = _dbContext.customerInfos.Where(p => p.ID == id).FirstOrDefault();
+            var user = _dbContext.customerInfos.Where(p => p.User_ID == id).FirstOrDefault();
             return Json(user, JsonRequestBehavior.AllowGet);
         }
 

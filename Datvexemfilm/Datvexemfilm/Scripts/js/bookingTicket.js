@@ -23,7 +23,7 @@ async function bookseat(seats) {
     const totalRaw = document.querySelector('.price.total-price').textContent;
     const totalClean = totalRaw.replace(/[^\d]/g, '');
 
-    const response = await fetch("https://localhost:44343/Seat/Seat_Booking", {
+    const response = await fetch(`${window.location.origin}/Seat/Seat_Booking`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -44,7 +44,7 @@ async function bookseat(seats) {
         total: parseInt(totalClean, 10) 
     };
 
-    const _response = await fetch("https://localhost:44343/Booking/Booking", {
+    const _response = await fetch(`${window.location.origin}/Booking/Booking`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(booking)

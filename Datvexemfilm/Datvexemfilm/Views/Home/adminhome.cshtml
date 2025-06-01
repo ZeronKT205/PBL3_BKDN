@@ -130,99 +130,43 @@
             </div>    
             <div class="mainPage__Screens__ContainerListCard">
                 <!-- DANH SÁCH PHÒNG CHIẾU NẰM Ở ĐÂY -->
-                <div class="mainPage__Screens__ContainerListCard__item">
-                    <h2 class="mainPage__Screens__ContainerListCard__item-title">Screen A</h2>
-                    <div class="mainPage__Screens__ContainerListCard__item__Containerinf">
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-numSeats">
-                            <span>Total Seats</span>
-                            <p>50</p>
-                        </div>
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-AvailablenumSeats">
-                            <span>Row | Col</span>
-                            <p>5 | 10</p>
-                        </div>
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-quantity">
-                            <span>Quantity</span>
-                            <p>50</p>
-                        </div>
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-status">
-                            <span>Status</span>
-                            <p>inactive</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="mainPage__Screens__ContainerListCard__item">
-                    <h2 class="mainPage__Screens__ContainerListCard__item-title">Screen A</h2>
-                    <div class="mainPage__Screens__ContainerListCard__item__Containerinf">
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-numSeats">
-                            <span>Total Seats</span>
-                            <p>50</p>
-                        </div>
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-AvailablenumSeats">
-                            <span>Row | Col</span>
-                            <p>5 | 10</p>
-                        </div>
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-quantity">
-                            <span>Quantity</span>
-                            <p>50</p>
-                        </div>
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-status">
-                            <span>Status</span>
-                            <p>active</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="mainPage__Screens__ContainerListCard__item">
-                    <h2 class="mainPage__Screens__ContainerListCard__item-title">Screen A</h2>
-                    <div class="mainPage__Screens__ContainerListCard__item__Containerinf">
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-numSeats">
-                            <span>Total Seats</span>
-                            <p>50</p>
-                        </div>
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-AvailablenumSeats">
-                            <span>Row | Col</span>
-                            <p>5 | 10</p>
-                        </div>
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-quantity">
-                            <span>Quantity</span>
-                            <p>50</p>
-                        </div>
-                        <div class="mainPage__Screens__ContainerListCard__item__Containerinf-status">
-                            <span>Status</span>
-                            <p>active</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="mainPage__Screens__DetailContainer hidden">
-                    <div class="containerScreenx">
-                        <div class="input-container">
-                            <h1>Chỉnh Sửa Phòng Chiếu</h1>
-                            <div class = "input-container__block1">
-                                <label for="rows">Số Hàng: </label>
-                                <input type="number" id="rows" min="1" placeholder="Số hàng" />
-                                <label for="cols">Số Cột: </label>
-                                <input type="number" id="cols" min="1" placeholder="Số cột" />
-                                <label >Tên Rạp: </label>
+            </div>
+
+            <!-- Detail Container -->
+            <div class="mainPage__Screens__DetailContainer hidden">
+                <div class="containerScreenx">
+                    <div class="closeScreen">×</div>
+                    <div class="input-container">
+                        <h1>Chỉnh Sửa Phòng Chiếu</h1>
+                        <div class="input-container__block1">
+                            <div>
+                                <label for="nameScreen">Tên Rạp:</label>
                                 <input type="text" id="nameScreen" />
-                                <label>Trạng Thái </label>
-                                <select id="status_Room" placeholder="active">
+                            </div>
+                            <div>
+                                <label for="rows">Số Hàng:</label>
+                                <input type="number" id="rows" min="1" placeholder="Số hàng" />
+                            </div>
+                            <div>
+                                <label for="cols">Số Cột:</label>
+                                <input type="number" id="cols" min="1" placeholder="Số cột" />
+                            </div>
+                            <div>
+                                <label>Trạng Thái:</label>
+                                <select id="status_Room">
                                     <option value="active">active</option>
                                     <option value="inactive">inactive</option>
                                 </select>
                             </div>
-                            <div class = "input-container__block2">
-                                <button class = "buttontaosodo" onclick="generateSeats()">Tạo Sơ Đồ</button>
-    
-                                <!-- CẦN ADD SỰ KIỆN LƯU DỮ LIỆU VÀO DATABASE -->
-                                <button class ="SubmitChangeSeatLayout" >Submit</button>
-                            </div>
-                            <h1>\____________SCREEN____________/</h1>
                         </div>
-                
-                        <div id="seats-container" class="seats-container">
-                            <!-- Sơ đồ ghế sẽ hiển thị ở đây -->
+                        <div class="input-container__block2">
+                            <button class="buttontaosodo" onclick="generateSeats()">Tạo Sơ Đồ</button>
+                            <button class="SubmitChangeSeatLayout">Submit</button>
                         </div>
-                        <Button class = "closeScreen"><i class="fas fa-times"></i></Button>
+                        <h1>\____________SCREEN____________/</h1>
+                    </div>
+                    <div id="seats-container" class="seats-container">
+                        <!-- Sơ đồ ghế sẽ hiển thị ở đây -->
                     </div>
                 </div>
             </div>
@@ -251,14 +195,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>The Dark Knight</td>
-                            <td>Action, Crime, Drama</td>
-                            <td>18-6-2008</td>
-                            <td><span>Đang Chiếu</span></td>
-                            <td><Button class = "Editmovie1">Edit</Button> <button class="DeleteMovie">Xóa</button></td>
-                        </tr>
+                        
 
                         <!-- Thêm nhiều phim nếu cần -->
                     </tbody>

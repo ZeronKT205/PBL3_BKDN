@@ -1,3 +1,6 @@
+window.onload = function () {
+    loadmovie();
+}
 //-----------------------Hàm này xử lý edit và Add trong quản lý Phim---------------------//
 // Mở modal khi bấm Edit hoặc Thêm Phim
 document.querySelectorAll('.Editmovie1, .AddMovieBtn').forEach(btn => {
@@ -34,24 +37,41 @@ document.querySelectorAll('.Editmovie1, .AddMovieBtn').forEach(btn => {
     e.preventDefault();
     const formData = new FormData(this);
     const movieData = Object.fromEntries(formData.entries());
-    // TODO: Gọi API backend để lưu dữ liệu phim
-    // Ví dụ:
-    // fetch('/api/movies', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(movieData),
-    // })
-    // .then(response => response.json())
-    // .then(data => {
-    //   console.log('Success:', data);
-    //   document.getElementById('movieModal').classList.add('hidden');
-    // })
-    // .catch((error) => {
-    //   console.error('Error:', error);
-    // });
+    
   });
+async function loadmovie() {
+    try {
+        const response = await fetch(`${window.location.origin}/Film/GetFilm`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+
+        const movies = await response.json();
+        const tbody = document.querySelector('.mainPage__Movies__Container tbody');
+        tbody.innerHTML = '';
+
+        originalMovies = movies.map(movie => ({
+            id: movie.ID_Movie,
+            title: movie.name,
+            genre: movie.Type,
+            releaseDay: movie.releaseDay,
+            status: movie.Status,
+            poster: movie.Poster,
+            description: movie.ShortDescription,
+            fullDescription: movie.FullDescription,
+            director: movie.Director,
+            language: movie.Language,
+            duration: movie.Duration
+        }));
+
+        updateMovieTable(originalMovies);
+    } catch (error) {
+        console.error("Error loading movies:", error);
+    }
+}
+
 
 // Hàm xóa phim
 function deleteMovie(movieId) {

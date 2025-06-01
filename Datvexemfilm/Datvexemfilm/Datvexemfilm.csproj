@@ -216,6 +216,7 @@
     <Compile Include="Controllers\PaymentController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\RegisterController.cs" />
+    <Compile Include="Controllers\ScreenController.cs" />
     <Compile Include="Controllers\SeatController.cs" />
     <Compile Include="Controllers\ShowController.cs" />
     <Compile Include="Controllers\TicketController.cs" />
@@ -392,6 +393,7 @@
     <Folder Include="Views\Booking\" />
     <Folder Include="Views\Payment\" />
     <Folder Include="Views\Product\" />
+    <Folder Include="Views\Screen\" />
     <Folder Include="Views\Seat\" />
     <Folder Include="Views\Show\" />
     <Folder Include="Views\Ticket\" />

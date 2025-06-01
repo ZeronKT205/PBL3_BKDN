@@ -54,12 +54,11 @@ window.addEventListener('click', (e) => {
 });
 async function loaduser() {
     const userInfo = getUserInfo();
-    const response = await fetch('https://localhost:44343/User/GetUserbyID', {
-        method: 'POST',
+    const response = await fetch(`${window.location.origin}/User/GetUserbyID?id=${userInfo.id}`, {
+        method: 'GET',
         headers: {
-            "Content-Type": "application/json"    
-        },
-        body: JSON.stringify({ id: userInfo.id })
+            "Content-Type": "application/json"
+        }
     });
     const data = await response.json();
     const container = document.getElementById("user__info");
@@ -82,7 +81,7 @@ async function loaduser() {
                     </div>
                     <div class="user-info-row">
                         <span class="user-info-label"><i class="fas fa-calendar-alt"></i> Ngày sinh</span>
-                        <span class="user-info-value">${formatDate(data.Birthday)}</span>
+                        <span class="user-info-value">${data.Birthday ? formatDate(data.Birthday) : ''}</span>
                     </div>
                     <div class="user-info-row">
                         <span class="user-info-label"><i class="fas fa-venus-mars"></i> Giới tính</span>

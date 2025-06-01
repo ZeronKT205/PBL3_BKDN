@@ -36,7 +36,7 @@ window.onload = function () {
 
 async function getDayofMovie(id) {
     try {
-        const response = await fetch(`https://localhost:44343/Show/getDay?id=${id}`, {
+        const response = await fetch(`${window.location.origin}/Show/getDay?id=${id}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -92,7 +92,7 @@ async function getDayofMovie(id) {
 // Hàm getShowofDay giữ nguyên như cũ
 async function getShowofDay(id, day) {
     try {
-        const response = await fetch(`https://localhost:44343/Show/getShowofDay?id=${id}&Day=${day}`, {
+        const response = await fetch(`${window.location.origin}/Show/getShowofDay?id=${id}&Day=${day}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"

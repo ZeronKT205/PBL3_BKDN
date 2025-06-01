@@ -1,7 +1,7 @@
 @model Datvexemfilm.Models._Payment
 @{
     Layout = null;
-    var seats = Model.Seat.Split(',');
+    var seats = Model?.Seat?.Split(',') ?? new string[0];
     var seatCount = seats.Length;
 }
 <!DOCTYPE html>
@@ -41,24 +41,24 @@
                 <div class="payment-ticket-box">
                     <div class="ticket-bill-title">HÓA ĐƠN THANH TOÁN</div>
                     <div class="ticket-bill-list">
-                        <div class="ticket-bill-row"><span class="bill-label">Phim:</span> <span class="bill-value payment-movie-name">@Model.Name</span></div>
-                        <div class="ticket-bill-row"><span class="bill-label">Suất chiếu:</span> <span class="bill-value payment-date">@Model.Day.ToString("dd/MM/yyyy")</span><spann class="bill-value payment-date">|</spann><span class="bill-value payment-date payment-time">@Model.Start.ToString(@"hh\:mm")</span></div>
-                        <div class="ticket-bill-row"><span class="bill-label">Phòng chiếu:</span> <span class="bill-value payment-cinema">@Model.Room_Name</span></div>
-                        <div class="ticket-bill-row"><span class="bill-label">Ghế:</span> <span class="bill-value payment-seats">@Model.Seat</span></div>
+                        <div class="ticket-bill-row"><span class="bill-label">Phim:</span> <span class="bill-value payment-movie-name">@(Model?.Name ?? "Unknown Movie")</span></div>
+                        <div class="ticket-bill-row"><span class="bill-label">Suất chiếu:</span> <span class="bill-value payment-date">@(Model?.Day.ToString("dd/MM/yyyy") ?? DateTime.Now.ToString("dd/MM/yyyy"))</span><spann class="bill-value payment-date">|</spann><span class="bill-value payment-date payment-time">@(Model?.Start.ToString(@"hh\:mm") ?? "00:00")</span></div>
+                        <div class="ticket-bill-row"><span class="bill-label">Phòng chiếu:</span> <span class="bill-value payment-cinema">@(Model?.Room_Name ?? "Unknown Room")</span></div>
+                        <div class="ticket-bill-row"><span class="bill-label">Ghế:</span> <span class="bill-value payment-seats">@(Model?.Seat ?? "")</span></div>
                         <div class="ticket-bill-row"><span class="bill-label">Số lượng vé:</span> <span class="bill-value payment-number-ticket">@seatCount</span></div>
-                        <div class="ticket-bill-row"><span class="bill-label">Giá mỗi vé:</span> <span class="bill-value payment-price-ticket">@Model.Price_Show VNĐ</span></div>
-                        <div class="ticket-bill-row"><span class="bill-label">Tạm tính vé:</span> <span class="bill-value payment-total" id="bill-ticket-total">@Model.Total VNĐ</span></div>
+                        <div class="ticket-bill-row"><span class="bill-label">Giá mỗi vé:</span> <span class="bill-value payment-price-ticket">@(Model?.Price_Show ?? 0) VNĐ</span></div>
+                        <div class="ticket-bill-row"><span class="bill-label">Tạm tính vé:</span> <span class="bill-value payment-total" id="bill-ticket-total">@(Model?.Total ?? "0") VNĐ</span></div>
                         <div class="ticket-bill-row bill-addon-title"><span class="product-title"><i class="fa fa-utensils bill-icon"></i>Đồ ăn & Đồ uống đi kèm:</span></div>
                         <div class="ticket-bill-addon-list"></div>
-                        <div class="ticket-bill-row bill-total"><span class="bill-label"><i class="fa fa-receipt bill-icon"></i>Tổng cộng:</span> <span class="bill-value" id="bill-grand-total"> VNĐ</span></div>
+                        <div class="ticket-bill-row bill-total"><span class="bill-label"><i class="fa fa-receipt bill-icon"></i>Tổng cộng:</span> <span class="bill-value" id="bill-grand-total">@(Model?.Total ?? "0") VNĐ</span></div>
                     </div>
                 </div>
                 <!-- Box chi tiết thanh toán -->
                 <div class="payment-detail-box">
-                    <div class="payment-detail-row"><span class="payment-detail-label">Tổng tiền:</span> <span class="payment-detail-value payment-amount">@Model.Total VNĐ</span></div>
+                    <div class="payment-detail-row"><span class="payment-detail-label">Tổng tiền:</span> <span class="payment-detail-value payment-amount">@(Model?.Total ?? "0") VNĐ</span></div>
                     <div class="payment-detail-row"><span class="payment-detail-label">Phí giao dịch:</span> <span class="payment-detail-value">Miễn phí</span></div>
-                    <div class="payment-detail-row"><span class="payment-detail-label">Mã đơn hàng:</span> <span class="payment-detail-value">@Model.Booking_ID</span></div>
-                    <div class="payment-detail-row"><span class="payment-detail-label">Email:</span> <span class="payment-detail-value">@Model.Email</span></div>
+                    <div class="payment-detail-row"><span class="payment-detail-label">Mã đơn hàng:</span> <span class="payment-detail-value">@(Model?.Booking_ID ?? 0)</span></div>
+                    <div class="payment-detail-row"><span class="payment-detail-label">Email:</span> <span class="payment-detail-value">@(Model?.Email ?? "")</span></div>
                     <!-- Sản phẩm bắp nước đi kèm -->
                     <div class="addon-section">
                         <div class="addon-title">Chọn bắp nước đi kèm</div>
@@ -78,8 +78,6 @@
                 </button>
             </div>
         </div>
-
-
     </div>
     <footer>
         <div class="container__footer">
@@ -131,10 +129,10 @@
 
     <script src="@Url.Content("~/Scripts/js/Payment.js")" defer></script>
     <script>
-        var _price = "@Model.Total";
-        const seats = "@Model.Seat";
-        const tmp = @Html.Raw(Json.Encode(Model));
-        const bookingid=@Model.Booking_ID;
+        var _price = "@(Model?.Total ?? "0")";
+        const seats = "@(Model?.Seat ?? "")";
+        const tmp = @Html.Raw(Json.Encode(Model ?? new Datvexemfilm.Models._Payment()));
+        const bookingid = @(Model?.Booking_ID ?? 0);
     </script>
     <script src="@Url.Content("~/Scripts/js/dataManager.js")" defer></script>
     <script src="@Url.Content("~/Scripts/js/auth.js")" defer></script>

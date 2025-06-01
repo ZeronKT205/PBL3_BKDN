@@ -10,12 +10,12 @@ namespace MySimpleMvcApp.Controllers
 
         public RegisterController()
         {
-            _dbContext = new AppDbContext(); 
+            _dbContext = new AppDbContext();
         }
         [HttpPost]
         public JsonResult Register(RegisterRequest req)
         {
-            if(req.Username==null || req.Password == null || req.Email == null)
+            if (req.Username == null || req.Password == null || req.Email == null)
             {
                 return Json(new { success = false, message = "Input is not valid!" });
             }
@@ -42,7 +42,22 @@ namespace MySimpleMvcApp.Controllers
                 };
                 _dbContext.Accounts.Add(newAccount);
                 _dbContext.SaveChanges();
+
+                var customer = new CustomerInfo
+                {
+                    User_ID=newAccount.User_ID,
+                    fullname = "",
+                    Birthday = null,      // nếu có truyền từ client
+                    Gender = "",          // nếu có truyền từ client
+                    Phone = "",
+                    Address = "",
+                    Email = req.Email             // trùng với email của Account
+                };
+                _dbContext.customerInfos.Add(customer);
+                _dbContext.SaveChanges();
+
                 return Json(new { success = true, message = "Đăng ký thành công!" });
+
             }
         }
     }

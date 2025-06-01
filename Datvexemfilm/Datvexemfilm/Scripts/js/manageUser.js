@@ -67,7 +67,7 @@ function attachInfoButtonListeners() {
 
 // Hàm load dữ liệu người dùng
 async function loadUsers() {
-    const response = await fetch("https://localhost:44343/User/GetUsers", {
+    const response = await fetch(`${window.location.origin}/User/GetUsers`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -80,11 +80,11 @@ async function loadUsers() {
     data.forEach(user => {
         const user_container = document.createElement("tr");
         user_container.innerHTML = `
-        <td>${user.ID}</td>
+        <td>${user.User_ID}</td>
         <td>${user.Username}</td>
         <td>${user.Email}</td>
         <td>${user.Role}</td>
-        <td><button class="InfoUser" data-userid="${user.ID}">Info</button> <button class="RemoveUser" data-userid="${user.ID}">Remove</button></td>
+        <td><button class="InfoUser" data-userid="${user.User_ID}">Info</button> <button class="RemoveUser" data-userid="${user.User_ID}">Remove</button></td>
         `;
         user_list.appendChild(user_container);
     });
@@ -110,7 +110,7 @@ function confirmUser(message) {
 async function deleteUser(userId) {
     if (confirmUser('Bạn có chắc chắn muốn xóa người dùng này?')) {
         try {
-            const response = await fetch(`https://localhost:44343/User/DeleteUser`, {
+            const response = await fetch(`${window.location.origin}/User/DeleteUser`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -170,8 +170,8 @@ function searchUsers(query) {
       <td>${user.Email}</td>
       <td>${user.Role}</td>
       <td>
-        <button class="InfoUser" data-userid="${user.ID}">Info</button>
-        <button class="RemoveUser" data-userid="${user.ID}">Remove</button>
+        <button class="InfoUser" data-userid="${user.User_ID}">Info</button>
+        <button class="RemoveUser" data-userid="${user.User_ID}">Remove</button>
       </td>
     `;
     tbody.appendChild(row);
@@ -247,7 +247,7 @@ function fillUserInfoForm(userDetail) {
 
 // Hàm hiển thị thông tin chi tiết của user
 async function showUserInfo(userId) {
-    const user = originalUsers.find(u => u.ID === parseInt(userId));
+    const user = originalUsers.find(u => u.User_ID === parseInt(userId));
     if (!user) {
         alert('Không tìm thấy thông tin người dùng!');
         return;
@@ -260,7 +260,7 @@ async function showUserInfo(userId) {
     }
 
     try {
-        const response = await fetch(`https://localhost:44343/User/GetUserbyID?id=${userId}`, {
+        const response = await fetch(`${window.location.origin}/User/GetUserbyID?id=${userId}`, {
             method: "POST", 
             headers: {
                 "Content-Type": "application/json"

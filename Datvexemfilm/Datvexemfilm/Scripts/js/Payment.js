@@ -98,7 +98,7 @@ function attachAddonEventHandlers() {
 }
 
 async function getProduct() {
-    const response = await fetch("https://localhost:44343/Product/GetProduct", {
+    const response = await fetch(`${window.location.origin}/Product/GetProduct`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -147,7 +147,7 @@ async function submitPay() {
         total: p.price * p.qty
     }));
     
-    const response = await fetch("https://localhost:44343/Product/OrderProduct", {
+    const response = await fetch(`${window.location.origin}/Product/OrderProduct`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -156,7 +156,7 @@ async function submitPay() {
     });
     const totalText = document.querySelector('.payment-amount').textContent;
     const totalNumber = parseInt(totalText.replace(/[^\d]/g, ''), 10);
-    const _repose = await fetch("https://localhost:44343/Payment/addPayment", {
+    const _repose = await fetch(`${window.location.origin}/Payment/addPayment`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

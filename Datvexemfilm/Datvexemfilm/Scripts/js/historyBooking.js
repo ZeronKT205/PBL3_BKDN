@@ -1,7 +1,7 @@
 let mockTickets = [];
 
 async function Tickets(userId) {
-    const response = await fetch(`https://localhost:44343/User/history?id_user=${userId}`, {
+    const response = await fetch(`${window.location.origin}/User/history?id_user=${userId}`, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'

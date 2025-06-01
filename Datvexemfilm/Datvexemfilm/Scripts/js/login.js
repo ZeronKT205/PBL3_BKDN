@@ -11,7 +11,7 @@ document.getElementById('loginform').addEventListener('submit', async function (
     const Username = document.getElementById('Username').value;
     const Password = document.getElementById('Password').value;
 
-    const response = await fetch('https://localhost:44343/Login/Login', {
+    const response = await fetch(`${window.location.origin}/Login/Login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ Username, Password })

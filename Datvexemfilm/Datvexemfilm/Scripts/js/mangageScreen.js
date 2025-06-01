@@ -1,180 +1,171 @@
-// Hàm tạo sơ đồ ghế
-function generateSeats() {
-  const rowsInput = document.querySelector('#rows');
-  const colsInput = document.querySelector('#cols');
-  const nameScreenInput = document.querySelector('#nameScreen');
-  const seatsContainer = document.querySelector('#seats-container');
-
-  if (!rowsInput || !colsInput || !seatsContainer) return;
-
-  const rows = parseInt(rowsInput.value);
-  const cols = parseInt(colsInput.value);
-
-  if (isNaN(rows) || isNaN(cols) || rows <= 0 || cols <= 0) {
-    alert('Vui lòng nhập số hàng và số cột hợp lệ');
-    return;
-  }
-
-  // Xóa nội dung cũ
-  seatsContainer.innerHTML = '';
-
-  // Tạo sơ đồ ghế
-  for (let i = 0; i < rows; i++) {
-    const rowDiv = document.createElement('div');
-    rowDiv.className = 'seat-row';
-    rowDiv.style.display = 'flex';
-    rowDiv.style.justifyContent = 'center';
-    rowDiv.style.gap = '8px';
-    rowDiv.style.marginBottom = '8px';
-
-    // Chuyển số hàng thành chữ cái (0 -> A, 1 -> B, ...)
-    const rowLetter = String.fromCharCode(65 + i);
-
-    for (let j = 0; j < cols; j++) {
-      const seat = document.createElement('div');
-      seat.className = 'seat';
-      const seatId = `${rowLetter}${j + 1}`;
-      seat.id = `seat-${seatId}`;
-      seat.textContent = seatId;
-
-      // Thêm sự kiện click cho ghế
-      seat.addEventListener('click', () => {
-        if (seat.classList.contains('selected')) {
-          seat.classList.remove('selected');
-        } else {
-          seat.classList.add('selected');
-        }
-      });
-
-      rowDiv.appendChild(seat);
-    }
-
-    seatsContainer.appendChild(rowDiv);
-  }
+window.onload = function () {
+    loadscreen();
+    setupEventListeners();
 }
 
-// Gắn sự kiện click cho các card màn hình
-document.addEventListener('DOMContentLoaded', () => {
-  // Xử lý sự kiện click cho nút Add
-  const addButton = document.querySelector('.mainPage__Screens__BlockSearch-button-add');
-  if (addButton) {
-    addButton.addEventListener('click', () => {
-      const detailContainer = document.querySelector('.mainPage__Screens__DetailContainer');
-      if (detailContainer) {
-        // Reset các input về trống
-        const inputContainer = detailContainer.querySelector('.input-container');
-        if (inputContainer) {
-          const nameScreenInput = inputContainer.querySelector('#nameScreen');
-          if (nameScreenInput) {
-            nameScreenInput.value = '';
-            nameScreenInput.disabled = false;
-          }
+function setupEventListeners() {
+    // Nút Add
+    const addButton = document.querySelector('.mainPage__Screens__BlockSearch-button-add');
+    if (addButton) {
+        addButton.addEventListener('click', () => {
+            const detailContainer = document.querySelector('.mainPage__Screens__DetailContainer');
+            if (detailContainer) {
+                const inputContainer = detailContainer.querySelector('.input-container');
+                if (inputContainer) {
+                    inputContainer.querySelector('#nameScreen').value = '';
+                    inputContainer.querySelector('#nameScreen').disabled = false;
 
-          const rowsInput = inputContainer.querySelector('#rows');
-          if (rowsInput) {
-            rowsInput.value = '';
-            rowsInput.disabled = false;
-          }
+                    inputContainer.querySelector('#rows').value = '';
+                    inputContainer.querySelector('#rows').disabled = false;
 
-          const colsInput = inputContainer.querySelector('#cols');
-          if (colsInput) {
-            colsInput.value = '';
-            colsInput.disabled = false;
-          }
+                    inputContainer.querySelector('#cols').value = '';
+                    inputContainer.querySelector('#cols').disabled = false;
 
-          const statusSelect = inputContainer.querySelector('#status_Room');
-          if (statusSelect) {
-            statusSelect.value = 'active';
-            statusSelect.disabled = false;
-          }
+                    const statusSelect = inputContainer.querySelector('#status_Room');
+                    if (statusSelect) {
+                        statusSelect.value = 'active';
+                        statusSelect.disabled = false;
+                    }
+                }
+
+                const generateButton = detailContainer.querySelector('.buttontaosodo');
+                const submitButton = detailContainer.querySelector('.SubmitChangeSeatLayout');
+                
+                if (generateButton) generateButton.style.display = 'block';
+                if (submitButton) submitButton.style.display = 'block';
+
+                detailContainer.classList.remove('hidden');
+            }
+        });
+    }
+
+    // Nút đóng
+    const closeButton = document.querySelector('.closeScreen');
+    if (closeButton) {
+        closeButton.addEventListener('click', () => {
+            const detailContainer = document.querySelector('.mainPage__Screens__DetailContainer');
+            if (detailContainer) {
+                detailContainer.classList.add('hidden');
+            }
+        });
+    }
+}
+
+// Hàm tạo sơ đồ ghế
+function generateSeats() {
+    const rowsInput = document.querySelector('#rows');
+    const colsInput = document.querySelector('#cols');
+    const seatsContainer = document.querySelector('#seats-container');
+
+    if (!rowsInput || !colsInput || !seatsContainer) return;
+
+    const rows = parseInt(rowsInput.value);
+    const cols = parseInt(colsInput.value);
+
+    if (isNaN(rows) || isNaN(cols) || rows <= 0 || cols <= 0) {
+        alert('Vui lòng nhập số hàng và số cột hợp lệ');
+        return;
+    }
+
+    seatsContainer.innerHTML = '';
+
+    for (let i = 0; i < rows; i++) {
+        const rowDiv = document.createElement('div');
+        rowDiv.className = 'seat-row';
+        rowDiv.style.display = 'flex';
+        rowDiv.style.justifyContent = 'center';
+        rowDiv.style.gap = '8px';
+        rowDiv.style.marginBottom = '8px';
+
+        const rowLetter = String.fromCharCode(65 + i);
+        for (let j = 0; j < cols; j++) {
+            const seat = document.createElement('div');
+            seat.className = 'seat';
+            const seatId = `${rowLetter}${j + 1}`;
+            seat.id = `seat-${seatId}`;
+            seat.textContent = seatId;
+
+            seat.addEventListener('click', () => {
+                seat.classList.toggle('selected');
+            });
+
+            rowDiv.appendChild(seat);
         }
 
-        // Hiển thị các nút
-        const generateButton = document.querySelector('.generate-seats-button');
-        const submitButton = document.querySelector('.SubmitChangeSeatLayout');
-        if (generateButton) generateButton.style.display = 'block';
-        if (submitButton) submitButton.style.display = 'block';
+        seatsContainer.appendChild(rowDiv);
+    }
+}
 
-        // Hiển thị container
-        detailContainer.classList.remove('hidden');
+// Load màn hình và gán sự kiện click
+async function loadscreen() {
+    try {
+        const response = await fetch(`${window.location.origin}/Screen/getallscreen`);
+        const data = await response.json();
+        const container = document.querySelector('.mainPage__Screens__ContainerListCard');
+        if (!container) return;
+        container.innerHTML = '';
 
-        // Gắn sự kiện cho nút close
-        const closeButton = detailContainer.querySelector('.closeScreen');
-        if (closeButton) {
-          closeButton.addEventListener('click', () => {
-            detailContainer.classList.add('hidden');
-          });
-        }
-      }
-    });
-  }
+        data.forEach(screen => {
+            const card = document.createElement('div');
+            card.className = 'mainPage__Screens__ContainerListCard__item';
+            card.innerHTML = `
+                <div class="mainPage__Screens__ContainerListCard__item-title">${screen.Room_Name}</div>
+                <div class="mainPage__Screens__ContainerListCard__item__Containerinf">
+                    <div class="mainPage__Screens__ContainerListCard__item__Containerinf-numSeats">
+                        <span>Total Seats</span>
+                        <p>${screen.capacity}</p>
+                    </div>
+                    <div class="mainPage__Screens__ContainerListCard__item__Containerinf-AvailablenumSeats">
+                        <span>Row | Col</span>
+                        <p>${screen.Row} | ${screen.Col}</p>
+                    </div>
+                    <div class="mainPage__Screens__ContainerListCard__item__Containerinf-status">
+                        <span>Status</span>
+                        <p>${screen.Status}</p>
+                    </div>
+                </div>
+            `;
 
-  // Xử lý sự kiện click cho các card
-  const screenCards = document.querySelectorAll('.mainPage__Screens__ContainerListCard__item');
-  screenCards.forEach(card => {
-    card.addEventListener('click', () => {
-      // Lấy thông tin từ card được click
-      const screenTitle = card.querySelector('.mainPage__Screens__ContainerListCard__item-title').textContent;
-      const rowCol = card.querySelector('.mainPage__Screens__ContainerListCard__item__Containerinf-AvailablenumSeats p').textContent;
-      const status = card.querySelector('.mainPage__Screens__ContainerListCard__item__Containerinf-status p').textContent;
-      
-      // Tách row và col từ chuỗi "row | col"
-      const [rows, cols] = rowCol.split('|').map(item => item.trim());
+            // Gán sự kiện click cho card
+            card.addEventListener('click', () => {
+                const detailContainer = document.querySelector('.mainPage__Screens__DetailContainer');
+                if (!detailContainer) return;
 
-      // Hiển thị container chi tiết
-      const detailContainer = document.querySelector('.mainPage__Screens__DetailContainer');
-      if (detailContainer) {
-        // Điền thông tin vào input container
-        const inputContainer = detailContainer.querySelector('.input-container');
-        if (inputContainer) {
-          // Điền tên rạp
-          const nameScreenInput = inputContainer.querySelector('#nameScreen');
-          if (nameScreenInput) {
-            nameScreenInput.value = screenTitle;
-            nameScreenInput.disabled = true;
-          }
+                const inputContainer = detailContainer.querySelector('.input-container');
+                if (!inputContainer) return;
 
-          // Điền số hàng và cột
-          const rowsInput = inputContainer.querySelector('#rows');
-          if (rowsInput) {
-            rowsInput.value = rows;
-            rowsInput.disabled = true;
-          }
+                const nameInput = inputContainer.querySelector('#nameScreen');
+                const rowsInput = inputContainer.querySelector('#rows');
+                const colsInput = inputContainer.querySelector('#cols');
+                const statusSelect = inputContainer.querySelector('#status_Room');
 
-          const colsInput = inputContainer.querySelector('#cols');
-          if (colsInput) {
-            colsInput.value = cols;
-            colsInput.disabled = true;
-          }
+                if (nameInput) nameInput.value = screen.Room_Name;
+                if (nameInput) nameInput.disabled = true;
 
-          // Điền trạng thái
-          const statusSelect = inputContainer.querySelector('#status_Room');
-          if (statusSelect) {
-            statusSelect.value = status;
-            statusSelect.disabled = true;
-          }
-        }
+                if (rowsInput) rowsInput.value = screen.Row;
+                if (rowsInput) rowsInput.disabled = true;
 
-        // Ẩn các nút
-        const generateButton = document.querySelector('.generate-seats-button');
-        const submitButton = document.querySelector('.SubmitChangeSeatLayout');
-        if (generateButton) generateButton.style.display = 'none';
-        if (submitButton) submitButton.style.display = 'none';
+                if (colsInput) colsInput.value = screen.Col;
+                if (colsInput) colsInput.disabled = true;
 
-        // Tạo sơ đồ ghế
-        generateSeats();
+                if (statusSelect) {
+                    statusSelect.value = screen.Status;
+                    statusSelect.disabled = true;
+                }
 
-        // Hiển thị container
-        detailContainer.classList.remove('hidden');
+                const generateButton = detailContainer.querySelector('.buttontaosodo');
+                const submitButton = detailContainer.querySelector('.SubmitChangeSeatLayout');
+                
+                if (generateButton) generateButton.style.display = 'none';
+                if (submitButton) submitButton.style.display = 'none';
 
-        // Gắn sự kiện cho nút close
-        const closeButton = detailContainer.querySelector('.closeScreen');
-        if (closeButton) {
-          closeButton.addEventListener('click', () => {
-            detailContainer.classList.add('hidden');
-          });
-        }
-      }
-    });
-  });
-});
+                detailContainer.classList.remove('hidden');
+                generateSeats();
+            });
+
+            container.appendChild(card);
+        });
+    } catch (err) {
+        console.error('Lỗi fetch danh sách màn hình:', err);
+    }
+}

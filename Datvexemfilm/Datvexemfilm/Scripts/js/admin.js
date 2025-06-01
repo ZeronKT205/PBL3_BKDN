@@ -116,33 +116,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 //Hàm load film
-async function loadmovie() {
-    const response = await fetch("https://localhost:44343/Film/GetFilm", {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json"
-        }
-    });
-    const movies = await response.json();
-    const tbody = document.querySelector('.mainPage__Movies__Container tbody');
-    tbody.innerHTML = ''; // Xóa nội dung cũ
-
-    movies.forEach(movie => {
-        const row = document.createElement('tr');
-        row.innerHTML = `
-      <td>${movie.ID}</td>
-      <td>${movie.name}</td>
-      <td>${movie.Type}</td>
-      <td>${movie.releaseDay}</td>
-      <td><span>${movie.Status}</span></td>
-      <td>
-        <button class="Editmovie1" data-id="${movie.ID}">Edit</button>
-        <button class="DeleteMovie" data-id="${movie.ID}">Xóa</button>
-      </td>
-    `;
-        tbody.appendChild(row);
-    });
-}
 
 
 
