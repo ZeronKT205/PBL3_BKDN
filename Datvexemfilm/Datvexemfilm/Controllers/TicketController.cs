@@ -68,6 +68,59 @@ namespace Datvexemfilm.Controllers
             _dbContext.SaveChanges();
             return Json(new { success = true });
         }
+        [HttpPost]
+        public JsonResult Report(DateTime start, DateTime end)
+        {
+            var tmp = _dbContext.Bookings
+                .Include("Show")
+                .Where(s => s.Booking_Date >= start && s.Booking_Date <= end)
+                .ToList();
 
+            var mostBookedFilm = _dbContext.Bookings
+                .Include("Show")
+                .Include("Show.Film")
+                .Where(b => b.Booking_Date >= start && b.Booking_Date <= end)
+                .GroupBy(b => b.Show.Film.ID_Movie)
+                .Select(g => new
+                {
+                    FilmId = g.Key,
+                    FilmName = g.FirstOrDefault().Show.Film.name,
+                    Count = g.Count()
+                })
+                .OrderByDescending(x => x.Count)
+                .FirstOrDefault();
+
+            var mostBookedScreen = _dbContext.Bookings
+                .Include("Show")
+                .Include("Show.Room")
+                .Where(b => b.Booking_Date >= start && b.Booking_Date <= end)
+                .GroupBy(b => b.Show.Room_ID)
+                .Select(g => new
+                {
+                    RoomId = g.Key,
+                    RoomName = g.FirstOrDefault().Show.Room.Room_Name,
+                    Count = g.Count()
+                })
+                .OrderByDescending(x => x.Count)
+                .FirstOrDefault();
+
+            var report = new
+            {
+                totalamount = tmp.Sum(s => s.total),
+                count = tmp.Count,
+                mostBookedFilm = mostBookedFilm != null ? new
+                {
+                    name = mostBookedFilm.FilmName,
+                    count = mostBookedFilm.Count
+                } : null,
+                mostBookedScreen = mostBookedScreen != null ? new
+                {
+                    name = mostBookedScreen.RoomName,
+                    count = mostBookedScreen.Count
+                } : null
+            };
+
+            return Json(report, JsonRequestBehavior.AllowGet);
+        }
     } 
 }

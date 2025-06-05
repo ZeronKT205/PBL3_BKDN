@@ -206,74 +206,101 @@ button:hover {
 
 
 .movie-modal {
-    position: fixed; inset: 0; z-index: 3000;
+    position: fixed; 
+    inset: 0; 
+    z-index: 3000;
     background: rgba(15,23,42,0.7);
-    display: flex; align-items: center; justify-content: center;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
     transition: opacity 0.3s;
-  }
-  .movie-modal.hidden { display: none; }
-  .movie-modal__content {
+}
+
+.movie-modal.hidden { 
+    display: none; 
+}
+
+.movie-modal__content {
     background: #1e2332;
     border-radius: 14px;
     box-shadow: 0 8px 32px rgba(30,41,59,0.25);
-    padding: 32px 32px 24px 32px;
-    min-width: 700px; max-width: 900px;
+    padding: 32px;
     width: 95vw;
+    max-width: 1200px;
+    max-height: 90vh;
     color: #e0f0ff;
-    display: flex; flex-direction: column;
+    display: flex;
+    flex-direction: column;
     animation: fadeIn 0.3s;
-  }
-  .movie-modal__content h2 {
+    overflow: hidden; /* Thay đổi từ auto sang hidden */
+}
+
+.movie-modal__content h2 {
     color: #38bdf8;
     margin-bottom: 18px;
     text-align: center;
     font-size: 25px;
     font-weight: 600;
     padding-right: 50px;
-  }
-  .movie-form {
+}
+
+.movie-form {
     display: flex;
     gap: 36px;
-  }
-  .movie-form__left {
-    flex: 1.2;
+    overflow-y: auto; /* Thêm thanh cuộn cho form */
+    padding-right: 20px; /* Thêm padding bên phải */
+    margin-right: -20px; /* Bù trừ padding để không bị lệch */
+}
+
+.movie-form__left {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 12px;
-  }
-  .movie-form__right {
-    flex: 0.8;
+    min-width: 0;
+}
+
+.movie-form__right {
+    flex: 0 0 300px; /* Cố định chiều rộng */
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    min-width: 300px;
-  }
-  .movie-form__right label{
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    height: fit-content;
+}
+
+.movie-form__right label{
     color: #e0e7ef;
     font-weight: 500;
     margin-bottom: 4px;
     font-size: 25px;
-  }
-  .movie-form__actions {
+}
+
+.movie-form__actions {
     display: flex;
     justify-content: flex-end;
     gap: 16px;
     margin-top: 80px;
-  }
-  .movie-form__row {
+}
+
+.movie-form__row {
     margin-bottom: 8px;
     display: flex;
     flex-direction: column;
-  }
-  .movie-form__row label {
+}
+
+.movie-form__row label {
     color: #e0e7ef;
     font-weight: 500;
     margin-bottom: 4px;
     font-size: 1rem;
-  }
-  .movie-form__row input,
-  .movie-form__row textarea {
+}
+
+.movie-form__row input,
+.movie-form__row textarea {
     width: 100%;
     padding: 10px 12px;
     background: #0f172a;
@@ -282,27 +309,31 @@ button:hover {
     color: #f1f5f9;
     font-size: 1rem;
     transition: border 0.2s;
-  }
-  .movie-form__row input:focus,
-  .movie-form__row textarea:focus {
+}
+
+.movie-form__row input:focus,
+.movie-form__row textarea:focus {
     border: 1.5px solid #38bdf8;
     outline: none;
-  }
-  .movie-poster-upload {
+}
+
+.movie-poster-upload {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-  }
-  .movie-poster-img {
+}
+
+.movie-poster-img {
     width: 300px; height: 450px;
     object-fit: cover;
     border-radius: 10px;
     background: #334155;
     box-shadow: 0 2px 12px rgba(56,189,248,0.12);
     margin-bottom: 15px;
-  }
-  .movie-poster-btn {
+}
+
+.movie-poster-btn {
     background: #2563eb;
     color: #fff;
     border: none;
@@ -312,12 +343,14 @@ button:hover {
     font-weight: 600;
     cursor: pointer;
     transition: background 0.2s;
-  }
-  .movie-poster-btn:hover {
+}
+
+.movie-poster-btn:hover {
     background: #38bdf8;
     color: #222;
-  }
-  .btn-save {
+}
+
+.btn-save {
     background: linear-gradient(90deg, #2563eb, #38bdf8);
     color: #fff;
     border: none;
@@ -327,11 +360,13 @@ button:hover {
     font-weight: 600;
     cursor: pointer;
     transition: background 0.2s;
-  }
-  .btn-save:hover {
+}
+
+.btn-save:hover {
     background: linear-gradient(90deg, #0ea5e9, #38bdf8);
-  }
-  .btn-delete {
+}
+
+.btn-delete {
     background: #ef4444;
     color: #fff;
     border: none;
@@ -341,11 +376,13 @@ button:hover {
     font-weight: 600;
     cursor: pointer;
     transition: background 0.2s;
-  }
-  .btn-delete:hover {
+}
+
+.btn-delete:hover {
     background: #b91c1c;
-  }
-  .btn-cancel {
+}
+
+.btn-cancel {
     background: transparent;
     color: #e0e7ef;
     border: 1.5px solid #64748b;
@@ -355,18 +392,60 @@ button:hover {
     font-weight: 500;
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
-  }
-  .btn-cancel:hover {
+}
+
+.btn-cancel:hover {
     background: #334155;
     color: #fff;
-  }
-  .required { color: #ef4444; }
-  @media (max-width: 900px) {
+}
+
+.required { color: #ef4444; }
+
+@media (max-width: 900px) {
     .movie-modal__content { min-width: 90vw; padding: 18px 6vw; }
     .movie-form { flex-direction: column; gap: 18px; }
     .movie-form__right { min-width: 0; }
-  }
-  @keyframes fadeIn {
+}
+
+@keyframes fadeIn {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
-  }
+}
+
+/* Tùy chỉnh thanh cuộn */
+.movie-modal__content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.movie-modal__content::-webkit-scrollbar-track {
+    background: #1e2332;
+    border-radius: 4px;
+}
+
+.movie-modal__content::-webkit-scrollbar-thumb {
+    background: #38bdf8;
+    border-radius: 4px;
+}
+
+.movie-modal__content::-webkit-scrollbar-thumb:hover {
+    background: #0ea5e9;
+}
+
+/* Tùy chỉnh thanh cuộn cho form */
+.movie-form::-webkit-scrollbar {
+    width: 8px;
+}
+
+.movie-form::-webkit-scrollbar-track {
+    background: #1e2332;
+    border-radius: 4px;
+}
+
+.movie-form::-webkit-scrollbar-thumb {
+    background: #38bdf8;
+    border-radius: 4px;
+}
+
+.movie-form::-webkit-scrollbar-thumb:hover {
+    background: #0ea5e9;
+}

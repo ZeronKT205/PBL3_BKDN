@@ -33,7 +33,8 @@ namespace Datvexemfilm.Controllers
                    f.FullDescription,
                    f._Cast,
                    f.Status,
-                   f.Poster
+                   f.Poster,
+                   f.Trailer
                })
                .ToList();
                 return Json(films, JsonRequestBehavior.AllowGet);
@@ -152,6 +153,67 @@ namespace Datvexemfilm.Controllers
             _dbContext.Films.Add(moviedata);
             _dbContext.SaveChanges();
             return Json(new { success = false });
+        }
+        [HttpDelete]
+        public JsonResult DeleteFilm(int id)
+        {
+            try
+            {
+                // Tìm phim cần xóa
+                var film = _dbContext.Films.Find(id);
+                if (film == null)
+                {
+                    return Json(new { success = false, message = "Không tìm thấy phim!" }, JsonRequestBehavior.AllowGet);
+                }
+
+                // Lấy tất cả suất chiếu của phim
+                var shows = _dbContext.Shows.Where(s => s.ID_Movie == id).ToList();
+
+                foreach (var show in shows)
+                {
+                    // Lấy tất cả ghế của suất chiếu
+                    var seats = _dbContext.Seats.Where(s => s.Show_ID == show.Show_ID).ToList();
+                    foreach (var seat in seats)
+                    {
+                        // Xóa các đơn đặt ghế
+                        var seatOrders = _dbContext.seatOrders.Where(so => so.Seat_ID == seat.Seat_ID).ToList();
+                        _dbContext.seatOrders.RemoveRange(seatOrders);
+                    }
+                    _dbContext.Seats.RemoveRange(seats);
+
+                    // Lấy tất cả đặt vé của suất chiếu
+                    var bookings = _dbContext.Bookings.Where(b => b.Show_ID == show.Show_ID).ToList();
+                    foreach (var booking in bookings)
+                    {
+                        // Xóa các đơn đặt đồ ăn
+                        var orderProducts = _dbContext.order_Products.Where(op => op.Booking_ID == booking.Booking_ID).ToList();
+                        _dbContext.order_Products.RemoveRange(orderProducts);
+
+                        // Xóa thanh toán
+                        var payment = _dbContext.payments.FirstOrDefault(p => p.Booking_ID == booking.Booking_ID);
+                        if (payment != null)
+                        {
+                            _dbContext.payments.Remove(payment);
+                        }
+                    }
+                    _dbContext.Bookings.RemoveRange(bookings);
+                }
+
+                // Xóa tất cả suất chiếu
+                _dbContext.Shows.RemoveRange(shows);
+
+                // Xóa phim
+                _dbContext.Films.Remove(film);
+
+                // Lưu thay đổi
+                _dbContext.SaveChanges();
+
+                return Json(new { success = true, message = "Xóa phim thành công!" }, JsonRequestBehavior.AllowGet);
+            }
+            catch (Exception ex)
+            {
+                return Json(new { success = false, message = "Có lỗi xảy ra: " + ex.Message }, JsonRequestBehavior.AllowGet);
+            }
         }
     }
 }

@@ -10,55 +10,86 @@ if (addComboBtnProduct) {
 
 // --- Chức năng chọn ảnh cho form thêm combo ---
 const imgUploadAreaProduct = document.getElementById('imgUploadArea');
-const imgInputProduct = document.getElementById('comboimgInput');
+const imgInputProduct = document.getElementById('comboImgInput');
 const imgPreviewProduct = document.getElementById('comboImgPreview');
 const imgRemoveBtnProduct = document.getElementById('imgRemoveBtn');
 const imgChooseBtnProduct = document.getElementById('imgChooseBtn');
 const imgPlaceholderProduct = document.getElementById('imgUploadPlaceholder');
 
 if (imgUploadAreaProduct && imgInputProduct && imgPreviewProduct && imgRemoveBtnProduct && imgChooseBtnProduct && imgPlaceholderProduct) {
-  imgUploadAreaProduct.addEventListener('click', () => imgInputProduct.click());
-  imgChooseBtnProduct.addEventListener('click', () => imgInputProduct.click());
-  imgInputProduct.addEventListener('change', handleImgChange);
-  imgRemoveBtnProduct.addEventListener('click', function(e) {
-    e.stopPropagation();
-    imgInputProduct.value = '';
-    imgPreviewProduct.src = '#';
-    imgPreviewProduct.classList.add('hidden');
-    imgRemoveBtnProduct.classList.add('hidden');
-    imgPlaceholderProduct.classList.remove('hidden');
-  });
-  imgUploadAreaProduct.addEventListener('dragover', function(e) {
-    e.preventDefault(); imgUploadAreaProduct.classList.add('dragover');
-  });
-  imgUploadAreaProduct.addEventListener('dragleave', function(e) {
-    e.preventDefault(); imgUploadAreaProduct.classList.remove('dragover');
-  });
-  imgUploadAreaProduct.addEventListener('drop', function(e) {
-    e.preventDefault(); imgUploadAreaProduct.classList.remove('dragover');
-    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-      imgInputProduct.files = e.dataTransfer.files;
-      handleImgChange();
-    }
-  });
+    // Thêm console.log để debug
+    console.log('Image elements found:', {
+        uploadArea: imgUploadAreaProduct,
+        input: imgInputProduct,
+        preview: imgPreviewProduct,
+        removeBtn: imgRemoveBtnProduct,
+        chooseBtn: imgChooseBtnProduct,
+        placeholder: imgPlaceholderProduct
+    });
+
+    imgUploadAreaProduct.addEventListener('click', () => {
+        console.log('Upload area clicked');
+        imgInputProduct.click();
+    });
+    
+    imgChooseBtnProduct.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('Choose button clicked');
+        imgInputProduct.click();
+    });
+    
+    imgInputProduct.addEventListener('change', (e) => {
+        console.log('File input changed:', e.target.files);
+        handleImgChange();
+    });
+    
+    imgRemoveBtnProduct.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('Remove button clicked');
+        imgInputProduct.value = '';
+        imgPreviewProduct.src = '#';
+        imgPreviewProduct.classList.add('hidden');
+        imgRemoveBtnProduct.classList.add('hidden');
+        imgPlaceholderProduct.classList.remove('hidden');
+    });
+    imgUploadAreaProduct.addEventListener('dragover', function(e) {
+        e.preventDefault(); imgUploadAreaProduct.classList.add('dragover');
+    });
+    imgUploadAreaProduct.addEventListener('dragleave', function(e) {
+        e.preventDefault(); imgUploadAreaProduct.classList.remove('dragover');
+    });
+    imgUploadAreaProduct.addEventListener('drop', function(e) {
+        e.preventDefault(); imgUploadAreaProduct.classList.remove('dragover');
+        if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+            imgInputProduct.files = e.dataTransfer.files;
+            handleImgChange();
+        }
+    });
 }
+
 function handleImgChange() {
-  if (imgInputProduct.files && imgInputProduct.files[0]) {
-    const file = imgInputProduct.files[0];
-    if (!file.type.startsWith('image/')) {
-      alert('Vui lòng chọn file ảnh!');
-      imgInputProduct.value = '';
-      return;
+    if (imgInputProduct.files && imgInputProduct.files[0]) {
+        const file = imgInputProduct.files[0];
+        console.log('Selected file:', file);
+        
+        if (!file.type.startsWith('image/')) {
+            alert('Vui lòng chọn file ảnh!');
+            imgInputProduct.value = '';
+            return;
+        }
+        
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            console.log('File loaded');
+            imgPreviewProduct.src = e.target.result;
+            imgPreviewProduct.classList.remove('hidden');
+            imgRemoveBtnProduct.classList.remove('hidden');
+            imgPlaceholderProduct.classList.add('hidden');
+        };
+        reader.readAsDataURL(file);
     }
-    const reader = new FileReader();
-    reader.onload = function(e) {
-      imgPreviewProduct.src = e.target.result;
-      imgPreviewProduct.classList.remove('hidden');
-      imgRemoveBtnProduct.classList.remove('hidden');
-      imgPlaceholderProduct.classList.add('hidden');
-    };
-    reader.readAsDataURL(file);
-  }
 }
 
 // Đóng form thêm combo khi nhấn Hủy hoặc overlay
@@ -74,36 +105,43 @@ if (addComboOverlayProduct && addComboModalProduct) {
 function closeaddComboModalProduct() {
   addComboModalProduct.classList.add('hidden');
   document.getElementById('addComboForm').reset();
-  document.getElementById('comboImgPreview').classList.add('hidden');
-  document.getElementById('imgRemoveBtn').classList.add('hidden');
-  document.getElementById('imgUploadPlaceholder').classList.remove('hidden');
+  imgInputProduct.value = '';
+  imgPreviewProduct.src = '#';
+  imgPreviewProduct.classList.add('hidden');
+  imgRemoveBtnProduct.classList.add('hidden');
+  imgPlaceholderProduct.classList.remove('hidden');
+  document.querySelector('.add-combo-modal__content h2').textContent = 'Thêm Combo Mới';
+  document.getElementById('addComboForm').removeAttribute('data-edit-id');
+  document.querySelector('.btn-save').textContent = 'Thêm combo';
 }
 
 
 // // Hàm gọi API thêm combo mới
-// async function addComboAPI(comboData) {
-//     // comboData: { name, items, price, status, image (File) }
-//     const formData = new FormData();
-//     formData.append('name', comboData.name);
-//     formData.append('items', comboData.items);
-//     formData.append('price', comboData.price);
-//     formData.append('status', comboData.status);
-//     if (comboData.image) formData.append('image', comboData.image);
-  
-//     // Thay endpoint dưới đây bằng API thực tế của bạn
-//     const endpoint = '/api/combos';
-//     const response = await fetch(endpoint, {
-//       method: 'POST',
-//       body: formData
-//       // Nếu cần token:
-//       // headers: { 'Authorization': 'Bearer ...' }
-//     });
-//     if (!response.ok) {
-//       const err = await response.text();
-//       throw new Error(err || 'Thêm combo thất bại!');
-//     }
-//     return await response.json(); // hoặc response.text() nếu backend trả về text
-//   }
+async function addComboAPI(comboData) {
+    try {
+        const response = await fetch("https://localhost:44343/Product/addProduct", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                Name: comboData.name,
+                Description: comboData.items,
+                Price: parseFloat(comboData.price),
+                Status: comboData.status,
+                img: comboData.image
+            })
+        });
+
+        const result = await response.json();
+        if (!result.success) {
+            throw new Error(result.message || 'Thêm combo thất bại!');
+        }
+        return result;
+    } catch (error) {
+        throw new Error(error.message || 'Thêm combo thất bại!');
+    }
+}
 
 
 
@@ -118,32 +156,67 @@ function closeaddComboModalProduct() {
 //-----------------------------Chức năng xóa combo Product-------------------------------------------//
 
 // Xóa card combo khi nhấn nút xóa
-function handleDeleteCombo(e) {
-  if (confirm('Bạn có chắc chắn muốn xóa combo này?')) {
-    const card = e.target.closest('.mainPage__FoodDrinks-containerinfo-card');
-    if (card) card.remove();
-  }
-}
-document.querySelectorAll('.mainPage__FoodDrinks-containerinfo-card-action-button:last-child').forEach(btn => {
-  btn.onclick = handleDeleteCombo;
-});
+async function handleDeleteCombo(e) {
+    const deleteButton = e.target.closest('.mainPage__FoodDrinks-containerinfo-card-action-button');
+    if (!deleteButton) return;
 
-// // Hàm gọi API xóa combo
-// async function deleteComboAPI(comboId) {
-//     // comboId: ID của combo cần xóa
-//     // Thay endpoint dưới đây bằng API thực tế của bạn
-//     const endpoint = `/api/combos/${comboId}`;
-//     const response = await fetch(endpoint, {
-//       method: 'DELETE'
-//       // Nếu cần token:
-//       // headers: { 'Authorization': 'Bearer ...' }
-//     });
-//     if (!response.ok) {
-//       const err = await response.text();
-//       throw new Error(err || 'Xóa combo thất bại!');
-//     }
-//     return true; // hoặc response.json() nếu backend trả về dữ liệu
-//   }
+    const card = deleteButton.closest('.mainPage__FoodDrinks-containerinfo-card');
+    if (!card) return;
+
+    const comboId = card.dataset.id;
+    if (!comboId) {
+        console.error('Không tìm thấy ID của combo');
+        return;
+    }
+
+    if (confirm('Bạn có chắc chắn muốn xóa combo này?')) {
+        try {
+            await deleteComboAPI(comboId);
+            card.remove();
+            alert('Xóa combo thành công!');
+        } catch (error) {
+            console.error('Error deleting combo:', error);
+            alert(error.message);
+        }
+    }
+}
+
+// Hàm gọi API xóa combo
+async function deleteComboAPI(comboId) {
+    try {
+        const response = await fetch(`https://localhost:44343/Product/deleteProduct?id=${comboId}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+
+        // Kiểm tra status code
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        // Kiểm tra content type
+        const contentType = response.headers.get("content-type");
+        if (contentType && contentType.includes("application/json")) {
+            const result = await response.json();
+            if (!result.success) {
+                throw new Error(result.message || 'Xóa combo thất bại!');
+            }
+            return result;
+        } else {
+            // Nếu response không phải JSON, coi như thành công nếu status code là 200
+            if (response.status === 200) {
+                return { success: true, message: 'Xóa combo thành công!' };
+            } else {
+                throw new Error('Xóa combo thất bại!');
+            }
+        }
+    } catch (error) {
+        console.error('Error in deleteComboAPI:', error);
+        throw new Error(error.message || 'Xóa combo thất bại!');
+    }
+}
 
 //cách dùng:   await deleteComboAPI(comboId);
 
@@ -173,37 +246,31 @@ function handleEditCombo(e) {
   const items = card.querySelector('p:nth-child(3) span').textContent.trim();
   const status = card.querySelector('p:nth-child(4) span').textContent.trim().toLowerCase();
   const imgSrc = card.querySelector('img').src;
-  // Lấy id combo (nên gắn data-id vào card)
-  const comboId = card.dataset.id || null;
+  const comboId = card.dataset.id;
 
-  // Hiện form Edit (dùng lại modal add, đổi tiêu đề, điền sẵn dữ liệu)
+  // Hiện form Edit
   const modal = document.getElementById('addComboModal');
   modal.classList.remove('hidden');
   document.querySelector('.add-combo-modal__content h2').textContent = 'Sửa Combo';
+  
+  // Điền dữ liệu vào form
   document.getElementById('comboName').value = name;
   document.getElementById('comboPrice').value = price;
   document.getElementById('comboItems').value = items;
   document.getElementById('comboStatus').value = status;
+  document.getElementById('comboUrl').value = imgSrc;
 
-  // Lưu id combo vào form (để biết khi submit là sửa)
-  const form = document.getElementById('addComboForm');
-  form.setAttribute('data-edit-id', comboId);
-
-  // Ảnh preview
-  const imgPreview = document.getElementById('comboImgPreview');
+  // Hiển thị ảnh preview
   if (imgSrc) {
-    imgPreview.src = imgSrc;
-    imgPreview.classList.remove('hidden');
-    document.getElementById('imgRemoveBtn').classList.remove('hidden');
-    document.getElementById('imgUploadPlaceholder').classList.add('hidden');
-  } else {
-    imgPreview.classList.add('hidden');
-    document.getElementById('imgRemoveBtn').classList.add('hidden');
-    document.getElementById('imgUploadPlaceholder').classList.remove('hidden');
+    imgPreviewProduct.src = imgSrc;
+    imgPreviewProduct.classList.remove('hidden');
+    imgRemoveBtnProduct.classList.remove('hidden');
+    imgPlaceholderProduct.classList.add('hidden');
   }
 
-  // Reset input file
-  document.getElementById('comboImgInput').value = '';
+  // Lưu id combo vào form
+  const form = document.getElementById('addComboForm');
+  form.setAttribute('data-edit-id', comboId);
 
   // Đổi nút lưu thành 'Cập nhật combo'
   form.querySelector('.btn-save').textContent = 'Cập nhật combo';
@@ -220,30 +287,32 @@ addComboModalProduct.addEventListener('transitionend', function() {
 
 
 // // Hàm gọi API sửa combo
-// async function editComboAPI(comboId, comboData) {
-//     // comboId: ID của combo cần sửa
-//     // comboData: { name, items, price, status, image (File, optional) }
-//     const formData = new FormData();
-//     formData.append('name', comboData.name);
-//     formData.append('items', comboData.items);
-//     formData.append('price', comboData.price);
-//     formData.append('status', comboData.status);
-//     if (comboData.image) formData.append('image', comboData.image);
-  
-//     // Thay endpoint dưới đây bằng API thực tế của bạn
-//     const endpoint = `/api/combos/${comboId}`;
-//     const response = await fetch(endpoint, {
-//       method: 'PUT', // hoặc PATCH nếu backend dùng PATCH
-//       body: formData
-//       // Nếu cần token:
-//       // headers: { 'Authorization': 'Bearer ...' }
-//     });
-//     if (!response.ok) {
-//       const err = await response.text();
-//       throw new Error(err || 'Sửa combo thất bại!');
-//     }
-//     return await response.json(); // hoặc response.text() nếu backend trả về text
-//   }
+async function editComboAPI(comboId, comboData) {
+    try {
+        const response = await fetch("https://localhost:44343/Product/updateProduct", {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                Product_ID: comboId,
+                Name: comboData.name,
+                Description: comboData.items,
+                Price: parseFloat(comboData.price),
+                Status: comboData.status,
+                img: comboData.image
+            })
+        });
+
+        const result = await response.json();
+        if (!result.success) {
+            throw new Error(result.message || 'Sửa combo thất bại!');
+        }
+        return result;
+    } catch (error) {
+        throw new Error(error.message || 'Sửa combo thất bại!');
+    }
+}
 
   //cách dùng:   await editComboAPI(comboId, comboData);
 
@@ -382,7 +451,7 @@ window.loadproduct = async function () {
         data.forEach(item => {
             const card = document.createElement("div");
             card.className = "mainPage__FoodDrinks-containerinfo-card";
-            card.dataset.id = item.Id;
+            card.setAttribute('data-id', item.Product_ID);
             card.innerHTML = `
                 <img src="${item.img}" alt="${item.Name}" class="mainPage__FoodDrinks-containerinfo-card-img">
                 <div class="mainPage__FoodDrinks-containerinfo-card-content">
@@ -424,3 +493,61 @@ window.loadproduct = async function () {
     Notr: Cần chú ý các hàm xử lý backend, để lưu thông tin khi được cập nhật thêm sửa xóa
     - Thêm hàm để search combo là xong
 */
+
+// Update form submission to handle both add and edit
+document.getElementById('addComboForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    // Lấy URL từ input mới
+    const imageUrl = document.getElementById('comboUrl').value;
+
+    const formData = {
+        name: document.getElementById('comboName').value,
+        items: document.getElementById('comboItems').value,
+        price: document.getElementById('comboPrice').value,
+        status: document.getElementById('comboStatus').value,
+        image: imageUrl // Lưu URL vào trường image
+    };
+
+    console.log('Form data to be sent:', formData); // Debug log
+
+    try {
+        const editId = this.getAttribute('data-edit-id');
+        if (editId) {
+            // Edit mode
+            await editComboAPI(editId, formData);
+            alert('Cập nhật combo thành công!');
+        } else {
+            // Add mode
+            await addComboAPI(formData);
+            alert('Thêm combo thành công!');
+        }
+        
+        // Reload the product list
+        await window.loadproduct();
+        
+        // Close modal and reset form
+        closeaddComboModalProduct();
+    } catch (error) {
+        console.error('Error submitting form:', error); // Debug log
+        alert(error.message);
+    }
+});
+
+// Thêm event listener cho input URL
+document.getElementById('comboUrl').addEventListener('input', function(e) {
+    const url = e.target.value;
+    if (url) {
+        // Hiển thị ảnh preview
+        imgPreviewProduct.src = url;
+        imgPreviewProduct.classList.remove('hidden');
+        imgRemoveBtnProduct.classList.remove('hidden');
+        imgPlaceholderProduct.classList.add('hidden');
+    } else {
+        // Ẩn ảnh preview nếu không có URL
+        imgPreviewProduct.src = '#';
+        imgPreviewProduct.classList.add('hidden');
+        imgRemoveBtnProduct.classList.add('hidden');
+        imgPlaceholderProduct.classList.remove('hidden');
+    }
+});

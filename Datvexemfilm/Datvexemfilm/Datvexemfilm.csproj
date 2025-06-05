@@ -356,6 +356,7 @@
     <Content Include="Scripts\js\manageBooking.js" />
     <Content Include="Scripts\js\manageMovie.js" />
     <Content Include="Scripts\js\manageProduct.js" />
+    <Content Include="Scripts\js\manageReport.js" />
     <Content Include="Scripts\js\manageShow.js" />
     <Content Include="Scripts\js\manageUser.js" />
     <Content Include="Scripts\js\mangageScreen.js" />

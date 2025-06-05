@@ -51,10 +51,31 @@ async function movie_loadMovies() {
     }
 }
 
-function movie_deleteMovie(movieId) {
+async function movie_deleteMovie(movieId) {
     if (confirm('Bạn có chắc chắn muốn xóa phim này?')) {
-        movie_originalMovies = movie_originalMovies.filter(movie => movie.id !== movieId);
-        movie_updateMovieTable(movie_originalMovies);
+        try {
+            const response = await fetch(`${window.location.origin}/Film/DeleteFilm?id=${movieId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            const result = await response.json();
+            
+            if (result.success) {
+                // Cập nhật danh sách phim trong bộ nhớ
+                movie_originalMovies = movie_originalMovies.filter(movie => movie.id !== movieId);
+                // Cập nhật bảng hiển thị
+                movie_updateMovieTable(movie_originalMovies);
+                alert('Xóa phim thành công!');
+            } else {
+                throw new Error(result.message || 'Xóa phim thất bại!');
+            }
+        } catch (error) {
+            console.error('Error deleting movie:', error);
+            alert('Có lỗi xảy ra khi xóa phim: ' + error.message);
+        }
     }
 }
 
@@ -165,6 +186,7 @@ function movie_showEditModal(movie) {
         document.getElementById('movieShortDesc').value = movie.shortDescription;
         document.getElementById('movieFullDesc').value = movie.fullDescription;
         document.getElementById('movieTrailer').value = movie.trailer;
+        document.getElementById('moviePoster').value = movie.poster;
 
         
         // Set poster preview if exists

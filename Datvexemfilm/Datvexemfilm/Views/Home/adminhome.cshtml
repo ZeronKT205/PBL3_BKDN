@@ -363,26 +363,7 @@
                     <label>End Day</label>
                     <input type="date" class = "mainPage__SalesReport__Containersearch-date-input">
                 </div>
-                <div class = "mainPage__SalesReport__Containersearch-screen">
-                    <label>Screenx</label>
-                    <select class = "mainPage__SalesReport__Containersearch-screen-select">
-                        <option value="0">Phòng Chiếu</option>
-                        <option>ScreenA</option>
-                        <option>ScreenB</option>
-                        <option>ScreenC</option>
-                        <option>ScreenD</option>
-                        <option>ScreenE</option>
-                    </select>
-                </div>
-                <div class = "mainPage__SalesReport__Containersearch-movie">
-                    <label>Movie</label>
-                    <select class = "mainPage__SalesReport__Containersearch-movie-select">
-                        <option value="0">Tất Cả Phim</option>
-                        <option>Em Của Anh ĐỪng Của Ai</option>
-                        <option>Vòng Tròn Oan Nghiệt</option>
-                        <option>Cuộc Tấn Công Mãnh Liệt</option>
-                    </select>
-                </div>
+                
                 <div class="mainPage__SalesReport__Containersearch-button">
                     <button class = "mainPage__SalesReport__Containersearch-button-search"><i class="fas fa-magnifying-glass"></i></button>
                 </div>
@@ -499,6 +480,8 @@
                     <textarea name="items" id="comboItems" rows="2" placeholder=" 1 Bắp rang , 1 Coca Cola , 1 Snack"></textarea>
                     <label>Giá tiền (VNĐ) <span class="required">*</span></label>
                     <input type="number" name="price" id="comboPrice" min="0" required>
+                    <label>URL <span class="required">*</span></label>
+                    <input type="text" name="url" id="comboUrl"  required>
                     <label>Trạng thái</label>
                     <select name="status" id="comboStatus" required>
                         <option value="active">Active</option>
@@ -620,8 +603,12 @@
                      <input type="text" id="movieTitle" name="name" required>
                  </div>
                  <div class="movie-form__row">
-                     <label for="movieSrc">Đường dẫn nguồn <span class="required">*</span></label>
+                     <label for="movieSrc">src <span class="required">*</span></label>
                      <input type="text" id="movieSrc" name="src" required>
+                 </div>
+                 <div class="movie-form__row">
+                     <label for="moviePoster">Poster <span class="required">*</span></label>
+                     <input type="text" id="moviePoster" name="poster" required>
                  </div>
                  <div class="movie-form__row">
                      <label for="movieType">Thể loại <span class="required">*</span></label>
@@ -736,7 +723,7 @@
 <script src = "@Url.Content("~/Scripts/js/manageMovie.js")" defer></script>
 <script src = "@Url.Content("~/Scripts/js/manageUser.js")" defer></script>
 <script src = "@Url.Content("~/Scripts/js/mangageScreen.js")" defer></script>
-
+<script src="@Url.Content("~/Scripts/js/manageReport.js")" defer></script>
 
 <script src = "@Url.Content("~/Scripts/js/auth.js")" defer></script>
 
