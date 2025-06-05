@@ -359,7 +359,64 @@ function handleSearch() {
     searchFoods(query);
   }
 }
+window.loadproduct = async function () {
+    try {
+        const response = await fetch("https://localhost:44343/Product/getallproduct", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
 
+        if (!response.ok) {
+            throw new Error('Không thể tải danh sách combo');
+        }
+
+        const data = await response.json();
+        const container = document.querySelector('.mainPage__FoodDrinks-containerinfo');
+        if (!container) {
+            throw new Error('Không tìm thấy container để hiển thị combo');
+        }
+
+        container.innerHTML = '';
+        data.forEach(item => {
+            const card = document.createElement("div");
+            card.className = "mainPage__FoodDrinks-containerinfo-card";
+            card.dataset.id = item.Id;
+            card.innerHTML = `
+                <img src="${item.img}" alt="${item.Name}" class="mainPage__FoodDrinks-containerinfo-card-img">
+                <div class="mainPage__FoodDrinks-containerinfo-card-content">
+                    <p>Tên Combo: <span>${item.Name}</span></p>
+                    <p>Giá: <span>${item.Price} VNĐ</span></p>
+                    <p>Mô Tả: <span>${item.Description}</span></p>
+                    <p>Trạng Thái: <span>${item.Status}</span></p>
+                </div>
+                <div class="mainPage__FoodDrinks-containerinfo-card-action">
+                    <button class="mainPage__FoodDrinks-containerinfo-card-action-button">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </button>
+                    <button class="mainPage__FoodDrinks-containerinfo-card-action-button">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+
+        // Gắn lại sự kiện cho các nút
+        document.querySelectorAll('.mainPage__FoodDrinks-containerinfo-card-action-button:first-child').forEach(btn => {
+            btn.onclick = handleEditCombo;
+        });
+
+        document.querySelectorAll('.mainPage__FoodDrinks-containerinfo-card-action-button:last-child').forEach(btn => {
+            btn.onclick = handleDeleteCombo;
+        });
+
+    } catch (error) {
+        console.error('Error loading products:', error);
+        alert('Có lỗi xảy ra khi tải danh sách combo: ' + error.message);
+    }
+}
 //------------------------------- End Hàm tìm kiếm đồ ăn & đồ uống-------------------------------// 
 
 

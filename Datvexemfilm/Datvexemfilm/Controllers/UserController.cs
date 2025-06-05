@@ -19,7 +19,7 @@ namespace MySimpleMvcApp.Controllers
         [HttpGet]
         public JsonResult GetUsers()
         {
-            var users = _dbContext.Accounts.Select(user => new
+            var users = _dbContext.Accounts.Where(s=>s.Status== "Normal").Select(user => new
             {
                 user.User_ID,
                 user.Username,
@@ -55,15 +55,15 @@ namespace MySimpleMvcApp.Controllers
                     return Json(new { success = false, message = "Không thể xóa tài khoản admin!" }, JsonRequestBehavior.AllowGet);
                 }
 
-                // Xóa user
-                _dbContext.Accounts.Remove(user);
+                // Đánh dấu user là inactive thay vì xóa
+                user.Status = "inactive";
                 _dbContext.SaveChanges();
 
-                return Json(new { success = true, message = "Xóa người dùng thành công!" }, JsonRequestBehavior.AllowGet);
+                return Json(new { success = true, message = "Vô hiệu hóa người dùng thành công!" }, JsonRequestBehavior.AllowGet);
             }
             catch (Exception ex)
             {
-                return Json(new { success = false, message = "Có lỗi xảy ra khi xóa người dùng: " + ex.Message }, JsonRequestBehavior.AllowGet);
+                return Json(new { success = false, message = "Có lỗi xảy ra: " + ex.Message }, JsonRequestBehavior.AllowGet);
             }
         }
         [HttpGet]

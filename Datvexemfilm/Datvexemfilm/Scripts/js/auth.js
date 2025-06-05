@@ -156,5 +156,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+function logout() {
+    localStorage.removeItem('user');
+    window.location.href = '/Home/Index';
+}
+
 
 

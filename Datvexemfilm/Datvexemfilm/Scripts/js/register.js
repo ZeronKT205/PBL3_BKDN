@@ -16,7 +16,7 @@ if (registerForm) {
             return;
         }
 
-        const response = await fetch(`${window.location.origin}/Register/Register`, {
+        const response = await fetch("https://localhost:44343/Register/Register", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|d:\\c#\\project\\pbl3_bkdn\\datvexemfilm\\datvexemfilm\\scripts\\js\\customerinfo.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|solutionrelative:datvexemfilm\\scripts\\js\\customerinfo.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|d:\\c#\\project\\pbl3_bkdn\\datvexemfilm\\datvexemfilm\\controllers\\showcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|solutionrelative:datvexemfilm\\controllers\\showcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|d:\\c#\\project\\pbl3_bkdn\\datvexemfilm\\datvexemfilm\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|solutionrelative:datvexemfilm\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|d:\\c#\\project\\pbl3_bkdn\\datvexemfilm\\datvexemfilm\\scripts\\js\\manageshow.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|solutionrelative:datvexemfilm\\scripts\\js\\manageshow.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|d:\\c#\\project\\pbl3_bkdn\\datvexemfilm\\datvexemfilm\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|solutionrelative:datvexemfilm\\views\\home\\home.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|d:\\c#\\project\\pbl3_bkdn\\datvexemfilm\\datvexemfilm\\models\\show.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|solutionrelative:datvexemfilm\\models\\show.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|d:\\c#\\project\\pbl3_bkdn\\datvexemfilm\\datvexemfilm\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|solutionrelative:datvexemfilm\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\datvexemfilm\\views\\home\\adminhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|solutionrelative:datvexemfilm\\views\\home\\adminhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|d:\\c#\\project\\pbl3_bkdn\\datvexemfilm\\datvexemfilm\\views\\home\\customerinfor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|solutionrelative:datvexemfilm\\views\\home\\customerinfor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\datvexemfilm\\scripts\\js\\manageuser.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{540FBB11-0602-4B13-9B63-8F493A954688}|Datvexemfilm\\Datvexemfilm.csproj|solutionrelative:datvexemfilm\\scripts\\js\\manageuser.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,8 +29,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 183,
-          "SelectedChildIndex": 5,
+          "DockedWidth": 143,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,70 +39,76 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
+            }
+          ]
+        },
+        {
+          "DockedWidth": 126,
+          "SelectedChildIndex": 1,
+          "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "home.cshtml",
-              "DocumentMoniker": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Views\\Home\\home.cshtml",
-              "RelativeDocumentMoniker": "Datvexemfilm\\Views\\Home\\home.cshtml",
-              "ToolTip": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Views\\Home\\home.cshtml",
-              "RelativeToolTip": "Datvexemfilm\\Views\\Home\\home.cshtml",
-              "ViewState": "AgIAAG8AAAAAAAAAAAAAAHYAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-01T03:53:20.647Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Datvexemfilm\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Datvexemfilm\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAYwCIAAAAcAAAAAAAAAA==",
+              "Title": "Show.cs",
+              "DocumentMoniker": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Models\\Show.cs",
+              "RelativeDocumentMoniker": "Datvexemfilm\\Models\\Show.cs",
+              "ToolTip": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Models\\Show.cs",
+              "RelativeToolTip": "Datvexemfilm\\Models\\Show.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T03:52:35.867Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "Datvexemfilm\\Controllers\\UserController.cs",
-              "ToolTip": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Controllers\\UserController.cs",
-              "RelativeToolTip": "Datvexemfilm\\Controllers\\UserController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwCoAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-01T03:42:45.105Z",
+              "WhenOpened": "2025-06-05T06:33:02.348Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "customerInfo.js",
-              "DocumentMoniker": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Scripts\\js\\customerInfo.js",
-              "RelativeDocumentMoniker": "Datvexemfilm\\Scripts\\js\\customerInfo.js",
-              "ToolTip": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Scripts\\js\\customerInfo.js",
-              "RelativeToolTip": "Datvexemfilm\\Scripts\\js\\customerInfo.js",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAFMAAAATAAAAAAAAAA==",
+              "Title": "ShowController.cs",
+              "DocumentMoniker": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Controllers\\ShowController.cs",
+              "RelativeDocumentMoniker": "Datvexemfilm\\Controllers\\ShowController.cs",
+              "ToolTip": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Controllers\\ShowController.cs",
+              "RelativeToolTip": "Datvexemfilm\\Controllers\\ShowController.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAAwJoAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-05T03:22:06.948Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "manageShow.js",
+              "DocumentMoniker": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Scripts\\js\\manageShow.js",
+              "RelativeDocumentMoniker": "Datvexemfilm\\Scripts\\js\\manageShow.js",
+              "ToolTip": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Scripts\\js\\manageShow.js",
+              "RelativeToolTip": "Datvexemfilm\\Scripts\\js\\manageShow.js",
+              "ViewState": "AgIAAI0CAAAAAAAAAAAAALkCAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-06-01T03:23:04.818Z",
+              "WhenOpened": "2025-06-04T18:49:21.454Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "CustomerInfor.cshtml",
-              "DocumentMoniker": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Views\\Home\\CustomerInfor.cshtml",
-              "RelativeDocumentMoniker": "Datvexemfilm\\Views\\Home\\CustomerInfor.cshtml",
-              "ToolTip": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Views\\Home\\CustomerInfor.cshtml",
-              "RelativeToolTip": "Datvexemfilm\\Views\\Home\\CustomerInfor.cshtml",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAswG0AAAAHAAAAAAAAAA==",
+              "Title": "manageUser.js",
+              "DocumentMoniker": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Scripts\\js\\manageUser.js",
+              "RelativeDocumentMoniker": "Datvexemfilm\\Scripts\\js\\manageUser.js",
+              "ToolTip": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Scripts\\js\\manageUser.js",
+              "RelativeToolTip": "Datvexemfilm\\Scripts\\js\\manageUser.js",
+              "ViewState": "AgIAAP0AAAAAAAAAAAAEwPoAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-04T18:34:32.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "adminhome.cshtml",
+              "DocumentMoniker": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Views\\Home\\adminhome.cshtml",
+              "RelativeDocumentMoniker": "Datvexemfilm\\Views\\Home\\adminhome.cshtml",
+              "ToolTip": "D:\\C#\\Project\\PBL3_BKDN\\Datvexemfilm\\Datvexemfilm\\Views\\Home\\adminhome.cshtml",
+              "RelativeToolTip": "Datvexemfilm\\Views\\Home\\adminhome.cshtml",
+              "ViewState": "AgIAADgCAAAAAAAAAAAowEYCAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-01T03:22:59.843Z",
+              "WhenOpened": "2025-06-02T08:50:53.929Z",
               "EditorCaption": ""
             }
           ]

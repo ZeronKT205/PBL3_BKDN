@@ -56,5 +56,15 @@ namespace Datvexemfilm.Controllers
             _dbContext.SaveChanges();
             return Json(new {success = true });
         }
+        [HttpGet]
+        public JsonResult getallproduct()
+        {
+                var products = _dbContext.products.ToList();
+                return Json(products, JsonRequestBehavior.AllowGet);
+            }
+
+        }
+        [HttpPost]
+        public JsonResult addProduct(Product _product)
+        { }
     }
-}

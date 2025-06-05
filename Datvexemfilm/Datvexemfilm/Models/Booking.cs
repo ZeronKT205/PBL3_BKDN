@@ -11,6 +11,8 @@
         [Key]
         public int Booking_ID { get; set; }
         public int User_ID { get; set; }
+        [ForeignKey("User_ID")]
+        public CustomerInfo CustomerInfo { get; set; }
         public int Show_ID { get; set; }
         [ForeignKey("Show_ID")]
         public Show Show { get; set; }

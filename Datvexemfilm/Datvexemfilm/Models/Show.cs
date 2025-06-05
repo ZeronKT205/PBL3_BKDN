@@ -13,7 +13,7 @@
         [ForeignKey("Room")]
 
         public int Room_ID { get; set; }
-        public Room Room { get; set; }
+        public  Room Room { get; set; }
 
         [ForeignKey("Film")]
         public int ID_Movie { get; set; }

@@ -8,10 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zeron | Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/loginstyle.css")">
-    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/style.css")">
-    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/homestyle.css")">
-    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/animation.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/loginstyle.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/style.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/signinstyle.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/homestyle.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/detailmoviestyle.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/animation.css")">
 </head>
 <body>
     <button class="toggle-nav-btn"><i class="fas fa-bars"></i></button>
@@ -189,6 +191,48 @@
             <div><p class="line"></p></div>
         </div>
     </footer>
+    <!-- Booking Modal -->
+    <div class="booking-modal hidden">
+        <div class="booking-modal__content">
+            <button class="booking-modal__close" onclick="closeBookingModal()">×</button>
+            <div class="booking-modal__header">
+                <h2>Đặt Vé Xem Phim</h2>
+            </div>
+            <div class="booking-modal__body">
+                <div class="booking-modal__container">
+                    <!-- Thông tin phim -->
+                    <div class="movie-info">
+                        <div class="movie-info__poster">
+                            <img src="" alt="poster" id="modal-movie-poster">
+                        </div>
+                        <div class="movie-info__details">
+                            <h3 class="movie-info__title" id="modal-movie-title"></h3>
+                            <div class="movie-info__meta" id="modal-movie-meta">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phần bên phải -->
+                    <div class="booking-info">
+                        <!-- Chọn ngày -->
+                        <div class="booking-modal__date">
+                            <h3>Chọn ngày chiếu</h3>
+                            <div id="date-list" class="date-list">
+                            </div>
+                        </div>
+
+                        <!-- Chọn suất chiếu -->
+                        <div class="booking-modal__showtime">
+                            <h3>Chọn suất chiếu</h3>
+                            <div class="showtime-list">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="@Url.Content("~/Scripts/js/tabpage.js")" defer></script>
     <script src="@Url.Content("~/Scripts/js/home.js")" defer></script>
     <script src="@Url.Content("~/Scripts/js/auth.js")" defer></script>

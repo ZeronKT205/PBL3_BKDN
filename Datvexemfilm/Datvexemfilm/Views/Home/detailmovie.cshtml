@@ -168,36 +168,7 @@
             </div>
         </div>
     </div>
-    <!-- Form xác nhận đặt chỗ -->
-    <div class="confirm-modal hidden">
-        <div class="confirm-modal__content">
-            <button class="confirm-modal__close" onclick="closeConfirmModal()">×</button>
-            <div class="confirm-modal__header">
-                <h2>Xác nhận đặt chỗ</h2>
-            </div>
-            <div class="confirm-modal__body">
-                <div class="confirm-info">
-                    <h3>Thông tin suất chiếu</h3>
-                    <div class="confirm-info__details">
-                        <p><strong>Phim:</strong> <span id="confirm-movie-title">VÒNG TRÒN OAN NGHIỆT</span></p>
-                        <p><strong>Ngày chiếu:</strong> <span id="confirm-date">21/03</span></p>
-                        <p><strong>Suất chiếu:</strong> <span id="confirm-time">09:00 - 10:35</span></p>
-                        <p><strong>Rạp:</strong> <span id="confirm-screen">Rạp 1</span></p>
-                    </div>
-                </div>
-                <div class="confirm-terms">
-                    <label class="terms-checkbox">
-                        <input type="checkbox" id="terms-checkbox">
-                        <span>Tôi đồng ý với <a href="#" class="terms-link">điều khoản và điều kiện</a> của rạp chiếu phim</span>
-                    </label>
-                </div>
-            </div>
-            <div class="confirm-modal__footer">
-                <button class="confirm-modal__btn cancel" onclick="closeConfirmModal()">Hủy</button>
-                <button class="confirm-modal__btn confirm" onclick="proceedToSeatSelection()" disabled>Xác nhận</button>
-            </div>
-        </div>
-    </div>
+    
     <div id="movie-detail" data-id="@Model.ID_Movie"></div>
     <script src="@Url.Content("~/Scripts/js/detailmovie.js")" defer></script>
     <script src="@Url.Content("~/Scripts/js/tabpage.js")"></script>

@@ -16,9 +16,7 @@
 function saveBookingInfo(bookingInfo) {
     try {
         localStorage.setItem('bookingInfo', JSON.stringify(bookingInfo));
-        console.log('Đã lưu thông tin đặt vé thành công');
     } catch (error) {
-        console.error('Lỗi khi lưu thông tin đặt vé:', error);
     }
 }
 
@@ -31,7 +29,6 @@ function getBookingInfo() {
         const bookingInfo = localStorage.getItem('bookingInfo');
         return bookingInfo ? JSON.parse(bookingInfo) : null;
     } catch (error) {
-        console.error('Lỗi khi lấy thông tin đặt vé:', error);
         return null;
     }
 }
@@ -42,9 +39,7 @@ function getBookingInfo() {
 function clearBookingInfo() {
     try {
         localStorage.removeItem('bookingInfo');
-        console.log('Đã xóa thông tin đặt vé');
     } catch (error) {
-        console.error('Lỗi khi xóa thông tin đặt vé:', error);
     }
 }
 
@@ -88,3 +83,16 @@ Local storage sẽ lưu dữ liệu dưới dạng key-value và nó đóng vai 
 */
 
 //--------End Xử lý localStorage khi load từ trang bookingTicket.html sang trang Payment.html--------
+
+function saveBookingData(data) {
+    localStorage.setItem('bookingData', JSON.stringify(data));
+}
+
+function getBookingData() {
+    const data = localStorage.getItem('bookingData');
+    return data ? JSON.parse(data) : null;
+}
+
+function clearBookingData() {
+    localStorage.removeItem('bookingData');
+}

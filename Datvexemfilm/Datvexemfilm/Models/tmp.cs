@@ -35,6 +35,7 @@ namespace Datvexemfilm.Models
     }
     public class TicketViewModel
     {
+        public string Name_User { get; set; }
         public string Id { get; set; }
         public string Title { get; set; }
         public string Status { get; set; }
@@ -52,6 +53,16 @@ namespace Datvexemfilm.Models
             public int Quantity { get; set; }
             public string Price { get; set; }
         }
+    }
+    public class _Show
+    {
+        public int ID_Show { get; set; }
+        public string Name_Movie { get;set; }
+        public string Name_Room { get; set; }
+        public DateTime Day { get; set; }
+        public TimeSpan Start_Movie { get; set; }
+        public TimeSpan End_Movie { get; set; }
+        public int Price { get; set; }
     }
 
 }

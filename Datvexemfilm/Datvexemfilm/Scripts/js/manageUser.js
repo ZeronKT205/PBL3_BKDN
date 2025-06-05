@@ -108,32 +108,33 @@ function confirmUser(message) {
 
 // Hàm xóa người dùng
 async function deleteUser(userId) {
-    if (confirmUser('Bạn có chắc chắn muốn xóa người dùng này?')) {
+    if (confirmUser('Bạn có chắc chắn muốn vô hiệu hóa người dùng này?')) {
         try {
-            const response = await fetch(`${window.location.origin}/User/DeleteUser`, {
+            console.log('Deactivating user with ID:', userId);
+            const response = await fetch(`${window.location.origin}/User/DeleteUser?id=${userId}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ id: userId })
+                }
             });
 
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
             const result = await response.json();
+            console.log('Delete response:', result);
             
             if (result.success) {
-                // Xóa người dùng khỏi danh sách
-                const userRow = document.querySelector(`.RemoveUser[data-userid="${userId}"]`).closest('tr');
-                if (userRow) {
-                    userRow.remove();
-                    // Cập nhật lại originalUsers sau khi xóa
-                    originalUsers = originalUsers.filter(user => user.ID !== parseInt(userId));
-                }
                 alert(result.message);
+                // Load lại danh sách user sau khi vô hiệu hóa thành công
+                await loadUsers();
             } else {
-                alert(result.message);
+                alert(result.message || 'Có lỗi xảy ra khi vô hiệu hóa người dùng!');
             }
         } catch (error) {
-            alert('Có lỗi xảy ra khi xóa người dùng!');
+            console.error('Error deactivating user:', error);
+            alert('Có lỗi xảy ra khi vô hiệu hóa người dùng!');
         }
     }
 }
@@ -261,7 +262,7 @@ async function showUserInfo(userId) {
 
     try {
         const response = await fetch(`${window.location.origin}/User/GetUserbyID?id=${userId}`, {
-            method: "POST", 
+            method: "GET", 
             headers: {
                 "Content-Type": "application/json"
             }
@@ -271,7 +272,7 @@ async function showUserInfo(userId) {
         const userDetail = {
             name: data.fullname || '',
             gender: data.Gender || '',
-            birthday: formatDate(data.Birthday) || '',
+            birthday: data.Birthday ? formatDate(data.Birthday) : '',
             phone: data.Phone || '',
             address: data.Address || '',
             email: data.Email || ''

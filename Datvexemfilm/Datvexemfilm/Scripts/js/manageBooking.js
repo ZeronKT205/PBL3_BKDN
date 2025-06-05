@@ -4,6 +4,13 @@
 const invoiceModalBooking = document.getElementById('invoiceModal');
 const closeInvoiceBtnBooking = document.querySelector('.closeInvoice');
 
+// List lưu dữ liệu từ API
+let bookingDataList = [];
+
+document.addEventListener('DOMContentLoaded', function () {
+    loadtick();
+});
+
 // Thêm sự kiện click cho nút View
 document.addEventListener('click', function(e) {
     if (e.target.classList.contains('view-btn')) {
@@ -13,58 +20,124 @@ document.addEventListener('click', function(e) {
     }
 });
 
-// Hàm hiển thị hóa đơn (chuẩn bị cho backend)
+// Hàm hiển thị hóa đơn
 function showInvoice(invoiceId) {
-    // Sau này sẽ fetch từ backend bằng invoiceId, thay dữ liệu là xong
-    
-    // Dữ liệu mẫu hoàn chỉnh:
-    const bookingData = {
-        id: invoiceId,
-        date: "2023-10-01",
-        username: "john_doe",
-        movie: "The Dark Knight",
-        time: "18:00",
-        screen: "Screen A",
-        seats: "A1, A2, A3",
-        ticketPrice: 150000,
-        food: [
-            { name: "Bắp rang bơ", quantity: 2, price: 40000 },
-            { name: "Coca Cola", quantity: 2, price: 30000 }
-        ],
-        foodPrice: 70000,
-        totalPrice: 220000
-    };
-    // Cập nhật thông tin hóa đơn
-    document.getElementById('invoiceId').textContent = bookingData.id;
-    document.getElementById('bookingDate').textContent = bookingData.date;
-    document.getElementById('customerName').textContent = bookingData.username;
-    document.getElementById('movieName').textContent = bookingData.movie;
-    document.getElementById('showTime').textContent = bookingData.time;
-    document.getElementById('screenName').textContent = bookingData.screen;
-    document.getElementById('seats').textContent = bookingData.seats;
-    // Cập nhật thông tin đồ ăn
-    const foodItemsContainer = document.getElementById('foodItems');
-    foodItemsContainer.innerHTML = '';
-    if (bookingData.food && bookingData.food.length > 0) {
-        bookingData.food.forEach(item => {
-            const foodItem = document.createElement('div');
-            foodItem.className = 'foodItem';
-            foodItem.innerHTML = `
-                <span class="name">${item.name}</span>
-                <span class="quantity">x${item.quantity}</span>
-                <span class="price">${item.price.toLocaleString()}đ</span>
-            `;
-            foodItemsContainer.appendChild(foodItem);
+    try {
+        // Tìm thông tin trong list dữ liệu
+        const bookingData = bookingDataList.find(item => {
+            // Chuyển đổi cả hai ID về string để so sánh
+            const itemId = String(item.Id).padStart(6, '0');
+            const searchId = String(invoiceId).padStart(6, '0');
+            return itemId === searchId;
         });
-    } else {
-        foodItemsContainer.innerHTML = '<div class="no-food">Không có đồ ăn</div>';
+
+        if (!bookingData) {
+            throw new Error('Không tìm thấy thông tin hóa đơn');
+        }
+
+        // Hiển thị thông tin trong modal   
+        const modal = document.getElementById('invoiceModal');
+        if (!modal) {
+            throw new Error('Không tìm thấy modal');
+        }
+
+        // Cập nhật thông tin hóa đơn
+        const invoiceInfo = modal.querySelector('.invoiceInfo');
+        if (invoiceInfo) {
+            invoiceInfo.innerHTML = `
+                <div class="invoiceInfo__item">
+                    <span class="label">Mã Hóa Đơn:</span>
+                    <span class="value">${String(bookingData.Id).padStart(6, '0')}</span>
+                </div>
+                <div class="invoiceInfo__item">
+                    <span class="label">Ngày Đặt:</span>
+                    <span class="value">${bookingData.BookingDate || ''}</span>
+                </div>
+                <div class="invoiceInfo__item">
+                    <span class="label">Khách Hàng:</span>
+                    <span class="value">${bookingData.Name_User || ''}</span>
+                </div>
+            `;
+        }
+
+        // Cập nhật thông tin vé
+        const movieInfo = modal.querySelector('.movieInfo');
+        if (movieInfo) {
+            movieInfo.innerHTML = `
+                <h3>Thông Tin Vé</h3>
+                <div class="movieInfo__item">
+                    <span class="label">Tên Phim:</span>
+                    <span class="value">${bookingData.Title || ''}</span>
+                </div>
+                <div class="movieInfo__item">
+                    <span class="label">Suất Chiếu:</span>
+                    <span class="value">${bookingData.Showtime || ''}</span>
+                </div>
+                <div class="movieInfo__item">
+                    <span class="label">Phòng Chiếu:</span>
+                    <span class="value">${bookingData.CinemaRoom || ''}</span>
+                </div>
+                <div class="movieInfo__item">
+                    <span class="label">Ghế:</span>
+                    <span class="value">${bookingData.Seat || ''}</span>
+                </div>
+            `;
+        }
+
+        // Cập nhật thông tin đồ ăn
+        const foodInfo = modal.querySelector('.foodInfo');
+        if (foodInfo) {
+            const foodItems = bookingData.Combo && bookingData.Combo.length > 0 
+                ? bookingData.Combo.map(item => `
+                    <div class="foodItem">
+                        <span class="name">${item.Name} X ${item.Quantity}</span>
+                        <span class="price">${item.Price}</span>
+                    </div>
+                `).join('')
+                : '<div class="foodItem">Không có đồ ăn</div>';
+
+            foodInfo.innerHTML = `
+                <h3>Đồ Ăn & Thức Uống</h3>
+                <div class="foodInfo__items" id="foodItems">
+                    ${foodItems}
+                </div>
+            `;
+        }
+
+        // Cập nhật tổng tiền
+        const invoiceTotal = modal.querySelector('.invoiceTotal');
+        if (invoiceTotal) {
+            // Calculate food price first
+            const totalFood = bookingData.Combo 
+                ? bookingData.Combo.reduce((sum, item) => sum + parseFloat(item.Price), 0) * 1000
+                : 0;
+            
+            // Get total price and subtract food price to get ticket price
+            const totalPrice = parseFloat(bookingData.Price.replace(/[^\d]/g, '')) || 0;
+            const ticketPrice = totalPrice - totalFood;
+            
+            invoiceTotal.innerHTML = `
+            <div class="totalItem">
+                <span class="label">Tiền Vé:</span>
+                <span class="value">${ticketPrice.toLocaleString('vi-VN')} VNĐ</span>
+            </div>
+            <div class="totalItem">
+                <span class="label">Tiền Đồ Ăn:</span>
+                <span class="value">${totalFood.toLocaleString('vi-VN')} VNĐ</span>
+            </div>
+            <div class="totalItem grandTotal">
+                <span class="label">Tổng Cộng:</span>
+                <span class="value">${totalPrice.toLocaleString('vi-VN')} VNĐ</span>
+            </div>
+            `;
+        }
+
+        // Hiển thị modal
+        modal.classList.remove('hidden');
+    } catch (error) {
+        console.error('Error showing invoice:', error);
+        alert('Có lỗi xảy ra khi hiển thị hóa đơn: ' + error.message);
     }
-    // Cập nhật tổng tiền
-    document.getElementById('ticketAmount').textContent = `${bookingData.ticketPrice.toLocaleString()}đ`;
-    document.getElementById('foodAmount').textContent = `${bookingData.foodPrice.toLocaleString()}đ`;
-    document.getElementById('totalAmount').textContent = `${bookingData.totalPrice.toLocaleString()}đ`;
-    // Hiển thị modal
-    invoiceModalBooking.classList.remove('hidden');
 }
 
 // Đóng modal hóa đơn
@@ -115,6 +188,88 @@ if (bookingTable2Booking && filterDateBooking && filterScreenBooking && filterMo
   filterMovieBooking.addEventListener('change', filterBookingTable);
 }
 
+window.loadtick = async function () {
+    try {
+        const response = await fetch("https://localhost:44343/Booking/gettick", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+
+        const data = await response.json();
+        bookingDataList = data;
+
+        // Cập nhật danh sách phim và phòng từ dữ liệu suất chiếu
+        updateMovieAndScreenLists(data);
+
+        // Sửa lại selector để chắc chắn tìm đúng tbody
+        const tbody = document.querySelector('.mainPage__Booking__containerinfo-table tbody');
+        tbody.innerHTML = '';
+        data.forEach(tick => {
+            const _show = document.createElement("tr");
+            _show.innerHTML = `
+                <td>${tick.Id}</td>
+                <td>${tick.Name_User}</td>
+                <td>${tick.Title}</td>
+                <td>${tick.BookingDate}</td>
+                <td>${tick.CinemaRoom}</td>
+                <td>${tick.Price}</td>
+                <td>
+                    <button class="view-btn">View</button>
+                </td>
+            `;
+            tbody.appendChild(_show);
+        });
+       
+    } catch (error) {
+        console.error('Error in loadtick:', error);
+    }
+}
+
+function updateMovieAndScreenLists(showData) {
+    try {
+        // Tạo Set để loại bỏ các giá trị trùng lặp
+        const uniqueMovies = new Set();
+        const uniqueScreens = new Set();
+
+        // Lấy danh sách phim và phòng từ dữ liệu suất chiếu
+        showData.forEach(show => {
+            uniqueMovies.add(show.Title);
+            uniqueScreens.add(show.CinemaRoom);
+        });
+
+        // Cập nhật listbox phim
+        const movieSelect = document.querySelector('.mainPage__Booking__Containersearch-movie-select');
+        if (movieSelect) {
+            // Giữ lại option đầu tiên
+            movieSelect.innerHTML = '<option value="0">Tất Cả Phim</option>';
+            // Thêm các phim mới
+            uniqueMovies.forEach(movieName => {
+                const option = document.createElement('option');
+                option.value = movieName;
+                option.textContent = movieName;
+                movieSelect.appendChild(option);
+            });
+        }
+
+        // Cập nhật listbox phòng
+        const screenSelect = document.querySelector('.mainPage__Booking__Containersearch-screen-select');
+        if (screenSelect) {
+            // Giữ lại option đầu tiên
+            screenSelect.innerHTML = '<option value="0">Phòng Chiếu</option>';
+            // Thêm các phòng mới
+            uniqueScreens.forEach(screenName => {
+                const option = document.createElement('option');
+                option.value = screenName;
+                option.textContent = screenName;
+                screenSelect.appendChild(option);
+            });
+        }
+    } catch (error) {
+        console.error('Error updating movie and screen lists:', error);
+    }
+}
 
 //-----------------------------------End chức năng lọc vé trong quản lý vé-----------------------------------//
 

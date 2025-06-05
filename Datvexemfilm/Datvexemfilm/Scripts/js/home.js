@@ -1,3 +1,13 @@
+// Global variables
+let dayContainer;
+let showtimeList;
+
+// Initialize variables when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    dayContainer = document.getElementById("date-list");
+    showtimeList = document.querySelector(".showtime-list");
+});
+
 // Hàm khởi tạo khi trang web được tải
 window.onload = function() {
     loadfilm();
@@ -364,11 +374,12 @@ async function loadfilm_on() {
 
     const result = await response.json();
     movieList = document.querySelector("#now-showing");
-    //movieList.innerHTML = "";
+    movieList.innerHTML = "";
 
     result.forEach(movie => {
         const movieContainer = document.createElement("div");
         movieContainer.classList.add("movie-card");
+        movieContainer.setAttribute("data-id", movie.ID_Movie);
         movieContainer.innerHTML = `
             <img src="${movie.src}" alt="Phim 2">
                         <div class="movie-card-overlay">
@@ -379,7 +390,7 @@ async function loadfilm_on() {
                                 <div class="movie-info-item"><i class="fa fa-language"></i> <span>Tiếng Việt</span></div>
                             </div>
                             <div class="movie-card-btns">
-                                <button class="btn-book">Đặt vé</button>
+                                <button class="btn-book open-booking-btn">Đặt vé</button>
                                 <button class="btn-trailer" onclick="viewDetail(${movie.ID_Movie})">Chi tiết</button>
                             </div>
                         </div>
@@ -389,12 +400,36 @@ async function loadfilm_on() {
         movieList.appendChild(movieContainer);
     });
 
-
+    // Add event listeners for booking buttons
+    document.querySelectorAll(".open-booking-btn").forEach(btn => {
+        btn.addEventListener("click", async function(e) {
+            e.preventDefault();
+            const filmEl = this.closest(".movie-card");
+            const filmId = filmEl.getAttribute("data-id");
+            
+            // Get movie details
+            const movieTitle = filmEl.querySelector(".movie-card-title").textContent;
+            const moviePoster = filmEl.querySelector("img").src;
+            const movieMeta = filmEl.querySelector(".movie-info-list").innerHTML;
+            
+            // Update modal content
+            document.getElementById("modal-movie-poster").src = moviePoster;
+            document.getElementById("modal-movie-title").textContent = movieTitle;
+            document.getElementById("modal-movie-meta").innerHTML = movieMeta;
+            
+            // Show modal
+            const modal = document.querySelector(".booking-modal");
+            modal.classList.remove("hidden");
+            modal.classList.add("active");
+            
+            // Load show days
+            await loadShowDays(filmId);
+        });
+    });
 
     const nowShowingLeftBtn = document.querySelector('.movie-carousel-nav-btn.left[data-target="now-showing"]');
     const nowShowingRightBtn = document.querySelector('.movie-carousel-nav-btn.right[data-target="now-showing"]');
     setupCarousel('now-showing', nowShowingLeftBtn, nowShowingRightBtn);
-
 }
 async function loadfilm_next() {
     const response = await fetch(`${window.location.origin}/Film/GetFilm_Next`, {
@@ -410,6 +445,7 @@ async function loadfilm_next() {
     result.forEach(movie => {
         const movieContainer = document.createElement("div");
         movieContainer.classList.add("movie-card");
+        movieContainer.setAttribute("data-id", movie.ID_Movie);
         movieContainer.innerHTML = `
             <img src="${movie.src}" alt="Phim 2">
                         <div class="movie-card-overlay">
@@ -420,7 +456,7 @@ async function loadfilm_next() {
                                 <div class="movie-info-item"><i class="fa fa-language"></i> <span>Tiếng Việt</span></div>
                             </div>
                             <div class="movie-card-btns">
-                                <button class="btn-book">Đặt vé</button>
+                                <button class="btn-book open-booking-btn">Đặt vé</button>
                                 <button class="btn-trailer" onclick="viewDetail(${movie.ID_Movie})">Chi tiết</button>
                             </div>
                         </div>
@@ -430,8 +466,150 @@ async function loadfilm_next() {
         movieList.appendChild(movieContainer);
     });
 
+    // Add event listeners for booking buttons
+    document.querySelectorAll(".open-booking-btn").forEach(btn => {
+        btn.addEventListener("click", async function(e) {
+            e.preventDefault();
+            const filmEl = this.closest(".movie-card");
+            const filmId = filmEl.getAttribute("data-id");
+            
+            // Get movie details
+            const movieTitle = filmEl.querySelector(".movie-card-title").textContent;
+            const moviePoster = filmEl.querySelector("img").src;
+            const movieMeta = filmEl.querySelector(".movie-info-list").innerHTML;
+            
+            // Update modal content
+            document.getElementById("modal-movie-poster").src = moviePoster;
+            document.getElementById("modal-movie-title").textContent = movieTitle;
+            document.getElementById("modal-movie-meta").innerHTML = movieMeta;
+            
+            // Show modal
+            const modal = document.querySelector(".booking-modal");
+            modal.classList.remove("hidden");
+            modal.classList.add("active");
+            
+            // Load show days
+            await loadShowDays(filmId);
+        });
+    });
 
     const nowShowingLeftBtn = document.querySelector('.movie-carousel-nav-btn.left[data-target="coming-soon"]');
     const nowShowingRightBtn = document.querySelector('.movie-carousel-nav-btn.right[data-target="coming-soon"]');
     setupCarousel('coming-soon', nowShowingLeftBtn, nowShowingRightBtn);
+}
+
+// Add close modal functionality
+function closeBookingModal() {
+    const modal = document.querySelector(".booking-modal");
+    modal.classList.remove("active");
+    setTimeout(() => {
+        modal.classList.add("hidden");
+    }, 300);
+}
+
+// Close modal when clicking outside
+document.querySelector(".booking-modal").addEventListener("click", function(e) {
+    if (e.target === this) {
+        closeBookingModal();
+    }
+});
+
+// Add these functions after the existing code
+function parseDateFromAspNet(dateStr) {
+    const match = dateStr.match(/\d+/);
+    if (!match) return null;
+    const timestamp = parseInt(match[0]);
+    const date = new Date(timestamp);
+    const serverTimezoneOffset = 7 * 60;
+    date.setMinutes(date.getMinutes() + date.getTimezoneOffset() + serverTimezoneOffset);
+    return date;
+}
+
+function formatDisplayDate(date) {
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    return `${day}/${month}`;
+}
+
+function formatAPIDate(date) {
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
+    return `${year}-${month}-${day}`;
+}
+
+async function loadShowDays(filmId) {
+    try {
+        const response = await fetch(`${window.location.origin}/Show/getDay?id=${filmId}`);
+        const days = await response.json();
+
+        const validDays = days
+            .filter(p => p.Day)
+            .map(p => ({
+                original: p,
+                date: parseDateFromAspNet(p.Day)
+            }))
+            .sort((a, b) => a.date - b.date);
+
+        dayContainer.innerHTML = '';
+
+        validDays.forEach((p, index) => {
+            const displayDate = formatDisplayDate(p.date);
+            const apiDate = formatAPIDate(p.date);
+
+            const button = document.createElement("button");
+            button.className = "date-item";
+            button.innerHTML = `
+                <span class="day">Ngày</span>
+                <span class="date">${displayDate}</span>
+            `;
+
+            button.addEventListener("click", () => {
+                document.querySelectorAll(".date-item").forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+                loadShowtimes(filmId, apiDate);
+            });
+
+            dayContainer.appendChild(button);
+
+            if (index === 0) {
+                button.classList.add("active");
+                loadShowtimes(filmId, apiDate);
+            }
+        });
+    } catch (e) {
+        console.error("Lỗi lấy ngày chiếu:", e);
+    }
+}
+
+async function loadShowtimes(filmId, day) {
+    try {
+        const response = await fetch(`${window.location.origin}/Show/getShowofDay?id=${filmId}&Day=${day}`);
+        const shows = await response.json();
+
+        showtimeList.innerHTML = '';
+
+        shows.forEach(show => {
+            const startHour = String(show.Start_Movie.Hours).padStart(2, '0');
+            const startMinute = String(show.Start_Movie.Minutes).padStart(2, '0');
+            const endHour = String(show.End_Movie.Hours).padStart(2, '0');
+            const endMinute = String(show.End_Movie.Minutes).padStart(2, '0');
+
+            const button = document.createElement("button");
+            button.className = "showtime-item";
+            button.innerHTML = `
+                <span class="time">${startHour}:${startMinute} - ${endHour}:${endMinute}</span>
+                <span class="screen">${show.Name}</span>
+            `;
+
+            button.addEventListener("click", () => {
+                window.location.href = `/Ticket/seat_booking?show_id=${show.Show_ID}&room_id=${show.Room_ID}`;
+            });
+
+            showtimeList.appendChild(button);
+        });
+
+    } catch (err) {
+        console.error("Lỗi lấy suất chiếu:", err);
+    }
 }

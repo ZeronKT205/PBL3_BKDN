@@ -1,3 +1,4 @@
+/* Typography */
 html, body{
     height: auto !important;
     min-height: 100vh;
@@ -829,4 +830,290 @@ body {
 
 .navbar__content-btn.logout i {
   font-size: 1.1em;
+}
+
+/* Booking Modal Styles */
+.booking-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.booking-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.booking-modal__content {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border-radius: 20px;
+    width: 90%;
+    max-width: 1400px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(17, 17, 17, 0.5);
+    animation: fadeIn 0.9s ease;
+}
+
+.booking-modal__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.booking-modal__close:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(90deg);
+}
+
+.booking-modal__header {
+    padding: 30px 20px 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.booking-modal__header h2 {
+    color: #c0bcbc;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(97, 92, 92, 0.3);
+}
+
+.booking-modal__body {
+    padding: 30px;
+    max-height: calc(90vh - 100px);
+    overflow-y: auto;
+}
+
+.booking-modal__container {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 40px;
+    padding: 10px;
+}
+
+.movie-info {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    height: fit-content;
+}
+
+.movie-info__poster {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.movie-info__poster img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.movie-info__title {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 15px;
+    line-height: 1.3;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-family: 'Poppins', sans-serif;
+}
+
+.movie-info__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.movie-info__meta span {
+    color: #c0bcbc;
+    font-size: 14px;
+}
+
+.movie-info__meta i {
+    margin-right: 8px;
+    color: #e94560;
+}
+
+.booking-info {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.booking-modal__date h3,
+.booking-modal__showtime h3 {
+    color: #c0bcbc;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.date-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.date-item {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+}
+
+.date-item:hover {
+    background: rgba(233, 69, 96, 0.2);
+}
+
+.date-item.active {
+    background: #e94560;
+}
+
+.date-item .day {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 6px;
+    color: #e0e0e0;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.date-item .date {
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.showtime-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.showtime-item {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.showtime-item:hover {
+    background: rgba(233, 69, 96, 0.2);
+}
+
+.showtime-item .time {
+    display: block;
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+}
+
+.showtime-item .screen {
+    display: block;
+    font-size: 16px;
+    color: #e0e0e0;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .booking-modal__container {
+        grid-template-columns: 1fr;
+    }
+    
+    .movie-info {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+    }
+    
+    .movie-info__poster {
+        width: 150px;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .movie-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .movie-info__poster {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .showtime-list {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
 }

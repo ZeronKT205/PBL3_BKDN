@@ -1,5 +1,6 @@
 ﻿namespace Datvexemfilm.Models
 {
+    using Newtonsoft.Json;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
@@ -28,6 +29,7 @@
         public string ShortDescription { get; set; }
         public string _Cast { get; set; }
         public string Trailer { get; set; }
+        [JsonIgnore]
         public ICollection<Show> Shows { get; set; }
     }
 }
