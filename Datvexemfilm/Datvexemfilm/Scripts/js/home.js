@@ -32,8 +32,6 @@ document.addEventListener('click', function(e) {
 
 
 
-
-
 // MainPoster slideshow functionality
 let slides = [];
 let dots = [];
@@ -305,10 +303,71 @@ async function loadfilm() {
     const movieList = document.querySelector("#movie");
     const movieListPoster = document.querySelector("#main_posster");
     const dotsContainer = document.querySelector(".mainposter__dots");
+    const typelist = document.querySelector(".listfilm__navbar-genre-content");
 
     movieList.innerHTML = "";
     movieListPoster.innerHTML = "";
     dotsContainer.innerHTML = "";
+    typelist.innerHTML = "";
+
+    // Tạo Set để lưu các thể loại duy nhất
+    const uniqueGenres = new Set();
+    result.forEach(movie => {
+        if (movie.Type) {
+            uniqueGenres.add(movie.Type);
+        }
+    });
+
+    // Thêm nút "Tất cả" vào đầu danh sách
+    const allButton = document.createElement("div");
+    allButton.classList.add("genre-item", "active");
+    allButton.textContent = "Tất cả";
+    allButton.addEventListener("click", () => {
+        document.querySelectorAll(".genre-item").forEach(item => item.classList.remove("active"));
+        allButton.classList.add("active");
+        filterMovies("all");
+        // Ẩn dropdown sau khi chọn "Tất cả"
+        const genreDropdown = document.getElementById("genreDropdown");
+        const genreBtn = document.getElementById("genreDropdownBtn");
+        if (genreDropdown && genreBtn) {
+            genreDropdown.classList.remove("show");
+            genreBtn.classList.remove("active");
+        }
+    });
+    typelist.appendChild(allButton);
+
+    // Thêm các thể loại vào dropdown
+    uniqueGenres.forEach(genre => {
+        const list = document.createElement("div");
+        list.classList.add("genre-item");
+        list.textContent = genre;
+        list.addEventListener("click", () => {
+            document.querySelectorAll(".genre-item").forEach(item => item.classList.remove("active"));
+            list.classList.add("active");
+            filterMovies(genre);
+            // Ẩn dropdown sau khi chọn thể loại
+            const genreDropdown = document.getElementById("genreDropdown");
+            const genreBtn = document.getElementById("genreDropdownBtn");
+            if (genreDropdown && genreBtn) {
+                genreDropdown.classList.remove("show");
+                genreBtn.classList.remove("active");
+            }
+        });
+        typelist.appendChild(list);
+    });
+
+    // Hàm lọc phim theo thể loại
+    function filterMovies(genre) {
+        const movies = document.querySelectorAll(".movie1");
+        movies.forEach(movie => {
+            if (genre === "all") {
+                movie.style.display = "block";
+            } else {
+                const movieGenre = movie.querySelector(".movie__type")?.textContent;
+                movie.style.display = movieGenre === genre ? "block" : "none";
+            }
+        });
+    }
 
     result.forEach((movie, index) => {
         // Thêm phim vào danh sách
@@ -317,6 +376,7 @@ async function loadfilm() {
         movieContainer.innerHTML = `
             <img src="${movie.src}" onclick="viewDetail(${movie.ID_Movie})" alt="photo" class="poster_booking">
             <p class="movie__name">${movie.name}</p>
+            <p class="movie__type" style="display: none;">${movie.Type}</p>
             <p class="movie__releaseDay">KC | ${movie.releaseDay}</p>
         `;
         movieList.appendChild(movieContainer);
@@ -613,3 +673,48 @@ async function loadShowtimes(filmId, day) {
         console.error("Lỗi lấy suất chiếu:", err);
     }
 }
+
+// Thêm hàm tìm kiếm phim
+function searchMovies(searchTerm) {
+    const movies = document.querySelectorAll(".movie1");
+    const searchTermLower = searchTerm.toLowerCase();
+
+    movies.forEach(movie => {
+        const movieName = movie.querySelector(".movie__name").textContent.toLowerCase();
+        if (movieName.includes(searchTermLower)) {
+            movie.style.display = "block";
+        } else {
+            movie.style.display = "none";
+        }
+    });
+}
+
+// Thêm sự kiện tìm kiếm
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.querySelector(".search__input");
+    const searchBtn = document.querySelector(".search__btn");
+
+    if (searchInput) {
+        // Tìm kiếm khi nhập
+        searchInput.addEventListener("input", function(e) {
+            const searchTerm = e.target.value.trim();
+            searchMovies(searchTerm);
+        });
+
+        // Tìm kiếm khi nhấn Enter
+        searchInput.addEventListener("keypress", function(e) {
+            if (e.key === "Enter") {
+                const searchTerm = e.target.value.trim();
+                searchMovies(searchTerm);
+            }
+        });
+    }
+
+    if (searchBtn) {
+        // Tìm kiếm khi click nút
+        searchBtn.addEventListener("click", function() {
+            const searchTerm = searchInput.value.trim();
+            searchMovies(searchTerm);
+        });
+    }
+});

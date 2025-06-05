@@ -87,3 +87,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     getReport(startDateInput.value, endDateInput.value);
 });
+
