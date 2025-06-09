@@ -1,0 +1,216 @@
+.container {
+    min-height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #070a1d 0%, #301463 50%, #2d1342 100%) !important;
+
+}
+
+.customer-info-box{
+    background: rgba(20, 30, 48, 0.95);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.15);
+    padding: 32px 28px;
+    margin: 32px auto 0 auto;
+    max-width: 800px;
+}
+.customer-info-title{
+    font-size: 30px;
+    font-weight: 700;
+    color: #c6c9db;
+    margin-bottom: 18px;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    border-bottom: 4px solid rgb(166, 172, 229);
+    border-left: 4px solid rgb(20, 20, 206);
+    padding-bottom: 15px;
+    padding-left: 15px;
+    width: 400px;
+
+}
+.customer-info-btns{
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 24px;
+}
+.customer-info-btns button{
+    background: linear-gradient(90deg, #12148a 0%, #726e6e 100%);
+    color: #fff;
+    border: none;
+    padding: 10px 0;
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.2s, transform 0.2s;
+}
+.customer-info-btns button:hover{
+    background: linear-gradient(90deg, #d76d77 0%, #3a1c71 100%);
+}
+
+.user-info-container {
+    background: rgba(30, 36, 58, 0.98);
+    border-radius: 14px;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
+    padding: 28px 32px;
+    margin: 0 auto 0 auto;
+    max-width: 650px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: relative;
+}
+
+.user-info-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    gap: 80px;
+}
+.user-info-row:last-child {
+    border-bottom: none;
+}
+
+.user-info-label {
+    flex: 1 1 40%;
+    color: #a3bffa;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 120px;
+    max-width: 220px;
+}
+
+.user-info-label i {
+    color: #ffd600;
+    font-size: 1.1em;
+}
+
+.user-info-value {
+    flex: 1 1 60%;
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 600;
+    text-align: left;
+    max-width: 100%;
+    word-break: break-word;
+    padding-left: 12px;
+}
+
+@media (max-width: 600px) {
+    .user-info-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    .user-info-label, .user-info-value {
+        min-width: unset;
+        max-width: 100%;
+        text-align: left;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .customer-info-box {
+        max-width: 98vw;
+        padding: 18px 4vw;
+    }
+    .user-info-container {
+        max-width: 98vw;
+        padding: 18px 2vw;
+    }
+}
+
+.change-pass-modal {
+    display: none;
+    position: fixed;
+    left: 0; right: 0; bottom: 0; top: 0;
+    background: rgba(20, 20, 40, 0.65);
+    z-index: 1000;
+    align-items: flex-end;
+    justify-content: center;
+    transition: all 0.5s;
+}
+.change-pass-modal.show {
+    display: flex;
+}
+.change-pass-content {
+    background: #23244a;
+    border-radius: 18px 18px 0 0;
+    box-shadow: 0 -4px 24px 0 rgba(0,0,0,0.18);
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 0;
+    padding: 32px 28px 24px 28px;
+    animation: slideUp 1s cubic-bezier(.4,2,.6,1) both;
+    position: relative;
+}
+@keyframes slideUp {
+    from { transform: translateY(100%); opacity: 0; }
+    to { transform: translateY(-200px); opacity: 1; }
+}
+.close-change-pass {
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    font-size: 1.5rem;
+    color: #ffd600;
+    cursor: pointer;
+}
+.change-pass-content h2 {
+    text-align: center;
+    color: #ffd600;
+    margin-bottom: 18px;
+}
+#changePassForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+#changePassForm label {
+    color: #a3bffa;
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+#changePassForm input {
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: #181a2f;
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+#changePassForm button {
+    background: linear-gradient(90deg, #12148a 0%, #726e6e 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s, transform 0.2s;
+}
+#changePassForm button:hover {
+    background: linear-gradient(90deg, #d76d77 0%, #3a1c71 100%);
+}
+.user-info-value input, .user-info-value select {
+    width: 100%;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background: #181a2f;
+    color: #fff;
+    font-size: 1rem;
+    margin-left: 0;
+    margin-top: 2px;
+}

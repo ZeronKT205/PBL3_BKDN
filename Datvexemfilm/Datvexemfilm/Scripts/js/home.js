@@ -425,7 +425,7 @@ function updateSlideControls() {
 
 
 async function loadfilm_on() {
-    const response = await fetch(`${window.location.origin}/Film/GetFilm_ON`, {
+    const response = await fetch(`/Film/GetFilm_ON`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -492,7 +492,7 @@ async function loadfilm_on() {
     setupCarousel('now-showing', nowShowingLeftBtn, nowShowingRightBtn);
 }
 async function loadfilm_next() {
-    const response = await fetch(`${window.location.origin}/Film/GetFilm_Next`, {
+    const response = await fetch(`/Film/GetFilm_Next`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -600,7 +600,7 @@ function formatAPIDate(date) {
 
 async function loadShowDays(filmId) {
     try {
-        const response = await fetch(`${window.location.origin}/Show/getDay?id=${filmId}`);
+        const response = await fetch(`/Show/getDay?id=${filmId}`);
         const days = await response.json();
 
         const validDays = days
@@ -644,7 +644,7 @@ async function loadShowDays(filmId) {
 
 async function loadShowtimes(filmId, day) {
     try {
-        const response = await fetch(`${window.location.origin}/Show/getShowofDay?id=${filmId}&Day=${day}`);
+        const response = await fetch(`/Show/getShowofDay?id=${filmId}&Day=${day}`);
         const shows = await response.json();
 
         showtimeList.innerHTML = '';
@@ -663,7 +663,7 @@ async function loadShowtimes(filmId, day) {
             `;
 
             button.addEventListener("click", () => {
-                window.location.href = `/Ticket/seat_booking?show_id=${show.Show_ID}&room_id=${show.Room_ID}`;
+                window.location.href = `/Seat/seat_booking?show_id=${show.Show_ID}&room_id=${show.Room_ID}`;
             });
 
             showtimeList.appendChild(button);

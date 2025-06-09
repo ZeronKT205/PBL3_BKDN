@@ -209,17 +209,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Controllers\FilmController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\PaymentController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
-    <Compile Include="Controllers\RegisterController.cs" />
     <Compile Include="Controllers\ScreenController.cs" />
     <Compile Include="Controllers\SeatController.cs" />
     <Compile Include="Controllers\ShowController.cs" />
-    <Compile Include="Controllers\TicketController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -348,7 +346,6 @@
     <Content Include="Scripts\js\auth.js" />
     <Content Include="Scripts\js\bookingTicket.js" />
     <Content Include="Scripts\js\customerInfo.js" />
-    <Content Include="Scripts\js\dataManager.js" />
     <Content Include="Scripts\js\detailmovie.js" />
     <Content Include="Scripts\js\historyBooking.js" />
     <Content Include="Scripts\js\home.js" />
@@ -366,12 +363,8 @@
     <Content Include="Scripts\js\seatLayout.js" />
     <Content Include="Scripts\js\tabpage.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
-    <Content Include="Views\Home\adminhome.cshtml" />
     <Content Include="Views\Home\detailmovie.cshtml" />
     <Content Include="Views\Home\home.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\userlogin.cshtml" />
-    <Content Include="Views\Home\usersignup.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -383,21 +376,17 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\bookingTicket.cshtml" />
-    <Content Include="Views\Home\CustomerInfor.cshtml" />
-    <Content Include="Views\Home\historyBooking.cshtml" />
-    <Content Include="Views\Home\Payment.cshtml" />
-    <Content Include="Views\Home\SearchFilmPage.cshtml" />
+    <Content Include="Views\Booking\bookingTicket.cshtml" />
+    <Content Include="Views\Booking\historyBooking.cshtml" />
+    <Content Include="Views\User\CustomerInfor.cshtml" />
+    <Content Include="Views\User\usersignup.cshtml" />
+    <Content Include="Views\Payment\Payment.cshtml" />
+    <Content Include="Views\Admin\adminhome.cshtml" />
+    <Content Include="Views\Home\index.cshtml" />
+    <Content Include="Views\User\userlogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Booking\" />
-    <Folder Include="Views\Payment\" />
-    <Folder Include="Views\Product\" />
-    <Folder Include="Views\Screen\" />
-    <Folder Include="Views\Seat\" />
-    <Folder Include="Views\Show\" />
-    <Folder Include="Views\Ticket\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

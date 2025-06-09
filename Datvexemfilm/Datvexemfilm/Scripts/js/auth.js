@@ -61,7 +61,7 @@ function isLoggedIn() {
  * Hàm kiểm tra và chuyển hướng nếu chưa đăng nhập
  * @param {string} redirectUrl - URL để chuyển hướng nếu chưa đăng nhập
  */
-function checkAuth(redirectUrl = '/Home/userlogin') {
+function checkAuth(redirectUrl = '/User/userlogin') {
     if (!isLoggedIn()) {
         alert('Vui lòng đăng nhập để tiếp tục!');
         window.location.href = redirectUrl;
@@ -125,15 +125,14 @@ function handleUIForLoginStatus() {
 // Thêm sự kiện kiểm tra đăng nhập khi trang được tải
 document.addEventListener('DOMContentLoaded', function () {
     const protectedPages = [
-        '/home/bookingticket',
-        '/home/payment',
-        '/home/customerinfor',
-        '/home/searchfilmPage',
+        '/Booking/bookingticket',
+        '/Home/Payment',
+        '/User/customerinfor',
         '/home/detailmovie',
-        '/home/historybooking'
+        '/Booking/historybooking'
     ];
     const adminPages = [
-        '/home/adminhome'
+        '/Admin/adminhome'
     ];
     const currentPage = window.location.pathname.toLowerCase();
 
@@ -150,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
         logoutBtn.addEventListener('click', function (e) {
             e.preventDefault();
             clearUserInfo();
-            window.location.href = '/Home/Index';
+            window.location.href = '/Home/index';
         });
     }
 
@@ -158,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function logout() {
     localStorage.removeItem('user');
-    window.location.href = '/Home/Index';
+    window.location.href = '/Home/index';
 }
 
 

@@ -35,7 +35,7 @@ function updateReportUI(data) {
 // Hàm lấy report từ API
 async function getReport(startDate, endDate) {
     try {
-        const response = await fetch(`${window.location.origin}/Ticket/Report`, {
+        const response = await fetch(`/Booking/Report`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -1,0 +1,228 @@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeron | Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/loginstyle.css")">
+    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/style.css")">
+    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/homestyle.css")">
+    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/animation.css")">
+</head>
+<body>
+    <button class="toggle-nav-btn"><i class="fas fa-bars"></i></button>
+    <div class="container1">
+        <!--NAVBAR -->
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <img src="@Url.Content("~/Content/assets/images/logo.png")" alt="logo" class="navbar__logo-item">
+                <span class="navbar__logo-name">Zeron</span>
+            </div>
+            <ul class="navbar__content">
+                <li><a href="#" class="navbar__content-item1">TRANG CHỦ</a></li>
+                <li><a href="#" id="btnbooking" class="navbar__content-item1">ĐẶT VÉ</a></li>
+                <li><button class="navbar__content-btn" onclick="goToPageLogin()">ĐĂNG NHẬP</button></li>
+            </ul>
+        </nav>
+        <!--END NAVBAR -->
+        <!-- POSSTER MAIN -->
+        <div class="mainposter">
+            <div class="poster" id="main_posster">
+            
+            </div>
+            <div class="mainposter__dots">
+               
+            </div>
+            <div class="mainposter__button">
+                <button class="mainposter__button-left"><i class="fas fa-chevron-left"></i></button>
+                <button class="mainposter__button-right"><i class="fas fa-chevron-right"></i></button>
+            </div>
+
+        </div>
+        <!-- END POSSTER MAIN -->
+
+        <div class="movie-section" id="now-showing-section" style="background: transparent;">
+            <h2 class="movie-section-title"><i class="fa fa-film"></i> Phim đang chiếu</h2>
+            <div class="movie-carousel-nav-wrap">
+                <button class="movie-carousel-nav-btn left" data-target="now-showing"><i class="fas fa-chevron-left"></i></button>
+                <button class="movie-carousel-nav-btn right" data-target="now-showing"><i class="fas fa-chevron-right"></i></button>
+                <div class="movie-horizontal-list" id="now-showing">
+         
+                </div>
+            </div>
+        </div>
+
+        <div class="movie-section" id="coming-soon-section" style="background: transparent;">
+            <h2 class="movie-section-title" id="coming-soon-section"><i class="fa fa-clock"></i> Phim sắp chiếu</h2>
+            <div class="movie-carousel-nav-wrap">
+                <button class="movie-carousel-nav-btn left" data-target="coming-soon"><i class="fas fa-chevron-left"></i></button>
+                <button class="movie-carousel-nav-btn right" data-target="coming-soon"><i class="fas fa-chevron-right"></i></button>
+                <div class="movie-horizontal-list" id="coming-soon">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="listfilm">
+            <div class="listfilm__navbar">
+                <div class="listfilm__navbar-search">
+                    <button class="search__btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" placeholder="Search Film" class="search__input">
+                </div>
+                <div class="listfilm__navbar-genre">
+                    <button class="genre-btn" id="genreDropdownBtn">Thể Loại <i class="fas fa-chevron-down"></i></button>
+                    <div class="listfilm__navbar-genre-content" id="genreDropdown">
+                        <!-- Thể loại sẽ được thêm vào đây bằng JavaScript -->
+                    </div>
+                </div>
+                <div class="listfilm__navbar-btnnow">
+                    <button class="listfilmnow">Phim Đang Chiếu</button>
+                </div>
+                <div class="listfilm__navbar-btnfuture">
+                    <button class="listfilmfulture">Phim Sắp Chiếu</button>
+                </div>
+            </div>
+
+            <div id="movie" class="listfilm__container">
+                <p class="title_container">Movies</p>
+
+                <!-- Phim se xuat hien ở đây -->
+            </div>
+        </div>
+
+
+        <!-- Thanh chi tiết đặt vé  -->
+        <div class="NavbarLeftContainer">
+            <div class="NavbarLeftContainer__header">
+                <p>Zeron</p>
+            </div>
+            <div class="NavbarLeftContainer__content">
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Trang chủ</span>
+                </a>
+                <a href="@Url.Action("CustomerInfor","Home")" class="nav-item">
+                    <i class="fas fa-user"></i>
+                    <span>Thông tin cá nhân</span>
+                </a>
+                <a href="@Url.Action("historyBooking","Home")" class="nav-item">
+                    <i class="fas fa-history"></i>
+                    <span>Lịch sử đặt vé</span>
+                </a>
+                <div class="nav-divider"></div>
+                <a href="#" class="nav-item nav-nowshowing">
+                    <i class="fas fa-play-circle"></i>
+                    <span>Phim đang chiếu</span>
+                </a>
+                <a href="#" class="nav-item nav-comingsoon">
+                    <i class="fas fa-clock"></i>
+                    <span>Phim sắp chiếu</span>
+                </a>
+                <div class="nav-divider"></div>
+                <div class="logout">
+                    <button class="navbar__content-btn logout btn-logout"><i class="fas fa-sign-out-alt"></i> ĐĂNG XUẤT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container__footer">
+            <h3>Ký ức đẹp bắt đầu từ một bộ phim hay!</h3>
+        </div>
+        <div class="footercontent">
+            <div class="navbar__logo navbar__logo2">
+                <img src="@Url.Content("~/Content/assets/images/logo.png")" alt="logo" class="navbar__logo-item">
+                <span class="navbar__logo-name">Zeron</span>
+            </div>
+            <ul class="footercontent__ContactInf">
+                <li><p class="footercontent__header">Hỗ Trợ</p></li>
+                <li>
+                    <div class="footercontent__ContactInf-list">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>0948 203 816</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="footercontent__ContactInf-list">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>zeron_cinema@gmail.com</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="footercontent__ContactInf-list">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Số 16 Nguyễn Lương Bằng, Hòa Khánh Bắc, Đà Nẵng</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="footercontent__QuickLink">
+                <li><p class="footercontent__header">Liên Kết Nhanh</p></li>
+                <li><a class="footercontent__QuickLink-list" href="##">Trang Chủ</a></li>
+                <li><a class="footercontent__QuickLink-list" href="##">Đặt Vé</a></li>
+                <li><a class="footercontent__QuickLink-list" href="##">Thể Loại</a></li>
+
+            </ul>
+            <ul class="footercontent__SocialMedia">
+                <p class="footercontent__header">Mạng Xã Hội</p></li>
+                <div class="footercontent__SocialMedia-list">
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                    <a href="https://zalo.me" target="_blank"><i class="fa-solid fa-comment-dots fa-2x"></i></a>
+                </div>
+            </ul>
+            <div><p class="line"></p></div>
+        </div>
+    </footer>
+    <!-- Booking Modal -->
+    <div class="booking-modal hidden">
+        <div class="booking-modal__content">
+            <button class="booking-modal__close" onclick="closeBookingModal()">×</button>
+            <div class="booking-modal__header">
+                <h2>Đặt Vé Xem Phim</h2>
+            </div>
+            <div class="booking-modal__body">
+                <div class="booking-modal__container">
+                    <!-- Thông tin phim -->
+                    <div class="movie-info">
+                        <div class="movie-info__poster">
+                            <img src="" alt="poster" id="modal-movie-poster">
+                        </div>
+                        <div class="movie-info__details">
+                            <h3 class="movie-info__title" id="modal-movie-title"></h3>
+                            <div class="movie-info__meta" id="modal-movie-meta">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Phần bên phải -->
+                    <div class="booking-info">
+                        <!-- Chọn ngày -->
+                        <div class="booking-modal__date">
+                            <h3>Chọn ngày chiếu</h3>
+                            <div id="date-list" class="date-list">
+                            </div>
+                        </div>
+
+                        <!-- Chọn suất chiếu -->
+                        <div class="booking-modal__showtime">
+                            <h3>Chọn suất chiếu</h3>
+                            <div class="showtime-list">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="@Url.Content("~/Scripts/js/tabpage.js")" defer></script>
+    <script src="@Url.Content("~/Scripts/js/home.js")" defer></script>
+    <script src="@Url.Content("~/Scripts/js/auth.js")" defer></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</body>
+</html>

@@ -11,11 +11,26 @@ namespace Datvexemfilm.Controllers
     {
         private readonly AppDbContext _dbContext = new AppDbContext();
         [HttpGet]
-
         public JsonResult getallscreen()
         {
            var rooms=_dbContext.Rooms.ToList();
             return Json(rooms, JsonRequestBehavior.AllowGet);
         }
+        [HttpGet]
+        public JsonResult addscreen(Room tmp)
+        {
+            var rooms = new Room
+            {
+                Room_Name = tmp.Room_Name,
+                capacity = tmp.capacity,
+                Status = tmp.Status,
+                Row = tmp.Row,
+                Col = tmp.Row
+            };
+            _dbContext.Rooms.Add(rooms);
+            _dbContext.SaveChanges();
+            return Json(rooms, JsonRequestBehavior.AllowGet);
+        }
+
     }
 }

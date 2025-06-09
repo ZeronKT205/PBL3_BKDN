@@ -1,9 +1,9 @@
 
 function goToPageLogin() {
-    window.location.href = "/Home/userlogin";
+    window.location.href = "/User/userlogin";
 }
 function goToPageSignUp() {
-    window.location.href = "/Home/usersignup";
+    window.location.href = "/User/usersignup";
 }
 
 function toggleContent(type) {
@@ -170,6 +170,6 @@ function proceedToSeatSelection() {
     
     // Chuyển hướng sau khi hiệu ứng hoàn thành
     setTimeout(() => {
-        window.location.href = 'bookingTicket.html';
+        window.location.href = '/Booking/bookingTicket';
     }, 400);
 }

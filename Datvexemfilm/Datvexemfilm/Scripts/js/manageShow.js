@@ -94,60 +94,6 @@ if (addShowModal) {
 }
 
 
-/*
-// Xử lý submit form thêm/sửa suất chiếu    (hàm tham khảo)
-if (addShowForm) {
-  addShowForm.addEventListener('submit', async function(e) {
-    e.preventDefault();
-    // Lấy dữ liệu từ form
-    const formData = {
-      movieId: document.getElementById('showMovie').value,
-      screenId: document.getElementById('showScreen').value,
-      date: document.getElementById('showDate').value,
-      startTime: document.getElementById('showStartTime').value,
-      endTime: document.getElementById('showEndTime').value,
-      price: document.getElementById('showPrice').value
-    };
-    // Kiểm tra đang sửa hay thêm mới
-    const editId = addShowForm.getAttribute('data-edit-id');
-    try {
-      let response;
-      if (editId) {
-        // Sửa suất chiếu
-        response = await fetch(`/api/shows/${editId}`, {
-          method: 'PUT',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData)
-        });
-      } else {
-        // Thêm mới suất chiếu
-        response = await fetch('/api/shows', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData)
-        });
-      }
-      if (response.ok) {
-        addShowModal.classList.add('hidden');
-        addShowForm.reset();
-        addShowForm.removeAttribute('data-edit-id');
-        alert(editId ? 'Cập nhật suất chiếu thành công!' : 'Thêm suất chiếu thành công!');
-        // TODO: Refresh lại bảng dữ liệu
-      } else {
-        alert('Có lỗi xảy ra. Vui lòng thử lại!');
-      }
-    } catch (err) {
-      alert('Có lỗi kết nối server.');
-      console.error(err);
-    }
-  });
-}
-*/
-
-//----------------- End Hàm Thêm Và Sửa Suất Chiếu -----------------//
-
-
-
 
 
 //----------------- Hàm Xóa Suất Chiếu -----------------//
@@ -240,7 +186,7 @@ function updateMovieAndScreenLists_(showData) {
 // Cập nhật hàm loadshow
 window.loadshow = async function() {
     try {
-        const response = await fetch("https://localhost:44343/Show/getallshow", {
+        const response = await fetch(`/Show/getallshow`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"
@@ -309,18 +255,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-/*
-    Note: 
-    - Kiểm tra trùng suất chiếu
-    - Backend cần kiểm tra không cho phép tạo 2 suất chiếu trùng phòng, trùng thời gian (overlap).
-    - Validate dữ liệu
-    - Kiểm tra các trường bắt buộc: movieId, screenId, date, startTime, endTime, price.
-    - Kiểm tra giá trị hợp lệ: ngày không ở quá khứ, giờ bắt đầu < giờ kết thúc, giá vé > 0.
-
-
-    - Trong hàm xóa suất chiếu hãy chú ý phần call API rồi thêm xử lý backend vào đó. Nhớ thêm điều kiện để khi
-     xóa thahf công mới cập nhập xóa ở ngoài view
-*/
 
 // Hàm xử lý xem chi tiết đặt vé
 
@@ -329,11 +263,12 @@ document.addEventListener('DOMContentLoaded', function() {
 const ShowManager = {
     originalShows: [],
     currentEditId: null,
-    movieList: [], // Thêm biến lưu danh sách phim
-    screenList: [], // Thêm biến lưu danh sách phòng chiếu
+    movieList: [],
+    screenList: [],
 
     init: function() {
         this.attachEventListeners();
+        this.loadShows();
     },
 
     loadShows: async function() {
@@ -355,7 +290,7 @@ const ShowManager = {
             
             const tbody = document.querySelector('.mainPage__Shows__containerinfo-table tbody');
             if (!tbody) {
-                console.error('Table body not found. Available elements:', document.querySelectorAll('tbody'));
+                console.error('Table body not found');
                 return;
             }
 
@@ -363,13 +298,14 @@ const ShowManager = {
                 id: String(show.ID_Show),
                 movie: show.Name_Movie,
                 screen: show.Name_Room,
-                date: convertDotNetDateToVN(show.Day),
+                date: this.convertDotNetDateToVN(show.Day),
                 startTime: `${show.Start_Movie.Hours}:${show.Start_Movie.Minutes}`,
                 endTime: `${show.End_Movie.Hours}:${show.End_Movie.Minutes}`,
                 price: show.Price
             }));
 
             this.updateShowTable(this.originalShows);
+            this.attachTableEventListeners();
         } catch (error) {
             console.error("Error loading shows:", error);
         }
@@ -377,208 +313,50 @@ const ShowManager = {
 
     updateShowTable: function(shows) {
         const tbody = document.querySelector('.mainPage__Shows__containerinfo-table tbody');
-        if (!tbody) {
-            console.error('Table body not found in updateShowTable');
-            return;
-        }
-        tbody.innerHTML = '';
+        if (!tbody) return;
 
-        shows.forEach(show => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
+        tbody.innerHTML = shows.map(show => `
+            <tr>
                 <td>${show.id}</td>
                 <td>${show.movie}</td>
                 <td>${show.screen}</td>
                 <td>${show.date}</td>
                 <td>${show.startTime}</td>
                 <td>${show.endTime}</td>
-                <td>${parseInt(show.price).toLocaleString('vi-VN')} VND</td>
+                <td>${show.price}</td>
                 <td>
-                    <button class="EditShow" data-id="${show.id}">Edit</button>
-                    <button class="DeleteShow" data-id="${show.id}">Xóa</button>
+                    <button class="EditShow" data-id="${show.id}">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="DeleteShow" data-id="${show.id}">
+                        <i class="fas fa-trash"></i>
+                    </button>
                 </td>
-            `;
-            tbody.appendChild(row);
-        });
+            </tr>
+        `).join('');
+    },
 
-        // Gắn sự kiện cho các nút Edit và Delete
-        const editButtons = document.querySelectorAll('.EditShow');
-        editButtons.forEach(btn => {
-            btn.onclick = (e) => {
-                console.log('Edit button clicked');
-                const showId = e.target.getAttribute('data-id');
-                console.log('Show ID:', showId);
+    attachTableEventListeners: function() {
+        // Edit buttons
+        document.querySelectorAll('.EditShow').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const showId = e.target.closest('.EditShow').getAttribute('data-id');
                 const show = this.originalShows.find(s => s.id === showId);
-                console.log('Found show:', show);
                 if (show) {
                     this.showEditModal(show);
-                } else {
-                    console.error('Show not found with ID:', showId);
                 }
-            };
+            });
         });
 
-        const deleteButtons = document.querySelectorAll('.DeleteShow');
-        deleteButtons.forEach(btn => {
+        // Delete buttons
+        document.querySelectorAll('.DeleteShow').forEach(btn => {
             btn.addEventListener('click', (e) => {
-                const showId = e.target.getAttribute('data-id');
+                const showId = e.target.closest('.DeleteShow').getAttribute('data-id');
                 if (confirm('Bạn có chắc chắn muốn xóa suất chiếu này?')) {
                     this.deleteShow(showId);
                 }
             });
         });
-    },
-
-    deleteShow: async function(showId) {
-        try {
-            const response = await fetch(`${window.location.origin}/Show/DeleteShow?show_id=${showId}`, {
-                method: 'DELETE',
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            });
-
-            if (!response.ok) throw new Error('Xóa suất chiếu thất bại');
-
-            // Cập nhật lại danh sách
-            this.originalShows = this.originalShows.filter(show => show.id !== showId);
-            this.updateShowTable(this.originalShows);
-        } catch (error) {
-            console.error('Error deleting show:', error);
-            alert('Có lỗi xảy ra: ' + error.message);
-        }
-    },
-
-    loadMovies: async function() {
-        try {
-            const response = await fetch(`${window.location.origin}/Film/GetFilm`, {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            });
-            const movies = await response.json();
-            this.movieList = movies; // Lưu danh sách phim
-            const movieSelect = document.getElementById('showMovie');
-            if (movieSelect) {
-                movieSelect.innerHTML = '<option value="">Chọn phim</option>';
-                movies.forEach(movie => {
-                    const option = document.createElement('option');
-                    option.value = movie.ID_Movie;
-                    option.textContent = movie.name;
-                    movieSelect.appendChild(option);
-                });
-            }
-        } catch (error) {
-            console.error("Error loading movies:", error);
-        }
-    },
-
-    loadScreens: async function() {
-        try {
-            const response = await fetch(`${window.location.origin}/Screen/getallscreen`, {
-                method: "GET",
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            });
-            const screens = await response.json();
-            this.screenList = screens; // Lưu danh sách phòng chiếu
-            const screenSelect = document.getElementById('showScreen');
-            if (screenSelect) {
-                screenSelect.innerHTML = '<option value="">Chọn phòng chiếu</option>';
-                screens.forEach(screen => {
-                    const option = document.createElement('option');
-                    option.value = screen.Room_ID;
-                    option.textContent = screen.Room_Name;
-                    screenSelect.appendChild(option);
-                });
-            }
-        } catch (error) {
-            console.error("Error loading screens:", error);
-        }
-    },
-
-    showAddModal: function() {
-        const modal = document.getElementById('addShowModal');
-        if (!modal) {
-            console.error('Add modal element not found');
-            return;
-        }
-
-        // Load movies and screens for dropdowns
-        this.loadMovies();
-        this.loadScreens();
-
-        // Reset form
-        const form = document.getElementById('addShowForm');
-        if (form) {
-            form.reset();
-        }
-
-        modal.classList.remove('hidden');
-    },
-
-    showEditModal: async function(show) {
-        console.log('Opening edit modal for show:', show);
-        const modal = document.getElementById('editShowModal');
-        if (!modal) {
-            console.error('Edit modal element not found');
-            return;
-        }
-
-        // Load movies and screens for dropdowns
-        await this.loadMovies();
-        await this.loadScreens();
-
-        // Fill form with show data
-        const form = document.getElementById('editShowForm');
-        if (!form) {
-            console.error('Edit form element not found');
-            return;
-        }
-
-        try {
-            document.getElementById('editShowId').value = show.id;
-            
-            // Set movie name
-            const movieInput = document.getElementById('editMovieTitle');
-            if (movieInput) movieInput.value = show.movie;
-            
-            // Set screen name
-            const screenInput = document.getElementById('editScreenName');
-            if (screenInput) screenInput.value = show.screen;
-            
-            // Format date from dd/MM/yyyy to yyyy-MM-dd
-            const [day, month, year] = show.date.split('/');
-            const formattedDate = `${year}-${month}-${day}`;
-            document.getElementById('editShowDate').value = formattedDate;
-
-            document.getElementById('editStartTime').value = show.startTime;
-            document.getElementById('editEndTime').value = show.endTime;
-            
-            // Format price to remove VND and dots
-            const priceInput = document.getElementById('editPrice');
-            if (priceInput) {
-                const price = show.price.toString().replace(/[^\d]/g, '');
-                priceInput.value = price;
-            }
-
-            modal.classList.remove('hidden');
-            console.log('Edit modal opened successfully');
-        } catch (error) {
-            console.error('Error showing edit modal:', error);
-        }
-    },
-
-    findMovieIdByName: function(movieName) {
-        const movie = this.movieList.find(m => m.name === movieName);
-        return movie ? movie.ID_Movie : null;
-    },
-
-    findScreenIdByName: function(screenName) {
-        const screen = this.screenList.find(s => s.Room_Name === screenName);
-        return screen ? screen.Room_ID : null;
     },
 
     attachEventListeners: function() {
@@ -617,11 +395,8 @@ const ShowManager = {
                     Start_Movie: document.querySelector('#showStartTime').value,
                     End_Movie: document.querySelector('#showEndTime').value,
                     Price: document.querySelector('#showPrice').value,
-                    Status:"ON"
+                    Status: "ON"
                 };
-
-                // Log show data object
-                console.log('Show Data Object:', showData);
 
                 try {
                     const response = await fetch('/Show/addshow', {
@@ -632,16 +407,13 @@ const ShowManager = {
                         body: JSON.stringify(showData)
                     });
 
-                    // Log response
-                    console.log('Response status:', response.status);
                     const result = await response.json();
-                    console.log('Response data:', result);
 
                     if (response.ok) {
                         alert('Thêm suất chiếu thành công!');
                         const modal = document.getElementById('addShowModal');
                         if (modal) modal.classList.add('hidden');
-                        window.loadshow();
+                        await this.loadShows();
                     } else {
                         alert('Lỗi: ' + result.message);
                     }
@@ -652,36 +424,25 @@ const ShowManager = {
             };
         }
 
-        // Edit show form submission
+        // Edit form submission
         const editForm = document.getElementById('editShowForm');
         if (editForm) {
             editForm.onsubmit = async (e) => {
                 e.preventDefault();
-                const movieName = document.querySelector('#editMovieTitle').value;
-                const screenName = document.querySelector('#editScreenName').value;
-                
-                // Tìm ID từ tên trong danh sách đã lưu
-                const movie = this.movieList.find(m => m.name === movieName);
-                const screen = this.screenList.find(s => s.Room_Name === screenName);
-                
-                if (!movie || !screen) {
-                    alert('Không tìm thấy thông tin phim hoặc phòng chiếu!');
-                    return;
-                }
-
+                const showId = document.getElementById('editShowId').value;
                 const showData = {
-                    Show_ID: document.querySelector('#editShowId').value,
-                    Room_ID: screen.Room_ID,
-                    ID_Movie: movie.ID_Movie,
-                    Start_Movie: document.querySelector('#editStartTime').value + ":00",
-                    End_Movie: document.querySelector('#editEndTime').value + ":00",
+                    Show_ID: showId,
+                    ID_Movie: document.querySelector('#editMovieTitle').value,
+                    Room_ID: document.querySelector('#editScreenName').value,
                     Day: document.querySelector('#editShowDate').value,
-                    Status: "ON",
-                    Price: document.querySelector('#editPrice').value
+                    Start_Movie: document.querySelector('#editStartTime').value,
+                    End_Movie: document.querySelector('#editEndTime').value,
+                    Price: document.querySelector('#editPrice').value,
+                    Status: "ON"
                 };
-                console.log('Update Data:', showData);
+
                 try {
-                    const response = await fetch(`${window.location.origin}/Show/UpdateShow/${showData.Show_ID}`, {
+                    const response = await fetch(`/Show/UpdateShow/${showId}`, {
                         method: 'PUT',
                         headers: {
                             'Content-Type': 'application/json'
@@ -691,10 +452,9 @@ const ShowManager = {
                     
                     if (!response.ok) throw new Error('Cập nhật suất chiếu thất bại');
                     
-                    // Close modal and reload shows
                     const modal = document.getElementById('editShowModal');
                     if (modal) modal.classList.add('hidden');
-                    window.loadshow();
+                    await this.loadShows();
                     alert('Cập nhật suất chiếu thành công!');
                     
                 } catch (error) {
@@ -704,32 +464,124 @@ const ShowManager = {
             };
         }
 
-        // Edit button handling in table
-        document.addEventListener('click', (e) => {
-            if (e.target.classList.contains('EditShow')) {
-                const showId = e.target.getAttribute('data-id');
-                const show = this.originalShows.find(s => s.id === showId);
-                if (show) {
-                    this.showEditModal(show);
-                }
-            }
-        });
-
-        // Delete button handling in table
-        document.addEventListener('click', (e) => {
-            if (e.target.classList.contains('DeleteShow')) {
-                const showId = e.target.getAttribute('data-id');
-                this.deleteShow(showId);
-            }
-        });
-
         // Listen for tab changes
         const showsTab = document.querySelector('.navbar__management-Shows');
         if (showsTab) {
             showsTab.addEventListener('click', () => {
-                console.log('Shows tab clicked');
                 setTimeout(() => this.loadShows(), 100);
             });
+        }
+    },
+
+    deleteShow: async function(showId) {
+        try {
+            const response = await fetch(`/Show/DeleteShow?show_id=${showId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (!response.ok) throw new Error('Xóa suất chiếu thất bại');
+
+            this.originalShows = this.originalShows.filter(show => show.id !== showId);
+            this.updateShowTable(this.originalShows);
+            this.attachTableEventListeners();
+            alert('Xóa suất chiếu thành công!');
+        } catch (error) {
+            console.error('Error deleting show:', error);
+            alert('Có lỗi xảy ra: ' + error.message);
+        }
+    },
+
+    convertDotNetDateToVN: function(dateString) {
+        const date = new Date(dateString);
+        return `${date.getDate().toString().padStart(2, '0')}/${(date.getMonth() + 1).toString().padStart(2, '0')}/${date.getFullYear()}`;
+    },
+
+    showAddModal: async function() {
+        const modal = document.getElementById('addShowModal');
+        if (!modal) return;
+
+        // Load movies and screens for dropdowns
+        await this.loadMovies();
+        await this.loadScreens();
+
+        modal.classList.remove('hidden');
+    },
+
+    showEditModal: async function(show) {
+        const modal = document.getElementById('editShowModal');
+        if (!modal) return;
+
+        // Load movies and screens for dropdowns
+        await this.loadMovies();
+        await this.loadScreens();
+
+        try {
+            document.getElementById('editShowId').value = show.id;
+            document.getElementById('editMovieTitle').value = show.movie;
+            document.getElementById('editScreenName').value = show.screen;
+            
+            const [day, month, year] = show.date.split('/');
+            document.getElementById('editShowDate').value = `${year}-${month}-${day}`;
+            
+            document.getElementById('editStartTime').value = show.startTime;
+            document.getElementById('editEndTime').value = show.endTime;
+            
+            const priceInput = document.getElementById('editPrice');
+            if (priceInput) {
+                const price = show.price.toString().replace(/[^\d]/g, '');
+                priceInput.value = price;
+            }
+
+            modal.classList.remove('hidden');
+        } catch (error) {
+            console.error('Error showing edit modal:', error);
+        }
+    },
+
+    loadMovies: async function() {
+        try {
+            const response = await fetch(`/Movie/getallmovie`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            this.movieList = await response.json();
+            
+            const movieSelect = document.querySelector('#showMovie');
+            if (movieSelect) {
+                movieSelect.innerHTML = '<option value="">Chọn phim</option>' +
+                    this.movieList.map(movie => 
+                        `<option value="${movie.ID_Movie}">${movie.name}</option>`
+                    ).join('');
+            }
+        } catch (error) {
+            console.error('Error loading movies:', error);
+        }
+    },
+
+    loadScreens: async function() {
+        try {
+            const response = await fetch(`/Screen/getallscreen`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            this.screenList = await response.json();
+            
+            const screenSelect = document.querySelector('#showScreen');
+            if (screenSelect) {
+                screenSelect.innerHTML = '<option value="">Chọn phòng chiếu</option>' +
+                    this.screenList.map(screen => 
+                        `<option value="${screen.Room_ID}">${screen.Room_Name}</option>`
+                    ).join('');
+            }
+        } catch (error) {
+            console.error('Error loading screens:', error);
         }
     }
 };

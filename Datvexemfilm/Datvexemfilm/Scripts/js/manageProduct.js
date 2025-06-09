@@ -18,29 +18,18 @@ const imgPlaceholderProduct = document.getElementById('imgUploadPlaceholder');
 
 if (imgUploadAreaProduct && imgInputProduct && imgPreviewProduct && imgRemoveBtnProduct && imgChooseBtnProduct && imgPlaceholderProduct) {
     // Thêm console.log để debug
-    console.log('Image elements found:', {
-        uploadArea: imgUploadAreaProduct,
-        input: imgInputProduct,
-        preview: imgPreviewProduct,
-        removeBtn: imgRemoveBtnProduct,
-        chooseBtn: imgChooseBtnProduct,
-        placeholder: imgPlaceholderProduct
-    });
 
     imgUploadAreaProduct.addEventListener('click', () => {
-        console.log('Upload area clicked');
         imgInputProduct.click();
     });
     
     imgChooseBtnProduct.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
-        console.log('Choose button clicked');
         imgInputProduct.click();
     });
     
     imgInputProduct.addEventListener('change', (e) => {
-        console.log('File input changed:', e.target.files);
         handleImgChange();
     });
     
@@ -119,7 +108,7 @@ function closeaddComboModalProduct() {
 // // Hàm gọi API thêm combo mới
 async function addComboAPI(comboData) {
     try {
-        const response = await fetch("https://localhost:44343/Product/addProduct", {
+        const response = await fetch(`/Product/addProduct`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -184,7 +173,7 @@ async function handleDeleteCombo(e) {
 // Hàm gọi API xóa combo
 async function deleteComboAPI(comboId) {
     try {
-        const response = await fetch(`https://localhost:44343/Product/deleteProduct?id=${comboId}`, {
+        const response = await fetch(`/Product/deleteProduct?id=${comboId}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
@@ -289,7 +278,7 @@ addComboModalProduct.addEventListener('transitionend', function() {
 // // Hàm gọi API sửa combo
 async function editComboAPI(comboId, comboData) {
     try {
-        const response = await fetch("https://localhost:44343/Product/updateProduct", {
+        const response = await fetch(`/Product/updateProduct`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -430,7 +419,7 @@ function handleSearch() {
 }
 window.loadproduct = async function () {
     try {
-        const response = await fetch("https://localhost:44343/Product/getallproduct", {
+        const response = await fetch(`/Product/getallproduct`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json"

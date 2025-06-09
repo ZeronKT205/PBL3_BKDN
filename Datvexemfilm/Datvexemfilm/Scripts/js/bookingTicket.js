@@ -1,6 +1,6 @@
 function payment_age(user_id, show_id, room_id, seat, total,bookingid) {
     const encodedSeat = encodeURIComponent(seat.replace(/'/g, ''));
-    window.location.href = `/Payment/Payment_Booking?user_id=${user_id}&show_id=${show_id}&room_id=${room_id}&seat=${encodedSeat}&total=${total}&bookingid=${bookingid}`;
+    window.location.href = `/Payment/Payment?user_id=${user_id}&show_id=${show_id}&room_id=${room_id}&seat=${encodedSeat}&total=${total}&bookingid=${bookingid}`;
 }
 let booking_id;
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,7 +23,7 @@ async function bookseat(seats) {
     const totalRaw = document.querySelector('.price.total-price').textContent;
     const totalClean = totalRaw.replace(/[^\d]/g, '');
 
-    const response = await fetch(`${window.location.origin}/Seat/Seat_Booking`, {
+    const response = await fetch(`/Seat/Seat_Booking`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -44,7 +44,7 @@ async function bookseat(seats) {
         total: parseInt(totalClean, 10) 
     };
 
-    const _response = await fetch(`${window.location.origin}/Booking/Booking`, {
+    const _response = await fetch(`/Booking/Booking`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(booking)

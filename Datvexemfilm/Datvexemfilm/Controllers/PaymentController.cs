@@ -11,16 +11,12 @@ namespace Datvexemfilm.Controllers
     public class PaymentController : Controller
     {
         private readonly AppDbContext _dbContext = new AppDbContext();
-        public ActionResult Payment()
-        {
-            return View();
-        }
         public string getemail(int user_id)
         {
             var email = _dbContext.Accounts.Where(a => a.User_ID == user_id).Select(a => a.Email).FirstOrDefault();
             return email ?? string.Empty; // Return empty string if email is null
         }
-        public ActionResult Payment_Booking(int user_id, int show_id, int room_id, string seat, string total, int bookingid)
+        public ActionResult Payment(int user_id, int show_id, int room_id, string seat, string total, int bookingid)
         {
             var _show = _dbContext.Shows.Include("Film").FirstOrDefault(s => s.Show_ID == show_id);
             var _room = _dbContext.Rooms.FirstOrDefault(r => r.Room_ID == room_id);
@@ -40,7 +36,7 @@ namespace Datvexemfilm.Controllers
                 Show_ID = show_id,
                 Booking_ID = bookingid
             };
-            return View("~/Views/Home/Payment.cshtml", tmp);
+            return View(tmp);
         }
         [HttpPost]
         public JsonResult addPayment(int Booking_ID, int Amount)
@@ -64,7 +60,11 @@ namespace Datvexemfilm.Controllers
                 var seat = _dbContext.Seats.FirstOrDefault(s => s.Seat_ID == seatOrder.Seat_ID);
                 if (seat == null)
                     return Json(new { success = false, message = "Không tìm thấy seat." });
-
+                var bookedChoices = (seat.Booked ?? "").Split(',');
+                if (bookedChoices.Contains(seatOrder.Choice))
+                {
+                    return Json(new { success = false, message = "Ghế đã được người khác đặt trước." });
+                }
                 // Update seat booking status
                 if (string.IsNullOrEmpty(seat.Booked))
                     seat.Booked = seatOrder.Choice ?? string.Empty;

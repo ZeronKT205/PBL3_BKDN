@@ -1,0 +1,451 @@
+.mainPage__Movies{
+    display: grid;
+    grid-template-rows: 20% 90px 70%;
+    background:linear-gradient(to top, rgba(0,0,0,0.3),rgb(69, 49, 62)), url("../images/bg__admin.jpg") no-repeat center/cover;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position:relative;
+}
+
+.mainPage__Movies-title{
+    border-bottom: 3px inset #2b4f81;         /* Xanh đậm trung tính */
+    border-left: 3px inset #365a8d;           /* Xanh than gần nền */
+    box-shadow: 0px 4px 12px rgba(51, 112, 197, 0.6); /* Nhẹ, tông xanh dịu */
+    border-radius: 5px;
+    color: #e0f0ff;                           /* Trắng xanh nhẹ, không gắt */
+    font-weight: normal;
+    font-size: 18px;
+    padding: 3px 20px;
+    width: 350px !important;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    animation: fadeIn 1.3s ease-in-out forwards;
+}
+.searchMovieBtn{
+  padding:10px 15px !important;
+  border-radius: 8px;
+  border:none;
+  background-color: rgb(59, 65, 182);
+  color: white;
+}
+.mainPage__Movies-search{
+    display:flex;
+    width:60%;
+    height: auto;
+    align-items: center;
+    justify-self: center;
+    animation: fadeIn 1.3s ease-in-out forwards;
+    justify-content: center;
+    color: rgb(227, 46, 146);
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 3px inset rgb(130, 130, 130);
+}
+.mainPage__Movies-search-input{
+    width: 400px;
+    font-size: 16px;
+    padding: 6px 7px;
+    border-radius: 3px;
+    border: none;
+    margin-left: 10px;
+
+}
+
+.mainPage__Movies-search button{
+    padding:4px 7px;
+    border-radius: 5px;
+    border:none;
+}
+button{
+  padding:10px 15px !important;
+  border-radius: 8px;
+  border:none;
+  background-color: rgb(59, 65, 182);
+  color: white;
+}
+
+.mainPage__Movies__Container {
+    width: 80%;
+    max-width: 1200px;
+    height: 80%;
+    margin: 50px auto;
+    border-radius: 12px;
+    overflow-y: auto;
+    background: rgba(9, 8, 10, 0.6);
+    border:2px inset rgb(180, 178, 180);
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.mainPage__Movies__Container table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    animation: fadeIn 1.3s ease-in-out forwards;
+}
+
+.mainPage__Movies__Container th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Viền dưới các ô */
+    font-size: 16px;
+}
+
+.mainPage__Movies__Container th {
+    background: #2b235f;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 12px;
+    text-align: center;
+    border-bottom:4px solid rgba(255, 255, 255, 0.1);
+}
+.mainPage__Movies__Container thead{
+    position:sticky;
+    top:0;
+    z-index: 1;
+}
+.mainPage__Movies__Container tbody tr{
+    background: rgba(52, 121, 170, 0.3);
+    color: rgb(217, 211, 211);
+    font-size: 15px;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+.mainPage__Movies__Container tbody tr:nth-child(odd) {
+    background: rgba(79, 156, 211, 0.3);
+}
+
+.mainPage__Movies__Container tbody tr:hover {
+    background: rgba(18, 41, 109, 0.5);
+}
+
+.mainPage__Movies__Container td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Optional button style */
+.mainPage__Movies__Container td button {
+    color: white;
+    background: transparent;
+    border: 1px solid #aaa;
+    padding: 4px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.mainPage__Movies__Container td button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+.mainPage__Movies__Container span {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+
+
+button:hover {
+    background-color: #006F8E; /* Màu nền khi di chuột vào nút */
+}
+
+/* Kiểu thanh cuộn */
+.mainPage__Movies__Container::-webkit-scrollbar {
+    width: 8px;  /* Đặt độ rộng cho thanh cuộn */
+
+}
+
+.mainPage__Movies__Container::-webkit-scrollbar-thumb {
+    background-color: #431e41;  /* Màu sắc cho phần thanh cuộn */
+    border-radius: 10px;  /* Tạo góc bo tròn cho thanh cuộn */
+    border: 2px solid #fff;  /* Thêm viền quanh thanh cuộn */
+}
+
+.mainPage__Movies__Container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;  /* Màu nền cho thanh cuộn */
+    border-radius: 10px;  /* Tạo góc bo tròn cho track */
+}
+
+/* Thêm hiệu ứng khi hover vào thanh cuộn */
+.mainPage__Movies__Container::-webkit-scrollbar:hover {
+    width: 12px;  /* Mở rộng thanh cuộn khi hover */
+}
+
+.AddMovieBtn {
+  background: linear-gradient(90deg, #2563eb, #38bdf8);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 12px !important;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 2px 8px rgba(56, 189, 248, 0.15);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+.AddMovieBtn i {
+  font-size: 16px;
+}
+.AddMovieBtn:hover {
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+  box-shadow: 0 4px 16px rgba(56, 189, 248, 0.25);
+  transform: translateY(-2px) scale(1.04);
+}
+
+
+
+.movie-modal {
+    position: fixed; 
+    inset: 0; 
+    z-index: 3000;
+    background: rgba(15,23,42,0.7);
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    transition: opacity 0.3s;
+}
+
+.movie-modal.hidden { 
+    display: none; 
+}
+
+.movie-modal__content {
+    background: #1e2332;
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(30,41,59,0.25);
+    padding: 32px;
+    width: 95vw;
+    max-width: 1200px;
+    max-height: 90vh;
+    color: #e0f0ff;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.3s;
+    overflow: hidden; /* Thay đổi từ auto sang hidden */
+}
+
+.movie-modal__content h2 {
+    color: #38bdf8;
+    margin-bottom: 18px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    padding-right: 50px;
+}
+
+.movie-form {
+    display: flex;
+    gap: 36px;
+    overflow-y: auto; /* Thêm thanh cuộn cho form */
+    padding-right: 20px; /* Thêm padding bên phải */
+    margin-right: -20px; /* Bù trừ padding để không bị lệch */
+}
+
+.movie-form__left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+}
+
+.movie-form__right {
+    flex: 0 0 300px; /* Cố định chiều rộng */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    height: fit-content;
+}
+
+.movie-form__right label{
+    color: #e0e7ef;
+    font-weight: 500;
+    margin-bottom: 4px;
+    font-size: 25px;
+}
+
+.movie-form__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 80px;
+}
+
+.movie-form__row {
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-form__row label {
+    color: #e0e7ef;
+    font-weight: 500;
+    margin-bottom: 4px;
+    font-size: 1rem;
+}
+
+.movie-form__row input,
+.movie-form__row textarea {
+    width: 100%;
+    padding: 10px 12px;
+    background: #0f172a;
+    border: 1.5px solid #334155;
+    border-radius: 6px;
+    color: #f1f5f9;
+    font-size: 1rem;
+    transition: border 0.2s;
+}
+
+.movie-form__row input:focus,
+.movie-form__row textarea:focus {
+    border: 1.5px solid #38bdf8;
+    outline: none;
+}
+
+.movie-poster-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.movie-poster-img {
+    width: 300px; height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #334155;
+    box-shadow: 0 2px 12px rgba(56,189,248,0.12);
+    margin-bottom: 15px;
+}
+
+.movie-poster-btn {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 18px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.movie-poster-btn:hover {
+    background: #38bdf8;
+    color: #222;
+}
+
+.btn-save {
+    background: linear-gradient(90deg, #2563eb, #38bdf8);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 22px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-save:hover {
+    background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+}
+
+.btn-delete {
+    background: #ef4444;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 22px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-delete:hover {
+    background: #b91c1c;
+}
+
+.btn-cancel {
+    background: transparent;
+    color: #e0e7ef;
+    border: 1.5px solid #64748b;
+    border-radius: 6px;
+    padding: 10px 22px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-cancel:hover {
+    background: #334155;
+    color: #fff;
+}
+
+.required { color: #ef4444; }
+
+@media (max-width: 900px) {
+    .movie-modal__content { min-width: 90vw; padding: 18px 6vw; }
+    .movie-form { flex-direction: column; gap: 18px; }
+    .movie-form__right { min-width: 0; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tùy chỉnh thanh cuộn */
+.movie-modal__content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.movie-modal__content::-webkit-scrollbar-track {
+    background: #1e2332;
+    border-radius: 4px;
+}
+
+.movie-modal__content::-webkit-scrollbar-thumb {
+    background: #38bdf8;
+    border-radius: 4px;
+}
+
+.movie-modal__content::-webkit-scrollbar-thumb:hover {
+    background: #0ea5e9;
+}
+
+/* Tùy chỉnh thanh cuộn cho form */
+.movie-form::-webkit-scrollbar {
+    width: 8px;
+}
+
+.movie-form::-webkit-scrollbar-track {
+    background: #1e2332;
+    border-radius: 4px;
+}
+
+.movie-form::-webkit-scrollbar-thumb {
+    background: #38bdf8;
+    border-radius: 4px;
+}
+
+.movie-form::-webkit-scrollbar-thumb:hover {
+    background: #0ea5e9;
+}

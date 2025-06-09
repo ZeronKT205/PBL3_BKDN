@@ -8,34 +8,30 @@ if (addUserForm) {
 
     // Lấy thông tin từ form
     const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+      const password = document.getElementById('password').value;
+      const email = document.getElementById('email').value;
     const role = document.getElementById('role').value;
-
     // Kiểm tra điều kiện
     if (!username || !password) {
       alert('Vui lòng điền đầy đủ thông tin.');
       return;
     }
 
-    // TODO: Gọi API để thêm User
-    // Ví dụ:
-    // fetch('/api/users', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify({ username, password, role }),
-    // })
-    // .then(response => response.json())
-    // .then(data => {
-    //   console.log('Success:', data);
-    //   // Cập nhật UI sau khi thêm User
-    // })
-    // .catch((error) => {
-    //   console.error('Error:', error);
-    // });
+     fetch('/User/Register', {
+       method: 'POST',
+       headers: {
+         'Content-Type': 'application/json',
+       },
+       body: JSON.stringify({ username, password,email, role }),
+     })
+     .then(response => response.json())
+     .then(data => {
+       console.log('Success:', data);
+     })
+     .catch((error) => {
+       console.error('Error:', error);
+     });
 
-    // Đóng modal sau khi thêm User
     document.getElementById('addUserModal').classList.add('hidden');
   });
 }

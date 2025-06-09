@@ -1,0 +1,109 @@
+@{ 
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeron | History Booking</title>
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/style.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/historyBooking.css")">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!--NAVBAR -->
+        <nav class="navbar">
+            <div class="navbar__logo">
+                <img src="@Url.Content("~/Content/assets/images/logo.png")" alt="logo" class="navbar__logo-item">
+                <span class="navbar__logo-name">Zeron</span>
+            </div>
+            <ul class="navbar__content">
+                <li><a href="@Url.Action("Home","Home")" class="navbar__content-item1">TRANG CHỦ</a></li>
+            </ul>
+        </nav>
+        <!--END NAVBAR -->
+        <!-- History Container -->
+        <section class="history-container">
+            <div class="history-container__header">
+                <h1><i class="fas fa-history"></i> Lịch sử đặt vé</h1>
+            </div>
+
+            <div class="history-container__search">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Tìm kiếm theo tên phim..." />
+                </div>
+            </div>
+
+            <div class="ticket-grid" id="ticketGrid"></div>
+            <div class="loading-state" style="display: none;">Đang tải...</div>
+            <div class="no-tickets" style="display: none;">Chưa có lịch sử đặt vé</div>
+        </section>
+    </div>
+
+    <!-- Modal for Ticket Details -->
+    <div class="modal" id="ticketModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Chi tiết vé</h2>
+                <button class="close-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container__footer">
+            <h3>Ký ức đẹp bắt đầu từ một bộ phim hay!</h3>
+        </div>
+        <div class="footercontent">
+            <div class="navbar__logo navbar__logo2">
+                <img src="@Url.Content("~/Content/assets/images/logo.png")" alt="logo" class="navbar__logo-item">
+                <span class="navbar__logo-name">Zeron</span>
+            </div>
+            <ul class="footercontent__ContactInf">
+                <li><p class="footercontent__header">Hỗ Trợ</p></li>
+                <li>
+                    <div class="footercontent__ContactInf-list">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>0948 203 816</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="footercontent__ContactInf-list">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>zeron_cinema@gmail.com</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="footercontent__ContactInf-list">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Số 16 Nguyễn Lương Bằng, Hòa Khánh Bắc, Đà Nẵng</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="footercontent__QuickLink">
+                <li><p class="footercontent__header">Liên Kết Nhanh</p></li>
+                <li><a class="footercontent__QuickLink-list" href="##">Trang Chủ</a></li>
+                <li><a class="footercontent__QuickLink-list" href="##">Đặt Vé</a></li>
+                <li><a class="footercontent__QuickLink-list" href="##">Thể Loại</a></li>
+            </ul>
+            <ul class="footercontent__SocialMedia">
+                <p class="footercontent__header">Mạng Xã Hội</p></li>
+                <div class="footercontent__SocialMedia-list">
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                    <a href="https://zalo.me" target="_blank"><i class="fa-solid fa-comment-dots fa-2x"></i></a>
+                </div>
+            </ul>
+            <div><p class="line"></p></div>
+        </div>
+    </footer>
+
+    <script src="@Url.Content("~/Scripts/js/historyBooking.js")" defer></script>
+    <script src="@Url.Content("~/Scripts/js/auth.js")" defer></script>
+</body>
+</html>

@@ -20,12 +20,13 @@ namespace Datvexemfilm.Controllers
         public JsonResult getDay(int id)
         {
             var _day = _dbContext.Shows
-                .Where(s => s.ID_Movie == id)
-                .OrderBy(s=>s.Day)
+                .Where(s => s.ID_Movie == id && s.Day >= DateTime.UtcNow)
+                .OrderBy(s => s.Day)
                 .Select(s => new
                 {
                     s.Day
                 })
+                .Distinct()
                 .ToList();
             return Json(_day, JsonRequestBehavior.AllowGet);
         }
@@ -126,25 +127,7 @@ namespace Datvexemfilm.Controllers
             try
             {
                 var show = _dbContext.Shows.Find(show_id);
-                if (show == null)
-                {
-                    return Json(new { success = false, message = "Không tìm thấy suất chiếu!" }, JsonRequestBehavior.AllowGet);
-                }
-
-                // Xóa các bản ghi liên quan trong SeatOrder
-                var seatOrders = _dbContext.seatOrders.Where(so => so.Seat_ID == show_id);
-                _dbContext.seatOrders.RemoveRange(seatOrders);
-
-                // Xóa các bản ghi liên quan trong Booking
-                var bookings = _dbContext.Bookings.Where(b => b.Show_ID == show_id);
-                _dbContext.Bookings.RemoveRange(bookings);
-
-                // Xóa các bản ghi liên quan trong Seat
-                var seats = _dbContext.Seats.Where(s => s.Show_ID == show_id);
-                _dbContext.Seats.RemoveRange(seats);
-
-                // Xóa suất chiếu
-                _dbContext.Shows.Remove(show);
+               show.Status = "inactive";
                 _dbContext.SaveChanges();
 
                 return Json(new { success = true, message = "Xóa suất chiếu thành công!" }, JsonRequestBehavior.AllowGet);

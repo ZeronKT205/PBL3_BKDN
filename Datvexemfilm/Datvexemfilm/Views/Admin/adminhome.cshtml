@@ -1,0 +1,743 @@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeron | AdminHome</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/adminhomestyle.css")">
+    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/manageUsers.css")">
+    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/manageMovies.css")">
+    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/animation.css")">
+    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/manageScreens.css")">
+    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/manageShows.css")">
+    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/manageBooking.css")">
+    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/manageReport.css")">
+    <link rel = "stylesheet" href = "@Url.Content("~/Content/assets/css/manageFood.css")">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar__logo">
+            <img src="@Url.Content("~/Content/assets/images/logo.png")" alt="logo" class="navbar__logo-item">
+            <span class = "navbar__logo-name">Zeron</span>
+        </div>
+        <p class = "title">Menu Admin</p>
+        <div class="navbar__management">
+            <div class="navbar__management-Users">
+                <p><i class="fas fa-user-cog"></i> Quản Lý Tài Khoản</p>
+            </div>
+            <div class="navbar__management-Screens">
+                <p><i class="fas fa-building"></i> Quản Lý Rạp Chiếu</p>
+            </div>
+            <div class="navbar__management-Movies">
+                <p><i class="fas fa-film"></i> Quản Lý Phim</p>
+            </div>
+            <div class="navbar__management-Shows">
+                <p><i class="fas fa-clock"></i> Quản Lý Suất Chiếu</p>
+            </div>
+            <div class="navbar__management-Booking">
+                <p><i class="fas fa-ticket-alt"></i> Quản Lý Vé</p>
+            </div>
+            <div class="navbar__management-FoodDrinks">
+                <p><i class="fas fa-utensils"></i> Quản Lý Đồ Ăn & Uống</p>
+            </div>
+            <div class="navbar__management-SalesReport">
+                <p><i class="fas fa-chart-line"></i> Thống Kê Doanh Thu</p>
+            </div>
+        </div>
+        <div class="navbar__logout">
+            <button class="logout-btn btn-logout">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Đăng Xuất</span>
+            </button>
+        </div>
+    </div>
+    <div class="mainPage">
+        <!-- WELCOME -->
+        <div class="mainPage__Welcome">
+            <h1><span>WELCOME</span> TO ADMIN PAGE !!</h1>
+        </div>
+
+        <!-- QUAN LY TAI KHOAN -->
+        <div class="mainPage__Users hidden">
+            <div class="mainPage__Users-title">
+                <h1>Manage Users</h1>
+            </div>
+            <div class = "mainPage__Users-search">
+                <button class = "searchUserBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="text" placeholder="Search Username" class="mainPage__Users-search-input">
+                <button class="AddUserBtn"><i class="fa-solid fa-user-plus"></i> Thêm User</button>
+            </div>
+            <!-- Modal Thêm User -->
+            <div class="addUserModal hidden" id="addUserModal">
+                <div class="addUserModal__content">
+                    <h2>Thêm User Mới</h2>
+                    <form id="addUserForm">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="role">Role</label>
+                        <select id="role" name="role" required>
+                            <option value="admin">Admin</option>
+                            <option value="user">User</option>
+                        </select>
+                        <div class="addUserModal__actions">
+                            <button type="submit" class="confirmAddUser">Thêm</button>
+                            <button type="button" class="cancelAddUser">Hủy</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- Danh Sach Nguoi Dung -->
+            <div class="mainPage__Users-inf">
+                <table class="mainPage__Users-inf-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Roles</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userlist">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- QUAN LY RAP CHIEU -->
+        <div class="mainPage__Screens hidden">
+            <div class="mainPage__Screens-title">
+                <h1>Manage Screens</h1>
+            </div>
+            <div class = "mainPage__Screens-search">
+                <div>
+                    <h1>SCREENX</h1>
+                </div>
+                <!-- BUTTON SEARCH VÀ ADD THUỘC TÍNH POSITION -->
+                <div class="mainPage__Screens__BlockSearch">
+                    <div class="mainPage__Screens__BlockSearch-button">
+                        <button class = "mainPage__Screens__BlockSearch-button-add"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+                             <!--END BUTTON SEARCH VÀ ADD THUỘC TÍNH POSITION -->
+            </div>    
+            <div class="mainPage__Screens__ContainerListCard">
+                <!-- DANH SÁCH PHÒNG CHIẾU NẰM Ở ĐÂY -->
+            </div>
+
+            <!-- Detail Container -->
+            <div class="mainPage__Screens__DetailContainer hidden">
+                <div class="containerScreenx">
+                    <div class="closeScreen">×</div>
+                    <div class="input-container">
+                        <h1>Chỉnh Sửa Phòng Chiếu</h1>
+                        <div class="input-container__block1">
+                            <div>
+                                <label for="nameScreen">Tên Rạp:</label>
+                                <input type="text" id="nameScreen" />
+                            </div>
+                            <div>
+                                <label for="rows">Số Hàng:</label>
+                                <input type="number" id="rows" min="1" placeholder="Số hàng" />
+                            </div>
+                            <div>
+                                <label for="cols">Số Cột:</label>
+                                <input type="number" id="cols" min="1" placeholder="Số cột" />
+                            </div>
+                            <div>
+                                <label>Trạng Thái:</label>
+                                <select id="status_Room">
+                                    <option value="active">active</option>
+                                    <option value="inactive">inactive</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-container__block2">
+                            <button class="buttontaosodo" onclick="generateSeats()">Tạo Sơ Đồ</button>
+                            <button class="SubmitChangeSeatLayout">Submit</button>
+                        </div>
+                        <h1>\____________SCREEN____________/</h1>
+                    </div>
+                    <div id="seats-container" class="seats-container">
+                        <!-- Sơ đồ ghế sẽ hiển thị ở đây -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- QUAN LY PHIM -->
+        <div class="mainPage__Movies hidden">
+            <div class="mainPage__Movies-title">
+                <h1>Manage Movies</h1>
+            </div>
+            <div class = "mainPage__Movies-search">
+                <button class = "searchMovieBtn" ><i class="fa-solid fa-magnifying-glass"></i></button>
+                <input type="text" placeholder="Search Title" class="mainPage__Movies-search-input">
+                <button class="AddMovieBtn"><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <div class="mainPage__Movies__Container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>TITLE</th>
+                            <th>GENRENS</th>
+                            <th>RELEASE_DAY</th>
+                            <th>STATUS</th>
+                            <th>ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+
+                        <!-- Thêm nhiều phim nếu cần -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- QUAN LY SUAT CHIEU -->
+        <div class="mainPage__Shows hidden">
+            <div class="mainPage__Shows-title">
+                <h1>Manage Shows</h1>
+            </div>
+            <div class = "mainPage__Shows__Containersearch">
+                <div class = "mainPage__Shows__Containersearch-date">
+                    <label>Chọn Ngày</label>
+                    <input type="date" class = "mainPage__Shows__Containersearch-date-input">
+                </div>
+                <div class = "mainPage__Shows__Containersearch-screen">
+                    <label>Chọn Phòng</label>
+                    <select class = "mainPage__Shows__Containersearch-screen-select">
+                        <option value="0">Phòng Chiếu</option>
+                        
+                    </select>
+                </div>
+                <div class = "mainPage__Shows__Containersearch-movie">
+                    <label>Chọn Phim</label>
+                    <select class = "mainPage__Shows__Containersearch-movie-select">
+                        <option value="0">Tất Cả Phim</option>
+                        
+                    </select>
+                </div>
+                <div class="mainPage__Shows__Containersearch-button">
+                    <button class = "mainPage__Shows__Containersearch-button-search"><i class="fa-solid fa-filter"></i></button>
+                    <button class = "mainPage__Shows__Containersearch-button-add"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+            <!-- Danh Sach suat chieu -->
+            <div class="mainPage__Shows__containerinfo">
+                <table class = "mainPage__Shows__containerinfo-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Movie</th>
+                            <th>Screen</th>
+                            <th>Date</th>
+                            <th>StartTime</th>
+                            <th>EndTime</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            
+                            <!-- Dữ liệu từ cơ sở dữ liệu sẽ được chèn vào đây -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- QUAN LY VE -->
+        <div class="mainPage__Booking hidden">
+            <div class="mainPage__Booking-title">
+                <h1>Manage Booking</h1>
+            </div>
+            <div class = "mainPage__Booking__Containersearch">
+                <div class = "mainPage__Booking__Containersearch-date">
+                    <label>Chọn Ngày</label>
+                    <input type="date" class = "mainPage__Booking__Containersearch-date-input">
+                </div>
+                <div class = "mainPage__Booking__Containersearch-screen">
+                    <label>Chọn Phòng</label>
+                    <select class = "mainPage__Booking__Containersearch-screen-select">
+                        <option value="0">Phòng Chiếu</option>
+
+                    </select>
+                </div>
+                <div class = "mainPage__Booking__Containersearch-movie">
+                    <label>Chọn Phim</label>
+                    <select class = "mainPage__Booking__Containersearch-movie-select">
+    
+                    </select>
+                </div>
+                <div class="mainPage__Booking__Containersearch-button">
+                    <button class = "mainPage__Booking__Containersearch-button-search"><i class="fa-solid fa-filter"></i></button>
+                </div>
+            </div>
+            <!-- Danh Sach suat chieu -->
+            <div class="mainPage__Booking__containerinfo">
+                <table class="mainPage__Booking__containerinfo-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Movie</th>
+                            <th>Date</th>
+                            <th>Screenx</th>
+                            <th>Amount (VND)</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Ví dụ mẫu (sẽ thay bằng dữ liệu từ CSDL) -->
+                        <tr>
+                            <td>BK001</td>
+                            <td>john_doe</td>
+                            <td>The Dark Knight</td>
+                            <td>2023-10-01</td>
+                            <td>Screen A</td>
+                            <td>100,000</td>
+                            <td>
+                                <button class="view-btn">View</button>
+                            </td>
+                        </tr>
+                        <!-- Các dòng khác từ database sẽ thêm vào đây -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- QUAN LY DO AN & UONG -->
+        <div class="mainPage__FoodDrinks hidden">
+            <div class="mainPage__FoodDrinks-title">
+                <h1>Manage Food & Drinks</h1>
+            </div>
+            <div class = "mainPage__FoodDrinks-search">
+                <div class = "mainPage__FoodDrinks-search-search">
+                    <button class = "mainPage__FoodDrinks-search-search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <input type="text" placeholder="Search Username" class="mainPage__FoodDrinks-search-input">
+                </div>
+                <div class = "mainPage__FoodDrinks-add">
+                    <button class = "mainPage__FoodDrinks-add-button"><i class="fa-solid fa-plus"></i></button>
+                </div>
+            </div>
+            <div class = "mainPage__FoodDrinks-containerinfo">
+                <div class = "mainPage__FoodDrinks-containerinfo-card">
+                    <img src="@Url.Content("~/Content/assets/images/Product/combo1.png")" alt="Combo 1" class="mainPage__FoodDrinks-containerinfo-card-img">
+                    <div class = "mainPage__FoodDrinks-containerinfo-card-content">
+                        <p>Tên Combo: <span>Combo Thường 1</span></p>
+                        <p>Giá: <span>100.000 VNĐ</span></p>
+                        <p>Mô Tả: <span>Combo gồm 1 bắp và 1 nước</span></p>
+                        <p>Trạng Thái: <span>active</span></p>        
+                    </div>
+                    <div class = "mainPage__FoodDrinks-containerinfo-card-action">
+                        <button class = "mainPage__FoodDrinks-containerinfo-card-action-button"><i class="fa-solid fa-pen-to-square"></i></button>
+                        <button class = "mainPage__FoodDrinks-containerinfo-card-action-button"><i class="fa-solid fa-trash"></i></button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Add Food & Drinks content here -->
+        </div>
+
+        <!-- THONG KE DOANH THU -->
+        <div class="mainPage__SalesReport hidden">
+            <div class="mainPage__SalesReport-title">
+                <h1>Manage Report</h1>
+            </div>
+            <div class = "mainPage__SalesReport__Containersearch">
+                <div class = "mainPage__SalesReport__Containersearch-datestart">
+                    <label>Start Day</label>
+                    <input type="date" class = "mainPage__SalesReport__Containersearch-date-input">
+                </div>
+                <div class = "mainPage__SalesReport__Containersearch-date-end">
+                    <label>End Day</label>
+                    <input type="date" class = "mainPage__SalesReport__Containersearch-date-input">
+                </div>
+                
+                <div class="mainPage__SalesReport__Containersearch-button">
+                    <button class = "mainPage__SalesReport__Containersearch-button-search"><i class="fas fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+            <div class="mainPage__SalesReport__containerinfo">
+                <div class="mainPage__SalesReport__containerinfo-blockTotalAmount">
+                    <h1>Total Amount</h1>
+                    <p><span>250.000.000</span> VND</p>
+                </div>
+
+                <div class="mainPage__SalesReport__containerinfo-blockTotalTicket">
+                    <h1>Total Ticket</h1>
+                    <p>3.500</p>
+                </div>
+                <div class="mainPage__SalesReport__containerinfo-blockTopFilm">
+                    <h1>Top Film</h1>
+                    <p>Em Cua Anh Dung Cua Ai</p>
+                </div>
+                <div class="mainPage__SalesReport__containerinfo-blockTopScreenx">
+                    <h1>Top Screen</h1>
+                    <p>Screenx A</p>
+                </div>
+                
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Modal Hóa Đơn -->
+    <div class="invoiceModal hidden" id="invoiceModal">
+        <div class="invoiceModal__content">
+            <div class="invoiceModal__header">
+                <h2>Hóa Đơn Vé Xem Phim</h2>
+                <button class="closeInvoice"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="invoiceModal__body">
+                <div class="invoiceInfo">
+                    <div class="invoiceInfo__item">
+                        <span class="label">Mã Hóa Đơn:</span>
+                        
+                    </div>
+                    <div class="invoiceInfo__item">
+                        <span class="label">Ngày Đặt:</span>
+                       
+                    </div>
+                    <div class="invoiceInfo__item">
+                        <span class="label">Khách Hàng:</span>
+                     
+                    </div>
+                </div>
+                <div class="movieInfo">
+                    <h3>Thông Tin Vé</h3>
+                    <div class="movieInfo__item">
+                        <span class="label">Tên Phim:</span>
+                       
+                    </div>
+                    <div class="movieInfo__item">
+                        <span class="label">Suất Chiếu:</span>
+                     
+                    </div>
+                    <div class="movieInfo__item">
+                        <span class="label">Phòng Chiếu:</span>
+                 
+                    </div>
+                    <div class="movieInfo__item">
+                        <span class="label">Ghế:</span>
+                    
+                    </div>
+                </div>
+                <div class="foodInfo">
+                    <h3>Đồ Ăn & Thức Uống</h3>
+                    <div class="foodInfo__items" id="foodItems">
+                        <div class="foodItem">
+                  
+                        </div>
+                        <div class="foodItem">
+                    
+                        </div>
+                    </div>
+                </div>
+                <div class="invoiceTotal">
+                    <div class="totalItem">
+                        <span class="label">Tiền Vé:</span>
+                    
+                    </div>
+                    <div class="totalItem">
+                        <span class="label">Tiền Đồ Ăn:</span>
+                  
+                    </div>
+                    <div class="totalItem grandTotal">
+                        <span class="label">Tổng Cộng:</span>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Thêm Combo -->
+    <div class="add-combo-modal hidden" id="addComboModal">
+        <div class="add-combo-modal__overlay"></div>
+        <div class="add-combo-modal__content">
+            <h2>Thêm Combo Mới</h2>
+
+            <!-- SỬ dụng id này để call api thêm combo -->
+            <form id="addComboForm" class="add-combo-form">
+                <div class="add-combo-form__left">
+                    <label>Tên combo <span class="required">*</span></label>
+                    <input type="text" name="name" id="comboName" required>
+                    <label>Danh sách món</label>
+                    <textarea name="items" id="comboItems" rows="2" placeholder=" 1 Bắp rang , 1 Coca Cola , 1 Snack"></textarea>
+                    <label>Giá tiền (VNĐ) <span class="required">*</span></label>
+                    <input type="number" name="price" id="comboPrice" min="0" required>
+                    <label>URL <span class="required">*</span></label>
+                    <input type="text" name="url" id="comboUrl"  required>
+                    <label>Trạng thái</label>
+                    <select name="status" id="comboStatus" required>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                    </select>
+                </div>
+                <div class="add-combo-form__right">
+                    <label>Ảnh combo</label>
+                    <div class="img-upload-area" id="imgUploadArea">
+                        <span class="img-upload-placeholder" id="imgUploadPlaceholder">
+                            <i class="fa-solid fa-image"></i><br>
+                            Kéo & thả ảnh vào đây<br>hoặc<br>Chọn ảnh từ máy
+                        </span>
+                        <input type="file" accept="image/*" id="comboImgInput" hidden>
+                        <img id="comboImgPreview" class="img-preview hidden" src="#" alt="Preview">
+                        <button type="button" class="img-remove-btn hidden" id="imgRemoveBtn">Xóa ảnh</button>
+                    </div>
+                    <div class="img-choose-btn-wrapper">
+                        <button type="button" class="img-choose-btn" id="imgChooseBtn">Chọn ảnh</button>
+                    </div>
+                </div>
+                <div class="add-combo-form__actions">
+                    <button type="submit" class="btn-save">Lưu combo</button>
+                    <button type="button" class="btn-cancel" id="cancelAddCombo">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Thêm Suất Chiếu -->
+    <div class="add-show-modal hidden" id="addShowModal">
+        <div class="add-show-modal__content">
+            <h2>Thêm Suất Chiếu Mới</h2>
+            <form id="addShowForm" class="add-show-form">
+                <div class="add-show-form__row">
+                    <label for="showMovie">Tên Phim <span class="required">*</span></label>
+                    <select id="showMovie" name="movie" required>
+                        <option value="">Chọn phim</option>
+                    </select>
+                </div>
+                <div class="add-show-form__row">
+                    <label for="showScreen">Phòng Chiếu <span class="required">*</span></label>
+                    <select id="showScreen" name="screen" required>
+                        <option value="">Chọn phòng chiếu</option>
+                    </select>
+                </div>
+                <div class="add-show-form__row">
+                    <label for="showDate">Ngày Chiếu <span class="required">*</span></label>
+                    <input type="date" id="showDate" name="date" required>
+                </div>
+                <div class="add-show-form__row">
+                    <label for="showStartTime">Giờ Bắt Đầu <span class="required">*</span></label>
+                    <input type="time" id="showStartTime" name="startTime" required>
+                </div>
+                <div class="add-show-form__row">
+                    <label for="showEndTime">Giờ Kết Thúc <span class="required">*</span></label>
+                    <input type="time" id="showEndTime" name="endTime" required>
+                </div>
+                <div class="add-show-form__row">
+                    <label for="showPrice">Giá Vé (VND) <span class="required">*</span></label>
+                    <input type="number" id="showPrice" name="price" min="0" step="1000" required>
+                </div>
+                <div class="add-show-form__actions">
+                    <button type="submit" class="btn-save">Thêm Suất Chiếu</button>
+                    <button type="button" class="btn-cancel" id="cancelAddShow">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- End Modal Thêm Suất Chiếu -->
+
+    <!-- Modal Sửa Suất Chiếu -->
+    <div class="edit-show-modal hidden" id="editShowModal">
+        <div class="edit-show-modal__content">
+            <h2>Chỉnh Sửa Suất Chiếu</h2>
+            <form id="editShowForm" class="edit-show-form">
+                <input type="hidden" id="editShowId" name="id">
+                <div class="edit-show-form__row">
+                    <label for="editMovieTitle">Tên Phim <span class="required">*</span></label>
+                    <input type="text" id="editMovieTitle" name="movie" required>
+                </div>
+                <div class="edit-show-form__row">
+                    <label for="editScreenName">Phòng Chiếu <span class="required">*</span></label>
+                    <input type="text" id="editScreenName" name="screen" required>
+                </div>
+                <div class="edit-show-form__row">
+                    <label for="editShowDate">Ngày Chiếu <span class="required">*</span></label>
+                    <input type="date" id="editShowDate" name="date" required>
+                </div>
+                <div class="edit-show-form__row">
+                    <label for="editStartTime">Giờ Bắt Đầu <span class="required">*</span></label>
+                    <input type="time" id="editStartTime" name="startTime" required>
+                </div>
+                <div class="edit-show-form__row">
+                    <label for="editEndTime">Giờ Kết Thúc <span class="required">*</span></label>
+                    <input type="time" id="editEndTime" name="endTime" required>
+                </div>
+                <div class="edit-show-form__row">
+                    <label for="editPrice">Giá Vé (VND) <span class="required">*</span></label>
+                    <input type="number" id="editPrice" name="price" min="0" step="1000" required>
+                </div>
+                <div class="edit-show-form__actions">
+                    <button type="submit" class="btn-save">Cập Nhật Suất Chiếu</button>
+                    <button type="button" class="btn-cancel" id="cancelEditShow">Hủy</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- End Modal Sửa Suất Chiếu -->
+
+    <!-- Modal Quản Lý Thông Tin Phim -->
+    <div class="movie-modal hidden" id="movieModal">
+       <div class="movie-modal__content">
+         <h2>THÔNG TIN PHIM</h2>
+         <form id="movieForm" class="movie-form">
+             <div class="movie-form__left">
+                 <div class="movie-form__row">
+                     <label for="movieTitle">Tên phim <span class="required">*</span></label>
+                     <input type="text" id="movieTitle" name="name" required>
+                 </div>
+                 <div class="movie-form__row">
+                     <label for="movieSrc">src <span class="required">*</span></label>
+                     <input type="text" id="movieSrc" name="src" required>
+                 </div>
+                 <div class="movie-form__row">
+                     <label for="moviePoster">Poster <span class="required">*</span></label>
+                     <input type="text" id="moviePoster" name="poster" required>
+                 </div>
+                 <div class="movie-form__row">
+                     <label for="movieType">Thể loại <span class="required">*</span></label>
+                     <select id="movieType" name="idType" required>
+                         <option value="">Chọn thể loại</option>
+                         <!-- Options sẽ được thêm bằng JavaScript -->
+                     </select>
+                 </div>
+                 <div class="movie-form__row">
+                     <label for="movieRelease">Ngày công chiếu <span class="required">*</span></label>
+                     <input type="date" id="movieRelease" name="releaseDay" required>
+                 </div>
+                 <div class="movie-form__row">
+                     <label for="movieDirector">Đạo diễn <span class="required">*</span></label>
+                     <input type="text" id="movieDirector" name="director" required>
+                 </div>
+                 <div class="movie-form__row">
+                     <label for="movieCast">Diễn viên <span class="required">*</span></label>
+                     <input type="text" id="movieCast" name="cast" required>
+                 </div>
+                 <div class="movie-form__row">
+                     <label for="movieDuration">Thời lượng (phút) <span class="required">*</span></label>
+                     <input type="number" id="movieDuration" name="duration" min="1" required>
+                 </div>
+                 <div class="movie-form__row">
+                     <label for="movieLanguage">Ngôn ngữ <span class="required">*</span></label>
+                     <input type="text" id="movieLanguage" name="language" required>
+                 </div>
+                 <div class="movie-form__row">
+                     <label for="movieStatus">Trạng thái <span class="required">*</span></label>
+                     <select id="movieStatus" name="status" required>
+                         <option value="ON">Đang chiếu</option>
+                         <option value="NEXT">Sắp chiếu</option>
+                         <option value="OFF">Ngừng chiếu</option>
+                     </select>
+                 </div>
+                 <div class="movie-form__row">
+                     <label for="movieShortDesc">Mô tả ngắn <span class="required">*</span></label>
+                     <textarea id="movieShortDesc" name="shortDescription" rows="3" required></textarea>
+                 </div>
+                 <div class="movie-form__row">
+                     <label for="movieFullDesc">Mô tả chi tiết <span class="required">*</span></label>
+                     <textarea id="movieFullDesc" name="fullDescription" rows="5" required></textarea>
+                 </div>
+                 <div class="movie-form__row">
+                     <label for="movieTrailer">Link trailer <span class="required">*</span></label>
+                     <input type="url" id="movieTrailer" name="trailer" required>
+                 </div>
+
+             </div>
+           <div class="movie-form__right">
+             <div class="movie-poster-upload" id="moviePosterUpload">
+                 <img id="moviePosterPreview" src="" alt="Poster" class="movie-poster-img">
+                 <input type="file" id="moviePosterInput" accept="image/*" hidden>
+                 
+             </div>
+
+             <div class="movie-form__actions">
+                 <button type="submit" class="btn-save">Lưu</button>
+                 <button type="button" class="btn-cancel" id="cancelMovieBtn">Hủy</button>
+             </div>
+           </div>
+         </form>
+       </div>
+     </div>
+    <!-- End Modal Quản Lý Thông Tin Phim -->
+
+    <!-- Modal Thông tin chi tiết User -->
+    <div class="userInfoModal hidden" id="userInfoModal">
+        <div class="userInfoModal__content">
+            <div class="userInfoModal__header">
+                <h2>Thông tin người dùng</h2>
+                <button class="closeUserInfo"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="userInfoModal__body">
+                <form id="userInfoForm">
+                    <div class="form-group">
+                        <label for="userEmail">Email:</label>
+                        <input type="email" id="userEmail" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="userName">Tên:</label>
+                        <input type="text" id="userName" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="userGender">Giới tính:</label>
+                        <input type="text" id="userGender" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="userBirthday">Ngày sinh:</label>
+                        <input type="date" id="userBirthday" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="userPhone">Số điện thoại:</label>
+                        <input type="tel" id="userPhone" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="userAddress">Địa chỉ:</label>
+                        <textarea id="userAddress" readonly></textarea>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src = "@Url.Content("~/Scripts/js/admin.js")" defer></script>
+<script src = "@Url.Content("~/Scripts/js/manageProduct.js")" defer></script>
+<script src = "@Url.Content("~/Scripts/js/manageShow.js")" defer></script>
+<script src = "@Url.Content("~/Scripts/js/manageBooking.js")" defer></script>
+<script src = "@Url.Content("~/Scripts/js/manageMovie.js")" defer></script>
+<script src = "@Url.Content("~/Scripts/js/manageUser.js")" defer></script>
+<script src = "@Url.Content("~/Scripts/js/mangageScreen.js")" defer></script>
+<script src="@Url.Content("~/Scripts/js/manageReport.js")" defer></script>
+
+<script src = "@Url.Content("~/Scripts/js/auth.js")" defer></script>
+
+<script>
+    document.querySelector('.AddUserBtn').onclick = function() {
+        document.getElementById('addUserModal').classList.remove('hidden');
+    };
+    document.querySelector('.cancelAddUser').onclick = function() {
+        document.getElementById('addUserModal').classList.add('hidden');
+    };
+    // Đóng modal khi click ra ngoài
+    document.getElementById('addUserModal').onclick = function(e) {
+        if(e.target === this) this.classList.add('hidden');
+    };
+</script>
+</html>

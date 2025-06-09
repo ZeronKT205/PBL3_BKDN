@@ -24,5 +24,46 @@ namespace Datvexemfilm.Controllers
             _dbContext.SaveChanges();
             return Json(new { id=_seatorder.SeatOrder_ID,success = true }, JsonRequestBehavior.AllowGet);
         }
+        public ActionResult seat_booking(int show_id, int room_id)
+        {
+            try
+            {
+                var _show = _dbContext.Shows.Include("Film").FirstOrDefault(s => s.Show_ID == show_id);
+                if (_show == null)
+                {
+                    return HttpNotFound();
+                }
+                var _room = _dbContext.Rooms.Where(s => s.Room_ID == room_id).FirstOrDefault();
+                if (_room == null)
+                {
+                    return HttpNotFound();
+                }
+                var _seat = _dbContext.Seats.FirstOrDefault(s => s.Show_ID == show_id && s.Room_ID == room_id);
+                if (_seat == null)
+                {
+                    return HttpNotFound();
+                }
+                var tmp = new TMP
+                {
+                    Show_ID = show_id,
+                    Room_ID = room_id,
+                    Name_Room = _room.Room_Name,
+                    Day = _show.Day,
+                    Booked = _seat.Booked,
+                    Start = _show.Start_Movie,
+                    Row = _room.Row,
+                    Col = _room.Col,
+                    FilmName = _show.Film.name,
+                    FilmSrc = _show.Film.src,
+                    Price_Show = _show.Price
+                };
+                return View("~/Views/Booking/bookingTicket.cshtml", tmp);
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"Error: {ex.Message}");
+                return HttpNotFound();
+            }
+        }
     }
 }

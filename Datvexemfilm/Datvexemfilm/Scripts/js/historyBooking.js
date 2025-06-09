@@ -52,7 +52,7 @@ function setupEventListeners() {
     if (bookNowBtn) {
         bookNowBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            window.location.href = '../FE/bookingTicket.html'; // Adjust path as needed
+            window.location.href = '/Booking/bookingTicket'; // Adjust path as needed
         });
     }
 
@@ -109,15 +109,11 @@ function renderTickets(tickets) {
 
     tickets.forEach(ticket => {
         const statusClass = ticket.Status.toLowerCase(); // "on", "finish" ...
-        const statusLabel = statusClass === 'finish' ? 'Đã xem' : 'Sắp tới';
 
         const card = document.createElement('div');
         card.className = `ticket-card ${statusClass}`;
         card.dataset.ticketId = ticket.Id;
         card.innerHTML = `
-      <div class="ticket-status">
-        <span class="status-badge">${statusLabel}</span>
-      </div>
       <div class="ticket-poster">
         <img src="${ticket.Poster}" alt="${ticket.Title}">
       </div>

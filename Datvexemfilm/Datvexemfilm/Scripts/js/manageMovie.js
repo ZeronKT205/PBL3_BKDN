@@ -192,8 +192,8 @@ function movie_showEditModal(movie) {
         // Set poster preview if exists
         const posterPreview = document.getElementById('moviePosterPreview');
         if (posterPreview && movie.poster) {
-            posterPreview.src = movie.poster;
-            document.getElementById('moviePoster').value = movie.poster;
+            posterPreview.src = movie.src;
+            document.getElementById('moviePoster').value = movie.src;
         }
 
         // Show modal

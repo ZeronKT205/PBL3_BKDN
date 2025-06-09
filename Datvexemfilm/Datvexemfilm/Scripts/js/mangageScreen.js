@@ -2,6 +2,48 @@ window.onload = function () {
     loadscreen();
     setupEventListeners();
 }
+document.addEventListener('DOMContentLoaded', () => {
+    const submitButton = document.querySelector('.SubmitChangeSeatLayout');
+    if (submitButton) {
+        submitButton.addEventListener('click', () => {
+            const inputContainer = document.querySelector('.input-container');
+            const name = inputContainer.querySelector('#nameScreen').value;
+            const rows = parseInt(inputContainer.querySelector('#rows').value);
+            const cols = parseInt(inputContainer.querySelector('#cols').value);
+            const status = inputContainer.querySelector('#status_Room').value;
+
+            if (!name || !rows || !cols || isNaN(rows) || isNaN(cols)) {
+                alert("Vui lòng nhập đầy đủ thông tin phòng.");
+                return;
+            }
+
+            const capacity = rows * cols;
+
+            fetch('/Room/addscreen', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    Room_Name: name,
+                    Row: rows,
+                    Col: cols,
+                    Status: status,
+                    capacity: capacity
+                })
+            })
+                .then(res => res.json())
+                .then(data => {
+                    alert("Thêm phòng thành công!");
+                    document.querySelector('.mainPage__Screens__DetailContainer').classList.add('hidden');
+                    loadscreen();
+                })
+                .catch(err => {
+                    alert("Có lỗi xảy ra khi thêm phòng.");
+                });
+        });
+    }
+});
 
 function setupEventListeners() {
     // Nút Add
@@ -99,7 +141,7 @@ function generateSeats() {
 // Load màn hình và gán sự kiện click
 async function loadscreen() {
     try {
-        const response = await fetch(`${window.location.origin}/Screen/getallscreen`);
+        const response = await fetch(`/Screen/getallscreen`);
         const data = await response.json();
         const container = document.querySelector('.mainPage__Screens__ContainerListCard');
         if (!container) return;

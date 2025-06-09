@@ -1,5 +1,5 @@
 function goToPageLogin() {
-    window.location.href = "/Home/userlogin";
+    window.location.href = "/User/userlogin";
 }
 // Xử lý form đăng ký
 const registerForm = document.getElementById("registerform");
@@ -10,24 +10,24 @@ if (registerForm) {
         const email = document.getElementById("Email").value;
         const pass = document.getElementById("Password").value;
         const confirm_pass = document.getElementById("Confirm_Password").value;
-
+        const role = "user";
         if (pass !== confirm_pass) {
             alert("Mật khẩu không khớp!");
             return;
         }
 
-        const response = await fetch("https://localhost:44343/Register/Register", {
+        const response = await fetch(`/User/Register`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ Username: user, Password: pass, Email: email })
+            body: JSON.stringify({ Username: user, Password: pass, Email: email ,Role:role})
         });
 
         const result = await response.json();
         if (result.success) {
             alert("Đăng ký thành công!");
-            window.location.href = "/Home/userlogin";
+            window.location.href = "/User/userlogin";
         } else {
             alert(result.message);
         }
